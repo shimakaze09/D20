@@ -31,6 +31,6 @@ public struct AbilityScore
 
     public static implicit operator AbilityScore(int score)
     {
-        return new(score);
+        return new AbilityScore(score);
     }
 }
