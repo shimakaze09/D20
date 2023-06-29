@@ -9,7 +9,15 @@ public enum MainMenuOption
     Continue
 }
 
-public class MainMenu : MonoBehaviour
+public interface IMainMenu : IDependency<IMainMenu>
+{
+    void Setup(bool hasSavedGame);
+    UniTask TransitionIn();
+    UniTask<MainMenuOption> SelectMenuOption();
+    UniTask TransitionOut();
+}
+
+public class MainMenu : MonoBehaviour, IMainMenu
 {
     [SerializeField] private RectTransform rootPanel;
     [SerializeField] private CanvasGroup rootGroup;
@@ -18,61 +26,18 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private Layout onscreen;
     [SerializeField] private Button continueButton;
     [SerializeField] private Button newGameButton;
+    private CancellationTokenSource cts = new();
 
-    private void Start()
-    {
-        DemoFlow().Forget();
-    }
-
-    private async UniTask DemoFlow()
-    {
-        while (true)
-        {
-            Setup(Random.value > 0.5f);
-            await TransitionIn();
-            var option = await SelectMenuOption();
-            Debug.Log("Selected: " + option.ToString());
-            await TransitionOut();
-        }
-    }
-
-    private void Setup(bool hasSavedGame)
+    public void Setup(bool hasSavedGame)
     {
         continueButton.gameObject.SetActive(hasSavedGame);
     }
 
-    private async UniTask TransitionIn()
+    public async UniTask TransitionIn()
     {
-        var cts = new CancellationTokenSource();
         await UniTask.WhenAny(
             Enter(cts),
             SkipEnter(cts));
-        cts.Dispose();
-    }
-
-    private async UniTask Enter(CancellationTokenSource cts)
-    {
-        rootPanel.SetLayout(offscreen);
-        menuGroup.alpha = 0;
-        rootGroup.alpha = 1;
-        await rootPanel.Layout(offscreen, onscreen, 5).Play(cts.Token);
-        await menuGroup.FadeIn(1).Play(cts.Token);
-        cts.Cancel();
-    }
-
-    private async UniTask SkipEnter(CancellationTokenSource cts)
-    {
-        while (true)
-        {
-            await UniTask.NextFrame(cts.Token);
-            if (Input.anyKey)
-            {
-                cts.Cancel();
-                rootPanel.SetLayout(onscreen);
-                menuGroup.alpha = 1;
-                break;
-            }
-        }
     }
 
     public async UniTask<MainMenuOption> SelectMenuOption()
@@ -84,6 +49,36 @@ public class MainMenu : MonoBehaviour
         return (MainMenuOption)result;
     }
 
+    public async UniTask TransitionOut()
+    {
+        await rootGroup.FadeOut().Play(this.GetCancellationTokenOnDestroy());
+    }
+
+    private async UniTask Enter(CancellationTokenSource cts)
+    {
+        rootPanel.SetLayout(offscreen);
+        menuGroup.alpha = 0;
+        rootGroup.alpha = 1;
+        await rootPanel.Layout(offscreen, onscreen, 5).Play(cts.Token);
+        await menuGroup.FadeIn(1).Play(cts.Token);
+        CancelToken();
+    }
+
+    private async UniTask SkipEnter(CancellationTokenSource cts)
+    {
+        while (true)
+        {
+            await UniTask.NextFrame(cts.Token);
+            if (Input.anyKey)
+            {
+                CancelToken();
+                rootPanel.SetLayout(onscreen);
+                menuGroup.alpha = 1;
+                break;
+            }
+        }
+    }
+
     private async UniTask Press(Button button)
     {
         using (var handler = button.GetAsyncClickEventHandler(this.GetCancellationTokenOnDestroy()))
@@ -92,8 +87,24 @@ public class MainMenu : MonoBehaviour
         }
     }
 
-    private async UniTask TransitionOut()
+    private void OnEnable()
     {
-        await rootGroup.FadeOut().Play();
+        IMainMenu.Register(this);
+    }
+
+    private void OnDisable()
+    {
+        IMainMenu.Reset();
+        CancelToken();
+    }
+
+    private void CancelToken()
+    {
+        if (cts != null)
+        {
+            cts.Cancel();
+            cts.Dispose();
+            cts = null;
+        }
     }
 }
