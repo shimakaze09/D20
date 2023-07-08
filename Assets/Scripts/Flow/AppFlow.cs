@@ -6,10 +6,8 @@ public class AppFlow : MonoBehaviour
     private async UniTaskVoid Start()
     {
         DontDestroyOnLoad(gameObject);
-        IMainMenuFlow.Register(new MainMenuFlow());
-        IDataSerializer.Register(new DataSerializer());
-        IDataStore.Register(new DataStore("GameData"));
-        IDataSystem.Register(new DataSystem());
+        Injector.Inject();
+
         while (true)
         {
             await IMainMenuFlow.Resolve().Play();

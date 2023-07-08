@@ -7,7 +7,7 @@ public interface ICharismaSystem : IDependency<ICharismaSystem>, IEntityTableSys
 {
 }
 
-public class CharismaSystem : EntityTableSystem<AbilityScore>, IWisdomSystem
+public class CharismaSystem : EntityTableSystem<AbilityScore>, ICharismaSystem
 {
     public override CoreDictionary<Entity, AbilityScore> Table => IDataSystem.Resolve().Data.Charisma;
 }
