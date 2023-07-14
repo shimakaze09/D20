@@ -3,5 +3,6 @@
     public static void Inject()
     {
         IMainMenuFlow.Register(new MainMenuFlow());
+        IGameFlow.Register(new GameFlow());
     }
 }

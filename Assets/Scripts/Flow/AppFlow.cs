@@ -10,7 +10,7 @@ public class AppFlow : MonoBehaviour
 
         while (true)
         {
-            await IMainMenuFlow.Resolve().Play();
+            await IGameFlow.Resolve().Play();
             await UniTask.NextFrame(this.GetCancellationTokenOnDestroy());
         }
     }
