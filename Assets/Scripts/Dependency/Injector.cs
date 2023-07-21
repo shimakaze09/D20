@@ -8,5 +8,6 @@
         IEntitySystem.Register(new EntitySystem());
         FlowInjector.Inject();
         IGameSystem.Register(new GameSystem());
+        SoloAdventureInjector.Inject();
     }
 }

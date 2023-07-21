@@ -30,7 +30,15 @@ public class GameFlow : IGameFlow
 
     private async UniTask Loop()
     {
-        await UniTask.CompletedTask;
+        while (true)
+        {
+            var entryName = IEntrySystem.Resolve().GetName();
+            if (!string.IsNullOrEmpty(entryName))
+                await IEntryFlow.Resolve().Play();
+            else
+                break;
+            await UniTask.NextFrame();
+        }
     }
 
     private async UniTask Exit()
