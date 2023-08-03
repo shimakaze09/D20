@@ -1,6 +1,6 @@
+using System.Threading;
 using Cysharp.Threading.Tasks;
 using UnityEngine.SceneManagement;
-using System.Threading;
 
 public interface IEntryFlow : IDependency<IEntryFlow>
 {
@@ -13,17 +13,36 @@ public class EntryFlow : IEntryFlow
     {
         // MARK: - Enter
         await SceneManager.LoadSceneAsync("Explore");
-        // TODO: Load an Entry asset by name
-        // TODO: Resolve the Entry Panel
-        // TODO: Configure the panel with the asset
-        // TODO: Enter transition for the panel
+        var entry = await IEntryAssetSystem.Resolve().Load();
+
+        var panel = IEntryPanel.Resolve();
+        panel.Setup(entry);
+
+        await panel.TransitionIn();
 
         // MARK: - Loop
         while (true)
-            // TODO: Interact with the panel
-            await UniTask.NextFrame();
+        {
+            // Either select a menu option or interact with a link in the text
+            var cts = new CancellationTokenSource();
+            var (win, menu, link) = await UniTask.WhenAny(
+                panel.SelectMenuOption(cts.Token),
+                panel.SelectLink(cts.Token)
+            );
+            cts.Cancel();
+            cts.Dispose();
+
+            if (win == 0)
+            {
+                // Selected a menu option
+                entry.Options[menu].Select();
+                break;
+            }
+            // TODO: Selected a link in the text
+        }
 
         // MARK: - Exit
-        // TODO: Exit transition for the panel
+        IDataSystem.Resolve().Save();
+        await panel.TransitionOut();
     }
 }

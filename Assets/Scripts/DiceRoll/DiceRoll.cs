@@ -3,12 +3,11 @@ using System;
 [Serializable]
 public partial struct DiceRoll
 {
+    public static readonly DiceRoll D6 = new(6);
+    public static readonly DiceRoll D20 = new(20);
     public int count;
     public int sides;
     public int bonus;
-
-    public static readonly DiceRoll D6 = new(6);
-    public static readonly DiceRoll D20 = new(20);
 
     public DiceRoll(int sides)
     {

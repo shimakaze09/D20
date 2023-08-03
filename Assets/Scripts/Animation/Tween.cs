@@ -1,7 +1,7 @@
-using UnityEngine;
 using System;
-using Cysharp.Threading.Tasks;
 using System.Threading;
+using Cysharp.Threading.Tasks;
+using UnityEngine;
 
 public class Tween
 {
@@ -21,32 +21,32 @@ public class Tween
         Normal,
         Real,
         Fixed
-    };
+    }
 
     public enum PlayState
     {
         Stopped,
         Paused,
         Playing
-    };
+    }
 
     public enum Direction
     {
         Forward,
         Reverse
-    };
+    }
 
     public enum EndBehaviour
     {
         Constant,
         Reset
-    };
+    }
 
     public enum LoopType
     {
         Repeat,
         PingPong
-    };
+    }
 
     #endregion
 
@@ -58,7 +58,7 @@ public class Tween
     public TimeType timeType = TimeType.Normal;
     public PlayState playState { get; private set; }
     public Direction direction { get; private set; }
-    public PlayState previousPlayState { get; private set; }
+    public PlayState previousPlayState { get; }
     public EndBehaviour endBehaviour = EndBehaviour.Constant;
     public LoopType loopType = LoopType.Repeat;
 
@@ -73,7 +73,7 @@ public class Tween
     public float currentOffset { get; private set; }
     public int loops { get; private set; }
 
-    private static CancellationTokenSource cts = new();
+    private static readonly CancellationTokenSource cts = new();
 
     #endregion
 

@@ -8,9 +8,8 @@ public interface IEntry
 
 public class Entry : MonoBehaviour, IEntry
 {
-    public string Text => text;
-
     [SerializeField] private string text;
+    public string Text => text;
 
     public IEntryOption[] Options => GetComponents<IEntryOption>();
 }

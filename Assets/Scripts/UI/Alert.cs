@@ -1,16 +1,14 @@
-using UnityEngine;
-using Cysharp.Threading.Tasks;
-using UnityEngine.UI;
 using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
 
 public interface IAlert : IDependency<IAlert>
 {
-    
 }
 
 public class Alert : MonoBehaviour, IAlert
 {
-    [SerializeField] RectTransform rootPanel;
-    [SerializeField] TextMeshProUGUI label;
-    [SerializeField] Button button;
+    [SerializeField] private RectTransform rootPanel;
+    [SerializeField] private TextMeshProUGUI label;
+    [SerializeField] private Button button;
 }

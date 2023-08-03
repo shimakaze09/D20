@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using System;
 
-[System.Serializable]
+[Serializable]
 public struct AbilityScore
 {
     public enum Attribute
@@ -17,12 +15,12 @@ public struct AbilityScore
 
     public int value;
 
-    public int Modifier => value / 2 - 5;
-
     public AbilityScore(int value)
     {
         this.value = value;
     }
+
+    public int Modifier => value / 2 - 5;
 
     public static implicit operator int(AbilityScore score)
     {

@@ -1,11 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class QuaternionTween : Tween
 {
-    public Quaternion startTweenValue;
     public Quaternion endTweenValue;
+    public Quaternion startTweenValue;
     public Quaternion currentTweenValue { get; private set; }
 
     protected override void OnUpdate()

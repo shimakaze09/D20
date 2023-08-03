@@ -9,5 +9,6 @@
         FlowInjector.Inject();
         IGameSystem.Register(new GameSystem());
         SoloAdventureInjector.Inject();
+        AssetManagerInjector.Inject();
     }
 }

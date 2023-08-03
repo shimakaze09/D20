@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
@@ -13,12 +11,12 @@ public interface IDataStore : IDependency<IDataStore>
 
 public class DataStore : IDataStore
 {
-    public string FilePath { get; private set; }
-
     public DataStore(string fileName)
     {
         FilePath = $"{Application.persistentDataPath}/{fileName}.txt";
     }
+
+    public string FilePath { get; }
 
 
     public bool HasFile()
