@@ -38,7 +38,9 @@ public class EntryFlow : IEntryFlow
                 entry.Options[menu].Select();
                 break;
             }
-            // TODO: Selected a link in the text
+
+            // Selected a link in the text
+            await entry.SelectLink(link);
         }
 
         // MARK: - Exit

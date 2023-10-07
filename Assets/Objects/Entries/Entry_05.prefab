@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5350317754263771909}
   - component: {fileID: 31790957762321420}
-  - component: {fileID: 6916088325285070174}
-  - component: {fileID: -2714143504015597981}
+  - component: {fileID: 6195245322562618116}
+  - component: {fileID: -850565319945604685}
   m_Layer: 0
-  m_Name: Entry_02
+  m_Name: Entry_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,10 +46,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f7d42d246b8c2d4db512a43bf4de3fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "It looks like there is a monster up ahead. Kill or be killed. Or I supposed
-    you could run away\u2026  * Click \u201CFight\u201D to start a combat encounter. 
-    * Click \u201CRun Away\u201D to skip the fight and demo branching options."
---- !u!114 &6916088325285070174
+  text: "You\u2019ve emerged victorious. Well done! Now that you have time to look
+    around you notice a *<style=\u201Dpickup\u201D>key</style> on the ground. \u2003*Note,
+    you can click the colored word to interact with the item it mentions."
+--- !u!114 &6195245322562618116
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -58,12 +58,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 4381482647444934990}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2bc83a1c0e7137489dbfa1e92c1919e, type: 3}
+  m_Script: {fileID: 11500000, guid: 760751c027ba26848b6fa1839c64783b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Run Away
-  entryName: Entry_03
---- !u!114 &-2714143504015597981
+  item: 1
+  takeMessage: You take the skeleton key
+  dropMessage: You drop the skeleton key
+--- !u!114 &-850565319945604685
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -72,8 +73,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4381482647444934990}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2bc83a1c0e7137489dbfa1e92c1919e, type: 3}
+  m_Script: {fileID: 11500000, guid: d70f739454c161c46ae5bae539bc6dc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Fight
-  entryName: Entry_05
+  text: Next
+  item: 0
+  hasItemEntry: Entry_06
+  noItemEntry: Entry_07

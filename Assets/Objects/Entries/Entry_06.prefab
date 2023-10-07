@@ -10,10 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5350317754263771909}
   - component: {fileID: 31790957762321420}
-  - component: {fileID: 6916088325285070174}
-  - component: {fileID: -2714143504015597981}
+  - component: {fileID: 4340991861493416602}
   m_Layer: 0
-  m_Name: Entry_02
+  m_Name: Entry_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,10 +45,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f7d42d246b8c2d4db512a43bf4de3fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "It looks like there is a monster up ahead. Kill or be killed. Or I supposed
-    you could run away\u2026  * Click \u201CFight\u201D to start a combat encounter. 
-    * Click \u201CRun Away\u201D to skip the fight and demo branching options."
---- !u!114 &6916088325285070174
+  text: "As you continue your adventure you come upon a locked door. Good thing you
+    took that key from before! You unlock the door successfully and continue inside.
+    \u2003It isn\u2019t long before you come across a gaping hole. You might be able
+    to jump across."
+--- !u!114 &4340991861493416602
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -61,19 +61,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2bc83a1c0e7137489dbfa1e92c1919e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Run Away
-  entryName: Entry_03
---- !u!114 &-2714143504015597981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4381482647444934990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2bc83a1c0e7137489dbfa1e92c1919e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: Fight
-  entryName: Entry_05
+  text: Jump
+  entryName: 

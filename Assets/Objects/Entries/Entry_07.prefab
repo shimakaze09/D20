@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4381482647444934990
+--- !u!1 &2601360184493294307
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,24 +8,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5350317754263771909}
-  - component: {fileID: 31790957762321420}
-  - component: {fileID: 6916088325285070174}
-  - component: {fileID: -2714143504015597981}
+  - component: {fileID: 1258705919241590918}
+  - component: {fileID: 795611000926901787}
+  - component: {fileID: 1242815228722628882}
   m_Layer: 0
-  m_Name: Entry_02
+  m_Name: Entry_07
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5350317754263771909
+--- !u!4 &1258705919241590918
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4381482647444934990}
+  m_GameObject: {fileID: 2601360184493294307}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -34,46 +33,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &31790957762321420
+--- !u!114 &795611000926901787
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4381482647444934990}
+  m_GameObject: {fileID: 2601360184493294307}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f7d42d246b8c2d4db512a43bf4de3fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "It looks like there is a monster up ahead. Kill or be killed. Or I supposed
-    you could run away\u2026  * Click \u201CFight\u201D to start a combat encounter. 
-    * Click \u201CRun Away\u201D to skip the fight and demo branching options."
---- !u!114 &6916088325285070174
+  text: As you continue your adventure you come upon a locked door. If only you had
+    taken a key! I guess there is nothing left to do but go home.
+--- !u!114 &1242815228722628882
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4381482647444934990}
+  m_GameObject: {fileID: 2601360184493294307}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b2bc83a1c0e7137489dbfa1e92c1919e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Run Away
-  entryName: Entry_03
---- !u!114 &-2714143504015597981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4381482647444934990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2bc83a1c0e7137489dbfa1e92c1919e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: Fight
-  entryName: Entry_05
+  text: Go Home
+  entryName: 
