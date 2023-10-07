@@ -1,10 +1,15 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
 public partial class Data
 {
-    public CoreDictionary<Entity, string> name = new();
+    public CoreDictionary<Entity, string> name = new CoreDictionary<Entity, string>();
 }
 
 public interface INameSystem : IDependency<INameSystem>, IEntityTableSystem<string>
 {
+
 }
 
 public class NameSystem : EntityTableSystem<string>, INameSystem
@@ -16,7 +21,7 @@ public partial struct Entity
 {
     public string Name
     {
-        get => INameSystem.Resolve().Get(this);
-        set => INameSystem.Resolve().Set(this, value);
+        get { return INameSystem.Resolve().Get(this); }
+        set { INameSystem.Resolve().Set(this, value); }
     }
 }

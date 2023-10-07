@@ -1,10 +1,11 @@
 public partial class Data
 {
-    public CoreDictionary<Entity, AbilityScore> wisdom = new();
+    public CoreDictionary<Entity, AbilityScore> wisdom = new CoreDictionary<Entity, AbilityScore>();
 }
 
 public interface IWisdomSystem : IDependency<IWisdomSystem>, IEntityTableSystem<AbilityScore>
 {
+
 }
 
 public class WisdomSystem : EntityTableSystem<AbilityScore>, IWisdomSystem
@@ -16,7 +17,7 @@ public partial struct Entity
 {
     public AbilityScore Wisdom
     {
-        get => IWisdomSystem.Resolve().Get(this);
-        set => IWisdomSystem.Resolve().Set(this, value);
+        get { return IWisdomSystem.Resolve().Get(this); }
+        set { IWisdomSystem.Resolve().Set(this, value); }
     }
 }

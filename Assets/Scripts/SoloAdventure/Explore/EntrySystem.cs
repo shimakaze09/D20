@@ -1,3 +1,8 @@
+public partial class Data
+{
+    public string entryName;
+}
+
 public interface IEntrySystem : IDependency<IEntrySystem>
 {
     void SetName(string name);
@@ -15,9 +20,4 @@ public class EntrySystem : IEntrySystem
     {
         return IDataSystem.Resolve().Data.entryName;
     }
-}
-
-public partial class Data
-{
-    public string entryName;
 }

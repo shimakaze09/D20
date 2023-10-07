@@ -1,6 +1,6 @@
-using System.Threading;
 using Cysharp.Threading.Tasks;
 using UnityEngine.SceneManagement;
+using System.Threading;
 
 public interface IEntryFlow : IDependency<IEntryFlow>
 {
@@ -26,9 +26,9 @@ public class EntryFlow : IEntryFlow
             // Either select a menu option or interact with a link in the text
             var cts = new CancellationTokenSource();
             var (win, menu, link) = await UniTask.WhenAny(
-                panel.SelectMenuOption(cts.Token),
-                panel.SelectLink(cts.Token)
-            );
+                    panel.SelectMenuOption(cts.Token),
+                    panel.SelectLink(cts.Token)
+                );
             cts.Cancel();
             cts.Dispose();
 
@@ -38,9 +38,11 @@ public class EntryFlow : IEntryFlow
                 entry.Options[menu].Select();
                 break;
             }
-
-            // Selected a link in the text
-            await entry.SelectLink(link);
+            else
+            {
+                // Selected a link in the text
+                await entry.SelectLink(link);
+            }
         }
 
         // MARK: - Exit

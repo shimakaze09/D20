@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class MockDataStore : IDataStore
 {
     public bool fakeHasFile;
@@ -12,6 +8,11 @@ public class MockDataStore : IDataStore
     public bool DidCallRead { get; private set; }
     public bool DidCallWrite { get; private set; }
     public string WriteJsonParam { get; private set; }
+
+    public void Delete()
+    {
+        DidCallDelete = true;
+    }
 
     public bool HasFile()
     {
@@ -29,10 +30,5 @@ public class MockDataStore : IDataStore
     {
         DidCallWrite = true;
         WriteJsonParam = json;
-    }
-
-    public void Delete()
-    {
-        DidCallDelete = true;
     }
 }

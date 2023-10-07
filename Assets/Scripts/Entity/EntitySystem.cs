@@ -1,6 +1,8 @@
+using System.Collections.Generic;
+
 public partial class Data
 {
-    public CoreSet<Entity> entities = new();
+    public CoreSet<Entity> entities = new CoreSet<Entity>();
 }
 
 public interface IEntitySystem : IDependency<IEntitySystem>
@@ -11,8 +13,8 @@ public interface IEntitySystem : IDependency<IEntitySystem>
 
 public class EntitySystem : IEntitySystem
 {
-    private Data Data => IDataSystem.Resolve().Data;
-    private IRandomNumberGenerator RNG => IRandomNumberGenerator.Resolve();
+    Data Data { get { return IDataSystem.Resolve().Data; } }
+    IRandomNumberGenerator RNG { get { return IRandomNumberGenerator.Resolve(); } }
 
     public Entity Create()
     {
@@ -20,8 +22,8 @@ public class EntitySystem : IEntitySystem
         do
         {
             result = new Entity(RNG.Range(int.MinValue, int.MaxValue));
-        } while (result.id == 0 || Data.entities.Contains(result));
-
+        }
+        while (result.id == 0 || Data.entities.Contains(result));
         Data.entities.Add(result);
         return result;
     }

@@ -1,4 +1,4 @@
-﻿public class SoloAdventureInjector
+public static class SoloAdventureInjector
 {
     public static void Inject()
     {

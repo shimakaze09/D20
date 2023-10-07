@@ -11,6 +11,7 @@ public class ItemExploreEntryOption : MonoBehaviour, IEntryOption
     {
         get { return text; }
     }
+
     public void Select()
     {
         var entry = IAdventureItemSystem.Resolve().Has(item) ? hasItemEntry : noItemEntry;

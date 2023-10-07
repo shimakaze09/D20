@@ -24,16 +24,22 @@ public class AbilityScoreSystem : IAbilityScoreSystem
 
     public AbilityScore Get(Entity entity, AbilityScore.Attribute attribute)
     {
-        return attribute switch
+        switch (attribute)
         {
-            AbilityScore.Attribute.Strength => IStrengthSystem.Resolve().Get(entity),
-            AbilityScore.Attribute.Dexterity => IDexteritySystem.Resolve().Get(entity),
-            AbilityScore.Attribute.Constitution => IConstitutionSystem.Resolve().Get(entity),
-            AbilityScore.Attribute.Intelligence => IIntelligenceSystem.Resolve().Get(entity),
-            AbilityScore.Attribute.Wisdom => IWisdomSystem.Resolve().Get(entity),
-            AbilityScore.Attribute.Charisma => ICharismaSystem.Resolve().Get(entity),
-            _ => 0
-        };
+            case AbilityScore.Attribute.Strength:
+                return IStrengthSystem.Resolve().Get(entity);
+            case AbilityScore.Attribute.Dexterity:
+                return IDexteritySystem.Resolve().Get(entity);
+            case AbilityScore.Attribute.Constitution:
+                return IConstitutionSystem.Resolve().Get(entity);
+            case AbilityScore.Attribute.Intelligence:
+                return IIntelligenceSystem.Resolve().Get(entity);
+            case AbilityScore.Attribute.Wisdom:
+                return IWisdomSystem.Resolve().Get(entity);
+            case AbilityScore.Attribute.Charisma:
+                return ICharismaSystem.Resolve().Get(entity);
+        }
+        return (AbilityScore)0;
     }
 
     public void Set(Entity entity, AbilityScore.Attribute attribute, AbilityScore value)
@@ -66,7 +72,7 @@ public partial struct Entity
 {
     public AbilityScore this[AbilityScore.Attribute attribute]
     {
-        get => IAbilityScoreSystem.Resolve().Get(this, attribute);
-        set => IAbilityScoreSystem.Resolve().Set(this, attribute, value);
+        get { return IAbilityScoreSystem.Resolve().Get(this, attribute); }
+        set { IAbilityScoreSystem.Resolve().Set(this, attribute, value); }
     }
 }

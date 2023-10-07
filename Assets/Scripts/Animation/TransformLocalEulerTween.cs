@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class TransformLocalEulerTween : Vector3Tween
 {
-    public Transform transform;
+	public Transform transform;
 
-    protected override void OnUpdate()
-    {
-        base.OnUpdate();
-        transform.localEulerAngles = currentTweenValue;
-    }
+	protected override void OnUpdate()
+	{
+		base.OnUpdate();
+		transform.localEulerAngles = currentTweenValue;
+	}
 }

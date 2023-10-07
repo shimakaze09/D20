@@ -1,5 +1,5 @@
-using Cysharp.Threading.Tasks;
 using UnityEngine;
+using Cysharp.Threading.Tasks;
 
 public interface IEntry
 {
@@ -10,10 +10,16 @@ public interface IEntry
 
 public class Entry : MonoBehaviour, IEntry
 {
-    [SerializeField] private string text;
-    public string Text => text;
+    public string Text { get { return text; } }
+    [SerializeField] string text;
 
-    public IEntryOption[] Options => GetComponents<IEntryOption>();
+    public IEntryOption[] Options
+    {
+        get
+        {
+            return GetComponents<IEntryOption>();
+        }
+    }
 
     public async UniTask SelectLink(string link)
     {

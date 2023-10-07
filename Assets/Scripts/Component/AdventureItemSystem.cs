@@ -1,7 +1,7 @@
 public enum AdventureItem
 {
     SkeletonKey,
-    Torch,
+    Torch
 }
 
 public partial class Data

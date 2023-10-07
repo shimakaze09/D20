@@ -1,5 +1,7 @@
-using System;
+using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
+using System;
 
 public interface IDependency<T>
 {
@@ -31,14 +33,17 @@ public interface IDependency<T>
     {
         var pool = new Queue<T>();
 
-        Func<T> resolver = delegate
+        Func<T> resolver = delegate ()
         {
             if (pool.Count > 0)
                 return pool.Dequeue();
             return new U();
         };
 
-        Action<T> disposer = delegate(T entity) { pool.Enqueue(entity); };
+        Action<T> disposer = delegate (T entity)
+        {
+            pool.Enqueue(entity);
+        };
 
         Register(resolver, disposer);
     }
@@ -53,20 +58,20 @@ public interface IDependency<T>
     {
         return _resolver();
     }
-
+        
     public static T TryResolve()
     {
-        return _resolver != null ? _resolver() : default;
+        return (_resolver != null) ? _resolver() : default(T);
     }
 
     public static bool TryResolve(out T result)
     {
         if (_resolver == null)
         {
-            result = default;
+            result = default(T);
             return false;
         }
-
+            
         result = _resolver();
         return true;
     }

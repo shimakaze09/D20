@@ -1,19 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using NUnit.Framework;
-using UnityEngine;
-using UnityEngine.TestTools;
 
 public class DiceRollSystemTests
 {
     [SetUp]
-    public void Setup()
+    public void SetUp()
     {
         IRandomNumberGenerator.Register(new MockFixedRNG(7));
     }
 
     [TearDown]
-    public void Teardown()
+    public void TearDown()
     {
         IRandomNumberGenerator.Reset();
     }

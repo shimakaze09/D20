@@ -1,49 +1,48 @@
-using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public static class CanvasGroupAnimationExtensions
 {
-    public static CanvasGroupAlphaTween FadeOut(this CanvasGroup canvasGroup)
+	public static CanvasGroupAlphaTween FadeOut(this CanvasGroup canvasGroup)
+	{
+		return canvasGroup.FadeOut(Tween.DefaultDuration, Tween.DefaultEquation);
+	}
+
+	public static CanvasGroupAlphaTween FadeOut(this CanvasGroup canvasGroup, float duration)
+	{
+		return canvasGroup.FadeOut(duration, Tween.DefaultEquation);
+	}
+
+	public static CanvasGroupAlphaTween FadeOut(this CanvasGroup canvasGroup, float duration, Func<float, float, float, float> equation)
     {
-        return canvasGroup.FadeOut(Tween.DefaultDuration, Tween.DefaultEquation);
+		return canvasGroup.AlphaTween(canvasGroup.alpha, 0, duration, equation);
     }
 
-    public static CanvasGroupAlphaTween FadeOut(this CanvasGroup canvasGroup, float duration)
+	public static CanvasGroupAlphaTween FadeIn(this CanvasGroup canvasGroup)
     {
-        return canvasGroup.FadeOut(duration, Tween.DefaultEquation);
+		return canvasGroup.FadeIn(Tween.DefaultDuration, Tween.DefaultEquation);
     }
 
-    public static CanvasGroupAlphaTween FadeOut(this CanvasGroup canvasGroup, float duration,
-        Func<float, float, float, float> equation)
+	public static CanvasGroupAlphaTween FadeIn(this CanvasGroup canvasGroup, float duration)
     {
-        return canvasGroup.AlphaTween(canvasGroup.alpha, 0, duration, equation);
+		return canvasGroup.FadeIn(duration, Tween.DefaultEquation);
     }
 
-    public static CanvasGroupAlphaTween FadeIn(this CanvasGroup canvasGroup)
-    {
-        return canvasGroup.FadeIn(Tween.DefaultDuration, Tween.DefaultEquation);
-    }
+	public static CanvasGroupAlphaTween FadeIn(this CanvasGroup canvasGroup, float duration, Func<float, float, float, float> equation)
+	{
+		return canvasGroup.AlphaTween(canvasGroup.alpha, 1, duration, equation);
+	}
 
-    public static CanvasGroupAlphaTween FadeIn(this CanvasGroup canvasGroup, float duration)
+	public static CanvasGroupAlphaTween AlphaTween(this CanvasGroup canvasGroup, float fromValue, float toValue, float duration, Func<float, float, float, float> equation)
     {
-        return canvasGroup.FadeIn(duration, Tween.DefaultEquation);
-    }
-
-    public static CanvasGroupAlphaTween FadeIn(this CanvasGroup canvasGroup, float duration,
-        Func<float, float, float, float> equation)
-    {
-        return canvasGroup.AlphaTween(canvasGroup.alpha, 1, duration, equation);
-    }
-
-    public static CanvasGroupAlphaTween AlphaTween(this CanvasGroup canvasGroup, float fromValue, float toValue,
-        float duration, Func<float, float, float, float> equation)
-    {
-        var result = new CanvasGroupAlphaTween();
-        result.target = canvasGroup;
-        result.startTweenValue = fromValue;
-        result.endTweenValue = toValue;
-        result.duration = duration;
-        result.equation = equation;
-        return result;
-    }
+		var result = new CanvasGroupAlphaTween();
+		result.target = canvasGroup;
+		result.startTweenValue = fromValue;
+		result.endTweenValue = toValue;
+		result.duration = duration;
+		result.equation = equation;
+		return result;
+	}
 }

@@ -5,7 +5,7 @@ public interface IRandomNumberGenerator : IDependency<IRandomNumberGenerator>
     public int Range(int minInclusive, int maxExclusive);
 }
 
-public class RandomNumberGenerator : IRandomNumberGenerator
+public struct RandomNumberGenerator : IRandomNumberGenerator
 {
     public int Range(int minInclusive, int maxExclusive)
     {

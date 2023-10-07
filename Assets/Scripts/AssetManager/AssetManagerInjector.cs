@@ -1,4 +1,4 @@
-﻿public static class AssetManagerInjector
+public static class AssetManagerInjector
 {
     public static void Inject()
     {

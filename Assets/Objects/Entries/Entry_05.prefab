@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4381482647444934990
+--- !u!1 &1163405172834001663
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,10 +8,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5350317754263771909}
-  - component: {fileID: 31790957762321420}
-  - component: {fileID: 6195245322562618116}
-  - component: {fileID: -850565319945604685}
+  - component: {fileID: 3931580013858553733}
+  - component: {fileID: -5436670617448426171}
+  - component: {fileID: -8126133765339953239}
+  - component: {fileID: 7359066793518430571}
   m_Layer: 0
   m_Name: Entry_05
   m_TagString: Untagged
@@ -19,61 +19,61 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5350317754263771909
+--- !u!4 &3931580013858553733
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4381482647444934990}
+  m_GameObject: {fileID: 1163405172834001663}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &31790957762321420
+--- !u!114 &-5436670617448426171
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4381482647444934990}
+  m_GameObject: {fileID: 1163405172834001663}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f7d42d246b8c2d4db512a43bf4de3fe, type: 3}
+  m_Script: {fileID: 11500000, guid: cf7beb462b76d415e91564974363f4af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "You\u2019ve emerged victorious. Well done! Now that you have time to look
-    around you notice a *<style=\u201Dpickup\u201D>key</style> on the ground. \u2003*Note,
-    you can click the colored word to interact with the item it mentions."
---- !u!114 &6195245322562618116
+  text: "You've emerged victorious.  Well done!  Now that you have time to look around
+    you notice a *<style=\"pickup\">key</style> on the ground.<br> \t*Note, you can
+    click the colored word to interact with the item it mentions."
+--- !u!114 &-8126133765339953239
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4381482647444934990}
+  m_GameObject: {fileID: 1163405172834001663}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 760751c027ba26848b6fa1839c64783b, type: 3}
+  m_Script: {fileID: 11500000, guid: b2025de0b25424366a7d3429de3832ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: 1
+  item: 0
   takeMessage: You take the skeleton key
   dropMessage: You drop the skeleton key
---- !u!114 &-850565319945604685
+--- !u!114 &7359066793518430571
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4381482647444934990}
+  m_GameObject: {fileID: 1163405172834001663}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d70f739454c161c46ae5bae539bc6dc1, type: 3}
+  m_Script: {fileID: 11500000, guid: dafc5f4b5e4254bee931afcf9a4d5923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   text: Next

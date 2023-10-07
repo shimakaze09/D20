@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &380947469631520099
+--- !u!1 &4921083289649300536
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2465735160170568394}
-  - component: {fileID: 8562459466912370011}
-  - component: {fileID: 3369973899787420378}
+  - component: {fileID: 8216542418502611887}
+  - component: {fileID: 8433385857902146780}
+  - component: {fileID: 3489180355249363234}
   m_Layer: 0
   m_Name: Entry_01
   m_TagString: Untagged
@@ -18,39 +18,39 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2465735160170568394
+--- !u!4 &8216542418502611887
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 380947469631520099}
+  m_GameObject: {fileID: 4921083289649300536}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8562459466912370011
+--- !u!114 &8433385857902146780
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 380947469631520099}
+  m_GameObject: {fileID: 4921083289649300536}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f7d42d246b8c2d4db512a43bf4de3fe, type: 3}
+  m_Script: {fileID: 11500000, guid: cf7beb462b76d415e91564974363f4af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   text: "Imagine you are reading really great introductory material that establishes
-    characters, environments, and goals etc. To make it feel even more impressive,
-    I\u2019ve added a couple of paragraphs of placeholder text. All you need to do
-    is click \u201CNext\u201D below to test that we can go from one entry to another. 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu ornare nulla.
-    Nam vulputate mauris quis massa vestibulum, a aliquet augue mattis. Morbi egestas
+    characters, environments, and goals etc.  To make it feel even more impressive,
+    I've added a couple of paragraphs of placeholder text.  All you need to do is
+    click \"Next\" below to test that we can go from one entry to another.<br> \tLorem
+    ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu ornare nulla. Nam
+    vulputate mauris quis massa vestibulum, a aliquet augue mattis. Morbi egestas
     augue sapien, malesuada bibendum ligula mollis dignissim. In vestibulum neque
     tempus augue tempus, non pretium leo dapibus. Integer id diam lorem. Suspendisse
     velit neque, porta a convallis pretium, vulputate sit amet felis. Cras non rutrum
@@ -58,7 +58,7 @@ MonoBehaviour:
     Nunc at neque vel libero lacinia faucibus. Maecenas vel pulvinar sem, sed malesuada
     sapien. Nullam consectetur pulvinar orci, nec dapibus tortor ullamcorper sit
     amet. Duis non iaculis arcu. Quisque volutpat nunc nec tellus facilisis feugiat.
-    Nullam vitae tempus erat. Vivamus malesuada nisl sed pulvinar euismod.  Praesent
+    Nullam vitae tempus erat. Vivamus malesuada nisl sed pulvinar euismod.<br> \tPraesent
     tempus, nisl at lacinia tincidunt, diam nisi tincidunt massa, quis fringilla
     lorem massa ut mi. Phasellus mattis quis nulla ac auctor. Ut malesuada, diam
     in porttitor cursus, libero lacus rutrum lacus, eu pretium orci urna nec lectus.
@@ -70,16 +70,16 @@ MonoBehaviour:
     ultrices, gravida turpis in, imperdiet elit. Mauris nisl neque, facilisis at
     arcu ut, sodales posuere mi. Duis magna lacus, ornare eu lorem pharetra, gravida
     tincidunt lacus. Donec eget sapien sapien."
---- !u!114 &3369973899787420378
+--- !u!114 &3489180355249363234
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 380947469631520099}
+  m_GameObject: {fileID: 4921083289649300536}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2bc83a1c0e7137489dbfa1e92c1919e, type: 3}
+  m_Script: {fileID: 11500000, guid: 72d5ad610b7164b13af1116b334eadc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   text: Next

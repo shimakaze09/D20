@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4381482647444934990
+--- !u!1 &1163405172834001663
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5350317754263771909}
-  - component: {fileID: 31790957762321420}
-  - component: {fileID: 4340991861493416602}
+  - component: {fileID: 3931580013858553733}
+  - component: {fileID: -5436670617448426171}
+  - component: {fileID: -1870480248808334843}
   m_Layer: 0
   m_Name: Entry_06
   m_TagString: Untagged
@@ -18,47 +18,47 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5350317754263771909
+--- !u!4 &3931580013858553733
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4381482647444934990}
+  m_GameObject: {fileID: 1163405172834001663}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &31790957762321420
+--- !u!114 &-5436670617448426171
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4381482647444934990}
+  m_GameObject: {fileID: 1163405172834001663}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f7d42d246b8c2d4db512a43bf4de3fe, type: 3}
+  m_Script: {fileID: 11500000, guid: cf7beb462b76d415e91564974363f4af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "As you continue your adventure you come upon a locked door. Good thing you
-    took that key from before! You unlock the door successfully and continue inside.
-    \u2003It isn\u2019t long before you come across a gaping hole. You might be able
-    to jump across."
---- !u!114 &4340991861493416602
+  text: "As you continue your adventure you come upon a locked door.  Good thing
+    you took that key from before!  You unlock the door successfully and continue
+    inside.<br> \tIt isn't long before you come across a gaping hole.  You might
+    be able to jump across."
+--- !u!114 &-1870480248808334843
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4381482647444934990}
+  m_GameObject: {fileID: 1163405172834001663}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2bc83a1c0e7137489dbfa1e92c1919e, type: 3}
+  m_Script: {fileID: 11500000, guid: 72d5ad610b7164b13af1116b334eadc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   text: Jump

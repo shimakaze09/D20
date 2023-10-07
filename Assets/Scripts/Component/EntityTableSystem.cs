@@ -1,3 +1,7 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
 public interface IEntityTableSystem<T>
 {
     CoreDictionary<Entity, T> Table { get; }
@@ -23,7 +27,7 @@ public abstract class EntityTableSystem<T> : IEntityTableSystem<T>
         T result;
         if (Table.TryGetValue(entity, out result))
             return result;
-        return default;
+        return default(T);
     }
 
     public virtual bool TryGetValue(Entity entity, out T value)

@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public enum Anchor
@@ -56,7 +58,7 @@ public static class AnchorExtensions
                 return new Vector2(0.5f, 0);
             case Anchor.StretchRight:
                 return new Vector2(1, 0);
-            default: // Anchor.StretchStretch:
+            default:// Anchor.StretchStretch:
                 return new Vector2(0, 0);
         }
     }

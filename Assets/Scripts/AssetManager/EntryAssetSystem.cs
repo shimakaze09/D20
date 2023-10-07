@@ -1,5 +1,5 @@
-﻿using Cysharp.Threading.Tasks;
 using UnityEngine;
+using Cysharp.Threading.Tasks;
 
 public interface IEntryAssetSystem : IDependency<IEntryAssetSystem>
 {
@@ -18,7 +18,7 @@ public class EntryAssetSystem : IEntryAssetSystem
     public async UniTask<IEntry> Load(string entryName)
     {
         var assetManager = IAssetManager<GameObject>.Resolve();
-        var key = $"Assets/Objects/Entries/{entryName}.prefab";
+        var key = string.Format("Assets/Objects/Entries/{0}.prefab", entryName);
         var asset = await assetManager.LoadAssetAsync(key);
         return asset.GetComponent<IEntry>();
     }

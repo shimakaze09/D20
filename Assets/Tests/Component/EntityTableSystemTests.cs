@@ -1,20 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using NUnit.Framework;
-using UnityEngine;
 
-public class TestEntityTableSystem : EntityTableSystem<int>
+class TestEntityTableSystem : EntityTableSystem<int>
 {
-    public override CoreDictionary<Entity, int> Table => _table;
-
-    private CoreDictionary<Entity, int> _table = new();
+    public override CoreDictionary<Entity, int> Table { get { return _table; } }
+    CoreDictionary<Entity, int> _table = new CoreDictionary<Entity, int>();
 }
 
 public class EntityTableSystemTests
 {
-    private TestEntityTableSystem sut;
-    private Entity entity = new(1);
-    private int value = 123;
+    TestEntityTableSystem sut;
+    Entity entity = new Entity(1);
+    int value = 123;
 
     [SetUp]
     public void SetUp()

@@ -1,12 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
 
 public class EntitySystemTests
 {
-    private MockDataSystem mockDataSystem = new();
-    private EntitySystem sut = new();
+    MockDataSystem mockDataSystem = new MockDataSystem();
+    EntitySystem sut = new EntitySystem();
 
     [SetUp]
     public void SetUp()
@@ -59,7 +57,9 @@ public class EntitySystemTests
     {
         var entity = new Entity(1);
         mockDataSystem.Data.entities.Add(entity);
+
         sut.Destroy(entity);
+
         Assert.IsFalse(mockDataSystem.Data.entities.Contains(entity));
     }
 }

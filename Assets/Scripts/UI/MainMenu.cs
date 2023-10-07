@@ -1,7 +1,7 @@
-using System.Threading;
-using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
+using Cysharp.Threading.Tasks;
+using System.Threading;
 
 public enum MainMenuOption
 {
@@ -19,25 +19,14 @@ public interface IMainMenu : IDependency<IMainMenu>
 
 public class MainMenu : MonoBehaviour, IMainMenu
 {
-    [SerializeField] private RectTransform rootPanel;
-    [SerializeField] private CanvasGroup rootGroup;
-    [SerializeField] private CanvasGroup menuGroup;
-    [SerializeField] private Layout offscreen;
-    [SerializeField] private Layout onscreen;
-    [SerializeField] private Button continueButton;
-    [SerializeField] private Button newGameButton;
-    private CancellationTokenSource cts = new();
-
-    private void OnEnable()
-    {
-        IMainMenu.Register(this);
-    }
-
-    private void OnDisable()
-    {
-        IMainMenu.Reset();
-        CancelToken();
-    }
+    [SerializeField] RectTransform rootPanel;
+    [SerializeField] CanvasGroup rootGroup;
+    [SerializeField] CanvasGroup menuGroup;
+    [SerializeField] Layout offscreen;
+    [SerializeField] Layout onscreen;
+    [SerializeField] Button continueButton;
+    [SerializeField] Button newGameButton;
+    CancellationTokenSource cts = new CancellationTokenSource();
 
     public void Setup(bool hasSavedGame)
     {
@@ -56,7 +45,7 @@ public class MainMenu : MonoBehaviour, IMainMenu
         var result = await UniTask.WhenAny(
             Press(newGameButton),
             Press(continueButton)
-        );
+            );
         return (MainMenuOption)result;
     }
 
@@ -65,7 +54,7 @@ public class MainMenu : MonoBehaviour, IMainMenu
         await rootGroup.FadeOut().Play(this.GetCancellationTokenOnDestroy());
     }
 
-    private async UniTask Enter(CancellationTokenSource cts)
+    async UniTask Enter(CancellationTokenSource cts)
     {
         rootPanel.SetLayout(offscreen);
         menuGroup.alpha = 0;
@@ -75,7 +64,7 @@ public class MainMenu : MonoBehaviour, IMainMenu
         CancelToken();
     }
 
-    private async UniTask SkipEnter(CancellationTokenSource cts)
+    async UniTask SkipEnter(CancellationTokenSource cts)
     {
         while (true)
         {
@@ -90,7 +79,7 @@ public class MainMenu : MonoBehaviour, IMainMenu
         }
     }
 
-    private async UniTask Press(Button button)
+    async UniTask Press(Button button)
     {
         using (var handler = button.GetAsyncClickEventHandler(this.GetCancellationTokenOnDestroy()))
         {
@@ -98,7 +87,18 @@ public class MainMenu : MonoBehaviour, IMainMenu
         }
     }
 
-    private void CancelToken()
+    void OnEnable()
+    {
+        IMainMenu.Register(this);
+    }
+
+    void OnDisable()
+    {
+        IMainMenu.Reset();
+        CancelToken();
+    }
+
+    void CancelToken()
     {
         if (cts != null)
         {

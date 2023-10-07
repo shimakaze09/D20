@@ -1,13 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using NUnit.Framework;
-using UnityEngine;
 
 public class DataSystemTests
 {
-    private MockDataSerializer mockDataSerializer = new();
-    private MockDataStore mockDataStore = new();
-    private DataSystem sut = new();
+    MockDataSerializer mockDataSerializer = new MockDataSerializer();
+    MockDataStore mockDataStore = new MockDataStore();
+    DataSystem sut = new DataSystem();
 
     [SetUp]
     public void SetUp()
@@ -24,7 +21,7 @@ public class DataSystemTests
     }
 
     [Test]
-    public void Create_InitData()
+    public void Create_InitsData()
     {
         var dataBefore = sut.Data;
         sut.Create();
