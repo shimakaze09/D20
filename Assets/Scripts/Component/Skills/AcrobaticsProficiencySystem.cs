@@ -5,6 +5,7 @@ public partial class Data
 
 public interface IAcrobaticsProficiencySystem : IDependency<IAcrobaticsProficiencySystem>, IEntityTableSystem<Proficiency>
 {
+
 }
 
 public class AcrobaticsProficiencySystem : EntityTableSystem<Proficiency>, IAcrobaticsProficiencySystem

@@ -1,4 +1,5 @@
 using NUnit.Framework;
+
 public class BaseSkillSystemTests
 {
     [SetUp]
@@ -8,6 +9,7 @@ public class BaseSkillSystemTests
         IDataSystem.Register(new MockDataSystem());
         ILevelSystem.Register(new LevelSystem());
         IProficiencySystem.Register(new MockProficiencySystem());
+
         IDataSystem.Resolve().Create();
     }
 
@@ -24,13 +26,15 @@ public class BaseSkillSystemTests
     public void Setup_TrainedEntity_AssignsCorrectSkillValue()
     {
         // Arrange
-        var sut = new MockBaseSkillSystem(Skill.Intimidation, AbilityScore.Attribute.Strength);
+        var sut = new MockBaseSkillSystem(Skill.Athletics, AbilityScore.Attribute.Strength);
         var hero = new Entity(1);
         hero[AbilityScore.Attribute.Strength] = 18;
         hero.Level = 1;
-        IProficiencySystem.Resolve().Set(hero, Skill.Intimidation, Proficiency.Trained);
+        IProficiencySystem.Resolve().Set(hero, Skill.Athletics, Proficiency.Trained);
+
         // Act
         sut.Setup(hero);
+
         // Assert
         Assert.AreEqual(7, sut.Table[hero]); // 4 (Str) + 3 (Prof)
     }
@@ -39,13 +43,15 @@ public class BaseSkillSystemTests
     public void Setup_UntrainedEntity_AssignsCorrectSkillValue()
     {
         // Arrange
-        var sut = new MockBaseSkillSystem(Skill.Intimidation, AbilityScore.Attribute.Strength);
+        var sut = new MockBaseSkillSystem(Skill.Athletics, AbilityScore.Attribute.Strength);
         var hero = new Entity(1);
         hero[AbilityScore.Attribute.Strength] = 12;
         hero.Level = 1;
-        IProficiencySystem.Resolve().Set(hero, Skill.Intimidation, Proficiency.Untrained);
+        IProficiencySystem.Resolve().Set(hero, Skill.Athletics, Proficiency.Untrained);
+
         // Act
         sut.Setup(hero);
+
         // Assert
         Assert.AreEqual(1, sut.Table[hero]); // 1 (Str) + 0 (Prof)
     }

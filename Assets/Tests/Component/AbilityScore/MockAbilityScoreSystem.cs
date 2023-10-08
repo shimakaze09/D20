@@ -4,6 +4,7 @@ using NUnit.Framework;
 public class MockAbilityScoreSystem : IAbilityScoreSystem
 {
     Dictionary<Entity, Dictionary<AbilityScore.Attribute, AbilityScore>> fakeTable = new Dictionary<Entity, Dictionary<AbilityScore.Attribute, AbilityScore>>();
+
     public AbilityScore Get(Entity entity, AbilityScore.Attribute attribute)
     {
         if (fakeTable.ContainsKey(entity))
@@ -19,6 +20,7 @@ public class MockAbilityScoreSystem : IAbilityScoreSystem
     {
         if (!fakeTable.ContainsKey(entity))
             fakeTable[entity] = new Dictionary<AbilityScore.Attribute, AbilityScore>();
+
         fakeTable[entity][attribute] = value;
     }
 

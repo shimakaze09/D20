@@ -3,9 +3,9 @@ public partial class Data
     public CoreDictionary<Entity, int> arcana = new CoreDictionary<Entity, int>();
 }
 
-
 public interface IArcanaSystem : IDependency<IArcanaSystem>, IBaseSkillSystem
 {
+
 }
 
 public class ArcanaSystem : BaseSkillSystem, IArcanaSystem

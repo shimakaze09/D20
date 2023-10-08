@@ -5,6 +5,7 @@ public partial class Data
 
 public interface IIntimidationProficiencySystem : IDependency<IIntimidationProficiencySystem>, IEntityTableSystem<Proficiency>
 {
+
 }
 
 public class IntimidationProficiencySystem : EntityTableSystem<Proficiency>, IIntimidationProficiencySystem

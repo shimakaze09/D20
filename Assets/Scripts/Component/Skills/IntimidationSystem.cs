@@ -3,9 +3,9 @@ public partial class Data
     public CoreDictionary<Entity, int> intimidation = new CoreDictionary<Entity, int>();
 }
 
-
 public interface IIntimidationSystem : IDependency<IIntimidationSystem>, IBaseSkillSystem
 {
+
 }
 
 public class IntimidationSystem : BaseSkillSystem, IIntimidationSystem

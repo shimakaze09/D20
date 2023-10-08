@@ -3,9 +3,9 @@ public partial class Data
     public CoreDictionary<Entity, int> medicine = new CoreDictionary<Entity, int>();
 }
 
-
 public interface IMedicineSystem : IDependency<IMedicineSystem>, IBaseSkillSystem
 {
+
 }
 
 public class MedicineSystem : BaseSkillSystem, IMedicineSystem

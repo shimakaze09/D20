@@ -3,9 +3,9 @@ public partial class Data
     public CoreDictionary<Entity, int> society = new CoreDictionary<Entity, int>();
 }
 
-
 public interface ISocietySystem : IDependency<ISocietySystem>, IBaseSkillSystem
 {
+
 }
 
 public class SocietySystem : BaseSkillSystem, ISocietySystem

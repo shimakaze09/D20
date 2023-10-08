@@ -3,9 +3,9 @@ public partial class Data
     public CoreDictionary<Entity, int> performance = new CoreDictionary<Entity, int>();
 }
 
-
 public interface IPerformanceSystem : IDependency<IPerformanceSystem>, IBaseSkillSystem
 {
+
 }
 
 public class PerformanceSystem : BaseSkillSystem, IPerformanceSystem

@@ -3,9 +3,9 @@ public partial class Data
     public CoreDictionary<Entity, int> thievery = new CoreDictionary<Entity, int>();
 }
 
-
 public interface IThieverySystem : IDependency<IThieverySystem>, IBaseSkillSystem
 {
+
 }
 
 public class ThieverySystem : BaseSkillSystem, IThieverySystem

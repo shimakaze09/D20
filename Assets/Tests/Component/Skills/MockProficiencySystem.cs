@@ -1,7 +1,9 @@
 using System.Collections.Generic;
+
 public class MockProficiencySystem : IProficiencySystem
 {
     Dictionary<Entity, Dictionary<Skill, Proficiency>> fakeTable = new Dictionary<Entity, Dictionary<Skill, Proficiency>>();
+
     public Proficiency Get(Entity entity, Skill skill)
     {
         if (fakeTable.ContainsKey(entity))
@@ -17,6 +19,7 @@ public class MockProficiencySystem : IProficiencySystem
     {
         if (!fakeTable.ContainsKey(entity))
             fakeTable[entity] = new Dictionary<Skill, Proficiency>();
+
         fakeTable[entity][skill] = value;
     }
 }

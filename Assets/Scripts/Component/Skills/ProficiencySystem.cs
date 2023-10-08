@@ -4,7 +4,7 @@ public enum Proficiency
     Trained,
     Expert,
     Master,
-    Legendary,
+    Legendary
 }
 
 public interface IProficiencySystem : IDependency<IProficiencySystem>
@@ -31,10 +31,10 @@ public class ProficiencySystem : IProficiencySystem
         {
             case Skill.Acrobatics:
                 return IAcrobaticsProficiencySystem.Resolve();
-            case Skill.Athletics:
-                return IAthleticsProficiencySystem.Resolve();
             case Skill.Arcana:
                 return IArcanaProficiencySystem.Resolve();
+            case Skill.Athletics:
+                return IAthleticsProficiencySystem.Resolve();
             case Skill.Crafting:
                 return ICraftingProficiencySystem.Resolve();
             case Skill.Deception:

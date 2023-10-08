@@ -3,9 +3,9 @@ public partial class Data
     public CoreDictionary<Entity, int> survival = new CoreDictionary<Entity, int>();
 }
 
-
 public interface ISurvivalSystem : IDependency<ISurvivalSystem>, IBaseSkillSystem
 {
+
 }
 
 public class SurvivalSystem : BaseSkillSystem, ISurvivalSystem

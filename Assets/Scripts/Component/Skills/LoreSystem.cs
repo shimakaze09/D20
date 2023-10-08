@@ -3,9 +3,9 @@ public partial class Data
     public CoreDictionary<Entity, int> lore = new CoreDictionary<Entity, int>();
 }
 
-
 public interface ILoreSystem : IDependency<ILoreSystem>, IBaseSkillSystem
 {
+
 }
 
 public class LoreSystem : BaseSkillSystem, ILoreSystem

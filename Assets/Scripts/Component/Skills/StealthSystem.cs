@@ -3,9 +3,9 @@ public partial class Data
     public CoreDictionary<Entity, int> stealth = new CoreDictionary<Entity, int>();
 }
 
-
 public interface IStealthSystem : IDependency<IStealthSystem>, IBaseSkillSystem
 {
+
 }
 
 public class StealthSystem : BaseSkillSystem, IStealthSystem

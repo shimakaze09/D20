@@ -3,9 +3,9 @@ public partial class Data
     public CoreDictionary<Entity, int> diplomacy = new CoreDictionary<Entity, int>();
 }
 
-
 public interface IDiplomacySystem : IDependency<IDiplomacySystem>, IBaseSkillSystem
 {
+
 }
 
 public class DiplomacySystem : BaseSkillSystem, IDiplomacySystem

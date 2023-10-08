@@ -3,9 +3,9 @@ public partial class Data
     public CoreDictionary<Entity, int> nature = new CoreDictionary<Entity, int>();
 }
 
-
 public interface INatureSystem : IDependency<INatureSystem>, IBaseSkillSystem
 {
+
 }
 
 public class NatureSystem : BaseSkillSystem, INatureSystem

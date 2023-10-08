@@ -5,6 +5,7 @@ public partial class Data
 
 public interface IReligionProficiencySystem : IDependency<IReligionProficiencySystem>, IEntityTableSystem<Proficiency>
 {
+
 }
 
 public class ReligionProficiencySystem : EntityTableSystem<Proficiency>, IReligionProficiencySystem

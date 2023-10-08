@@ -1,3 +1,5 @@
+using System;
+
 public enum Skill
 {
     Acrobatics,
@@ -23,30 +25,43 @@ public interface ISkillSystem : IDependency<ISkillSystem>
 {
     void Set(Entity entity, Skill skill, int value);
     int Get(Entity entity, Skill skill);
+    void SetupAllSkills(Entity entity);
+    void Setup(Entity entity, Skill skill);
 }
 
 public class SkillSystem : ISkillSystem
 {
-    public int Get(Entity entity, Skill skill)
-    {
-        return GetSystem(skill).Get(entity);
-    }
-
     public void Set(Entity entity, Skill skill, int value)
     {
         GetSystem(skill).Set(entity, value);
     }
 
-    IEntityTableSystem<int> GetSystem(Skill skill)
+    public int Get(Entity entity, Skill skill)
+    {
+        return GetSystem(skill).Get(entity);
+    }
+
+    public void SetupAllSkills(Entity entity)
+    {
+        foreach (Skill skill in Enum.GetValues(typeof(Skill)))
+            GetSystem(skill).Setup(entity);
+    }
+
+    public void Setup(Entity entity, Skill skill)
+    {
+        GetSystem(skill).Setup(entity);
+    }
+
+    IBaseSkillSystem GetSystem(Skill skill)
     {
         switch (skill)
         {
-            case Skill.Athletics:
-                return IAthleticsSystem.Resolve();
             case Skill.Acrobatics:
                 return IAcrobaticsSystem.Resolve();
             case Skill.Arcana:
                 return IArcanaSystem.Resolve();
+            case Skill.Athletics:
+                return IAthleticsSystem.Resolve();
             case Skill.Crafting:
                 return ICraftingSystem.Resolve();
             case Skill.Deception:

@@ -3,9 +3,9 @@ public partial class Data
     public CoreDictionary<Entity, int> deception = new CoreDictionary<Entity, int>();
 }
 
-
 public interface IDeceptionSystem : IDependency<IDeceptionSystem>, IBaseSkillSystem
 {
+
 }
 
 public class DeceptionSystem : BaseSkillSystem, IDeceptionSystem

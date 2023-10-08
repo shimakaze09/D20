@@ -3,9 +3,9 @@ public partial class Data
     public CoreDictionary<Entity, int> crafting = new CoreDictionary<Entity, int>();
 }
 
-
 public interface ICraftingSystem : IDependency<ICraftingSystem>, IBaseSkillSystem
 {
+
 }
 
 public class CraftingSystem : BaseSkillSystem, ICraftingSystem

@@ -3,9 +3,9 @@ public partial class Data
     public CoreDictionary<Entity, int> acrobatics = new CoreDictionary<Entity, int>();
 }
 
-
 public interface IAcrobaticsSystem : IDependency<IAcrobaticsSystem>, IBaseSkillSystem
 {
+
 }
 
 public class AcrobaticsSystem : BaseSkillSystem, IAcrobaticsSystem

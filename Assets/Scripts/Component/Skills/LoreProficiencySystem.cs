@@ -5,6 +5,7 @@ public partial class Data
 
 public interface ILoreProficiencySystem : IDependency<ILoreProficiencySystem>, IEntityTableSystem<Proficiency>
 {
+
 }
 
 public class LoreProficiencySystem : EntityTableSystem<Proficiency>, ILoreProficiencySystem

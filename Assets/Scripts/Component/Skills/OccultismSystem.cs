@@ -3,9 +3,9 @@ public partial class Data
     public CoreDictionary<Entity, int> occultism = new CoreDictionary<Entity, int>();
 }
 
-
 public interface IOccultismSystem : IDependency<IOccultismSystem>, IBaseSkillSystem
 {
+
 }
 
 public class OccultismSystem : BaseSkillSystem, IOccultismSystem

@@ -6,7 +6,7 @@ public static class Injector
         ComponentInjector.Inject();
         DataInjector.Inject();
         DiceRollInjector.Inject();
-        IEntitySystem.Register(new EntitySystem());
+        EntityInjector.Inject();
         FlowInjector.Inject();
         IGameSystem.Register(new GameSystem());
         SoloAdventureInjector.Inject();

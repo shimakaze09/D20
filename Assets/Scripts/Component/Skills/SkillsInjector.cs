@@ -2,12 +2,12 @@ public static class SkillsInjector
 {
     public static void Inject()
     {
-        IAthleticsProficiencySystem.Register(new AthleticsProficiencySystem());
-        IAthleticsSystem.Register(new AthleticsSystem());
         IAcrobaticsProficiencySystem.Register(new AcrobaticsProficiencySystem());
         IAcrobaticsSystem.Register(new AcrobaticsSystem());
         IArcanaProficiencySystem.Register(new ArcanaProficiencySystem());
         IArcanaSystem.Register(new ArcanaSystem());
+        IAthleticsProficiencySystem.Register(new AthleticsProficiencySystem());
+        IAthleticsSystem.Register(new AthleticsSystem());
         ICraftingProficiencySystem.Register(new CraftingProficiencySystem());
         ICraftingSystem.Register(new CraftingSystem());
         IDeceptionProficiencySystem.Register(new DeceptionProficiencySystem());
@@ -26,8 +26,10 @@ public static class SkillsInjector
         IOccultismSystem.Register(new OccultismSystem());
         IPerformanceProficiencySystem.Register(new PerformanceProficiencySystem());
         IPerformanceSystem.Register(new PerformanceSystem());
+        IProficiencySystem.Register(new ProficiencySystem());
         IReligionProficiencySystem.Register(new ReligionProficiencySystem());
         IReligionSystem.Register(new ReligionSystem());
+        ISkillSystem.Register(new SkillSystem());
         ISocietyProficiencySystem.Register(new SocietyProficiencySystem());
         ISocietySystem.Register(new SocietySystem());
         IStealthProficiencySystem.Register(new StealthProficiencySystem());
@@ -36,7 +38,5 @@ public static class SkillsInjector
         ISurvivalSystem.Register(new SurvivalSystem());
         IThieveryProficiencySystem.Register(new ThieveryProficiencySystem());
         IThieverySystem.Register(new ThieverySystem());
-        IProficiencySystem.Register(new ProficiencySystem());
-        ISkillSystem.Register(new SkillSystem());
     }
 }

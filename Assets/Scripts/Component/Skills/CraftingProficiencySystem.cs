@@ -5,6 +5,7 @@ public partial class Data
 
 public interface ICraftingProficiencySystem : IDependency<ICraftingProficiencySystem>, IEntityTableSystem<Proficiency>
 {
+
 }
 
 public class CraftingProficiencySystem : EntityTableSystem<Proficiency>, ICraftingProficiencySystem
