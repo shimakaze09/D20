@@ -10,10 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3931580013858553733}
   - component: {fileID: -5436670617448426171}
-  - component: {fileID: -8303007700747142816}
-  - component: {fileID: -1870480248808334843}
+  - component: {fileID: 2248320312717218227}
   m_Layer: 0
-  m_Name: Entry_06
+  m_Name: Entry_09
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,30 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf7beb462b76d415e91564974363f4af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "As you continue your adventure you come upon a locked door.  Good thing
-    you took that key from before!  You unlock the door successfully and continue
-    inside.<br> \tIt isn't long before you come across a gaping hole.  You might
-    be able to jump across."
---- !u!114 &-8303007700747142816
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1163405172834001663}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e3f6d498f05f405b99c7b292169c468, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: Jump
-  skill: 2
-  difficultyCheck: 15
-  criticalFailureEntry: Entry_08
-  failureEntry: Entry_09
-  successEntry: Entry_10
-  criticalSuccessEntry: Entry_11
---- !u!114 &-1870480248808334843
+  text: You made a valiant attempt, but sadly did not make it to the other side.
+    If only you were a chicken.
+--- !u!114 &2248320312717218227
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -81,5 +59,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72d5ad610b7164b13af1116b334eadc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Turn back
-  entryName: Entry_03
+  text: Game Over
+  entryName: 
