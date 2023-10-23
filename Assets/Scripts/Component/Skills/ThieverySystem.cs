@@ -19,7 +19,7 @@ public partial struct Entity
 {
     public int Thievery
     {
-        get { return IThieverySystem.Resolve().Get(this); }
-        set { IThieverySystem.Resolve().Set(this, value); }
+        get => IThieverySystem.Resolve().Get(this);
+        set => IThieverySystem.Resolve().Set(this, value);
     }
 }

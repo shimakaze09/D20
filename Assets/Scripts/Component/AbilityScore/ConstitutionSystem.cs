@@ -17,7 +17,7 @@ public partial struct Entity
 {
     public AbilityScore Constitution
     {
-        get { return IConstitutionSystem.Resolve().Get(this); }
-        set { IConstitutionSystem.Resolve().Set(this, value); }
+        get => IConstitutionSystem.Resolve().Get(this);
+        set => IConstitutionSystem.Resolve().Set(this, value);
     }
 }

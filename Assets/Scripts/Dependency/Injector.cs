@@ -11,6 +11,7 @@ public static class Injector
         EntityInjector.Inject();
         FlowInjector.Inject();
         IGameSystem.Register(new GameSystem());
+        IInputSystem.Register(new InputSystem());
         SoloAdventureInjector.Inject();
     }
 }

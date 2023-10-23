@@ -19,7 +19,7 @@ public partial struct Entity
 {
     public int Lore
     {
-        get { return ILoreSystem.Resolve().Get(this); }
-        set { ILoreSystem.Resolve().Set(this, value); }
+        get => ILoreSystem.Resolve().Get(this);
+        set => ILoreSystem.Resolve().Set(this, value);
     }
 }

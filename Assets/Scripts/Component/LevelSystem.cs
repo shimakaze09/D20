@@ -17,7 +17,7 @@ public partial struct Entity
 {
     public int Level
     {
-        get { return ILevelSystem.Resolve().Get(this); }
-        set { ILevelSystem.Resolve().Set(this, value); }
+        get => ILevelSystem.Resolve().Get(this);
+        set => ILevelSystem.Resolve().Set(this, value);
     }
 }

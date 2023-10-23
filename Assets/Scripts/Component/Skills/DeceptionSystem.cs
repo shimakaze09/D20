@@ -19,7 +19,7 @@ public partial struct Entity
 {
     public int Deception
     {
-        get { return IDeceptionSystem.Resolve().Get(this); }
-        set { IDeceptionSystem.Resolve().Set(this, value); }
+        get => IDeceptionSystem.Resolve().Get(this);
+        set => IDeceptionSystem.Resolve().Set(this, value);
     }
 }

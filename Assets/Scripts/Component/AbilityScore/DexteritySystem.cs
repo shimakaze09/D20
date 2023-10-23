@@ -17,7 +17,7 @@ public partial struct Entity
 {
     public AbilityScore Dexterity
     {
-        get { return IDexteritySystem.Resolve().Get(this); }
-        set { IDexteritySystem.Resolve().Set(this, value); }
+        get => IDexteritySystem.Resolve().Get(this);
+        set => IDexteritySystem.Resolve().Set(this, value);
     }
 }

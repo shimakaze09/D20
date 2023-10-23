@@ -19,7 +19,7 @@ public partial struct Entity
 {
     public int Society
     {
-        get { return ISocietySystem.Resolve().Get(this); }
-        set { ISocietySystem.Resolve().Set(this, value); }
+        get => ISocietySystem.Resolve().Get(this);
+        set => ISocietySystem.Resolve().Set(this, value);
     }
 }

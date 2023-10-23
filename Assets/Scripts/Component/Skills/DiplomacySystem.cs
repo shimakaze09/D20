@@ -19,7 +19,7 @@ public partial struct Entity
 {
     public int Diplomacy
     {
-        get { return IDiplomacySystem.Resolve().Get(this); }
-        set { IDiplomacySystem.Resolve().Set(this, value); }
+        get => IDiplomacySystem.Resolve().Get(this);
+        set => IDiplomacySystem.Resolve().Set(this, value);
     }
 }

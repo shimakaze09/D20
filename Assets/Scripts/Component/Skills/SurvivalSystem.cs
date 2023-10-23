@@ -19,7 +19,7 @@ public partial struct Entity
 {
     public int Survival
     {
-        get { return ISurvivalSystem.Resolve().Get(this); }
-        set { ISurvivalSystem.Resolve().Set(this, value); }
+        get => ISurvivalSystem.Resolve().Get(this);
+        set => ISurvivalSystem.Resolve().Set(this, value);
     }
 }

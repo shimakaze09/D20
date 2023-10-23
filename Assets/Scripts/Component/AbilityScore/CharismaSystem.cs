@@ -17,7 +17,7 @@ public partial struct Entity
 {
     public AbilityScore Charisma
     {
-        get { return ICharismaSystem.Resolve().Get(this); }
-        set { ICharismaSystem.Resolve().Set(this, value); }
+        get => ICharismaSystem.Resolve().Get(this);
+        set => ICharismaSystem.Resolve().Set(this, value);
     }
 }

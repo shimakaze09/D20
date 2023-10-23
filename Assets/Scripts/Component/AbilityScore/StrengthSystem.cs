@@ -17,7 +17,7 @@ public partial struct Entity
 {
     public AbilityScore Strength
     {
-        get { return IStrengthSystem.Resolve().Get(this); }
-        set { IStrengthSystem.Resolve().Set(this, value); }
+        get => IStrengthSystem.Resolve().Get(this);
+        set => IStrengthSystem.Resolve().Set(this, value);
     }
 }

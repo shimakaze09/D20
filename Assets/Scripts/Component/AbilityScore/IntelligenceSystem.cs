@@ -17,7 +17,7 @@ public partial struct Entity
 {
     public AbilityScore Intelligence
     {
-        get { return IIntelligenceSystem.Resolve().Get(this); }
-        set { IIntelligenceSystem.Resolve().Set(this, value); }
+        get => IIntelligenceSystem.Resolve().Get(this);
+        set => IIntelligenceSystem.Resolve().Set(this, value);
     }
 }

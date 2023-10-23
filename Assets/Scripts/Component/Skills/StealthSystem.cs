@@ -19,7 +19,7 @@ public partial struct Entity
 {
     public int Stealth
     {
-        get { return IStealthSystem.Resolve().Get(this); }
-        set { IStealthSystem.Resolve().Set(this, value); }
+        get => IStealthSystem.Resolve().Get(this);
+        set => IStealthSystem.Resolve().Set(this, value);
     }
 }

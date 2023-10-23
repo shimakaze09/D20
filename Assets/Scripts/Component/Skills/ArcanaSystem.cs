@@ -19,7 +19,7 @@ public partial struct Entity
 {
     public int Arcana
     {
-        get { return IArcanaSystem.Resolve().Get(this); }
-        set { IArcanaSystem.Resolve().Set(this, value); }
+        get => IArcanaSystem.Resolve().Get(this);
+        set => IArcanaSystem.Resolve().Set(this, value);
     }
 }

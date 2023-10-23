@@ -19,7 +19,7 @@ public partial struct Entity
 {
     public int Occultism
     {
-        get { return IOccultismSystem.Resolve().Get(this); }
-        set { IOccultismSystem.Resolve().Set(this, value); }
+        get => IOccultismSystem.Resolve().Get(this);
+        set => IOccultismSystem.Resolve().Set(this, value);
     }
 }

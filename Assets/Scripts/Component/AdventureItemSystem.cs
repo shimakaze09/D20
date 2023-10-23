@@ -18,7 +18,7 @@ public interface IAdventureItemSystem : IDependency<IAdventureItemSystem>
 
 public class AdventureItemSystem : IAdventureItemSystem
 {
-    private CoreSet<AdventureItem> Items { get { return IDataSystem.Resolve().Data.items; } }
+    private CoreSet<AdventureItem> Items => IDataSystem.Resolve().Data.items;
 
     public void Take(AdventureItem item)
     {

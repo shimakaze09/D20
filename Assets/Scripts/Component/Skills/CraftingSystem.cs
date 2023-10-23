@@ -19,7 +19,7 @@ public partial struct Entity
 {
     public int Crafting
     {
-        get { return ICraftingSystem.Resolve().Get(this); }
-        set { ICraftingSystem.Resolve().Set(this, value); }
+        get => ICraftingSystem.Resolve().Get(this);
+        set => ICraftingSystem.Resolve().Set(this, value);
     }
 }

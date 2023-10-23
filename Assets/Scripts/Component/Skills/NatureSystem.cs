@@ -19,7 +19,7 @@ public partial struct Entity
 {
     public int Nature
     {
-        get { return INatureSystem.Resolve().Get(this); }
-        set { INatureSystem.Resolve().Set(this, value); }
+        get => INatureSystem.Resolve().Get(this);
+        set => INatureSystem.Resolve().Set(this, value);
     }
 }

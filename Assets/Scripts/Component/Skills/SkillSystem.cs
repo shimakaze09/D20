@@ -100,7 +100,7 @@ public partial struct Entity
 {
     public int this[Skill skill]
     {
-        get { return ISkillSystem.Resolve().Get(this, skill); }
-        set { ISkillSystem.Resolve().Set(this, skill, value); }
+        get => ISkillSystem.Resolve().Get(this, skill);
+        set => ISkillSystem.Resolve().Set(this, skill, value);
     }
 }

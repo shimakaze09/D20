@@ -19,7 +19,7 @@ public partial struct Entity
 {
     public int Medicine
     {
-        get { return IMedicineSystem.Resolve().Get(this); }
-        set { IMedicineSystem.Resolve().Set(this, value); }
+        get => IMedicineSystem.Resolve().Get(this);
+        set => IMedicineSystem.Resolve().Set(this, value);
     }
 }

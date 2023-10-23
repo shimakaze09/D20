@@ -19,7 +19,7 @@ public partial struct Entity
 {
     public int Performance
     {
-        get { return IPerformanceSystem.Resolve().Get(this); }
-        set { IPerformanceSystem.Resolve().Set(this, value); }
+        get => IPerformanceSystem.Resolve().Get(this);
+        set => IPerformanceSystem.Resolve().Set(this, value);
     }
 }

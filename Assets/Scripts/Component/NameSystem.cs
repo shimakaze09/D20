@@ -21,7 +21,7 @@ public partial struct Entity
 {
     public string Name
     {
-        get { return INameSystem.Resolve().Get(this); }
-        set { INameSystem.Resolve().Set(this, value); }
+        get => INameSystem.Resolve().Get(this);
+        set => INameSystem.Resolve().Set(this, value);
     }
 }

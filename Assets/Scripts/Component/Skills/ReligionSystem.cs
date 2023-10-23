@@ -19,7 +19,7 @@ public partial struct Entity
 {
     public int Religion
     {
-        get { return IReligionSystem.Resolve().Get(this); }
-        set { IReligionSystem.Resolve().Set(this, value); }
+        get => IReligionSystem.Resolve().Get(this);
+        set => IReligionSystem.Resolve().Set(this, value);
     }
 }

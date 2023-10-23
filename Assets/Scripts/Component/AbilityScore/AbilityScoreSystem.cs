@@ -72,7 +72,7 @@ public partial struct Entity
 {
     public AbilityScore this[AbilityScore.Attribute attribute]
     {
-        get { return IAbilityScoreSystem.Resolve().Get(this, attribute); }
-        set { IAbilityScoreSystem.Resolve().Set(this, attribute, value); }
+        get => IAbilityScoreSystem.Resolve().Get(this, attribute);
+        set => IAbilityScoreSystem.Resolve().Set(this, attribute, value);
     }
 }

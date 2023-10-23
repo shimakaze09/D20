@@ -13,8 +13,8 @@ public interface IEntitySystem : IDependency<IEntitySystem>
 
 public class EntitySystem : IEntitySystem
 {
-    private Data Data { get { return IDataSystem.Resolve().Data; } }
-    private IRandomNumberGenerator RNG { get { return IRandomNumberGenerator.Resolve(); } }
+    private Data Data => IDataSystem.Resolve().Data;
+    private IRandomNumberGenerator RNG => IRandomNumberGenerator.Resolve();
 
     public Entity Create()
     {

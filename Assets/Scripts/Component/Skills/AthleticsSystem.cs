@@ -19,7 +19,7 @@ public partial struct Entity
 {
     public int Athletics
     {
-        get { return IAthleticsSystem.Resolve().Get(this); }
-        set { IAthleticsSystem.Resolve().Set(this, value); }
+        get => IAthleticsSystem.Resolve().Get(this);
+        set => IAthleticsSystem.Resolve().Set(this, value);
     }
 }

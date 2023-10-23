@@ -19,7 +19,7 @@ public partial struct Entity
 {
     public int Acrobatics
     {
-        get { return IAcrobaticsSystem.Resolve().Get(this); }
-        set { IAcrobaticsSystem.Resolve().Set(this, value); }
+        get => IAcrobaticsSystem.Resolve().Get(this);
+        set => IAcrobaticsSystem.Resolve().Set(this, value);
     }
 }

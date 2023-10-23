@@ -15,8 +15,8 @@ public class SoloHeroSystem : ISoloHeroSystem
 {
     public Entity Hero
     {
-        get { return IDataSystem.Resolve().Data.hero; }
-        private set { IDataSystem.Resolve().Data.hero = value; }
+        get => IDataSystem.Resolve().Data.hero;
+        private set => IDataSystem.Resolve().Data.hero = value;
     }
 
     public async UniTask CreateHero()
