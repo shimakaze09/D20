@@ -52,7 +52,7 @@ public class SkillSystem : ISkillSystem
         GetSystem(skill).Setup(entity);
     }
 
-    IBaseSkillSystem GetSystem(Skill skill)
+    private IBaseSkillSystem GetSystem(Skill skill)
     {
         switch (skill)
         {

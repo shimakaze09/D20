@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class AbilityScoresProvider : MonoBehaviour, IAttributeProvider
 {
-    [SerializeField] int strength;
-    [SerializeField] int dexterity;
-    [SerializeField] int constitution;
-    [SerializeField] int intelligence;
-    [SerializeField] int wisdom;
-    [SerializeField] int charisma;
+    [SerializeField] private int strength;
+    [SerializeField] private int dexterity;
+    [SerializeField] private int constitution;
+    [SerializeField] private int intelligence;
+    [SerializeField] private int wisdom;
+    [SerializeField] private int charisma;
 
     public void Setup(Entity entity)
     {

@@ -183,7 +183,8 @@ public class Tween
 	#endregion
 
 	#region Private
-	async UniTask<float> Tick(CancellationToken cancellationToken)
+
+	private async UniTask<float> Tick(CancellationToken cancellationToken)
 	{
 		float frameTime = 0;
 		switch (timeType)
@@ -204,7 +205,7 @@ public class Tween
 		return frameTime;
 	}
 
-	bool Progress(float time)
+	private bool Progress(float time)
 	{
 		bool finished = false;
 		if (direction == Direction.Forward)

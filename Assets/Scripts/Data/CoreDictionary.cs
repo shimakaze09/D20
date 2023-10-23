@@ -6,9 +6,9 @@ using System.Runtime.Serialization;
 [System.Serializable]
 public class CoreDictionary<TKey, TValue> : ISerializationCallbackReceiver, ICollection<KeyValuePair<TKey, TValue>>, IEnumerable<KeyValuePair<TKey, TValue>>, IEnumerable, IDictionary<TKey, TValue>, IReadOnlyCollection<KeyValuePair<TKey, TValue>>, IReadOnlyDictionary<TKey, TValue>, ICollection, IDictionary, IDeserializationCallback, ISerializable
 {
-    [SerializeField] List<TKey> keys = new List<TKey>();
-    [SerializeField] List<TValue> values = new List<TValue>();
-    Dictionary<TKey, TValue> dictionary = new Dictionary<TKey, TValue>();
+    [SerializeField] private List<TKey> keys = new List<TKey>();
+    [SerializeField] private List<TValue> values = new List<TValue>();
+    private Dictionary<TKey, TValue> dictionary = new Dictionary<TKey, TValue>();
 
     public void OnAfterDeserialize()
     {

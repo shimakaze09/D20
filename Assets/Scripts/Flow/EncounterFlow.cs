@@ -15,14 +15,14 @@ public class EncounterFlow : IEncounterFlow
         await Exit(encounter, combatResult);
     }
 
-    async UniTask<IEncounter> Enter()
+    private async UniTask<IEncounter> Enter()
     {
         await SceneManager.LoadSceneAsync("Encounter");
         var asset = await IEncounterAssetSystem.Resolve().Load();
         return asset;
     }
 
-    async UniTask<CombatResult> Loop()
+    private async UniTask<CombatResult> Loop()
     {
         CombatResult? combatResult = null;
         while (!combatResult.HasValue)
@@ -33,7 +33,7 @@ public class EncounterFlow : IEncounterFlow
         return combatResult.Value;
     }
 
-    async UniTask Exit(IEncounter asset, CombatResult result)
+    private async UniTask Exit(IEncounter asset, CombatResult result)
     {
         switch (result)
         {

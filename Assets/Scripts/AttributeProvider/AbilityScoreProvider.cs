@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class AbilityScoreProvider : MonoBehaviour, IAttributeProvider
 {
-    [SerializeField] AbilityScore.Attribute attribute;
-    [SerializeField] int value;
+    [SerializeField] private AbilityScore.Attribute attribute;
+    [SerializeField] private int value;
 
     public void Setup(Entity entity)
     {

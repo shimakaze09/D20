@@ -3,9 +3,9 @@ using Cysharp.Threading.Tasks;
 
 public class PickupEntryLink : MonoBehaviour, IEntryLink
 {
-    [SerializeField] AdventureItem item;
-    [SerializeField] string takeMessage;
-    [SerializeField] string dropMessage;
+    [SerializeField] private AdventureItem item;
+    [SerializeField] private string takeMessage;
+    [SerializeField] private string dropMessage;
 
     public async UniTask Select(string link)
     {

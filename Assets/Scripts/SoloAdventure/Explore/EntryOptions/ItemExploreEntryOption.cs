@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class ItemExploreEntryOption : MonoBehaviour, IEntryOption
 {
-    [SerializeField] string text;
-    [SerializeField] AdventureItem item;
-    [SerializeField] string hasItemEntry;
-    [SerializeField] string noItemEntry;
+    [SerializeField] private string text;
+    [SerializeField] private AdventureItem item;
+    [SerializeField] private string hasItemEntry;
+    [SerializeField] private string noItemEntry;
 
     public string Text
     {

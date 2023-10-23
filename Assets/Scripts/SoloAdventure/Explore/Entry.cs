@@ -11,7 +11,7 @@ public interface IEntry
 public class Entry : MonoBehaviour, IEntry
 {
     public string Text { get { return text; } }
-    [SerializeField] string text;
+    [SerializeField] private string text;
 
     public IEntryOption[] Options
     {

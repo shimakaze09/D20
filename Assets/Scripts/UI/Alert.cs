@@ -10,9 +10,9 @@ public interface IAlert : IDependency<IAlert>
 
 public class Alert : MonoBehaviour, IAlert
 {
-    [SerializeField] RectTransform rootPanel;
-    [SerializeField] TextMeshProUGUI label;
-    [SerializeField] Button button;
+    [SerializeField] private RectTransform rootPanel;
+    [SerializeField] private TextMeshProUGUI label;
+    [SerializeField] private Button button;
 
     public async UniTask Show(string message)
     {

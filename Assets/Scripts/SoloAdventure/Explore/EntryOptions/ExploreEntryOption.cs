@@ -3,8 +3,8 @@ using UnityEngine;
 public class ExploreEntryOption : MonoBehaviour, IEntryOption
 {
     public string Text { get { return text; } }
-    [SerializeField] string text;
-    [SerializeField] string entryName;    
+    [SerializeField] private string text;
+    [SerializeField] private string entryName;    
 
     public void Select()
     {

@@ -18,7 +18,7 @@ public class EncounterAssetSystem : IEncounterAssetSystem
     public async UniTask<IEncounter> Load(string encounterName)
     {
         var assetManager = IAssetManager<GameObject>.Resolve();
-        var key = string.Format("Assets/Objects/Encounters/{0}.prefab", encounterName);
+        var key = $"Assets/Objects/Encounters/{encounterName}.prefab";
         var prefab = await assetManager.LoadAssetAsync(key);
         return prefab.GetComponent<Encounter>();
     }

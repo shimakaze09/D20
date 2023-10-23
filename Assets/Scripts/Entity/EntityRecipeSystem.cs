@@ -12,7 +12,7 @@ public class EntityRecipeSystem : IEntityRecipeSystem
     {
         var entity = IEntitySystem.Resolve().Create();
         var assetManager = IAssetManager<GameObject>.Resolve();
-        var key = string.Format("Assets/Objects/EntityRecipe/{0}.prefab", assetName);
+        var key = $"Assets/Objects/EntityRecipe/{assetName}.prefab";
         var prefab = await assetManager.LoadAssetAsync(key);
         var providers = prefab.GetComponents<IAttributeProvider>();
         for (int i = 0; i < providers.Length; ++i)

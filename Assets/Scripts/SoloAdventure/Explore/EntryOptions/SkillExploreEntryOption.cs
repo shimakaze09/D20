@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class SkillExploreEntryOption : MonoBehaviour, IEntryOption
 {
-    [SerializeField] string text;
-    [SerializeField] Skill skill;
-    [SerializeField] int difficultyCheck;
-    [SerializeField] string criticalFailureEntry;
-    [SerializeField] string failureEntry;
-    [SerializeField] string successEntry;
-    [SerializeField] string criticalSuccessEntry;
+    [SerializeField] private string text;
+    [SerializeField] private Skill skill;
+    [SerializeField] private int difficultyCheck;
+    [SerializeField] private string criticalFailureEntry;
+    [SerializeField] private string failureEntry;
+    [SerializeField] private string successEntry;
+    [SerializeField] private string criticalSuccessEntry;
 
     public string Text
     {
@@ -24,7 +24,7 @@ public class SkillExploreEntryOption : MonoBehaviour, IEntryOption
         IEntrySystem.Resolve().SetName(entry);
     }
 
-    string GetEntry(Check result)
+    private string GetEntry(Check result)
     {
         switch (result)
         {

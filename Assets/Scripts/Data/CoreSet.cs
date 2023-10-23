@@ -6,8 +6,8 @@ using UnityEngine;
 [System.Serializable]
 public class CoreSet<T> : ISerializationCallbackReceiver, ICollection<T>, IEnumerable<T>, IEnumerable, IReadOnlyCollection<T>, ISet<T>, IDeserializationCallback, ISerializable
 {
-    [SerializeField] List<T> values = new List<T>();
-    HashSet<T> set = new HashSet<T>();
+    [SerializeField] private List<T> values = new List<T>();
+    private HashSet<T> set = new HashSet<T>();
 
     public void OnAfterDeserialize()
     {

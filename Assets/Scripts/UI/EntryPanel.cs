@@ -17,11 +17,11 @@ public interface IEntryPanel : IDependency<IEntryPanel>
 
 public class EntryPanel : MonoBehaviour, IEntryPanel
 {
-    [SerializeField] CanvasGroup canvasGroup;
-    [SerializeField] TextMeshProUGUI entryText;
-    [SerializeField] List<GameObject> entryOptions;
+    [SerializeField] private CanvasGroup canvasGroup;
+    [SerializeField] private TextMeshProUGUI entryText;
+    [SerializeField] private List<GameObject> entryOptions;
 
-    const float transitionTime = 0.25f;
+    private const float transitionTime = 0.25f;
 
     public void Setup(IEntry entry)
     {
@@ -82,7 +82,7 @@ public class EntryPanel : MonoBehaviour, IEntryPanel
             .Play(this.GetCancellationTokenOnDestroy());
     }
 
-    async UniTask Press(Button button, CancellationToken token)
+    private async UniTask Press(Button button, CancellationToken token)
     {
         using (var handler = button.GetAsyncClickEventHandler(token))
         {
