@@ -10,10 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7306725236790569782}
   - component: {fileID: 4173060103062537175}
-  - component: {fileID: 6361157243940767651}
   - component: {fileID: 311446153244279440}
   m_Layer: 0
-  m_Name: Entry_02
+  m_Name: Entry_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,23 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf7beb462b76d415e91564974363f4af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: It looks like there is a monster up ahead.  Kill or be killed.  Or I supposed
-    you could run away...<br> * Click "Fight" to start a combat encounter.<br> *
-    Click "Run Away" to skip the fight and demo branching options.
---- !u!114 &6361157243940767651
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8058775435386504315}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a011fcadd16b4c9b8cdcedccfdde745, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: Fight
-  encounterName: Encounter_01
+  text: "You actually died? I\u2019m sure you\u2019re probably blaming unlucky rolls
+    right now. Just accept that you need to do better and try another round of the
+    game."
 --- !u!114 &311446153244279440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75,5 +60,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72d5ad610b7164b13af1116b334eadc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Run Away
-  entryName: Entry_03
+  text: Game Over
+  entryName: 

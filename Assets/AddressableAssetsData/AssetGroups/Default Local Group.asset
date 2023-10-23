@@ -61,6 +61,14 @@ MonoBehaviour:
     m_Address: Assets/Objects/Entries/Entry_11.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 709a7198790484cbfacbe3f9ff60a94a
+    m_Address: Assets/Objects/Entries/Entry_04.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f33f26efe01464d8785539c839886806
+    m_Address: Assets/Objects/Encounters/Encounter_01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: f21cd9db5c79a4075b9bbf8e245e552f, type: 2}
   m_SchemaSet:

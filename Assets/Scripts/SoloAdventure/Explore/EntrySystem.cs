@@ -14,6 +14,8 @@ public class EntrySystem : IEntrySystem
     public void SetName(string name)
     {
         IDataSystem.Resolve().Data.entryName = name;
+        if (!string.IsNullOrEmpty(name))
+            IEncounterSystem.Resolve().SetName(string.Empty);
     }
 
     public string GetName()

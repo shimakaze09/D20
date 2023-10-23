@@ -4,6 +4,7 @@ public static class Injector
     {
         ActionInjector.Inject();
         AssetManagerInjector.Inject();
+        CombatInjector.Inject();
         ComponentInjector.Inject();
         DataInjector.Inject();
         DiceRollInjector.Inject();
