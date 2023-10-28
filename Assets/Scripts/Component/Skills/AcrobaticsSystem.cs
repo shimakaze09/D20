@@ -1,18 +1,22 @@
 public partial class Data
 {
-    public CoreDictionary<Entity, int> acrobatics = new CoreDictionary<Entity, int>();
+    public CoreDictionary<Entity, int> acrobatics = new();
 }
 
-public interface IAcrobaticsSystem : IDependency<IAcrobaticsSystem>, IBaseSkillSystem
+public interface IAcrobaticsSystem : IDependency<IAcrobaticsSystem>,
+    IBaseSkillSystem
 {
-
 }
 
 public class AcrobaticsSystem : BaseSkillSystem, IAcrobaticsSystem
 {
-    public override CoreDictionary<Entity, int> Table => IDataSystem.Resolve().Data.acrobatics;
+    public override CoreDictionary<Entity, int> Table =>
+        IDataSystem.Resolve().Data.acrobatics;
+
     protected override Skill Skill => Skill.Acrobatics;
-    protected override AbilityScore.Attribute Attribute => AbilityScore.Attribute.Dexterity;
+
+    protected override AbilityScore.Attribute Attribute =>
+        AbilityScore.Attribute.Dexterity;
 }
 
 public partial struct Entity

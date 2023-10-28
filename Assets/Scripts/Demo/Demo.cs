@@ -1,18 +1,22 @@
-﻿using UnityEngine;
+using UnityEngine;
+
 public class Demo : MonoBehaviour
 {
-    [SerializeField] GameObject heroCombatant;
+    [SerializeField] private GameObject heroCombatant;
+
     private void Start()
     {
         AssociateHero();
         new SomeOtherClass().DamageHero();
     }
-    void AssociateHero()
+
+    private void AssociateHero()
     {
         var hero = ISoloHeroSystem.Resolve().Hero;
         hero.SetView(heroCombatant, ViewZone.Combatant);
     }
 }
+
 public class SomeOtherClass
 {
     public void DamageHero()

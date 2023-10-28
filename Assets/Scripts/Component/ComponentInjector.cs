@@ -6,6 +6,7 @@ public static class ComponentInjector
         IAdventureItemSystem.Register(new AdventureItemSystem());
         ILevelSystem.Register(new LevelSystem());
         INameSystem.Register(new NameSystem());
+        IPositionSystem.Register(new PositionSystem());
         SkillsInjector.Inject();
     }
 }

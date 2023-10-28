@@ -58,7 +58,7 @@ public static class AnchorExtensions
                 return new Vector2(0.5f, 0);
             case Anchor.StretchRight:
                 return new Vector2(1, 0);
-            default:// Anchor.StretchStretch:
+            default: // Anchor.StretchStretch:
                 return new Vector2(0, 0);
         }
     }
@@ -89,7 +89,8 @@ public static class AnchorExtensions
 
 public static class RectTransformAnchorExtensions
 {
-    public static void SetAnchor(this RectTransform rectTransform, Anchor anchor)
+    public static void SetAnchor(this RectTransform rectTransform,
+        Anchor anchor)
     {
         rectTransform.anchorMin = anchor.Min();
         rectTransform.anchorMax = anchor.Max();

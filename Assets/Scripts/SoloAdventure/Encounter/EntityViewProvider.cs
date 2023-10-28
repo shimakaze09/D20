@@ -1,4 +1,3 @@
-﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,9 +14,9 @@ public interface IEntityViewProvider : IDependency<IEntityViewProvider>
 
 public class EntityViewProvider : MonoBehaviour, IEntityViewProvider
 {
-    private Dictionary<ViewZone, Dictionary<Entity, GameObject>> mapping =
-        new Dictionary<ViewZone, Dictionary<Entity, GameObject>>();
-    
+    private Dictionary<ViewZone, Dictionary<Entity, GameObject>>
+        mapping = new();
+
     public GameObject GetView(Entity entity, ViewZone zone)
     {
         if (!mapping.ContainsKey(zone))

@@ -1,18 +1,22 @@
 public partial class Data
 {
-    public CoreDictionary<Entity, int> survival = new CoreDictionary<Entity, int>();
+    public CoreDictionary<Entity, int> survival = new();
 }
 
-public interface ISurvivalSystem : IDependency<ISurvivalSystem>, IBaseSkillSystem
+public interface ISurvivalSystem : IDependency<ISurvivalSystem>,
+    IBaseSkillSystem
 {
-
 }
 
 public class SurvivalSystem : BaseSkillSystem, ISurvivalSystem
 {
-    public override CoreDictionary<Entity, int> Table => IDataSystem.Resolve().Data.survival;
+    public override CoreDictionary<Entity, int> Table =>
+        IDataSystem.Resolve().Data.survival;
+
     protected override Skill Skill => Skill.Survival;
-    protected override AbilityScore.Attribute Attribute => AbilityScore.Attribute.Wisdom;
+
+    protected override AbilityScore.Attribute Attribute =>
+        AbilityScore.Attribute.Wisdom;
 }
 
 public partial struct Entity

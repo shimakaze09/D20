@@ -8,9 +8,9 @@ public interface IEncounter
 
 public class Encounter : MonoBehaviour, IEncounter
 {
-    public string VictoryEntry { get { return victoryEntry; } }
+    public string VictoryEntry => victoryEntry;
     [SerializeField] private string victoryEntry;
 
-    public string DefeatEntry { get { return defeatEntry; } }
+    public string DefeatEntry => defeatEntry;
     [SerializeField] private string defeatEntry;
 }

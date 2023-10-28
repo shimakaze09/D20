@@ -53,7 +53,8 @@ public class CombatantViewSystem : ICombatantViewSystem
         animator.CrossFade(hash, 0);
     }
 
-    public async UniTask PlayAnimation(CombatantView view, CombatantAnimation animation)
+    public async UniTask PlayAnimation(CombatantView view,
+        CombatantAnimation animation)
     {
         var hash = HashForState(animation);
         var animator = view.avatar.GetComponent<Animator>();

@@ -18,14 +18,20 @@ public class Alert : MonoBehaviour, IAlert
     {
         // Configure and show the alert
         label.text = message;
-        await rootPanel.ScaleTo(Vector3.one, 0.25f, EasingEquations.EaseOutBack).Play();
+        await rootPanel.ScaleTo(Vector3.one, 0.25f, EasingEquations.EaseOutBack)
+            .Play();
 
         // Wait for user to click Ok
-        using (var handler = button.GetAsyncClickEventHandler(this.GetCancellationTokenOnDestroy()))
+        using (var handler =
+               button.GetAsyncClickEventHandler(
+                   this.GetCancellationTokenOnDestroy()))
+        {
             await handler.OnClickAsync();
+        }
 
         // dismiss the alert
-        await rootPanel.ScaleTo(Vector3.zero, 0.25f, EasingEquations.EaseInBack).Play();
+        await rootPanel.ScaleTo(Vector3.zero, 0.25f, EasingEquations.EaseInBack)
+            .Play();
     }
 
     private void OnEnable()

@@ -9,9 +9,10 @@ public class DiceRollSystem : IDiceRollSystem
 {
     public int Roll(DiceRoll diceRoll)
     {
-        int result = diceRoll.bonus;
-        for (int i = 0; i < diceRoll.count; i++)
-            result += IRandomNumberGenerator.Resolve().Range(1, diceRoll.sides + 1);
+        var result = diceRoll.bonus;
+        for (var i = 0; i < diceRoll.count; i++)
+            result += IRandomNumberGenerator.Resolve()
+                .Range(1, diceRoll.sides + 1);
         return result;
     }
 }

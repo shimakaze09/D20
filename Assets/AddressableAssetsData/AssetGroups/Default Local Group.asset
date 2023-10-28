@@ -69,6 +69,10 @@ MonoBehaviour:
     m_Address: Assets/Objects/Encounters/Encounter_01.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 37ac1ae34ffb34af8903a452a0e35fa0
+    m_Address: Assets/Objects/CombatAction/Stride.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: f21cd9db5c79a4075b9bbf8e245e552f, type: 2}
   m_SchemaSet:

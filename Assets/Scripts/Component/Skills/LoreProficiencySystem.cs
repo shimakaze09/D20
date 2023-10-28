@@ -1,14 +1,16 @@
 public partial class Data
 {
-    public CoreDictionary<Entity, Proficiency> loreProficiency = new CoreDictionary<Entity, Proficiency>();
+    public CoreDictionary<Entity, Proficiency> loreProficiency = new();
 }
 
-public interface ILoreProficiencySystem : IDependency<ILoreProficiencySystem>, IEntityTableSystem<Proficiency>
+public interface ILoreProficiencySystem : IDependency<ILoreProficiencySystem>,
+    IEntityTableSystem<Proficiency>
 {
-
 }
 
-public class LoreProficiencySystem : EntityTableSystem<Proficiency>, ILoreProficiencySystem
+public class LoreProficiencySystem : EntityTableSystem<Proficiency>,
+    ILoreProficiencySystem
 {
-    public override CoreDictionary<Entity, Proficiency> Table => IDataSystem.Resolve().Data.loreProficiency;
+    public override CoreDictionary<Entity, Proficiency> Table =>
+        IDataSystem.Resolve().Data.loreProficiency;
 }

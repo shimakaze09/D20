@@ -26,7 +26,7 @@ public class MainMenu : MonoBehaviour, IMainMenu
     [SerializeField] private Layout onscreen;
     [SerializeField] private Button continueButton;
     [SerializeField] private Button newGameButton;
-    private CancellationTokenSource cts = new CancellationTokenSource();
+    private CancellationTokenSource cts = new();
 
     public void Setup(bool hasSavedGame)
     {
@@ -45,7 +45,7 @@ public class MainMenu : MonoBehaviour, IMainMenu
         var result = await UniTask.WhenAny(
             Press(newGameButton),
             Press(continueButton)
-            );
+        );
         return (MainMenuOption)result;
     }
 
@@ -81,7 +81,9 @@ public class MainMenu : MonoBehaviour, IMainMenu
 
     private async UniTask Press(Button button)
     {
-        using (var handler = button.GetAsyncClickEventHandler(this.GetCancellationTokenOnDestroy()))
+        using (var handler =
+               button.GetAsyncClickEventHandler(
+                   this.GetCancellationTokenOnDestroy()))
         {
             await handler.OnClickAsync();
         }

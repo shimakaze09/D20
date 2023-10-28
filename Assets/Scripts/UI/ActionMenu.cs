@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,23 +13,25 @@ public interface IActionMenu : IDependency<IActionMenu>
     UniTask TransitionOut();
 }
 
-public class ActionMenu : MonoBehaviour,IActionMenu
+public class ActionMenu : MonoBehaviour, IActionMenu
 {
-    [SerializeField] RectTransform rootPanel;
-    [SerializeField] List<Button> buttons;
-    [SerializeField] Layout onScreen;
-    [SerializeField] Layout offScreen;
-
+    [SerializeField] private RectTransform rootPanel;
+    [SerializeField] private List<Button> buttons;
+    [SerializeField] private Layout onScreen;
+    [SerializeField] private Layout offScreen;
     private Entity entity;
     private int selection;
     private int menuCount;
-    
+
     public async UniTask Setup()
     {
         selection = 0;
         buttons[0].Select();
-        entity = ISoloHeroSystem.Resolve().Hero; // TODO: Get the "current" entity from a "turn" system
-        var pairs = buttons.Zip(entity.EncounterActions, (Button button, string action) => (button, action));
+        entity =
+            ISoloHeroSystem.Resolve()
+                .Hero; // TODO: Get the "current" entity from a "turn" system
+        var pairs = buttons.Zip(entity.EncounterActions,
+            (Button button, string action) => (button, action));
         foreach (var pair in pairs)
         {
             var label = pair.button.GetComponentInChildren<TextMeshProUGUI>();
@@ -52,11 +53,11 @@ public class ActionMenu : MonoBehaviour,IActionMenu
         while (true)
         {
             await UniTask.NextFrame();
-            if(input.GetKeyUp(InputAction.Confirm))
+            if (input.GetKeyUp(InputAction.Confirm))
                 break;
 
             var offset = -input.GetAxisUp(InputAxis.Vertical);
-            if(offset==0)
+            if (offset == 0)
                 continue;
 
             selection = (selection + offset + menuCount) % menuCount;
@@ -81,4 +82,3 @@ public class ActionMenu : MonoBehaviour,IActionMenu
         IActionMenu.Reset();
     }
 }
-

@@ -10,9 +10,10 @@ public interface IAssetManager<T> : IDependency<IAssetManager<T>>
     UniTask<T> LoadAssetAsync(string key);
 }
 
-public abstract class AssetManager<T> : MonoBehaviour, IAssetManager<T> where T : Object
+public abstract class AssetManager<T> : MonoBehaviour, IAssetManager<T>
+    where T : Object
 {
-    private Dictionary<string, AsyncOperationHandle<T>> assetMap = new Dictionary<string, AsyncOperationHandle<T>>();
+    private Dictionary<string, AsyncOperationHandle<T>> assetMap = new();
 
     public async UniTask<T> InstantiateAsync(string key)
     {

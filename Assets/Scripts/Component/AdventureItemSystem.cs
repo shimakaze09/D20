@@ -6,7 +6,7 @@ public enum AdventureItem
 
 public partial class Data
 {
-    public CoreSet<AdventureItem> items = new CoreSet<AdventureItem>();
+    public CoreSet<AdventureItem> items = new();
 }
 
 public interface IAdventureItemSystem : IDependency<IAdventureItemSystem>

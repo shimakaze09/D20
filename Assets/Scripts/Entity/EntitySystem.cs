@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 public partial class Data
 {
-    public CoreSet<Entity> entities = new CoreSet<Entity>();
+    public CoreSet<Entity> entities = new();
 }
 
 public interface IEntitySystem : IDependency<IEntitySystem>
@@ -22,8 +22,8 @@ public class EntitySystem : IEntitySystem
         do
         {
             result = new Entity(RNG.Range(int.MinValue, int.MaxValue));
-        }
-        while (result.id == 0 || Data.entities.Contains(result));
+        } while (result.id == 0 || Data.entities.Contains(result));
+
         Data.entities.Add(result);
         return result;
     }

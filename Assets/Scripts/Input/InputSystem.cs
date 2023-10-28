@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 public enum InputAxis
 {
@@ -12,7 +12,7 @@ public enum InputAction
     Cancel
 }
 
-public interface IInputSystem: IDependency<IInputSystem>
+public interface IInputSystem : IDependency<IInputSystem>
 {
     int GetAxisUp(InputAxis axis);
     bool GetKeyUp(InputAction action);
@@ -43,7 +43,7 @@ public class InputSystem : IInputSystem
 
     public bool GetKeyUp(InputAction action)
     {
-        switch (action) 
+        switch (action)
         {
             case InputAction.Confirm:
                 return Input.GetKeyUp(KeyCode.Return);

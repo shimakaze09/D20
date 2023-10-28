@@ -29,7 +29,8 @@ public class EntryPanel : MonoBehaviour, IEntryPanel
         entryText.text = entry.Text;
 
         // Setup buttons for entry options
-        var pairs = entryOptions.Zip(entry.Options, (GameObject view, IEntryOption data) => (view, data));
+        var pairs = entryOptions.Zip(entry.Options,
+            (GameObject view, IEntryOption data) => (view, data));
         foreach (var pair in pairs)
         {
             pair.view.SetActive(true);
@@ -38,7 +39,7 @@ public class EntryPanel : MonoBehaviour, IEntryPanel
         }
 
         // Hide any unused buttons
-        for (int i = pairs.Count(); i < entryOptions.Count; ++i)
+        for (var i = pairs.Count(); i < entryOptions.Count; ++i)
             entryOptions[i].SetActive(false);
     }
 
@@ -51,8 +52,8 @@ public class EntryPanel : MonoBehaviour, IEntryPanel
 
     public async UniTask<int> SelectMenuOption(CancellationToken token)
     {
-        List<UniTask> tasks = new List<UniTask>(entryOptions.Count);
-        for (int i = 0; i < entryOptions.Count; ++i)
+        var tasks = new List<UniTask>(entryOptions.Count);
+        for (var i = 0; i < entryOptions.Count; ++i)
         {
             if (!entryOptions[i].activeSelf)
                 break;
@@ -60,6 +61,7 @@ public class EntryPanel : MonoBehaviour, IEntryPanel
             var task = Press(button, token);
             tasks.Add(task);
         }
+
         var result = await UniTask.WhenAny(tasks);
         return result;
     }
@@ -67,11 +69,12 @@ public class EntryPanel : MonoBehaviour, IEntryPanel
     public async UniTask<string> SelectLink(CancellationToken token)
     {
         var linkOpener = entryText.GetComponent<LinkOpener>();
-        string result = "";
+        var result = "";
         using (var handler = linkOpener.onClick.GetAsyncEventHandler(token))
         {
             result = await handler.OnInvokeAsync();
         }
+
         return result;
     }
 

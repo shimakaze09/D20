@@ -3,11 +3,11 @@ using System.Collections;
 
 public class TransformLocalPositionTween : Vector3Tween
 {
-	public Transform transform;
+    public Transform transform;
 
-	protected override void OnUpdate()
-	{
-		base.OnUpdate();
-		transform.localPosition = currentTweenValue;
-	}
+    protected override void OnUpdate()
+    {
+        base.OnUpdate();
+        transform.localPosition = currentTweenValue;
+    }
 }

@@ -30,6 +30,7 @@ public class EncounterFlow : IEncounterFlow
             await UniTask.NextFrame();
             combatResult = await IHeroActionFlow.Resolve().Play();
         }
+
         return combatResult.Value;
     }
 
@@ -44,6 +45,7 @@ public class EncounterFlow : IEncounterFlow
                 IEntrySystem.Resolve().SetName(asset.DefeatEntry);
                 break;
         }
+
         await UniTask.CompletedTask;
     }
 }

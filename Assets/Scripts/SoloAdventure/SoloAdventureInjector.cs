@@ -2,9 +2,11 @@ public static class SoloAdventureInjector
 {
     public static void Inject()
     {
-        IEncounterSystem.Register(new EncounterSystem());
+        ICombatantViewSystem.Register(new CombatantViewSystem());
         IEncounterActionsSystem.Register(new EncounterActionsSystem());
+        IEncounterSystem.Register(new EncounterSystem());
         IEntrySystem.Register(new EntrySystem());
+        IPositionSelectionSystem.Register(new PositionSelectionSystem());
         ISoloHeroSystem.Register(new SoloHeroSystem());
     }
 }
