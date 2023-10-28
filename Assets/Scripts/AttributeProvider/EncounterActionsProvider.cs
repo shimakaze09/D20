@@ -7,6 +7,6 @@ public class EncounterActionsProvider : MonoBehaviour, IAttributeProvider
 
     public void Setup(Entity entity)
     {
-        entity.EncounterActions = value;
+        entity.EncounterActions = new EncounterActions(value);
     }
 }

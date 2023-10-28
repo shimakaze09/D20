@@ -3,7 +3,7 @@ public partial struct Entity
 {
     public static readonly Entity None = new(0);
 
-    public readonly int id;
+    public int id;
 
     public Entity(int id)
     {

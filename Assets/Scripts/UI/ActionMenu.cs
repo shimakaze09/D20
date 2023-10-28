@@ -30,7 +30,7 @@ public class ActionMenu : MonoBehaviour, IActionMenu
         entity =
             ISoloHeroSystem.Resolve()
                 .Hero; // TODO: Get the "current" entity from a "turn" system
-        var pairs = buttons.Zip(entity.EncounterActions,
+        var pairs = buttons.Zip(entity.EncounterActions.names,
             (Button button, string action) => (button, action));
         foreach (var pair in pairs)
         {
@@ -64,7 +64,7 @@ public class ActionMenu : MonoBehaviour, IActionMenu
             buttons[selection].Select();
         }
 
-        return entity.EncounterActions[selection];
+        return entity.EncounterActions.names[selection];
     }
 
     public async UniTask TransitionOut()

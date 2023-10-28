@@ -73,6 +73,18 @@ MonoBehaviour:
     m_Address: Assets/Objects/CombatAction/Stride.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 0fd4428486fc34271990db041432b868
+    m_Address: Assets/Objects/EntityRecipe/Rat.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e42270f57d32f48b1a416f50cfb19180
+    m_Address: Assets/Prefabs/Combatants/Monsters/Rat.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 729a4707701d149ce8fec6d93c216116
+    m_Address: Assets/Prefabs/Combatants/Heroes/Warrior.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: f21cd9db5c79a4075b9bbf8e245e552f, type: 2}
   m_SchemaSet:
