@@ -8,7 +8,7 @@ public class MockSequenceRNG : IRandomNumberGenerator
     public MockSequenceRNG(params int[] values)
     {
         this.values = new Queue<int>(values);
-        this.fallback = 0;
+        fallback = 0;
     }
 
     public int Range(int minInclusive, int maxExclusive)

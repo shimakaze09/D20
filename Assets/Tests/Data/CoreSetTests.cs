@@ -3,12 +3,12 @@ using UnityEngine;
 
 public class CoreSetTests
 {
-    const string json = "{\"values\":[1]}";
+    private const string json = "{\"values\":[1]}";
 
     [Test]
     public void Add_And_Remove_Success()
     {
-        CoreSet<int> sut = new CoreSet<int>();
+        var sut = new CoreSet<int>();
         sut.Add(42);
         Assert.AreEqual(1, sut.Count);
         Assert.True(sut.Contains(42));
@@ -20,7 +20,7 @@ public class CoreSetTests
     [Test]
     public void Add_Duplicate_IsIgnored()
     {
-        CoreSet<int> sut = new CoreSet<int>();
+        var sut = new CoreSet<int>();
         sut.Add(1);
         sut.Add(1); // duplicate
         sut.Add(2);
@@ -31,7 +31,7 @@ public class CoreSetTests
     [Test]
     public void JsonUtility_Serialization_Success()
     {
-        CoreSet<int> sut = new CoreSet<int>();
+        var sut = new CoreSet<int>();
         sut.Add(1);
         var result = JsonUtility.ToJson(sut);
         Assert.AreEqual(json, result);
@@ -40,7 +40,7 @@ public class CoreSetTests
     [Test]
     public void JsonUtility_Deserialization_Success()
     {
-        CoreSet<int> sut = new CoreSet<int>();
+        var sut = new CoreSet<int>();
         JsonUtility.FromJsonOverwrite(json, sut);
         Assert.AreEqual(1, sut.Count);
         Assert.True(sut.Contains(1));

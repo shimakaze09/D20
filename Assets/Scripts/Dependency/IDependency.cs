@@ -21,12 +21,12 @@ public interface IDependency<T>
 
     public static void Register(T entity)
     {
-        Register(delegate { return entity; });
+        Register(() => entity);
     }
 
     public static void Register<U>() where U : T, new()
     {
-        Register(delegate { return new U(); });
+        Register(() => new U());
     }
 
     public static void RegisterPool<U>() where U : T, new()

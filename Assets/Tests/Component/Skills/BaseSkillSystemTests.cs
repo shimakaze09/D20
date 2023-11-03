@@ -26,11 +26,13 @@ public class BaseSkillSystemTests
     public void Setup_TrainedEntity_AssignsCorrectSkillValue()
     {
         // Arrange
-        var sut = new MockBaseSkillSystem(Skill.Athletics, AbilityScore.Attribute.Strength);
+        var sut = new MockBaseSkillSystem(Skill.Athletics,
+            AbilityScore.Attribute.Strength);
         var hero = new Entity(1);
         hero[AbilityScore.Attribute.Strength] = 18;
         hero.Level = 1;
-        IProficiencySystem.Resolve().Set(hero, Skill.Athletics, Proficiency.Trained);
+        IProficiencySystem.Resolve()
+            .Set(hero, Skill.Athletics, Proficiency.Trained);
 
         // Act
         sut.Setup(hero);
@@ -43,11 +45,13 @@ public class BaseSkillSystemTests
     public void Setup_UntrainedEntity_AssignsCorrectSkillValue()
     {
         // Arrange
-        var sut = new MockBaseSkillSystem(Skill.Athletics, AbilityScore.Attribute.Strength);
+        var sut = new MockBaseSkillSystem(Skill.Athletics,
+            AbilityScore.Attribute.Strength);
         var hero = new Entity(1);
         hero[AbilityScore.Attribute.Strength] = 12;
         hero.Level = 1;
-        IProficiencySystem.Resolve().Set(hero, Skill.Athletics, Proficiency.Untrained);
+        IProficiencySystem.Resolve()
+            .Set(hero, Skill.Athletics, Proficiency.Untrained);
 
         // Act
         sut.Setup(hero);

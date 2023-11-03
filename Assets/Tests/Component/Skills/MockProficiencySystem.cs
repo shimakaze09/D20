@@ -2,7 +2,8 @@ using System.Collections.Generic;
 
 public class MockProficiencySystem : IProficiencySystem
 {
-    Dictionary<Entity, Dictionary<Skill, Proficiency>> fakeTable = new Dictionary<Entity, Dictionary<Skill, Proficiency>>();
+    private Dictionary<Entity, Dictionary<Skill, Proficiency>>
+        fakeTable = new();
 
     public Proficiency Get(Entity entity, Skill skill)
     {
@@ -12,6 +13,7 @@ public class MockProficiencySystem : IProficiencySystem
             if (map.ContainsKey(skill))
                 return map[skill];
         }
+
         return 0;
     }
 

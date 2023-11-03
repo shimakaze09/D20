@@ -23,11 +23,9 @@ public class MockDataSystem : IDataSystem
 
     public void Load()
     {
-        
     }
 
     public void Save()
     {
-        
     }
 }

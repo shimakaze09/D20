@@ -3,14 +3,14 @@ using UnityEngine;
 
 public class CoreDictionaryTests
 {
-    const string json = "{\"keys\":[1],\"values\":[3]}";
-    const int key = 1;
-    const int value = 3;
+    private const string json = "{\"keys\":[1],\"values\":[3]}";
+    private const int key = 1;
+    private const int value = 3;
 
     [Test]
     public void Add_And_Remove_Success()
     {
-        CoreDictionary<int, int> sut = new CoreDictionary<int, int>();
+        var sut = new CoreDictionary<int, int>();
         sut.Add(key, value);
         Assert.AreEqual(1, sut.Count);
         Assert.AreEqual(value, sut[key]);
@@ -22,7 +22,7 @@ public class CoreDictionaryTests
     [Test]
     public void JsonUtility_Serialization_Success()
     {
-        CoreDictionary<int, int> sut = new CoreDictionary<int, int>();
+        var sut = new CoreDictionary<int, int>();
         sut.Add(key, value);
         var result = JsonUtility.ToJson(sut);
         Assert.AreEqual(json, result);
@@ -31,7 +31,7 @@ public class CoreDictionaryTests
     [Test]
     public void JsonUtility_Deserialization_Success()
     {
-        CoreDictionary<int, int> sut = new CoreDictionary<int, int>();
+        var sut = new CoreDictionary<int, int>();
         JsonUtility.FromJsonOverwrite(json, sut);
         Assert.AreEqual(1, sut.Count);
         Assert.AreEqual(value, sut[key]);

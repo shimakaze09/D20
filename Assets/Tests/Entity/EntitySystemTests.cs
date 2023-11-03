@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class EntitySystemTests
 {
-    MockDataSystem mockDataSystem = new MockDataSystem();
-    EntitySystem sut = new EntitySystem();
+    private MockDataSystem mockDataSystem = new();
+    private EntitySystem sut = new();
 
     [SetUp]
     public void SetUp()
