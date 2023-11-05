@@ -10,15 +10,13 @@ public partial class Data
     public CoreDictionary<Entity, Party> party = new();
 }
 
-public interface IPartySystem : IDependency<IPartySystem>,
-    IEntityTableSystem<Party>
+public interface IPartySystem : IDependency<IPartySystem>, IEntityTableSystem<Party>
 {
 }
 
 public class PartySystem : EntityTableSystem<Party>, IPartySystem
 {
-    public override CoreDictionary<Entity, Party> Table =>
-        IDataSystem.Resolve().Data.party;
+    public override CoreDictionary<Entity, Party> Table => IDataSystem.Resolve().Data.party;
 }
 
 public partial struct Entity

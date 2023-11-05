@@ -4,11 +4,9 @@ using UnityEngine;
 using System.Runtime.Serialization;
 
 [System.Serializable]
-public class CoreDictionary<TKey, TValue> : ISerializationCallbackReceiver,
-    ICollection<KeyValuePair<TKey, TValue>>,
-    IEnumerable<KeyValuePair<TKey, TValue>>, IEnumerable,
-    IDictionary<TKey, TValue>, IReadOnlyCollection<KeyValuePair<TKey, TValue>>,
-    IReadOnlyDictionary<TKey, TValue>, ICollection, IDictionary,
+public class CoreDictionary<TKey, TValue> : ISerializationCallbackReceiver, ICollection<KeyValuePair<TKey, TValue>>,
+    IEnumerable<KeyValuePair<TKey, TValue>>, IEnumerable, IDictionary<TKey, TValue>,
+    IReadOnlyCollection<KeyValuePair<TKey, TValue>>, IReadOnlyDictionary<TKey, TValue>, ICollection, IDictionary,
     IDeserializationCallback, ISerializable
 {
     [SerializeField] private List<TKey> keys = new();
@@ -42,8 +40,7 @@ public class CoreDictionary<TKey, TValue> : ISerializationCallbackReceiver,
     public ICollection<TKey> Keys => dictionary.Keys;
     public ICollection<TValue> Values => dictionary.Values;
 
-    IEnumerable<TKey> IReadOnlyDictionary<TKey, TValue>.Keys =>
-        ((IReadOnlyDictionary<TKey, TValue>)dictionary).Keys;
+    IEnumerable<TKey> IReadOnlyDictionary<TKey, TValue>.Keys => ((IReadOnlyDictionary<TKey, TValue>)dictionary).Keys;
 
     IEnumerable<TValue> IReadOnlyDictionary<TKey, TValue>.Values =>
         ((IReadOnlyDictionary<TKey, TValue>)dictionary).Values;
@@ -79,14 +76,12 @@ public class CoreDictionary<TKey, TValue> : ISerializationCallbackReceiver,
 
     public bool Contains(KeyValuePair<TKey, TValue> item)
     {
-        return ((ICollection<KeyValuePair<TKey, TValue>>)dictionary)
-            .Contains(item);
+        return ((ICollection<KeyValuePair<TKey, TValue>>)dictionary).Contains(item);
     }
 
     public void CopyTo(KeyValuePair<TKey, TValue>[] array, int arrayIndex)
     {
-        ((ICollection<KeyValuePair<TKey, TValue>>)dictionary).CopyTo(array,
-            arrayIndex);
+        ((ICollection<KeyValuePair<TKey, TValue>>)dictionary).CopyTo(array, arrayIndex);
     }
 
     public IEnumerator<KeyValuePair<TKey, TValue>> GetEnumerator()
@@ -96,8 +91,7 @@ public class CoreDictionary<TKey, TValue> : ISerializationCallbackReceiver,
 
     public bool Remove(KeyValuePair<TKey, TValue> item)
     {
-        return ((ICollection<KeyValuePair<TKey, TValue>>)dictionary)
-            .Remove(item);
+        return ((ICollection<KeyValuePair<TKey, TValue>>)dictionary).Remove(item);
     }
 
     IEnumerator IEnumerable.GetEnumerator()

@@ -16,8 +16,7 @@ public class SkillExploreEntryOption : MonoBehaviour, IEntryOption
     {
         var hero = ISoloHeroSystem.Resolve().Hero;
         var modifier = hero[skill];
-        var result = ICheckSystem.Resolve()
-            .GetResult(modifier, difficultyCheck);
+        var result = ICheckSystem.Resolve().GetResult(modifier, difficultyCheck);
         var entry = GetEntry(result);
         IEntrySystem.Resolve().SetName(entry);
     }

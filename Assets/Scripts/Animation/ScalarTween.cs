@@ -10,8 +10,7 @@ public class ScalarTween : Tween
 
     protected override void OnUpdate()
     {
-        currentTweenValue = (endTweenValue - startTweenValue) * currentValue +
-                            startTweenValue;
+        currentTweenValue = (endTweenValue - startTweenValue) * currentValue + startTweenValue;
         base.OnUpdate();
     }
 }

@@ -5,10 +5,7 @@ using UnityEngine;
 public interface IAbilityScoreSystem : IDependency<IAbilityScoreSystem>
 {
     AbilityScore Get(Entity entity, AbilityScore.Attribute attribute);
-
-    void Set(Entity entity, AbilityScore.Attribute attribute,
-        AbilityScore value);
-
+    void Set(Entity entity, AbilityScore.Attribute attribute, AbilityScore value);
     void Set(Entity entity, IEnumerable<int> scores);
 }
 
@@ -46,8 +43,7 @@ public class AbilityScoreSystem : IAbilityScoreSystem
         return (AbilityScore)0;
     }
 
-    public void Set(Entity entity, AbilityScore.Attribute attribute,
-        AbilityScore value)
+    public void Set(Entity entity, AbilityScore.Attribute attribute, AbilityScore value)
     {
         switch (attribute)
         {

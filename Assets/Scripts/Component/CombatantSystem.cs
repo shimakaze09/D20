@@ -3,15 +3,13 @@ public partial class Data
     public CoreSet<Entity> combatant = new();
 }
 
-public interface ICombatantSystem : IDependency<ICombatantSystem>,
-    IEntitySetSystem
+public interface ICombatantSystem : IDependency<ICombatantSystem>, IEntitySetSystem
 {
 }
 
 public class CombatantSystem : EntitySetSystem, ICombatantSystem
 {
-    public override CoreSet<Entity> Table =>
-        IDataSystem.Resolve().Data.combatant;
+    public override CoreSet<Entity> Table => IDataSystem.Resolve().Data.combatant;
 }
 
 public partial struct Entity

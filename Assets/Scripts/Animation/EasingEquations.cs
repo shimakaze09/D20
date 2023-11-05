@@ -44,11 +44,8 @@ public static class EasingEquations
     public static float Spring(float start, float end, float value)
     {
         value = Mathf.Clamp01(value);
-        value =
-            (Mathf.Sin(value * Mathf.PI *
-                       (0.2f + 2.5f * value * value * value)) *
-                Mathf.Pow(1f - value, 2.2f) + value) *
-            (1f + 1.2f * (1f - value));
+        value = (Mathf.Sin(value * Mathf.PI * (0.2f + 2.5f * value * value * value)) * Mathf.Pow(1f - value, 2.2f) +
+                 value) * (1f + 1.2f * (1f - value));
         return start + (end - start) * value;
     }
 
@@ -245,8 +242,7 @@ public static class EasingEquations
         if (value < d / 2)
             return EaseInBounce(0, end, value * 2) * 0.5f + start;
         else
-            return EaseOutBounce(0, end, value * 2 - d) * 0.5f + end * 0.5f +
-                   start;
+            return EaseOutBounce(0, end, value * 2 - d) * 0.5f + end * 0.5f + start;
     }
 
     public static float EaseInBack(float start, float end, float value)
@@ -288,8 +284,7 @@ public static class EasingEquations
         if (value == 1) return 0;
         var period = 1 * 0.3f;
         s = period / (2 * Mathf.PI) * Mathf.Asin(0);
-        return amplitude * Mathf.Pow(2, -10 * value) *
-               Mathf.Sin((value * 1 - s) * (2 * Mathf.PI) / period);
+        return amplitude * Mathf.Pow(2, -10 * value) * Mathf.Sin((value * 1 - s) * (2 * Mathf.PI) / period);
     }
 
     public static float EaseInElastic(float start, float end, float value)
@@ -317,8 +312,7 @@ public static class EasingEquations
             s = p / (2 * Mathf.PI) * Mathf.Asin(end / a);
         }
 
-        return -(a * Mathf.Pow(2, 10 * (value -= 1)) *
-                 Mathf.Sin((value * d - s) * (2 * Mathf.PI) / p)) + start;
+        return -(a * Mathf.Pow(2, 10 * (value -= 1)) * Mathf.Sin((value * d - s) * (2 * Mathf.PI) / p)) + start;
     }
 
     public static float EaseOutElastic(float start, float end, float value)
@@ -346,8 +340,7 @@ public static class EasingEquations
             s = p / (2 * Mathf.PI) * Mathf.Asin(end / a);
         }
 
-        return a * Mathf.Pow(2, -10 * value) *
-            Mathf.Sin((value * d - s) * (2 * Mathf.PI) / p) + end + start;
+        return a * Mathf.Pow(2, -10 * value) * Mathf.Sin((value * d - s) * (2 * Mathf.PI) / p) + end + start;
     }
 
     public static float EaseInOutElastic(float start, float end, float value)
@@ -376,11 +369,9 @@ public static class EasingEquations
         }
 
         if (value < 1)
-            return -0.5f * (a * Mathf.Pow(2, 10 * (value -= 1)) *
-                            Mathf.Sin((value * d - s) * (2 * Mathf.PI) / p)) +
+            return -0.5f * (a * Mathf.Pow(2, 10 * (value -= 1)) * Mathf.Sin((value * d - s) * (2 * Mathf.PI) / p)) +
                    start;
-        return a * Mathf.Pow(2, -10 * (value -= 1)) *
-               Mathf.Sin((value * d - s) * (2 * Mathf.PI) / p) * 0.5f + end +
+        return a * Mathf.Pow(2, -10 * (value -= 1)) * Mathf.Sin((value * d - s) * (2 * Mathf.PI) / p) * 0.5f + end +
                start;
     }
 }

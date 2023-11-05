@@ -11,8 +11,7 @@ public class DiceRollSystem : IDiceRollSystem
     {
         var result = diceRoll.bonus;
         for (var i = 0; i < diceRoll.count; i++)
-            result += IRandomNumberGenerator.Resolve()
-                .Range(1, diceRoll.sides + 1);
+            result += IRandomNumberGenerator.Resolve().Range(1, diceRoll.sides + 1);
         return result;
     }
 }

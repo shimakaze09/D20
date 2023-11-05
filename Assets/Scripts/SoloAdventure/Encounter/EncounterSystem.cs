@@ -16,9 +16,7 @@ public interface IEncounterSystem : IDependency<IEncounterSystem>
 public class EncounterSystem : IEncounterSystem
 {
     private string heroPath = "Assets/Prefabs/Combatants/Heroes/{0}.prefab";
-
-    private string monsterPath =
-        "Assets/Prefabs/Combatants/Monsters/{0}.prefab";
+    private string monsterPath = "Assets/Prefabs/Combatants/Monsters/{0}.prefab";
 
     public void SetName(string name)
     {
@@ -36,8 +34,7 @@ public class EncounterSystem : IEncounterSystem
     {
         foreach (var spawn in encounter.MonsterSpawns)
         {
-            var monster = await IEntityRecipeSystem.Resolve()
-                .Create(spawn.assetName);
+            var monster = await IEntityRecipeSystem.Resolve().Create(spawn.assetName);
             monster.Position = spawn.position;
             await CreateView(monster, monsterPath);
         }

@@ -27,11 +27,8 @@ public class ActionMenu : MonoBehaviour, IActionMenu
     {
         selection = 0;
         buttons[0].Select();
-        entity =
-            ISoloHeroSystem.Resolve()
-                .Hero; // TODO: Get the "current" entity from a "turn" system
-        var pairs = buttons.Zip(entity.EncounterActions.names,
-            (Button button, string action) => (button, action));
+        entity = ISoloHeroSystem.Resolve().Hero; // TODO: Get the "current" entity from a "turn" system
+        var pairs = buttons.Zip(entity.EncounterActions.names, (Button button, string action) => (button, action));
         foreach (var pair in pairs)
         {
             var label = pair.button.GetComponentInChildren<TextMeshProUGUI>();

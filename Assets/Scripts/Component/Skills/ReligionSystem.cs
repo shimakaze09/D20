@@ -3,20 +3,15 @@ public partial class Data
     public CoreDictionary<Entity, int> religion = new();
 }
 
-public interface IReligionSystem : IDependency<IReligionSystem>,
-    IBaseSkillSystem
+public interface IReligionSystem : IDependency<IReligionSystem>, IBaseSkillSystem
 {
 }
 
 public class ReligionSystem : BaseSkillSystem, IReligionSystem
 {
-    public override CoreDictionary<Entity, int> Table =>
-        IDataSystem.Resolve().Data.religion;
-
+    public override CoreDictionary<Entity, int> Table => IDataSystem.Resolve().Data.religion;
     protected override Skill Skill => Skill.Religion;
-
-    protected override AbilityScore.Attribute Attribute =>
-        AbilityScore.Attribute.Wisdom;
+    protected override AbilityScore.Attribute Attribute => AbilityScore.Attribute.Wisdom;
 }
 
 public partial struct Entity

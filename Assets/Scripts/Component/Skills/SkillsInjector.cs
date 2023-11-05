@@ -2,8 +2,7 @@ public static class SkillsInjector
 {
     public static void Inject()
     {
-        IAcrobaticsProficiencySystem.Register(
-            new AcrobaticsProficiencySystem());
+        IAcrobaticsProficiencySystem.Register(new AcrobaticsProficiencySystem());
         IAcrobaticsSystem.Register(new AcrobaticsSystem());
         IArcanaProficiencySystem.Register(new ArcanaProficiencySystem());
         IArcanaSystem.Register(new ArcanaSystem());
@@ -15,8 +14,7 @@ public static class SkillsInjector
         IDeceptionSystem.Register(new DeceptionSystem());
         IDiplomacyProficiencySystem.Register(new DiplomacyProficiencySystem());
         IDiplomacySystem.Register(new DiplomacySystem());
-        IIntimidationProficiencySystem.Register(
-            new IntimidationProficiencySystem());
+        IIntimidationProficiencySystem.Register(new IntimidationProficiencySystem());
         IIntimidationSystem.Register(new IntimidationSystem());
         ILoreProficiencySystem.Register(new LoreProficiencySystem());
         ILoreSystem.Register(new LoreSystem());
@@ -26,8 +24,7 @@ public static class SkillsInjector
         INatureSystem.Register(new NatureSystem());
         IOccultismProficiencySystem.Register(new OccultismProficiencySystem());
         IOccultismSystem.Register(new OccultismSystem());
-        IPerformanceProficiencySystem.Register(
-            new PerformanceProficiencySystem());
+        IPerformanceProficiencySystem.Register(new PerformanceProficiencySystem());
         IPerformanceSystem.Register(new PerformanceSystem());
         IProficiencySystem.Register(new ProficiencySystem());
         IReligionProficiencySystem.Register(new ReligionProficiencySystem());

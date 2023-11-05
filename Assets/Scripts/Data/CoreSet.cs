@@ -4,9 +4,8 @@ using System.Runtime.Serialization;
 using UnityEngine;
 
 [System.Serializable]
-public class CoreSet<T> : ISerializationCallbackReceiver, ICollection<T>,
-    IEnumerable<T>, IEnumerable, IReadOnlyCollection<T>, ISet<T>,
-    IDeserializationCallback, ISerializable
+public class CoreSet<T> : ISerializationCallbackReceiver, ICollection<T>, IEnumerable<T>, IEnumerable,
+    IReadOnlyCollection<T>, ISet<T>, IDeserializationCallback, ISerializable
 {
     [SerializeField] private List<T> values = new();
     private HashSet<T> set = new();

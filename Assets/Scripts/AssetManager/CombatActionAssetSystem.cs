@@ -1,8 +1,7 @@
 using UnityEngine;
 using Cysharp.Threading.Tasks;
 
-public interface
-    ICombatActionAssetSystem : IDependency<ICombatActionAssetSystem>
+public interface ICombatActionAssetSystem : IDependency<ICombatActionAssetSystem>
 {
     UniTask<ICombatAction> Load(string assetName);
 }

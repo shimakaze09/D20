@@ -3,20 +3,15 @@ public partial class Data
     public CoreDictionary<Entity, int> thievery = new();
 }
 
-public interface IThieverySystem : IDependency<IThieverySystem>,
-    IBaseSkillSystem
+public interface IThieverySystem : IDependency<IThieverySystem>, IBaseSkillSystem
 {
 }
 
 public class ThieverySystem : BaseSkillSystem, IThieverySystem
 {
-    public override CoreDictionary<Entity, int> Table =>
-        IDataSystem.Resolve().Data.thievery;
-
+    public override CoreDictionary<Entity, int> Table => IDataSystem.Resolve().Data.thievery;
     protected override Skill Skill => Skill.Thievery;
-
-    protected override AbilityScore.Attribute Attribute =>
-        AbilityScore.Attribute.Dexterity;
+    protected override AbilityScore.Attribute Attribute => AbilityScore.Attribute.Dexterity;
 }
 
 public partial struct Entity

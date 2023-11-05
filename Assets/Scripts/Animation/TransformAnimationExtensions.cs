@@ -4,20 +4,17 @@ using System.Collections;
 
 public static class TransformAnimationExtensions
 {
-    public static TransformPositionTween MoveTo(this Transform t,
-        Vector3 position)
+    public static TransformPositionTween MoveTo(this Transform t, Vector3 position)
     {
         return MoveTo(t, position, Tween.DefaultDuration);
     }
 
-    public static TransformPositionTween MoveTo(this Transform t,
-        Vector3 position, float duration)
+    public static TransformPositionTween MoveTo(this Transform t, Vector3 position, float duration)
     {
         return MoveTo(t, position, duration, Tween.DefaultEquation);
     }
 
-    public static TransformPositionTween MoveTo(this Transform t,
-        Vector3 position, float duration,
+    public static TransformPositionTween MoveTo(this Transform t, Vector3 position, float duration,
         Func<float, float, float, float> equation)
     {
         var result = new TransformPositionTween();
@@ -29,20 +26,17 @@ public static class TransformAnimationExtensions
         return result;
     }
 
-    public static TransformLocalPositionTween MoveToLocal(this Transform t,
-        Vector3 position)
+    public static TransformLocalPositionTween MoveToLocal(this Transform t, Vector3 position)
     {
         return MoveToLocal(t, position, Tween.DefaultDuration);
     }
 
-    public static TransformLocalPositionTween MoveToLocal(this Transform t,
-        Vector3 position, float duration)
+    public static TransformLocalPositionTween MoveToLocal(this Transform t, Vector3 position, float duration)
     {
         return MoveToLocal(t, position, duration, Tween.DefaultEquation);
     }
 
-    public static TransformLocalPositionTween MoveToLocal(this Transform t,
-        Vector3 position, float duration,
+    public static TransformLocalPositionTween MoveToLocal(this Transform t, Vector3 position, float duration,
         Func<float, float, float, float> equation)
     {
         var result = new TransformLocalPositionTween();
@@ -54,20 +48,17 @@ public static class TransformAnimationExtensions
         return result;
     }
 
-    public static TransformRotationTween RotateTo(this Transform t,
-        Quaternion rotation)
+    public static TransformRotationTween RotateTo(this Transform t, Quaternion rotation)
     {
         return RotateTo(t, rotation, Tween.DefaultDuration);
     }
 
-    public static TransformRotationTween RotateTo(this Transform t,
-        Quaternion rotation, float duration)
+    public static TransformRotationTween RotateTo(this Transform t, Quaternion rotation, float duration)
     {
         return RotateTo(t, rotation, duration, Tween.DefaultEquation);
     }
 
-    public static TransformRotationTween RotateTo(this Transform t,
-        Quaternion rotation, float duration,
+    public static TransformRotationTween RotateTo(this Transform t, Quaternion rotation, float duration,
         Func<float, float, float, float> equation)
     {
         var result = new TransformRotationTween();
@@ -79,20 +70,17 @@ public static class TransformAnimationExtensions
         return result;
     }
 
-    public static TransformLocalEulerTween RotateToLocal(this Transform t,
-        Vector3 euler)
+    public static TransformLocalEulerTween RotateToLocal(this Transform t, Vector3 euler)
     {
         return RotateToLocal(t, euler, Tween.DefaultDuration);
     }
 
-    public static TransformLocalEulerTween RotateToLocal(this Transform t,
-        Vector3 euler, float duration)
+    public static TransformLocalEulerTween RotateToLocal(this Transform t, Vector3 euler, float duration)
     {
         return RotateToLocal(t, euler, duration, Tween.DefaultEquation);
     }
 
-    public static TransformLocalEulerTween RotateToLocal(this Transform t,
-        Vector3 euler, float duration,
+    public static TransformLocalEulerTween RotateToLocal(this Transform t, Vector3 euler, float duration,
         Func<float, float, float, float> equation)
     {
         var result = new TransformLocalEulerTween();
@@ -109,14 +97,13 @@ public static class TransformAnimationExtensions
         return ScaleTo(t, scale, Tween.DefaultDuration);
     }
 
-    public static TransformScaleTween ScaleTo(this Transform t, Vector3 scale,
-        float duration)
+    public static TransformScaleTween ScaleTo(this Transform t, Vector3 scale, float duration)
     {
         return ScaleTo(t, scale, duration, Tween.DefaultEquation);
     }
 
-    public static TransformScaleTween ScaleTo(this Transform t, Vector3 scale,
-        float duration, Func<float, float, float, float> equation)
+    public static TransformScaleTween ScaleTo(this Transform t, Vector3 scale, float duration,
+        Func<float, float, float, float> equation)
     {
         var result = new TransformScaleTween();
         result.transform = t;

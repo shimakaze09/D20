@@ -11,9 +11,7 @@ public class ItemExploreEntryOption : MonoBehaviour, IEntryOption
 
     public void Select()
     {
-        var entry = IAdventureItemSystem.Resolve().Has(item)
-            ? hasItemEntry
-            : noItemEntry;
+        var entry = IAdventureItemSystem.Resolve().Has(item) ? hasItemEntry : noItemEntry;
         IEntrySystem.Resolve().SetName(entry);
     }
 }

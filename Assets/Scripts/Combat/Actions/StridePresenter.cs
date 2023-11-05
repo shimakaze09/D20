@@ -20,15 +20,11 @@ public class StridePresenter : MonoBehaviour, IStridePresenter
     public async UniTask Present(StridePresentationInfo info)
     {
         Vector3 delta = info.toPosition - info.fromPosition;
-        var view = IEntityViewProvider.Resolve()
-            .GetView(info.entity, ViewZone.Combatant);
+        var view = IEntityViewProvider.Resolve().GetView(info.entity, ViewZone.Combatant);
         var combatant = view.GetComponent<CombatantView>();
-        ICombatantViewSystem.Resolve()
-            .SetAnimation(combatant, CombatantAnimation.Walk);
-        await view.transform
-            .MoveTo(info.toPosition, speedMultiplier * delta.magnitude).Play();
-        ICombatantViewSystem.Resolve()
-            .SetAnimation(combatant, CombatantAnimation.Idle);
+        ICombatantViewSystem.Resolve().SetAnimation(combatant, CombatantAnimation.Walk);
+        await view.transform.MoveTo(info.toPosition, speedMultiplier * delta.magnitude).Play();
+        ICombatantViewSystem.Resolve().SetAnimation(combatant, CombatantAnimation.Idle);
     }
 
     private void OnEnable()

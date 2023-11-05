@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface
-    ICombatSelectionIndicator : IDependency<ICombatSelectionIndicator>
+public interface ICombatSelectionIndicator : IDependency<ICombatSelectionIndicator>
 {
     void SetPosition(Point value);
     void SetVisible(bool isVisible);

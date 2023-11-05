@@ -89,8 +89,7 @@ public static class AnchorExtensions
 
 public static class RectTransformAnchorExtensions
 {
-    public static void SetAnchor(this RectTransform rectTransform,
-        Anchor anchor)
+    public static void SetAnchor(this RectTransform rectTransform, Anchor anchor)
     {
         rectTransform.anchorMin = anchor.Min();
         rectTransform.anchorMax = anchor.Max();

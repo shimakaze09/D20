@@ -29,8 +29,7 @@ public class EntryPanel : MonoBehaviour, IEntryPanel
         entryText.text = entry.Text;
 
         // Setup buttons for entry options
-        var pairs = entryOptions.Zip(entry.Options,
-            (GameObject view, IEntryOption data) => (view, data));
+        var pairs = entryOptions.Zip(entry.Options, (GameObject view, IEntryOption data) => (view, data));
         foreach (var pair in pairs)
         {
             pair.view.SetActive(true);

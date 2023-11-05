@@ -14,8 +14,7 @@ public interface IEntityViewProvider : IDependency<IEntityViewProvider>
 
 public class EntityViewProvider : MonoBehaviour, IEntityViewProvider
 {
-    private Dictionary<ViewZone, Dictionary<Entity, GameObject>>
-        mapping = new();
+    private Dictionary<ViewZone, Dictionary<Entity, GameObject>> mapping = new();
 
     public GameObject GetView(Entity entity, ViewZone zone)
     {

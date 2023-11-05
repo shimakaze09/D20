@@ -81,9 +81,7 @@ public class MainMenu : MonoBehaviour, IMainMenu
 
     private async UniTask Press(Button button)
     {
-        using (var handler =
-               button.GetAsyncClickEventHandler(
-                   this.GetCancellationTokenOnDestroy()))
+        using (var handler = button.GetAsyncClickEventHandler(this.GetCancellationTokenOnDestroy()))
         {
             await handler.OnClickAsync();
         }

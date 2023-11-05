@@ -1,7 +1,6 @@
 using Cysharp.Threading.Tasks;
 
-public interface
-    IPositionSelectionSystem : IDependency<IPositionSelectionSystem>
+public interface IPositionSelectionSystem : IDependency<IPositionSelectionSystem>
 {
     UniTask<Point> Select(Point start);
 }

@@ -53,9 +53,7 @@ public class Tween
     #region Fields & Properties
 
     public static float DefaultDuration = 1f;
-
-    public static Func<float, float, float, float> DefaultEquation =
-        EasingEquations.EaseInOutQuad;
+    public static Func<float, float, float, float> DefaultEquation = EasingEquations.EaseInOutQuad;
 
     public TimeType timeType = TimeType.Normal;
     public PlayState playState { get; private set; }
@@ -100,13 +98,9 @@ public class Tween
                 if (loopCount < 0 || loopCount >= loops)
                 {
                     if (loopType == LoopType.Repeat)
-                        SeekToTime(direction == Direction.Forward
-                            ? 0.0f
-                            : duration);
+                        SeekToTime(direction == Direction.Forward ? 0.0f : duration);
                     else // PingPong
-                        SetDirection(direction == Direction.Forward
-                            ? Direction.Reverse
-                            : Direction.Forward);
+                        SetDirection(direction == Direction.Forward ? Direction.Reverse : Direction.Forward);
 
                     OnLoop();
                 }
@@ -236,9 +230,7 @@ public class Tween
             finished = Mathf.Approximately(currentTime, 0.0f);
         }
 
-        var frameValue =
-            (endValue - startValue) * equation(0.0f, 1.0f, currentTime) +
-            startValue;
+        var frameValue = (endValue - startValue) * equation(0.0f, 1.0f, currentTime) + startValue;
         currentOffset = frameValue - currentValue;
         currentValue = frameValue;
         return finished;

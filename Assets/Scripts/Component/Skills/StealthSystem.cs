@@ -9,13 +9,9 @@ public interface IStealthSystem : IDependency<IStealthSystem>, IBaseSkillSystem
 
 public class StealthSystem : BaseSkillSystem, IStealthSystem
 {
-    public override CoreDictionary<Entity, int> Table =>
-        IDataSystem.Resolve().Data.stealth;
-
+    public override CoreDictionary<Entity, int> Table => IDataSystem.Resolve().Data.stealth;
     protected override Skill Skill => Skill.Stealth;
-
-    protected override AbilityScore.Attribute Attribute =>
-        AbilityScore.Attribute.Dexterity;
+    protected override AbilityScore.Attribute Attribute => AbilityScore.Attribute.Dexterity;
 }
 
 public partial struct Entity

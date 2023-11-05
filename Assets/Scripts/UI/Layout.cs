@@ -12,8 +12,7 @@ public struct Layout
 
 public static class RectTransformLayoutExtensions
 {
-    public static void SetLayout(this RectTransform rectTransform,
-        Layout layout)
+    public static void SetLayout(this RectTransform rectTransform, Layout layout)
     {
         rectTransform.SetAnchor(layout.anchor);
         rectTransform.SetPivot(layout.pivot);

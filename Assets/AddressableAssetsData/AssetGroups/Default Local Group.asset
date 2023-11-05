@@ -85,6 +85,14 @@ MonoBehaviour:
     m_Address: Assets/Prefabs/Combatants/Heroes/Warrior.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: ddc206cb46b7442f094b95dd40d00fbd
+    m_Address: Assets/Objects/CombatAction/Strike (Shortsword).prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 707aebbc61dd143a3b59d39cff5943f9
+    m_Address: Assets/Objects/CombatAction/Bite.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: f21cd9db5c79a4075b9bbf8e245e552f, type: 2}
   m_SchemaSet:

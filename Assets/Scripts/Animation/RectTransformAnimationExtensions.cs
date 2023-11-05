@@ -4,20 +4,17 @@ using System.Collections;
 
 public static class RectTransformAnimationExtensions
 {
-    public static RectTransformAnchorPositionTween AnchorTo(
-        this RectTransform t, Vector3 position)
+    public static RectTransformAnchorPositionTween AnchorTo(this RectTransform t, Vector3 position)
     {
         return AnchorTo(t, position, Tween.DefaultDuration);
     }
 
-    public static RectTransformAnchorPositionTween AnchorTo(
-        this RectTransform t, Vector3 position, float duration)
+    public static RectTransformAnchorPositionTween AnchorTo(this RectTransform t, Vector3 position, float duration)
     {
         return AnchorTo(t, position, duration, Tween.DefaultEquation);
     }
 
-    public static RectTransformAnchorPositionTween AnchorTo(
-        this RectTransform t, Vector3 position, float duration,
+    public static RectTransformAnchorPositionTween AnchorTo(this RectTransform t, Vector3 position, float duration,
         Func<float, float, float, float> equation)
     {
         var result = new RectTransformAnchorPositionTween();
@@ -29,20 +26,17 @@ public static class RectTransformAnimationExtensions
         return result;
     }
 
-    public static LayoutTween Layout(this RectTransform t, Layout fromLayout,
-        Layout toLayout)
+    public static LayoutTween Layout(this RectTransform t, Layout fromLayout, Layout toLayout)
     {
         return Layout(t, fromLayout, toLayout, Tween.DefaultDuration);
     }
 
-    public static LayoutTween Layout(this RectTransform t, Layout fromLayout,
-        Layout toLayout, float duration)
+    public static LayoutTween Layout(this RectTransform t, Layout fromLayout, Layout toLayout, float duration)
     {
         return Layout(t, fromLayout, toLayout, duration, Tween.DefaultEquation);
     }
 
-    public static LayoutTween Layout(this RectTransform t, Layout fromLayout,
-        Layout toLayout, float duration,
+    public static LayoutTween Layout(this RectTransform t, Layout fromLayout, Layout toLayout, float duration,
         Func<float, float, float, float> equation)
     {
         var result = new LayoutTween();

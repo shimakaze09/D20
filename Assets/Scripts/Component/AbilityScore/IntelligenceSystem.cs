@@ -3,16 +3,13 @@ public partial class Data
     public CoreDictionary<Entity, AbilityScore> intelligence = new();
 }
 
-public interface IIntelligenceSystem : IDependency<IIntelligenceSystem>,
-    IEntityTableSystem<AbilityScore>
+public interface IIntelligenceSystem : IDependency<IIntelligenceSystem>, IEntityTableSystem<AbilityScore>
 {
 }
 
-public class IntelligenceSystem : EntityTableSystem<AbilityScore>,
-    IIntelligenceSystem
+public class IntelligenceSystem : EntityTableSystem<AbilityScore>, IIntelligenceSystem
 {
-    public override CoreDictionary<Entity, AbilityScore> Table =>
-        IDataSystem.Resolve().Data.intelligence;
+    public override CoreDictionary<Entity, AbilityScore> Table => IDataSystem.Resolve().Data.intelligence;
 }
 
 public partial struct Entity

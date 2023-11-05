@@ -9,8 +9,7 @@ public abstract class Vector3Tween : Tween
 
     protected override void OnUpdate()
     {
-        currentTweenValue = (endTweenValue - startTweenValue) * currentValue +
-                            startTweenValue;
+        currentTweenValue = (endTweenValue - startTweenValue) * currentValue + startTweenValue;
         base.OnUpdate();
     }
 }

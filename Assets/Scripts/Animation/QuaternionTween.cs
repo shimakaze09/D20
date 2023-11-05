@@ -10,8 +10,7 @@ public class QuaternionTween : Tween
 
     protected override void OnUpdate()
     {
-        currentTweenValue = Quaternion.SlerpUnclamped(startTweenValue,
-            endTweenValue, currentValue);
+        currentTweenValue = Quaternion.SlerpUnclamped(startTweenValue, endTweenValue, currentValue);
         base.OnUpdate();
     }
 }

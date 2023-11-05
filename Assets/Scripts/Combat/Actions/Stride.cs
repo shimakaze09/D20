@@ -6,8 +6,7 @@ public class Stride : MonoBehaviour, ICombatAction
     public async UniTask Perform(Entity entity)
     {
         // TODO: differentiate between user-controlled and AI controlled entities
-        var position = await IPositionSelectionSystem.Resolve()
-            .Select(entity.Position);
+        var position = await IPositionSelectionSystem.Resolve().Select(entity.Position);
 
         var info = new StrideInfo
         {

@@ -3,16 +3,13 @@ public partial class Data
     public CoreDictionary<Entity, string> combatantAsset = new();
 }
 
-public interface ICombatantAssetSystem : IDependency<ICombatantAssetSystem>,
-    IEntityTableSystem<string>
+public interface ICombatantAssetSystem : IDependency<ICombatantAssetSystem>, IEntityTableSystem<string>
 {
 }
 
-public class CombatantAssetSystem : EntityTableSystem<string>,
-    ICombatantAssetSystem
+public class CombatantAssetSystem : EntityTableSystem<string>, ICombatantAssetSystem
 {
-    public override CoreDictionary<Entity, string> Table =>
-        IDataSystem.Resolve().Data.combatantAsset;
+    public override CoreDictionary<Entity, string> Table => IDataSystem.Resolve().Data.combatantAsset;
 }
 
 public partial struct Entity
