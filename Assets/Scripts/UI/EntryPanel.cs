@@ -20,7 +20,6 @@ public class EntryPanel : MonoBehaviour, IEntryPanel
     [SerializeField] private CanvasGroup canvasGroup;
     [SerializeField] private TextMeshProUGUI entryText;
     [SerializeField] private List<GameObject> entryOptions;
-
     private const float transitionTime = 0.25f;
 
     public void Setup(IEntry entry)
@@ -38,7 +37,7 @@ public class EntryPanel : MonoBehaviour, IEntryPanel
         }
 
         // Hide any unused buttons
-        for (var i = pairs.Count(); i < entryOptions.Count; ++i)
+        for (int i = pairs.Count(); i < entryOptions.Count; ++i)
             entryOptions[i].SetActive(false);
     }
 
@@ -51,8 +50,8 @@ public class EntryPanel : MonoBehaviour, IEntryPanel
 
     public async UniTask<int> SelectMenuOption(CancellationToken token)
     {
-        var tasks = new List<UniTask>(entryOptions.Count);
-        for (var i = 0; i < entryOptions.Count; ++i)
+        List<UniTask> tasks = new(entryOptions.Count);
+        for (int i = 0; i < entryOptions.Count; ++i)
         {
             if (!entryOptions[i].activeSelf)
                 break;
@@ -60,7 +59,6 @@ public class EntryPanel : MonoBehaviour, IEntryPanel
             var task = Press(button, token);
             tasks.Add(task);
         }
-
         var result = await UniTask.WhenAny(tasks);
         return result;
     }
@@ -68,12 +66,11 @@ public class EntryPanel : MonoBehaviour, IEntryPanel
     public async UniTask<string> SelectLink(CancellationToken token)
     {
         var linkOpener = entryText.GetComponent<LinkOpener>();
-        var result = "";
+        string result = "";
         using (var handler = linkOpener.onClick.GetAsyncEventHandler(token))
         {
             result = await handler.OnInvokeAsync();
         }
-
         return result;
     }
 

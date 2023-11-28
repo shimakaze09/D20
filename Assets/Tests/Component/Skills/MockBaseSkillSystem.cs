@@ -4,8 +4,7 @@ public class MockBaseSkillSystem : BaseSkillSystem
     private Skill fakeSkill;
     private AbilityScore.Attribute fakeAttribute;
 
-    public MockBaseSkillSystem(Skill fakeSkill,
-        AbilityScore.Attribute fakeAttribute)
+    public MockBaseSkillSystem(Skill fakeSkill, AbilityScore.Attribute fakeAttribute)
     {
         this.fakeSkill = fakeSkill;
         this.fakeAttribute = fakeAttribute;

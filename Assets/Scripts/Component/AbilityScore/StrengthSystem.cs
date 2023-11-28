@@ -5,6 +5,7 @@ public partial class Data
 
 public interface IStrengthSystem : IDependency<IStrengthSystem>, IEntityTableSystem<AbilityScore>
 {
+
 }
 
 public class StrengthSystem : EntityTableSystem<AbilityScore>, IStrengthSystem

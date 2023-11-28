@@ -24,7 +24,6 @@ public class RoundFlow : IRoundFlow
             if (result.HasValue)
                 break;
         }
-
         return result;
     }
 }

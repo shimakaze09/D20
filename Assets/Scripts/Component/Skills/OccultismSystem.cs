@@ -5,6 +5,7 @@ public partial class Data
 
 public interface IOccultismSystem : IDependency<IOccultismSystem>, IBaseSkillSystem
 {
+
 }
 
 public class OccultismSystem : BaseSkillSystem, IOccultismSystem
@@ -20,5 +21,6 @@ public partial struct Entity
     {
         get => IOccultismSystem.Resolve().Get(this);
         set => IOccultismSystem.Resolve().Set(this, value);
+
     }
 }

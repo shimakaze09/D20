@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class EncounterEntryOption : MonoBehaviour, IEntryOption
 {
-    public string Text => text;
+    public string Text { get { return text; } }
     [SerializeField] private string text;
     [SerializeField] private string encounterName;
 

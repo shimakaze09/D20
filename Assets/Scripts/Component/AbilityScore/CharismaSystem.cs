@@ -5,6 +5,7 @@ public partial class Data
 
 public interface ICharismaSystem : IDependency<ICharismaSystem>, IEntityTableSystem<AbilityScore>
 {
+
 }
 
 public class CharismaSystem : EntityTableSystem<AbilityScore>, ICharismaSystem

@@ -5,6 +5,7 @@ public partial class Data
 
 public interface IPositionSystem : IDependency<IPositionSystem>, IEntityTableSystem<Point>
 {
+
 }
 
 public class PositionSystem : EntityTableSystem<Point>, IPositionSystem
@@ -18,5 +19,6 @@ public partial struct Entity
     {
         get => IPositionSystem.Resolve().Get(this);
         set => IPositionSystem.Resolve().Set(this, value);
+
     }
 }

@@ -44,9 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc4b1c444807e4881970ebfdb2912c76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRollBonus: 5
+  attackRollBonus: 7
   comboCost: 5
   damage:
     count: 1
     sides: 6
     bonus: 2
+  damageType: piercing
+  material: 

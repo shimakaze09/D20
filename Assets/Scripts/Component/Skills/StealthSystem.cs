@@ -5,6 +5,7 @@ public partial class Data
 
 public interface IStealthSystem : IDependency<IStealthSystem>, IBaseSkillSystem
 {
+
 }
 
 public class StealthSystem : BaseSkillSystem, IStealthSystem
@@ -20,5 +21,6 @@ public partial struct Entity
     {
         get => IStealthSystem.Resolve().Get(this);
         set => IStealthSystem.Resolve().Set(this, value);
+
     }
 }

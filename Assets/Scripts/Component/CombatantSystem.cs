@@ -5,6 +5,7 @@ public partial class Data
 
 public interface ICombatantSystem : IDependency<ICombatantSystem>, IEntitySetSystem
 {
+
 }
 
 public class CombatantSystem : EntitySetSystem, ICombatantSystem
@@ -17,6 +18,7 @@ public partial struct Entity
     public bool IsCombatant
     {
         get => ICombatantSystem.Resolve().Contains(this);
+
         set
         {
             if (value)

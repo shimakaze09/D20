@@ -5,6 +5,7 @@ public partial class Data
 
 public interface ILevelSystem : IDependency<ILevelSystem>, IEntityTableSystem<int>
 {
+
 }
 
 public class LevelSystem : EntityTableSystem<int>, ILevelSystem
@@ -18,5 +19,6 @@ public partial struct Entity
     {
         get => ILevelSystem.Resolve().Get(this);
         set => ILevelSystem.Resolve().Set(this, value);
+
     }
 }

@@ -9,6 +9,7 @@ public partial class Data
 
 public interface INameSystem : IDependency<INameSystem>, IEntityTableSystem<string>
 {
+
 }
 
 public class NameSystem : EntityTableSystem<string>, INameSystem
@@ -22,5 +23,6 @@ public partial struct Entity
     {
         get => INameSystem.Resolve().Get(this);
         set => INameSystem.Resolve().Set(this, value);
+
     }
 }

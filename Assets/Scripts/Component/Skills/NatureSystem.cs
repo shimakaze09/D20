@@ -5,6 +5,7 @@ public partial class Data
 
 public interface INatureSystem : IDependency<INatureSystem>, IBaseSkillSystem
 {
+
 }
 
 public class NatureSystem : BaseSkillSystem, INatureSystem
@@ -20,5 +21,6 @@ public partial struct Entity
     {
         get => INatureSystem.Resolve().Get(this);
         set => INatureSystem.Resolve().Set(this, value);
+
     }
 }

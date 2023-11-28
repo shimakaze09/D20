@@ -23,7 +23,6 @@ public struct TurnFlow : ITurnFlow
             if (result.HasValue)
                 break;
         }
-
         return result;
     }
 }

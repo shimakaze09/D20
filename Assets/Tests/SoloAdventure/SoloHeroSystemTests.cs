@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class SoloHeroSystemTests
 {
-    private MockEntityRecipeSystem mockEntityRecipeSystem;
+    MockEntityRecipeSystem mockEntityRecipeSystem;
 
     [SetUp]
     public void SetUp()
@@ -28,17 +28,15 @@ public class SoloHeroSystemTests
         await sut.CreateHero();
 
         // Assert
-        Assert.AreEqual(7,
-            sut.Hero.Athletics); // (+4 str, +2 trained, +1 level)
+        Assert.AreEqual(7, sut.Hero.Athletics); // (+4 str, +2 trained, +1 level)
     }
 
-    private Entity CreateSoloHero()
+    Entity CreateSoloHero()
     {
         var result = new Entity(123);
         result.Level = 1;
         result.Strength = 18;
-        IProficiencySystem.Resolve()
-            .Set(result, Skill.Athletics, Proficiency.Trained);
+        IProficiencySystem.Resolve().Set(result, Skill.Athletics, Proficiency.Trained);
         return result;
     }
 }

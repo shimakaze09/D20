@@ -39,7 +39,6 @@ public class AbilityScoreSystem : IAbilityScoreSystem
             case AbilityScore.Attribute.Charisma:
                 return ICharismaSystem.Resolve().Get(entity);
         }
-
         return (AbilityScore)0;
     }
 
@@ -75,5 +74,6 @@ public partial struct Entity
     {
         get => IAbilityScoreSystem.Resolve().Get(this, attribute);
         set => IAbilityScoreSystem.Resolve().Set(this, attribute, value);
+
     }
 }

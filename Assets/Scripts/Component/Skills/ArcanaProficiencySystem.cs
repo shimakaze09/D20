@@ -5,6 +5,7 @@ public partial class Data
 
 public interface IArcanaProficiencySystem : IDependency<IArcanaProficiencySystem>, IEntityTableSystem<Proficiency>
 {
+
 }
 
 public class ArcanaProficiencySystem : EntityTableSystem<Proficiency>, IArcanaProficiencySystem

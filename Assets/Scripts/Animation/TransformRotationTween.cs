@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class TransformRotationTween : QuaternionTween
 {
-    public Transform transform;
+	public Transform transform;
 
-    protected override void OnUpdate()
-    {
-        base.OnUpdate();
-        transform.rotation = currentTweenValue;
-    }
+	protected override void OnUpdate()
+	{
+		base.OnUpdate();
+		transform.rotation = currentTweenValue;
+	}
 }

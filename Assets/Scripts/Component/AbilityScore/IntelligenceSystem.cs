@@ -5,6 +5,7 @@ public partial class Data
 
 public interface IIntelligenceSystem : IDependency<IIntelligenceSystem>, IEntityTableSystem<AbilityScore>
 {
+
 }
 
 public class IntelligenceSystem : EntityTableSystem<AbilityScore>, IIntelligenceSystem

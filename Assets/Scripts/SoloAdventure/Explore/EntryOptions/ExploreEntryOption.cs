@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class ExploreEntryOption : MonoBehaviour, IEntryOption
 {
-    public string Text => text;
+    public string Text { get { return text; } }
     [SerializeField] private string text;
-    [SerializeField] private string entryName;
+    [SerializeField] private string entryName;    
 
     public void Select()
     {

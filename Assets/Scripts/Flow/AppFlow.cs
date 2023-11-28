@@ -3,7 +3,7 @@ using Cysharp.Threading.Tasks;
 
 public class AppFlow : MonoBehaviour
 {
-    private async UniTaskVoid Start()
+    async UniTaskVoid Start()
     {
         DontDestroyOnLoad(gameObject);
         Injector.Inject();

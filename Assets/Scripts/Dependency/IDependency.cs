@@ -21,26 +21,29 @@ public interface IDependency<T>
 
     public static void Register(T entity)
     {
-        Register(() => entity);
+        Register(delegate { return entity; });
     }
 
     public static void Register<U>() where U : T, new()
     {
-        Register(() => new U());
+        Register(delegate { return new U(); });
     }
 
     public static void RegisterPool<U>() where U : T, new()
     {
         var pool = new Queue<T>();
 
-        Func<T> resolver = delegate()
+        Func<T> resolver = delegate ()
         {
             if (pool.Count > 0)
                 return pool.Dequeue();
             return new U();
         };
 
-        Action<T> disposer = delegate(T entity) { pool.Enqueue(entity); };
+        Action<T> disposer = delegate (T entity)
+        {
+            pool.Enqueue(entity);
+        };
 
         Register(resolver, disposer);
     }
@@ -55,20 +58,20 @@ public interface IDependency<T>
     {
         return _resolver();
     }
-
+        
     public static T TryResolve()
     {
-        return _resolver != null ? _resolver() : default;
+        return (_resolver != null) ? _resolver() : default(T);
     }
 
     public static bool TryResolve(out T result)
     {
         if (_resolver == null)
         {
-            result = default;
+            result = default(T);
             return false;
         }
-
+            
         result = _resolver();
         return true;
     }

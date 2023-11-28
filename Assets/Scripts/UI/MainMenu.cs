@@ -45,7 +45,7 @@ public class MainMenu : MonoBehaviour, IMainMenu
         var result = await UniTask.WhenAny(
             Press(newGameButton),
             Press(continueButton)
-        );
+            );
         return (MainMenuOption)result;
     }
 

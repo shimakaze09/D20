@@ -12,7 +12,7 @@ public class RoundSystem : IRoundSystem
 {
     private List<Entity> turnOrder;
 
-    public bool IsComplete => turnOrder.Count == 0;
+    public bool IsComplete { get { return turnOrder.Count == 0; } }
 
     public void Begin(List<Entity> entities)
     {

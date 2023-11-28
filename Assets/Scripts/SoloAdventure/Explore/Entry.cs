@@ -10,10 +10,16 @@ public interface IEntry
 
 public class Entry : MonoBehaviour, IEntry
 {
-    public string Text => text;
+    public string Text { get { return text; } }
     [SerializeField] private string text;
 
-    public IEntryOption[] Options => GetComponents<IEntryOption>();
+    public IEntryOption[] Options
+    {
+        get
+        {
+            return GetComponents<IEntryOption>();
+        }
+    }
 
     public async UniTask SelectLink(string link)
     {

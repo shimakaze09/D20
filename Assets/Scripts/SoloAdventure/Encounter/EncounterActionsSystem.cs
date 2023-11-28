@@ -18,6 +18,7 @@ public partial class Data
 
 public interface IEncounterActionsSystem : IDependency<IEncounterActionsSystem>, IEntityTableSystem<EncounterActions>
 {
+
 }
 
 public class EncounterActionsSystem : EntityTableSystem<EncounterActions>, IEncounterActionsSystem
@@ -31,5 +32,6 @@ public partial struct Entity
     {
         get => IEncounterActionsSystem.Resolve().Get(this);
         set => IEncounterActionsSystem.Resolve().Set(this, value);
+
     }
 }

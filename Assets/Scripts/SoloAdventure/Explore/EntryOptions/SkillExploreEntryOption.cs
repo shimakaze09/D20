@@ -10,7 +10,10 @@ public class SkillExploreEntryOption : MonoBehaviour, IEntryOption
     [SerializeField] private string successEntry;
     [SerializeField] private string criticalSuccessEntry;
 
-    public string Text => text;
+    public string Text
+    {
+        get { return text; }
+    }
 
     public void Select()
     {

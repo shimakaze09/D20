@@ -25,7 +25,7 @@ public class ProficiencySystem : IProficiencySystem
         GetSystem(skill).Set(entity, value);
     }
 
-    private IEntityTableSystem<Proficiency> GetSystem(Skill skill)
+    IEntityTableSystem<Proficiency> GetSystem(Skill skill)
     {
         switch (skill)
         {

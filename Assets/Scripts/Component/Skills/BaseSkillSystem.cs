@@ -15,7 +15,7 @@ public abstract class BaseSkillSystem : EntityTableSystem<int>, IBaseSkillSystem
 
     protected virtual int Calculate(Entity entity)
     {
-        var result = entity[Attribute].Modifier;
+        int result = entity[Attribute].Modifier;
         var proficiency = IProficiencySystem.Resolve().Get(entity, Skill);
         if (proficiency != Proficiency.Untrained)
             result += (int)proficiency * 2 + entity.Level;

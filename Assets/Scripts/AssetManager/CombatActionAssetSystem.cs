@@ -11,7 +11,7 @@ public class CombatActionAssetSystem : ICombatActionAssetSystem
     public async UniTask<ICombatAction> Load(string assetName)
     {
         var assetManager = IAssetManager<GameObject>.Resolve();
-        var key = $"Assets/Objects/CombatAction/{assetName}.prefab";
+        var key = string.Format("Assets/Objects/CombatAction/{0}.prefab", assetName);
         var prefab = await assetManager.LoadAssetAsync(key);
         return prefab.GetComponent<ICombatAction>();
     }

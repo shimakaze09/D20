@@ -5,6 +5,7 @@ public partial class Data
 
 public interface ILoreSystem : IDependency<ILoreSystem>, IBaseSkillSystem
 {
+
 }
 
 public class LoreSystem : BaseSkillSystem, ILoreSystem
@@ -20,5 +21,6 @@ public partial struct Entity
     {
         get => ILoreSystem.Resolve().Get(this);
         set => ILoreSystem.Resolve().Set(this, value);
+
     }
 }

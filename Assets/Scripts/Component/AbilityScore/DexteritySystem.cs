@@ -5,6 +5,7 @@ public partial class Data
 
 public interface IDexteritySystem : IDependency<IDexteritySystem>, IEntityTableSystem<AbilityScore>
 {
+
 }
 
 public class DexteritySystem : EntityTableSystem<AbilityScore>, IDexteritySystem

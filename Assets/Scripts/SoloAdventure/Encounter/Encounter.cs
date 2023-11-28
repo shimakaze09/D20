@@ -19,15 +19,15 @@ public interface IEncounter
 
 public class Encounter : MonoBehaviour, IEncounter
 {
-    public string VictoryEntry => victoryEntry;
+    public string VictoryEntry { get { return victoryEntry; } }
     [SerializeField] private string victoryEntry;
 
-    public string DefeatEntry => defeatEntry;
+    public string DefeatEntry { get { return defeatEntry; } }
     [SerializeField] private string defeatEntry;
 
-    public List<MonsterSpawn> MonsterSpawns => monsterSpawns;
+    public List<MonsterSpawn> MonsterSpawns { get { return monsterSpawns; } }
     [SerializeField] private List<MonsterSpawn> monsterSpawns;
 
-    public List<Point> HeroPositions => heroPositions;
+    public List<Point> HeroPositions { get { return heroPositions; } }
     [SerializeField] private List<Point> heroPositions;
 }

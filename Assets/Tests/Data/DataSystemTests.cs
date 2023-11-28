@@ -55,8 +55,7 @@ public class DataSystemTests
         Assert.IsTrue(mockDataSerializer.DidCallSerialize);
         Assert.AreEqual(sut.Data, mockDataSerializer.SerializeDataParam);
         Assert.IsTrue(mockDataStore.DidCallWrite);
-        Assert.AreEqual(mockDataSerializer.fakeSerializeResult,
-            mockDataStore.WriteJsonParam);
+        Assert.AreEqual(mockDataSerializer.fakeSerializeResult, mockDataStore.WriteJsonParam);
     }
 
     [Test]
@@ -67,8 +66,7 @@ public class DataSystemTests
         sut.Load();
         Assert.IsTrue(mockDataStore.DidCallRead);
         Assert.IsTrue(mockDataSerializer.DidCallDeserialize);
-        Assert.AreEqual(mockDataStore.fakeReadResult,
-            mockDataSerializer.DeserializeJsonParam);
+        Assert.AreEqual(mockDataStore.fakeReadResult, mockDataSerializer.DeserializeJsonParam);
         Assert.AreEqual(mockDataSerializer.fakeDeserializeResult, sut.Data);
     }
 }

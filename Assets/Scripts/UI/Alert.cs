@@ -22,9 +22,7 @@ public class Alert : MonoBehaviour, IAlert
 
         // Wait for user to click Ok
         using (var handler = button.GetAsyncClickEventHandler(this.GetCancellationTokenOnDestroy()))
-        {
             await handler.OnClickAsync();
-        }
 
         // dismiss the alert
         await rootPanel.ScaleTo(Vector3.zero, 0.25f, EasingEquations.EaseInBack).Play();

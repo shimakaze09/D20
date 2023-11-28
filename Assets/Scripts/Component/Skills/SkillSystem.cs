@@ -52,7 +52,7 @@ public class SkillSystem : ISkillSystem
         GetSystem(skill).Setup(entity);
     }
 
-    private IBaseSkillSystem GetSystem(Skill skill)
+    IBaseSkillSystem GetSystem(Skill skill)
     {
         switch (skill)
         {
@@ -102,5 +102,6 @@ public partial struct Entity
     {
         get => ISkillSystem.Resolve().Get(this, skill);
         set => ISkillSystem.Resolve().Set(this, skill, value);
+
     }
 }

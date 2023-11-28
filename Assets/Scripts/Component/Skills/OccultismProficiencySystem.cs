@@ -5,6 +5,7 @@ public partial class Data
 
 public interface IOccultismProficiencySystem : IDependency<IOccultismProficiencySystem>, IEntityTableSystem<Proficiency>
 {
+
 }
 
 public class OccultismProficiencySystem : EntityTableSystem<Proficiency>, IOccultismProficiencySystem
