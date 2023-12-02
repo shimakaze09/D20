@@ -12,8 +12,8 @@ public class SoloAdventureAttack : MonoBehaviour, ICombatAction
 
     public async UniTask Perform(Entity entity)
     {
-        var attacker = ITurnSystem.Resolve().Current;
-        var target = ICombatantSystem.Resolve().Table.First(c => c.Party != attacker.Party);
+        var attacker = entity;
+        var target = await SelectTarget(entity);
 
         // Perform the Attack Roll
         var attackInfo = new AttackRollInfo
@@ -73,5 +73,21 @@ public class SoloAdventureAttack : MonoBehaviour, ICombatAction
             amount = -damageAmount
         };
         await IHealthSystem.Resolve().Apply(healthInfo);
+    }
+
+    private async UniTask<Entity> SelectTarget(Entity entity)
+    {
+        if (entity.Party == Party.Monster)
+            return ICombatantSystem.Resolve().Table.First(c => c.Party != entity.Party);
+
+        var layerMask = LayerMask.GetMask("Hero");
+        Entity? target = null;
+        while (!target.HasValue)
+        {
+            var position = await IPositionSelectionSystem.Resolve().Select(entity.Position);
+            target = IPhysicsSystem.Resolve().OverlapPoint(position, layerMask);
+        }
+
+        return target.Value;
     }
 }

@@ -40,9 +40,17 @@ public class EntityViewProvider : MonoBehaviour, IEntityViewProvider
             mapping[zone] = new Dictionary<Entity, GameObject>();
 
         if (view)
+        {
             mapping[zone][entity] = view;
+            var ev = view.GetComponent<EntityView>();
+            if (ev == null)
+                ev = view.AddComponent<EntityView>();
+            ev.entity = entity;
+        }
         else
+        {
             mapping[zone].Remove(entity);
+        }
     }
 
     private void OnEnable()
