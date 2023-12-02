@@ -5,7 +5,6 @@ public partial class Data
 
 public interface IDeceptionSystem : IDependency<IDeceptionSystem>, IBaseSkillSystem
 {
-
 }
 
 public class DeceptionSystem : BaseSkillSystem, IDeceptionSystem
@@ -21,6 +20,5 @@ public partial struct Entity
     {
         get => IDeceptionSystem.Resolve().Get(this);
         set => IDeceptionSystem.Resolve().Set(this, value);
-
     }
 }

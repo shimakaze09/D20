@@ -3,9 +3,9 @@ public partial class Data
     public CoreDictionary<Entity, Proficiency> acrobaticsProficiency = new();
 }
 
-public interface IAcrobaticsProficiencySystem : IDependency<IAcrobaticsProficiencySystem>, IEntityTableSystem<Proficiency>
+public interface IAcrobaticsProficiencySystem : IDependency<IAcrobaticsProficiencySystem>,
+    IEntityTableSystem<Proficiency>
 {
-
 }
 
 public class AcrobaticsProficiencySystem : EntityTableSystem<Proficiency>, IAcrobaticsProficiencySystem

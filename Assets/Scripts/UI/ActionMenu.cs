@@ -34,6 +34,7 @@ public class ActionMenu : MonoBehaviour, IActionMenu
             var label = pair.button.GetComponentInChildren<TextMeshProUGUI>();
             label.text = pair.action;
         }
+
         menuCount = pairs.Count();
         await UniTask.CompletedTask;
     }
@@ -59,6 +60,7 @@ public class ActionMenu : MonoBehaviour, IActionMenu
             selection = (selection + offset + menuCount) % menuCount;
             buttons[selection].Select();
         }
+
         return entity.EncounterActions.names[selection];
     }
 

@@ -5,7 +5,6 @@ public partial class Data
 
 public interface ISurvivalProficiencySystem : IDependency<ISurvivalProficiencySystem>, IEntityTableSystem<Proficiency>
 {
-
 }
 
 public class SurvivalProficiencySystem : EntityTableSystem<Proficiency>, ISurvivalProficiencySystem

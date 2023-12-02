@@ -12,16 +12,16 @@ public partial struct DiceRoll
 
     public DiceRoll(int sides)
     {
-        this.count = 1;
+        count = 1;
         this.sides = sides;
-        this.bonus = 0;
+        bonus = 0;
     }
 
     public DiceRoll(int count, int sides)
     {
         this.count = count;
         this.sides = sides;
-        this.bonus = 0;
+        bonus = 0;
     }
 
     public DiceRoll(int count, int sides, int bonus)

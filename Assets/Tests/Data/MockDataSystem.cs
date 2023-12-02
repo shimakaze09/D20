@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class MockDataSystem : IDataSystem
 {
     public Data Data { get; private set; }
@@ -23,11 +19,9 @@ public class MockDataSystem : IDataSystem
 
     public void Load()
     {
-        
     }
 
     public void Save()
     {
-        
     }
 }

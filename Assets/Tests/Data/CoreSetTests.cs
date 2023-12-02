@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class CoreSetTests
 {
-    const string json = "{\"values\":[1]}";
+    private const string json = "{\"values\":[1]}";
 
     [Test]
     public void Add_And_Remove_Success()

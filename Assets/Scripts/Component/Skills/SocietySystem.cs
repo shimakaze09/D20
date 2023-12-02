@@ -5,7 +5,6 @@ public partial class Data
 
 public interface ISocietySystem : IDependency<ISocietySystem>, IBaseSkillSystem
 {
-
 }
 
 public class SocietySystem : BaseSkillSystem, ISocietySystem
@@ -21,6 +20,5 @@ public partial struct Entity
     {
         get => ISocietySystem.Resolve().Get(this);
         set => ISocietySystem.Resolve().Set(this, value);
-
     }
 }

@@ -15,7 +15,7 @@ public class EntityRecipeSystem : IEntityRecipeSystem
         var key = string.Format("Assets/Objects/EntityRecipe/{0}.prefab", assetName);
         var prefab = await assetManager.LoadAssetAsync(key);
         var providers = prefab.GetComponents<IAttributeProvider>();
-        for (int i = 0; i < providers.Length; ++i)
+        for (var i = 0; i < providers.Length; ++i)
             providers[i].Setup(entity);
         return entity;
     }

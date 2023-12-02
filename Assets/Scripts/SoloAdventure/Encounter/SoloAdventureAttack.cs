@@ -39,8 +39,7 @@ public class SoloAdventureAttack : MonoBehaviour, ICombatAction
         }
 
         // Determine Damage
-        DamageInfo damageInfo = new()
-
+        var damageInfo = new DamageInfo
         {
             target = target,
             damage = 0,
@@ -66,8 +65,13 @@ public class SoloAdventureAttack : MonoBehaviour, ICombatAction
                 break;
         }
 
-        // TODO: Apply Damage if applicable
+        // Apply Damage
         var damageAmount = IDamageSystem.Resolve().Apply(damageInfo);
-        Debug.Log("Final Damage: " + damageAmount);
+        var healthInfo = new HealthInfo
+        {
+            target = target,
+            amount = -damageAmount
+        };
+        await IHealthSystem.Resolve().Apply(healthInfo);
     }
 }

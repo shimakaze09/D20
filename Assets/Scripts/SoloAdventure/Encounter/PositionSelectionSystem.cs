@@ -22,7 +22,7 @@ public class PositionSelectionSystem : IPositionSelectionSystem
             result += new Point(
                 input.GetAxisUp(InputAxis.Horizontal),
                 input.GetAxisUp(InputAxis.Vertical)
-                );
+            );
             indicator.SetPosition(result);
         }
 

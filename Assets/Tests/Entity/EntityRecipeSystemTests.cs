@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class EntityRecipeSystemTests
 {
-    MockAssetManager<GameObject> mockAssetManager;
+    private MockAssetManager<GameObject> mockAssetManager;
 
     [SetUp]
     public void SetUp()

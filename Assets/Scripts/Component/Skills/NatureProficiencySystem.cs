@@ -5,7 +5,6 @@ public partial class Data
 
 public interface INatureProficiencySystem : IDependency<INatureProficiencySystem>, IEntityTableSystem<Proficiency>
 {
-
 }
 
 public class NatureProficiencySystem : EntityTableSystem<Proficiency>, INatureProficiencySystem

@@ -13,6 +13,7 @@ public class MockAbilityScoreSystem : IAbilityScoreSystem
             if (map.ContainsKey(attribute))
                 return map[attribute];
         }
+
         return new AbilityScore(0);
     }
 

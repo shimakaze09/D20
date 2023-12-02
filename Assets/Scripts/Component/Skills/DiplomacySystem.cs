@@ -5,7 +5,6 @@ public partial class Data
 
 public interface IDiplomacySystem : IDependency<IDiplomacySystem>, IBaseSkillSystem
 {
-
 }
 
 public class DiplomacySystem : BaseSkillSystem, IDiplomacySystem
@@ -21,6 +20,5 @@ public partial struct Entity
     {
         get => IDiplomacySystem.Resolve().Get(this);
         set => IDiplomacySystem.Resolve().Set(this, value);
-
     }
 }

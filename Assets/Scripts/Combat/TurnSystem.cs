@@ -11,16 +11,16 @@ public interface ITurnSystem : IDependency<ITurnSystem>
 
 public class TurnSystem : ITurnSystem
 {
-    public Entity Current { get { return current; } }
-    Entity current;
+    public Entity Current => current;
+    private Entity current;
 
-    public int ActionsRemaining { get { return actionsRemaining; } }
-    int actionsRemaining;
+    public int ActionsRemaining => actionsRemaining;
+    private int actionsRemaining;
 
-    public int AttackCount { get { return attackCount; } }
-    int attackCount;
+    public int AttackCount => attackCount;
+    private int attackCount;
 
-    public bool IsComplete { get { return actionsRemaining == 0; } }
+    public bool IsComplete => actionsRemaining == 0;
 
     public void Begin(Entity entity)
     {

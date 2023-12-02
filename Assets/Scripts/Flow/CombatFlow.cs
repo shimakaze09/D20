@@ -1,3 +1,4 @@
+using System;
 using Cysharp.Threading.Tasks;
 
 public interface ICombatFlow : IDependency<ICombatFlow>
@@ -10,18 +11,18 @@ public struct CombatFlow : ICombatFlow
     public async UniTask<CombatResult> Play()
     {
         await Enter();
-        CombatResult result = await Loop();
+        var result = await Loop();
         await Exit();
         return result;
     }
 
-    async UniTask Enter()
+    private async UniTask Enter()
     {
         // TODO: initiative, surprise attacks, etc
         await UniTask.CompletedTask;
     }
 
-    async UniTask<CombatResult> Loop()
+    private async UniTask<CombatResult> Loop()
     {
         CombatResult? result = null;
         while (!result.HasValue)
@@ -29,9 +30,8 @@ public struct CombatFlow : ICombatFlow
         return result.Value;
     }
 
-    async UniTask Exit()
+    private async UniTask Exit()
     {
-        // TODO: award experience, delete monster data, etc
-        await UniTask.CompletedTask;
+        await UniTask.Delay(TimeSpan.FromSeconds(3), false);
     }
 }

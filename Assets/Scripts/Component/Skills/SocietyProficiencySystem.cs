@@ -5,7 +5,6 @@ public partial class Data
 
 public interface ISocietyProficiencySystem : IDependency<ISocietyProficiencySystem>, IEntityTableSystem<Proficiency>
 {
-
 }
 
 public class SocietyProficiencySystem : EntityTableSystem<Proficiency>, ISocietyProficiencySystem

@@ -5,7 +5,6 @@ public partial class Data
 
 public interface IAthleticsSystem : IDependency<IAthleticsSystem>, IBaseSkillSystem
 {
-
 }
 
 public class AthleticsSystem : BaseSkillSystem, IAthleticsSystem
@@ -21,6 +20,5 @@ public partial struct Entity
     {
         get => IAthleticsSystem.Resolve().Get(this);
         set => IAthleticsSystem.Resolve().Set(this, value);
-
     }
 }

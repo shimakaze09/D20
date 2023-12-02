@@ -7,10 +7,7 @@ public class ItemExploreEntryOption : MonoBehaviour, IEntryOption
     [SerializeField] private string hasItemEntry;
     [SerializeField] private string noItemEntry;
 
-    public string Text
-    {
-        get { return text; }
-    }
+    public string Text => text;
 
     public void Select()
     {

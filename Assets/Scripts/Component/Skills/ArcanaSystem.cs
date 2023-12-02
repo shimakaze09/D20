@@ -5,7 +5,6 @@ public partial class Data
 
 public interface IArcanaSystem : IDependency<IArcanaSystem>, IBaseSkillSystem
 {
-
 }
 
 public class ArcanaSystem : BaseSkillSystem, IArcanaSystem
@@ -21,6 +20,5 @@ public partial struct Entity
     {
         get => IArcanaSystem.Resolve().Get(this);
         set => IArcanaSystem.Resolve().Set(this, value);
-
     }
 }

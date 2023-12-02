@@ -5,7 +5,6 @@ public partial class Data
 
 public interface ISurvivalSystem : IDependency<ISurvivalSystem>, IBaseSkillSystem
 {
-
 }
 
 public class SurvivalSystem : BaseSkillSystem, ISurvivalSystem
@@ -21,6 +20,5 @@ public partial struct Entity
     {
         get => ISurvivalSystem.Resolve().Get(this);
         set => ISurvivalSystem.Resolve().Set(this, value);
-
     }
 }

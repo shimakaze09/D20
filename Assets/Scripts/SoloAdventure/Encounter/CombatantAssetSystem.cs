@@ -5,7 +5,6 @@ public partial class Data
 
 public interface ICombatantAssetSystem : IDependency<ICombatantAssetSystem>, IEntityTableSystem<string>
 {
-
 }
 
 public class CombatantAssetSystem : EntityTableSystem<string>, ICombatantAssetSystem
@@ -19,6 +18,5 @@ public partial struct Entity
     {
         get => ICombatantAssetSystem.Resolve().Get(this);
         set => ICombatantAssetSystem.Resolve().Set(this, value);
-
     }
 }

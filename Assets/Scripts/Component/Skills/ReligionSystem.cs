@@ -5,7 +5,6 @@ public partial class Data
 
 public interface IReligionSystem : IDependency<IReligionSystem>, IBaseSkillSystem
 {
-
 }
 
 public class ReligionSystem : BaseSkillSystem, IReligionSystem
@@ -21,6 +20,5 @@ public partial struct Entity
     {
         get => IReligionSystem.Resolve().Get(this);
         set => IReligionSystem.Resolve().Set(this, value);
-
     }
 }

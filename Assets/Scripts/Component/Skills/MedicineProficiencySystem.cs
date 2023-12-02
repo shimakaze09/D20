@@ -5,7 +5,6 @@ public partial class Data
 
 public interface IMedicineProficiencySystem : IDependency<IMedicineProficiencySystem>, IEntityTableSystem<Proficiency>
 {
-
 }
 
 public class MedicineProficiencySystem : EntityTableSystem<Proficiency>, IMedicineProficiencySystem

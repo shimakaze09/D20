@@ -5,7 +5,6 @@ public partial class Data
 
 public interface IDiplomacyProficiencySystem : IDependency<IDiplomacyProficiencySystem>, IEntityTableSystem<Proficiency>
 {
-
 }
 
 public class DiplomacyProficiencySystem : EntityTableSystem<Proficiency>, IDiplomacyProficiencySystem

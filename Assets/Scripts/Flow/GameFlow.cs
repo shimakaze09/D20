@@ -14,7 +14,7 @@ public class GameFlow : IGameFlow
         await Exit();
     }
 
-    async UniTask Enter()
+    private async UniTask Enter()
     {
         var option = await IMainMenuFlow.Resolve().Play();
         switch (option)
@@ -28,7 +28,7 @@ public class GameFlow : IGameFlow
         }
     }
 
-    async UniTask Loop()
+    private async UniTask Loop()
     {
         while (true)
         {
@@ -44,7 +44,7 @@ public class GameFlow : IGameFlow
         }
     }
 
-    async UniTask Exit()
+    private async UniTask Exit()
     {
         IDataSystem.Resolve().Delete();
         await UniTask.CompletedTask;

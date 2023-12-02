@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-[System.Serializable]
+[Serializable]
 public struct Point : IEquatable<Point>
 {
     public int x;
@@ -13,20 +13,44 @@ public struct Point : IEquatable<Point>
         this.y = y;
     }
 
-    public static Point operator +(Point lhs, Point rhs) => new(lhs.x + rhs.x, lhs.y + rhs.y);
-    public static Point operator -(Point lhs, Point rhs) => new(lhs.x - rhs.x, lhs.y - rhs.y);
-    public static bool operator ==(Point lhs, Point rhs) => lhs.x == rhs.x && lhs.y == rhs.y;
-    public static bool operator !=(Point lhs, Point rhs) => !(lhs == rhs);
-    public static explicit operator Point(Vector3 v) => new(Mathf.RoundToInt(v.x), Mathf.RoundToInt(v.y));
-    public static implicit operator Vector3(Point p) => new(p.x, p.y, 0);
+    public static Point operator +(Point lhs, Point rhs)
+    {
+        return new Point(lhs.x + rhs.x, lhs.y + rhs.y);
+    }
+
+    public static Point operator -(Point lhs, Point rhs)
+    {
+        return new Point(lhs.x - rhs.x, lhs.y - rhs.y);
+    }
+
+    public static bool operator ==(Point lhs, Point rhs)
+    {
+        return lhs.x == rhs.x && lhs.y == rhs.y;
+    }
+
+    public static bool operator !=(Point lhs, Point rhs)
+    {
+        return !(lhs == rhs);
+    }
+
+    public static explicit operator Point(Vector3 v)
+    {
+        return new Point(Mathf.RoundToInt(v.x), Mathf.RoundToInt(v.y));
+    }
+
+    public static implicit operator Vector3(Point p)
+    {
+        return new Vector3(p.x, p.y, 0);
+    }
 
     public override bool Equals(object obj)
     {
         if (obj is Point)
         {
-            Point p = (Point)obj;
+            var p = (Point)obj;
             return this == p;
         }
+
         return false;
     }
 

@@ -27,7 +27,7 @@ public abstract class EntityTableSystem<T> : IEntityTableSystem<T>
         T result;
         if (Table.TryGetValue(entity, out result))
             return result;
-        return default(T);
+        return default;
     }
 
     public virtual bool TryGetValue(Entity entity, out T value)

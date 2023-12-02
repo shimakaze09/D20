@@ -20,6 +20,13 @@ public struct AbilityScore
         this.value = value;
     }
 
-    public static implicit operator int(AbilityScore score) => score.value;
-    public static implicit operator AbilityScore(int score) => new(score);
+    public static implicit operator int(AbilityScore score)
+    {
+        return score.value;
+    }
+
+    public static implicit operator AbilityScore(int score)
+    {
+        return new AbilityScore(score);
+    }
 }

@@ -5,7 +5,6 @@ public partial class Data
 
 public interface IArmorClassSystem : IDependency<IArmorClassSystem>, IEntityTableSystem<int>
 {
-
 }
 
 public class ArmorClassSystem : EntityTableSystem<int>, IArmorClassSystem
@@ -19,6 +18,5 @@ public partial struct Entity
     {
         get => IArmorClassSystem.Resolve().Get(this);
         set => IArmorClassSystem.Resolve().Set(this, value);
-
     }
 }

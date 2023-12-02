@@ -34,7 +34,7 @@ public class DamageSystem : IDamageSystem
             if (system.GetImmunity(info))
                 return 0;
 
-        int result = info.damage + info.criticalDamage;
+        var result = info.damage + info.criticalDamage;
 
         // Step 2: Check for Weaknesses
         foreach (var system in damageTypeSystems)

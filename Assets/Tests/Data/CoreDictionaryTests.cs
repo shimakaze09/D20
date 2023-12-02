@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class CoreDictionaryTests
 {
-    const string json = "{\"keys\":[1],\"values\":[3]}";
-    const int key = 1;
-    const int value = 3;
+    private const string json = "{\"keys\":[1],\"values\":[3]}";
+    private const int key = 1;
+    private const int value = 3;
 
     [Test]
     public void Add_And_Remove_Success()

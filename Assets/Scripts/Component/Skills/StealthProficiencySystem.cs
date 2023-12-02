@@ -5,7 +5,6 @@ public partial class Data
 
 public interface IStealthProficiencySystem : IDependency<IStealthProficiencySystem>, IEntityTableSystem<Proficiency>
 {
-
 }
 
 public class StealthProficiencySystem : EntityTableSystem<Proficiency>, IStealthProficiencySystem

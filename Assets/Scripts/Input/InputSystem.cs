@@ -37,6 +37,7 @@ public class InputSystem : IInputSystem
                     return -1;
                 break;
         }
+
         return 0;
     }
 
@@ -49,6 +50,7 @@ public class InputSystem : IInputSystem
             case InputAction.Cancel:
                 return Input.GetKeyUp(KeyCode.Escape);
         }
+
         return false;
     }
 }

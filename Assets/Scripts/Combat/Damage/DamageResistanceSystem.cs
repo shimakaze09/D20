@@ -24,10 +24,8 @@ public class DamageResistanceSystem : EntityTableSystem<DamageResistance>, IDama
     {
         DamageResistance damageResistance;
         if (TryGetValue(entity, out damageResistance))
-        {
             if (damageResistance.types.ContainsKey(damageType))
                 return damageResistance.types[damageType];
-        }
         return 0;
     }
 

@@ -1,9 +1,8 @@
 using NUnit.Framework;
-using UnityEngine;
 
 public class SoloHeroSystemTests
 {
-    MockEntityRecipeSystem mockEntityRecipeSystem;
+    private MockEntityRecipeSystem mockEntityRecipeSystem;
 
     [SetUp]
     public void SetUp()
@@ -31,7 +30,7 @@ public class SoloHeroSystemTests
         Assert.AreEqual(7, sut.Hero.Athletics); // (+4 str, +2 trained, +1 level)
     }
 
-    Entity CreateSoloHero()
+    private Entity CreateSoloHero()
     {
         var result = new Entity(123);
         result.Level = 1;

@@ -12,6 +12,7 @@ public class MockProficiencySystem : IProficiencySystem
             if (map.ContainsKey(skill))
                 return map[skill];
         }
+
         return 0;
     }
 

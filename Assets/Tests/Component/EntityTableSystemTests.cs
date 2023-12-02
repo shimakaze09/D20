@@ -2,7 +2,7 @@ using NUnit.Framework;
 
 internal class TestEntityTableSystem : EntityTableSystem<int>
 {
-    public override CoreDictionary<Entity, int> Table { get { return _table; } }
+    public override CoreDictionary<Entity, int> Table => _table;
 
     private CoreDictionary<Entity, int> _table = new();
 }

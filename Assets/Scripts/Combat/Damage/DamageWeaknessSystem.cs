@@ -24,10 +24,8 @@ public class DamageWeaknessSystem : EntityTableSystem<DamageWeakness>, IDamageWe
     {
         DamageWeakness damageWeakness;
         if (TryGetValue(entity, out damageWeakness))
-        {
             if (damageWeakness.types.ContainsKey(damageType))
                 return damageWeakness.types[damageType];
-        }
         return 0;
     }
 

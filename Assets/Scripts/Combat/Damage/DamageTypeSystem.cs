@@ -18,6 +18,7 @@ public class DamageTypeSystem : IDamageTypeSystem
             var system = IDamageImmunitySystem.Resolve();
             return system.HasImmunity(info.target, info.type);
         }
+
         return false;
     }
 
@@ -31,6 +32,7 @@ public class DamageTypeSystem : IDamageTypeSystem
             var exception = excSystem.GetException(info.target, info.type);
             return string.Equals(info.material, exception) ? 0 : result;
         }
+
         return 0;
     }
 
@@ -41,6 +43,7 @@ public class DamageTypeSystem : IDamageTypeSystem
             var system = IDamageWeaknessSystem.Resolve();
             return system.GetWeakness(info.target, info.type);
         }
+
         return 0;
     }
 }

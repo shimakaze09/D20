@@ -5,7 +5,6 @@ public partial class Data
 
 public interface IDeceptionProficiencySystem : IDependency<IDeceptionProficiencySystem>, IEntityTableSystem<Proficiency>
 {
-
 }
 
 public class DeceptionProficiencySystem : EntityTableSystem<Proficiency>, IDeceptionProficiencySystem

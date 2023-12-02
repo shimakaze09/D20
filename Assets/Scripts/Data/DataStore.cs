@@ -15,7 +15,7 @@ public class DataStore : IDataStore
 
     public DataStore(string fileName)
     {
-        this.FilePath = string.Format("{0}/{1}.txt", Application.persistentDataPath, fileName);
+        FilePath = string.Format("{0}/{1}.txt", Application.persistentDataPath, fileName);
     }
 
     public bool HasFile()

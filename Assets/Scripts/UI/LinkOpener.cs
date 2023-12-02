@@ -11,7 +11,7 @@ public class LinkOpener : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         var text = GetComponent<TMP_Text>();
-        int linkIndex = TMP_TextUtilities.FindIntersectingLink(text, eventData.position, null);
+        var linkIndex = TMP_TextUtilities.FindIntersectingLink(text, eventData.position, null);
         if (linkIndex != -1)
         {
             var linkInfo = text.textInfo.linkInfo[linkIndex];

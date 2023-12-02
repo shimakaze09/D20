@@ -5,7 +5,6 @@ public partial class Data
 
 public interface ICraftingSystem : IDependency<ICraftingSystem>, IBaseSkillSystem
 {
-
 }
 
 public class CraftingSystem : BaseSkillSystem, ICraftingSystem
@@ -21,6 +20,5 @@ public partial struct Entity
     {
         get => ICraftingSystem.Resolve().Get(this);
         set => ICraftingSystem.Resolve().Set(this, value);
-
     }
 }

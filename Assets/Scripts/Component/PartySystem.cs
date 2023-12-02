@@ -12,7 +12,6 @@ public partial class Data
 
 public interface IPartySystem : IDependency<IPartySystem>, IEntityTableSystem<Party>
 {
-
 }
 
 public class PartySystem : EntityTableSystem<Party>, IPartySystem
@@ -26,6 +25,5 @@ public partial struct Entity
     {
         get => IPartySystem.Resolve().Get(this);
         set => IPartySystem.Resolve().Set(this, value);
-
     }
 }

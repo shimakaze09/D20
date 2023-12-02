@@ -5,7 +5,6 @@ public partial class Data
 
 public interface IConstitutionSystem : IDependency<IConstitutionSystem>, IEntityTableSystem<AbilityScore>
 {
-
 }
 
 public class ConstitutionSystem : EntityTableSystem<AbilityScore>, IConstitutionSystem
