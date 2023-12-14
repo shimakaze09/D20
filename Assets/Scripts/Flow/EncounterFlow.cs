@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using UnityEngine.SceneManagement;
 
@@ -47,6 +48,16 @@ public class EncounterFlow : IEncounterFlow
                 break;
         }
 
+        DeleteMonsters();
         await UniTask.CompletedTask;
+    }
+
+    private void DeleteMonsters()
+    {
+        var system = IEntitySystem.Resolve();
+        var table = new List<Entity>(ICombatantSystem.Resolve().Table);
+        foreach (var entity in table)
+            if (entity.Party == Party.Monster)
+                system.Destroy(entity);
     }
 }

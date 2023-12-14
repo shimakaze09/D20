@@ -45,4 +45,19 @@ public abstract class EntityTableSystem<T> : IEntityTableSystem<T>
         if (Table.ContainsKey(entity))
             Table.Remove(entity);
     }
+
+    public virtual void SetUp()
+    {
+        IEntitySystem.Resolve().EntityDestroyed += OnEntityDestroyed;
+    }
+
+    public virtual void TearDown()
+    {
+        IEntitySystem.Resolve().EntityDestroyed -= OnEntityDestroyed;
+    }
+
+    protected virtual void OnEntityDestroyed(Entity entity)
+    {
+        Remove(entity);
+    }
 }

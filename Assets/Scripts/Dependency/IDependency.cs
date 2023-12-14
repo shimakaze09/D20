@@ -77,4 +77,14 @@ public interface IDependency<T>
     {
         _disposer(entity);
     }
+
+    public void SetUp()
+    {
+        //Debug.Log("SetUp " + this.GetType().Name);
+    }
+
+    public void TearDown()
+    {
+        //Debug.Log("TearDown " + this.GetType().Name);
+    }
 }

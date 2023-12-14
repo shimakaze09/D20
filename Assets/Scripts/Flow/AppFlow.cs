@@ -7,10 +7,16 @@ public class AppFlow : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
         Injector.Inject();
+        Injector.SetUp();
         while (true)
         {
             await IGameFlow.Resolve().Play();
             await UniTask.NextFrame(this.GetCancellationTokenOnDestroy());
         }
+    }
+
+    private void OnDestroy()
+    {
+        Injector.TearDown();
     }
 }

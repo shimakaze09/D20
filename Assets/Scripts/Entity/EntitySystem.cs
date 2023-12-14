@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 public partial class Data
@@ -9,12 +10,14 @@ public interface IEntitySystem : IDependency<IEntitySystem>
 {
     Entity Create();
     void Destroy(Entity entity);
+    event Action<Entity> EntityDestroyed;
 }
 
 public class EntitySystem : IEntitySystem
 {
     private Data Data => IDataSystem.Resolve().Data;
     private IRandomNumberGenerator RNG => IRandomNumberGenerator.Resolve();
+    public event Action<Entity> EntityDestroyed;
 
     public Entity Create()
     {
@@ -31,5 +34,6 @@ public class EntitySystem : IEntitySystem
     public void Destroy(Entity entity)
     {
         Data.entities.Remove(entity);
+        EntityDestroyed?.Invoke(entity);
     }
 }
