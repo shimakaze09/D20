@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public interface ICombatSelectionIndicator : IDependency<ICombatSelectionIndicator>
@@ -10,16 +8,6 @@ public interface ICombatSelectionIndicator : IDependency<ICombatSelectionIndicat
 
 public class CombatSelectionIndicator : MonoBehaviour, ICombatSelectionIndicator
 {
-    public void SetPosition(Point value)
-    {
-        transform.position = value;
-    }
-
-    public void SetVisible(bool isVisible)
-    {
-        GetComponent<SpriteRenderer>().enabled = isVisible;
-    }
-
     private void OnEnable()
     {
         ICombatSelectionIndicator.Register(this);
@@ -28,5 +16,15 @@ public class CombatSelectionIndicator : MonoBehaviour, ICombatSelectionIndicator
     private void OnDisable()
     {
         ICombatSelectionIndicator.Reset();
+    }
+
+    public void SetPosition(Point value)
+    {
+        transform.position = value;
+    }
+
+    public void SetVisible(bool isVisible)
+    {
+        GetComponent<SpriteRenderer>().enabled = isVisible;
     }
 }

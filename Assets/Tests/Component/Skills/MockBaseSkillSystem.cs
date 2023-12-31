@@ -1,8 +1,8 @@
 public class MockBaseSkillSystem : BaseSkillSystem
 {
-    private CoreDictionary<Entity, int> fakeTable = new();
-    private Skill fakeSkill;
-    private AbilityScore.Attribute fakeAttribute;
+    private readonly AbilityScore.Attribute fakeAttribute;
+    private readonly Skill fakeSkill;
+    private readonly CoreDictionary<Entity, int> fakeTable = new();
 
     public MockBaseSkillSystem(Skill fakeSkill, AbilityScore.Attribute fakeAttribute)
     {

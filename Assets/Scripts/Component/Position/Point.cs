@@ -13,6 +13,11 @@ public struct Point : IEquatable<Point>
         this.y = y;
     }
 
+    public bool Equals(Point p)
+    {
+        return this == p;
+    }
+
     public static Point operator +(Point lhs, Point rhs)
     {
         return new Point(lhs.x + rhs.x, lhs.y + rhs.y);
@@ -52,11 +57,6 @@ public struct Point : IEquatable<Point>
         }
 
         return false;
-    }
-
-    public bool Equals(Point p)
-    {
-        return this == p;
     }
 
     public override int GetHashCode()

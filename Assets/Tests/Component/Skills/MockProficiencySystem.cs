@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 public class MockProficiencySystem : IProficiencySystem
 {
-    private Dictionary<Entity, Dictionary<Skill, Proficiency>> fakeTable = new();
+    private readonly Dictionary<Entity, Dictionary<Skill, Proficiency>> fakeTable = new();
 
     public Proficiency Get(Entity entity, Skill skill)
     {

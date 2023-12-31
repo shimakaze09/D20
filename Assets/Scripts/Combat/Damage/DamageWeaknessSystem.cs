@@ -1,4 +1,6 @@
-[System.Serializable]
+using System;
+
+[Serializable]
 public class DamageWeakness
 {
     public CoreDictionary<string, int> types = new();

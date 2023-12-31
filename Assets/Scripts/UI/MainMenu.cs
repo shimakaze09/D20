@@ -1,7 +1,7 @@
+using System.Threading;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
-using Cysharp.Threading.Tasks;
-using System.Threading;
 
 public enum MainMenuOption
 {
@@ -27,6 +27,17 @@ public class MainMenu : MonoBehaviour, IMainMenu
     [SerializeField] private Button continueButton;
     [SerializeField] private Button newGameButton;
     private CancellationTokenSource cts = new();
+
+    private void OnEnable()
+    {
+        IMainMenu.Register(this);
+    }
+
+    private void OnDisable()
+    {
+        IMainMenu.Reset();
+        CancelToken();
+    }
 
     public void Setup(bool hasSavedGame)
     {
@@ -85,17 +96,6 @@ public class MainMenu : MonoBehaviour, IMainMenu
         {
             await handler.OnClickAsync();
         }
-    }
-
-    private void OnEnable()
-    {
-        IMainMenu.Register(this);
-    }
-
-    private void OnDisable()
-    {
-        IMainMenu.Reset();
-        CancelToken();
     }
 
     private void CancelToken()

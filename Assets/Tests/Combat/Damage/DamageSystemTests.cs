@@ -2,10 +2,10 @@ using NUnit.Framework;
 
 public class DamageSystemTests
 {
-    private Entity entity;
-    private string damageType;
-    private string material;
     private DamageInfo damageInfo;
+    private string damageType;
+    private Entity entity;
+    private string material;
 
     [SetUp]
     public void SetUp()

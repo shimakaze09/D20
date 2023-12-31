@@ -9,9 +9,9 @@ public interface IThieverySystem : IDependency<IThieverySystem>, IBaseSkillSyste
 
 public class ThieverySystem : BaseSkillSystem, IThieverySystem
 {
-    public override CoreDictionary<Entity, int> Table => IDataSystem.Resolve().Data.thievery;
     protected override Skill Skill => Skill.Thievery;
     protected override AbilityScore.Attribute Attribute => AbilityScore.Attribute.Dexterity;
+    public override CoreDictionary<Entity, int> Table => IDataSystem.Resolve().Data.thievery;
 }
 
 public partial struct Entity

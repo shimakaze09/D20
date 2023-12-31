@@ -10,9 +10,7 @@ public class DataSerializer : IDataSerializer
 {
     public string Serialize(Data data)
     {
-        var result = JsonUtility.ToJson(data);
-        Debug.Log(result);
-        return result;
+        return JsonUtility.ToJson(data);
     }
 
     public Data Deserialize(string json)

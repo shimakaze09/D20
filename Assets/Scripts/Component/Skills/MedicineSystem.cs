@@ -9,9 +9,9 @@ public interface IMedicineSystem : IDependency<IMedicineSystem>, IBaseSkillSyste
 
 public class MedicineSystem : BaseSkillSystem, IMedicineSystem
 {
-    public override CoreDictionary<Entity, int> Table => IDataSystem.Resolve().Data.medicine;
     protected override Skill Skill => Skill.Medicine;
     protected override AbilityScore.Attribute Attribute => AbilityScore.Attribute.Wisdom;
+    public override CoreDictionary<Entity, int> Table => IDataSystem.Resolve().Data.medicine;
 }
 
 public partial struct Entity

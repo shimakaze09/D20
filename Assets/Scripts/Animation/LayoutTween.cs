@@ -1,11 +1,10 @@
 using UnityEngine;
-using System.Collections;
 
 public class LayoutTween : Tween
 {
+    public Layout endLayout;
     public RectTransform rectTransform;
     public Layout startLayout;
-    public Layout endLayout;
 
     protected override void OnUpdate()
     {

@@ -1,5 +1,5 @@
-using UnityEngine;
 using Cysharp.Threading.Tasks;
+using UnityEngine;
 
 public struct StridePresentationInfo
 {
@@ -17,16 +17,6 @@ public class StridePresenter : MonoBehaviour, IStridePresenter
 {
     [SerializeField] private float speedMultiplier = 0.25f;
 
-    public async UniTask Present(StridePresentationInfo info)
-    {
-        Vector3 delta = info.toPosition - info.fromPosition;
-        var view = IEntityViewProvider.Resolve().GetView(info.entity, ViewZone.Combatant);
-        var combatant = view.GetComponent<CombatantView>();
-        ICombatantViewSystem.Resolve().SetAnimation(combatant, CombatantAnimation.Walk);
-        await view.transform.MoveTo(info.toPosition, speedMultiplier * delta.magnitude).Play();
-        ICombatantViewSystem.Resolve().SetAnimation(combatant, CombatantAnimation.Idle);
-    }
-
     private void OnEnable()
     {
         IStridePresenter.Register(this);
@@ -35,5 +25,15 @@ public class StridePresenter : MonoBehaviour, IStridePresenter
     private void OnDisable()
     {
         IStridePresenter.Reset();
+    }
+
+    public async UniTask Present(StridePresentationInfo info)
+    {
+        Vector3 delta = info.toPosition - info.fromPosition;
+        var view = IEntityViewProvider.Resolve().GetView(info.entity, ViewZone.Combatant);
+        var combatant = view.GetComponent<CombatantView>();
+        ICombatantViewSystem.Resolve().SetAnimation(combatant, CombatantAnimation.Walk);
+        await view.transform.MoveTo(info.toPosition, speedMultiplier * delta.magnitude).Play();
+        ICombatantViewSystem.Resolve().SetAnimation(combatant, CombatantAnimation.Idle);
     }
 }

@@ -1,7 +1,7 @@
 public class MockDataSerializer : IDataSerializer
 {
-    public string fakeSerializeResult;
     public Data fakeDeserializeResult;
+    public string fakeSerializeResult;
 
     public bool DidCallSerialize { get; private set; }
     public Data SerializeDataParam { get; private set; }

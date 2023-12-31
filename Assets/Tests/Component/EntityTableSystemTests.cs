@@ -2,16 +2,15 @@ using NUnit.Framework;
 
 internal class TestEntityTableSystem : EntityTableSystem<int>
 {
+    private readonly CoreDictionary<Entity, int> _table = new();
     public override CoreDictionary<Entity, int> Table => _table;
-
-    private CoreDictionary<Entity, int> _table = new();
 }
 
 public class EntityTableSystemTests
 {
+    private readonly Entity entity = new(1);
+    private readonly int value = 123;
     private TestEntityTableSystem sut;
-    private Entity entity = new(1);
-    private int value = 123;
 
     [SetUp]
     public void SetUp()

@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using Cysharp.Threading.Tasks;
+using UnityEngine;
 
 public class CombatantView : MonoBehaviour
 {
@@ -34,11 +32,11 @@ public interface ICombatantViewSystem : IDependency<ICombatantViewSystem>
 
 public class CombatantViewSystem : ICombatantViewSystem
 {
-    private int attackState = Animator.StringToHash("Attack");
-    private int deathState = Animator.StringToHash("Death");
-    private int gestureState = Animator.StringToHash("Gesture");
-    private int idleState = Animator.StringToHash("Idle");
-    private int walkState = Animator.StringToHash("Walk");
+    private readonly int attackState = Animator.StringToHash("Attack");
+    private readonly int deathState = Animator.StringToHash("Death");
+    private readonly int gestureState = Animator.StringToHash("Gesture");
+    private readonly int idleState = Animator.StringToHash("Idle");
+    private readonly int walkState = Animator.StringToHash("Walk");
 
     public void SetLayerOrder(CombatantView view, int value)
     {

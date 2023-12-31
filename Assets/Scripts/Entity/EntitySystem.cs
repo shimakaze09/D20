@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 
 public partial class Data
 {
@@ -8,9 +7,10 @@ public partial class Data
 
 public interface IEntitySystem : IDependency<IEntitySystem>
 {
+    event Action<Entity> EntityDestroyed;
+
     Entity Create();
     void Destroy(Entity entity);
-    event Action<Entity> EntityDestroyed;
 }
 
 public class EntitySystem : IEntitySystem

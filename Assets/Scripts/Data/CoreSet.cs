@@ -1,31 +1,15 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 using UnityEngine;
 
-[System.Serializable]
+[Serializable]
 public class CoreSet<T> : ISerializationCallbackReceiver, ICollection<T>, IEnumerable<T>, IEnumerable,
     IReadOnlyCollection<T>, ISet<T>, IDeserializationCallback, ISerializable
 {
     [SerializeField] private List<T> values = new();
     private HashSet<T> set = new();
-
-    public void OnAfterDeserialize()
-    {
-        set.Clear();
-
-        var count = values.Count;
-        for (var i = 0; i < count; ++i)
-            set.Add(values[i]);
-    }
-
-    public void OnBeforeSerialize()
-    {
-        values.Clear();
-
-        foreach (var value in set)
-            values.Add(value);
-    }
 
     public int Count => set.Count;
     public bool IsReadOnly => ((ICollection<T>)set).IsReadOnly;
@@ -63,6 +47,33 @@ public class CoreSet<T> : ISerializationCallbackReceiver, ICollection<T>, IEnume
     IEnumerator IEnumerable.GetEnumerator()
     {
         return ((ICollection<T>)set).GetEnumerator();
+    }
+
+    public void OnDeserialization(object sender)
+    {
+        set.OnDeserialization(sender);
+    }
+
+    public void GetObjectData(SerializationInfo info, StreamingContext context)
+    {
+        set.GetObjectData(info, context);
+    }
+
+    public void OnAfterDeserialize()
+    {
+        set.Clear();
+
+        var count = values.Count;
+        for (var i = 0; i < count; ++i)
+            set.Add(values[i]);
+    }
+
+    public void OnBeforeSerialize()
+    {
+        values.Clear();
+
+        foreach (var value in set)
+            values.Add(value);
     }
 
     bool ISet<T>.Add(T item)
@@ -118,15 +129,5 @@ public class CoreSet<T> : ISerializationCallbackReceiver, ICollection<T>, IEnume
     public void UnionWith(IEnumerable<T> other)
     {
         set.UnionWith(other);
-    }
-
-    public void OnDeserialization(object sender)
-    {
-        set.OnDeserialization(sender);
-    }
-
-    public void GetObjectData(SerializationInfo info, StreamingContext context)
-    {
-        set.GetObjectData(info, context);
     }
 }

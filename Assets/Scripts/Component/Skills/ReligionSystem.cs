@@ -9,9 +9,9 @@ public interface IReligionSystem : IDependency<IReligionSystem>, IBaseSkillSyste
 
 public class ReligionSystem : BaseSkillSystem, IReligionSystem
 {
-    public override CoreDictionary<Entity, int> Table => IDataSystem.Resolve().Data.religion;
     protected override Skill Skill => Skill.Religion;
     protected override AbilityScore.Attribute Attribute => AbilityScore.Attribute.Wisdom;
+    public override CoreDictionary<Entity, int> Table => IDataSystem.Resolve().Data.religion;
 }
 
 public partial struct Entity

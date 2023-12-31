@@ -2,8 +2,8 @@ using NUnit.Framework;
 
 public class EntitySystemTests
 {
-    private MockDataSystem mockDataSystem = new();
-    private EntitySystem sut = new();
+    private readonly MockDataSystem mockDataSystem = new();
+    private readonly EntitySystem sut = new();
 
     [SetUp]
     public void SetUp()

@@ -9,9 +9,9 @@ public interface IAthleticsSystem : IDependency<IAthleticsSystem>, IBaseSkillSys
 
 public class AthleticsSystem : BaseSkillSystem, IAthleticsSystem
 {
-    public override CoreDictionary<Entity, int> Table => IDataSystem.Resolve().Data.athletics;
     protected override Skill Skill => Skill.Athletics;
     protected override AbilityScore.Attribute Attribute => AbilityScore.Attribute.Strength;
+    public override CoreDictionary<Entity, int> Table => IDataSystem.Resolve().Data.athletics;
 }
 
 public partial struct Entity

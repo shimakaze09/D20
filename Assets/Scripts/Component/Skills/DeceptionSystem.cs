@@ -9,9 +9,9 @@ public interface IDeceptionSystem : IDependency<IDeceptionSystem>, IBaseSkillSys
 
 public class DeceptionSystem : BaseSkillSystem, IDeceptionSystem
 {
-    public override CoreDictionary<Entity, int> Table => IDataSystem.Resolve().Data.deception;
     protected override Skill Skill => Skill.Deception;
     protected override AbilityScore.Attribute Attribute => AbilityScore.Attribute.Charisma;
+    public override CoreDictionary<Entity, int> Table => IDataSystem.Resolve().Data.deception;
 }
 
 public partial struct Entity

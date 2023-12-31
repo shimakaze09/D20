@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using System;
+using System.Collections.Generic;
 
 public interface IDependency<T>
 {
@@ -33,7 +31,7 @@ public interface IDependency<T>
     {
         var pool = new Queue<T>();
 
-        Func<T> resolver = delegate()
+        Func<T> resolver = delegate
         {
             if (pool.Count > 0)
                 return pool.Dequeue();

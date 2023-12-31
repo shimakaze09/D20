@@ -1,4 +1,6 @@
-[System.Serializable]
+using System;
+
+[Serializable]
 public partial class Data
 {
     public int version;

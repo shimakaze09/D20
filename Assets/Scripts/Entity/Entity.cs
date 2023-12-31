@@ -1,4 +1,6 @@
-[System.Serializable]
+using System;
+
+[Serializable]
 public partial struct Entity
 {
     public static readonly Entity None = new(0);

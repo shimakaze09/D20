@@ -1,6 +1,6 @@
-using UnityEngine;
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 [Serializable]
 public struct MonsterSpawn
@@ -15,19 +15,27 @@ public interface IEncounter
     string DefeatEntry { get; }
     List<MonsterSpawn> MonsterSpawns { get; }
     List<Point> HeroPositions { get; }
+    BoardData BoardData { get; }
+    BoardSkin BoardSkin { get; }
 }
 
 public class Encounter : MonoBehaviour, IEncounter
 {
-    public string VictoryEntry => victoryEntry;
     [SerializeField] private string victoryEntry;
+    [SerializeField] private string defeatEntry;
+    [SerializeField] private List<MonsterSpawn> monsterSpawns;
+    [SerializeField] private List<Point> heroPositions;
+    [SerializeField] private BoardData boardData;
+    [SerializeField] private BoardSkin boardSkin;
+    public string VictoryEntry => victoryEntry;
 
     public string DefeatEntry => defeatEntry;
-    [SerializeField] private string defeatEntry;
 
     public List<MonsterSpawn> MonsterSpawns => monsterSpawns;
-    [SerializeField] private List<MonsterSpawn> monsterSpawns;
 
     public List<Point> HeroPositions => heroPositions;
-    [SerializeField] private List<Point> heroPositions;
+
+    public BoardData BoardData => boardData;
+
+    public BoardSkin BoardSkin => boardSkin;
 }

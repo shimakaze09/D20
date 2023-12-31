@@ -2,9 +2,9 @@ using NUnit.Framework;
 
 public class DataSystemTests
 {
-    private MockDataSerializer mockDataSerializer = new();
-    private MockDataStore mockDataStore = new();
-    private DataSystem sut = new();
+    private readonly MockDataSerializer mockDataSerializer = new();
+    private readonly MockDataStore mockDataStore = new();
+    private readonly DataSystem sut = new();
 
     [SetUp]
     public void SetUp()

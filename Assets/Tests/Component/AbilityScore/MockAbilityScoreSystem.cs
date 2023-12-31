@@ -3,7 +3,7 @@ using NUnit.Framework;
 
 public class MockAbilityScoreSystem : IAbilityScoreSystem
 {
-    private Dictionary<Entity, Dictionary<AbilityScore.Attribute, AbilityScore>> fakeTable = new();
+    private readonly Dictionary<Entity, Dictionary<AbilityScore.Attribute, AbilityScore>> fakeTable = new();
 
     public AbilityScore Get(Entity entity, AbilityScore.Attribute attribute)
     {

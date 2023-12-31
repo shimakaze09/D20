@@ -2,8 +2,8 @@ using System.Collections.Generic;
 
 public class MockSequenceRNG : IRandomNumberGenerator
 {
-    public Queue<int> values;
     public int fallback;
+    public Queue<int> values;
 
     public MockSequenceRNG(params int[] values)
     {
