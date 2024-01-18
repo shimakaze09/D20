@@ -4,6 +4,7 @@ public static class Injector
     {
         ActionInjector.Inject();
         AssetManagerInjector.Inject();
+        BoardInjector.Inject();
         CombatInjector.Inject();
         ComponentInjector.Inject();
         DataInjector.Inject();
@@ -19,6 +20,7 @@ public static class Injector
     {
         ActionInjector.SetUp();
         AssetManagerInjector.SetUp();
+        BoardInjector.SetUp();
         CombatInjector.SetUp();
         ComponentInjector.SetUp();
         DataInjector.SetUp();
@@ -34,6 +36,7 @@ public static class Injector
     {
         ActionInjector.TearDown();
         AssetManagerInjector.TearDown();
+        BoardInjector.TearDown();
         CombatInjector.TearDown();
         ComponentInjector.TearDown();
         DataInjector.TearDown();

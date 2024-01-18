@@ -9,8 +9,8 @@ internal class TestEntityTableSystem : EntityTableSystem<int>
 public class EntityTableSystemTests
 {
     private readonly Entity entity = new(1);
-    private readonly int value = 123;
     private TestEntityTableSystem sut;
+    private readonly int value = 123;
 
     [SetUp]
     public void SetUp()

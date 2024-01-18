@@ -6,12 +6,26 @@ public interface IBoardSystem : IDependency<IBoardSystem>
     BoardData BoardData { get; }
     void Load(IEncounter encounter);
     TileBase GetTile(Point point);
+    bool IsPointOnBoard(Point point);
+    int GetTileType(Point point);
 }
 
 public class BoardSystem : MonoBehaviour, IBoardSystem
 {
+    private Tilemap tilemap;
+
+    private void OnEnable()
+    {
+        tilemap = GetComponent<Tilemap>();
+        IBoardSystem.Register(this);
+    }
+
+    private void OnDisable()
+    {
+        IBoardSystem.Reset();
+    }
+
     public BoardData BoardData { get; private set; }
-    Tilemap tilemap;
 
     public void Load(IEncounter encounter)
     {
@@ -24,14 +38,15 @@ public class BoardSystem : MonoBehaviour, IBoardSystem
         return tilemap.GetTile(new Vector3Int(point.x, point.y, 0));
     }
 
-    private void OnEnable()
+    public bool IsPointOnBoard(Point point)
     {
-        tilemap = GetComponent<Tilemap>();
-        IBoardSystem.Register(this);
+        return point.x >= 0 && point.y >= 0 &&
+               point.x < BoardData.width && point.y < BoardData.height;
     }
 
-    private void OnDisable()
+    public int GetTileType(Point point)
     {
-        IBoardSystem.Reset();
+        var index = point.y * BoardData.width + point.x;
+        return BoardData.tiles[index];
     }
 }
