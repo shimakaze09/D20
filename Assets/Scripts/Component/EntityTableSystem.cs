@@ -11,6 +11,12 @@ public interface IEntityTableSystem<T>
 
 public abstract class EntityTableSystem<T> : IEntityTableSystem<T>
 {
+    public EntityTableSystem()
+    {
+        ISetUpSystem.Resolve().Add(SetUp);
+        ITearDownSystem.Resolve().Add(TearDown);
+    }
+
     public abstract CoreDictionary<Entity, T> Table { get; }
 
     public virtual void Set(Entity entity, T value)

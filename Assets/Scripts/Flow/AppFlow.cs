@@ -7,7 +7,7 @@ public class AppFlow : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
         Injector.Inject();
-        Injector.SetUp();
+        ISetUpSystem.Resolve().SetUp();
         while (true)
         {
             await IGameFlow.Resolve().Play();
@@ -17,6 +17,6 @@ public class AppFlow : MonoBehaviour
 
     private void OnDestroy()
     {
-        Injector.TearDown();
+        ITearDownSystem.Resolve().TearDown();
     }
 }

@@ -9,6 +9,12 @@ public interface IEntitySetSystem
 
 public abstract class EntitySetSystem : IEntitySetSystem
 {
+    public EntitySetSystem()
+    {
+        ISetUpSystem.Resolve().Add(SetUp);
+        ITearDownSystem.Resolve().Add(TearDown);
+    }
+
     public abstract CoreSet<Entity> Table { get; }
 
     public virtual void Add(Entity entity)
