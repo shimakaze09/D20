@@ -15,6 +15,8 @@ public struct TurnFlow : ITurnFlow
         CombatResult? result = null;
         while (!system.IsComplete)
         {
+            system.InReach = IReachSystem.Resolve().EntitiesInReach(entity);
+
             if (entity.Party == Party.Hero)
                 result = await IHeroActionFlow.Resolve().Play();
             else

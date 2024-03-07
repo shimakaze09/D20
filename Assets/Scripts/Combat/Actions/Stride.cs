@@ -30,4 +30,9 @@ public class Stride : MonoBehaviour, ICombatAction
 
         await IStrideSystem.Resolve().Apply(info);
     }
+
+    public bool CanPerform(Entity entity)
+    {
+        return true;
+    }
 }

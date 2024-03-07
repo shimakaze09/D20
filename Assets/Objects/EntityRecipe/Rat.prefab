@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 7369316565701819928}
   - component: {fileID: 7556193971501837257}
   - component: {fileID: -1595261049445988634}
+  - component: {fileID: 2102884227737549203}
+  - component: {fileID: -8467273774502878215}
   m_Layer: 0
   m_Name: Rat
   m_TagString: Untagged
@@ -30,13 +32,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6148845569012826491}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8291525582597166259
 MonoBehaviour:
@@ -130,3 +132,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 20
+--- !u!114 &2102884227737549203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6148845569012826491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8580979c44a957148931d97c89f3f849, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 1
+--- !u!114 &-8467273774502878215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6148845569012826491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9505869d6b28d6d4a918879c21229cec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 1

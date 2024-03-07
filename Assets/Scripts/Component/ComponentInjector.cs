@@ -13,6 +13,7 @@ public static class ComponentInjector
         IPartySystem.Register(new PartySystem());
         IPositionSystem.Register(new PositionSystem());
         SkillsInjector.Inject();
+        SizeInjector.Inject();
         ISpeedSystem.Register(new SpeedSystem());
     }
 }
