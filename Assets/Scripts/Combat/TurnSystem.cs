@@ -6,7 +6,6 @@ public interface ITurnSystem : IDependency<ITurnSystem>
     int ActionsRemaining { get; }
     int AttackCount { get; }
     bool IsComplete { get; }
-
     List<Entity> InReach { get; set; }
 
     void Begin(Entity entity);

@@ -14,13 +14,13 @@ public class SpaceSystem : ISpaceSystem
 
     public int SpaceInFeet(Size size)
     {
-        return size switch
+        switch (size)
         {
-            Size.Large => 10,
-            Size.Huge => 15,
-            Size.Gargantuan => 20,
-            _ => 5
-        };
+            case Size.Large: return 10;
+            case Size.Huge: return 15;
+            case Size.Gargantuan: return 20;
+            default: return 5;
+        }
     }
 
     public int SpaceInTiles(Size size)
@@ -41,7 +41,14 @@ public class SpaceSystem : ISpaceSystem
         for (var y = 0; y < space; ++y)
         for (var x = 0; x < space; ++x)
             result.Add(new Point(x, y) + position);
-
         return result;
+    }
+}
+
+public static class SpaceSizeExtensions
+{
+    public static int ToTiles(this Size size)
+    {
+        return ISpaceSystem.Resolve().SpaceInTiles(size);
     }
 }

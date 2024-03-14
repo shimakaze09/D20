@@ -3,6 +3,11 @@ using UnityEngine;
 
 public class Stride : MonoBehaviour, ICombatAction
 {
+    public bool CanPerform(Entity entity)
+    {
+        return true;
+    }
+
     public async UniTask Perform(Entity entity)
     {
         // TODO: differentiate between user-controlled and AI controlled entities
@@ -29,10 +34,5 @@ public class Stride : MonoBehaviour, ICombatAction
         };
 
         await IStrideSystem.Resolve().Apply(info);
-    }
-
-    public bool CanPerform(Entity entity)
-    {
-        return true;
     }
 }

@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: -5865340455499602416}
   - component: {fileID: -1212855569916167613}
   m_Layer: 0
-  m_Name: Rat
+  m_Name: Giant Rat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39c577e064f184a4bbbecddd892deda0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: Rat
+  value: Giant Rat
 --- !u!114 &120346481683227552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 810c459042c194183beef4428d451b20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 1
+  value: 3
 --- !u!114 &-1212855569916167613
 MonoBehaviour:
   m_ObjectHideFlags: 0

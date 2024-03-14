@@ -1,4 +1,4 @@
-using System.Linq;
+using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
@@ -9,11 +9,21 @@ public class SoloAdventureAttack : MonoBehaviour, ICombatAction
     [SerializeField] private DiceRoll damage;
     [SerializeField] private string damageType;
     [SerializeField] private string material;
+    [SerializeField] private EntityFilter targetFilter;
+
+    public bool CanPerform(Entity entity)
+    {
+        return targetFilter.Apply(entity, ITurnSystem.Resolve().InReach).Count > 0;
+    }
 
     public async UniTask Perform(Entity entity)
     {
+        var targets = targetFilter.Apply(entity, ITurnSystem.Resolve().InReach);
+        if (targets.Count == 0)
+            return;
+
         var attacker = entity;
-        var target = await SelectTarget(entity);
+        var target = await SelectTarget(entity, targets);
 
         // Perform the Attack Roll
         var attackInfo = new AttackRollInfo
@@ -75,24 +85,10 @@ public class SoloAdventureAttack : MonoBehaviour, ICombatAction
         await IHealthSystem.Resolve().Apply(healthInfo);
     }
 
-    public bool CanPerform(Entity entity)
-    {
-        return ITurnSystem.Resolve().InReach.Any(e => e.Party != entity.Party);
-    }
-
-    private async UniTask<Entity> SelectTarget(Entity entity)
+    private async UniTask<Entity> SelectTarget(Entity entity, List<Entity> targets)
     {
         if (entity.Party == Party.Monster)
-            return ICombatantSystem.Resolve().Table.First(c => c.Party != entity.Party);
-
-        var layerMask = LayerMask.GetMask("Hero");
-        Entity? target = null;
-        while (!target.HasValue)
-        {
-            var position = await IPositionSelectionSystem.Resolve().Select(entity.Position);
-            target = IPhysicsSystem.Resolve().OverlapPoint(position, layerMask);
-        }
-
-        return target.Value;
+            return targets[0];
+        return await IEntitySelectionSystem.Resolve().Select(targets);
     }
 }

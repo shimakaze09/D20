@@ -21,78 +21,107 @@ MonoBehaviour:
     m_Address: Assets/Objects/Entries/Entry_01.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ba542e4c7f75e4dad8c6ea94a325ab22
     m_Address: Assets/Objects/Entries/Entry_02.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: eab2f8a797e774a4aa381a4cc14d4a59
     m_Address: Assets/Objects/Entries/Entry_03.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: fdf003d9f9cf24ff596106c2babe3eaf
     m_Address: Assets/Objects/Entries/Entry_05.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 01c7125ef8a79487b96b2d5544526ee6
     m_Address: Assets/Objects/Entries/Entry_06.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 627fe600cac5f4e34ae46fd4379125a7
     m_Address: Assets/Objects/Entries/Entry_07.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9f42d7cce74a8443bb9562624f5f989e
     m_Address: Assets/Objects/EntityRecipe/Hero.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1ecf016339a8d4e00b77be39b033ec37
     m_Address: Assets/Objects/Entries/Entry_08.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 81b001177f5c647ca849e71c6e6364c5
     m_Address: Assets/Objects/Entries/Entry_09.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3e5cc0cff6f6e4fc9ab14562535c6cde
     m_Address: Assets/Objects/Entries/Entry_10.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3449e343171974637baa42cd3857cdbe
     m_Address: Assets/Objects/Entries/Entry_11.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 709a7198790484cbfacbe3f9ff60a94a
     m_Address: Assets/Objects/Entries/Entry_04.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f33f26efe01464d8785539c839886806
     m_Address: Assets/Objects/Encounters/Encounter_01.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 37ac1ae34ffb34af8903a452a0e35fa0
     m_Address: Assets/Objects/CombatAction/Stride.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0fd4428486fc34271990db041432b868
     m_Address: Assets/Objects/EntityRecipe/Rat.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e42270f57d32f48b1a416f50cfb19180
     m_Address: Assets/Prefabs/Combatants/Monsters/Rat.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 729a4707701d149ce8fec6d93c216116
     m_Address: Assets/Prefabs/Combatants/Heroes/Warrior.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ddc206cb46b7442f094b95dd40d00fbd
     m_Address: Assets/Objects/CombatAction/Strike (Shortsword).prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 707aebbc61dd143a3b59d39cff5943f9
     m_Address: Assets/Objects/CombatAction/Bite.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 36bc58f90c00bd94c8c6c9b8393ae04c
+    m_Address: Assets/Objects/EntityRecipe/Giant Rat.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 037fa3ecf355fe747847358c3aa6a09f
+    m_Address: Assets/Prefabs/Combatants/Monsters/Rat 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: f21cd9db5c79a4075b9bbf8e245e552f, type: 2}
   m_SchemaSet:

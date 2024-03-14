@@ -32,6 +32,6 @@ public struct CombatFlow : ICombatFlow
 
     private async UniTask Exit()
     {
-        await UniTask.Delay(TimeSpan.FromSeconds(3));
+        await UniTask.Delay(TimeSpan.FromSeconds(3), false);
     }
 }

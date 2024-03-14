@@ -76,8 +76,10 @@ public class ReachSystem : EntityTableSystem<Reach>, IReachSystem
             {
                 var dX = x < 0 ? Mathf.Abs(x) : x - space + 1;
                 var dY = y < 0 ? Mathf.Abs(y) : y - space + 1;
+
                 var max = Mathf.Max(dX, dY);
                 var min = Mathf.Min(dX, dY);
+
                 delta = max + min / 2;
             }
 
@@ -91,12 +93,16 @@ public class ReachSystem : EntityTableSystem<Reach>, IReachSystem
     public List<Entity> EntitiesInReach(Entity entity)
     {
         var result = new List<Entity>();
+
         var sizeSystem = ISizeSystem.Resolve();
         var spaceSystem = ISpaceSystem.Resolve();
+
         var reachablePositions = new HashSet<Point>(ReachTiles(entity.Size, entity.Reach, entity.Position));
+
         var candidates = new HashSet<Entity>(sizeSystem.Table.Keys);
         var entitiesWithPosition = new HashSet<Entity>(IPositionSystem.Resolve().Table.Keys);
         candidates.IntersectWith(entitiesWithPosition);
+
         foreach (var candidate in candidates)
         {
             var candidateSpace = spaceSystem.SpaceTiles(candidate.Size, candidate.Position);
