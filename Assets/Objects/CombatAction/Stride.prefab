@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3140155405648363641}
   - component: {fileID: -743784451490658350}
+  - component: {fileID: 1091436914747046775}
   m_Layer: 0
   m_Name: Stride
   m_TagString: Untagged
@@ -44,3 +45,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 282812d8e906b4815aafd12a4d71f45c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  passFilter: 16
+  blockFilter: 9
+--- !u!114 &1091436914747046775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6590843656867763773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff8be70ec118f4a8e837bb8d3ba76ae0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filter: 9

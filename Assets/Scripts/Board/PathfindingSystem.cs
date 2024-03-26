@@ -2,12 +2,12 @@ using System.Collections.Generic;
 
 public interface ITraverser
 {
-    bool TryMove(Point fromPoint, Point toPoint, out int cost);
+    bool TryMove(Point fromPoint, Point toPoint, Size size, out int cost, out Traversal traversal);
 }
 
 public interface IPathfindingSystem : IDependency<IPathfindingSystem>
 {
-    IPathMap Map(Point start, int range, ITraverser traverser);
+    IPathMap Map(Point start, int range, Size size, ITraverser traverser);
 }
 
 public class PathfindingSystem : IPathfindingSystem
@@ -24,12 +24,12 @@ public class PathfindingSystem : IPathfindingSystem
         new(-1, 1)
     };
 
-    public IPathMap Map(Point start, int range, ITraverser traverser)
+    public IPathMap Map(Point start, int range, Size size, ITraverser traverser)
     {
         var checkNow = new List<Point>();
         var checkNext = new HashSet<Point>();
         var map = new Dictionary<Point, PathNode>();
-        map[start] = new PathNode(start, 0, false, null);
+        map[start] = new PathNode(start, 0, false, null, Traversal.Open);
         checkNow.Add(start);
 
         while (checkNow.Count > 0)
@@ -42,7 +42,8 @@ public class PathfindingSystem : IPathfindingSystem
                     var nextPoint = point + offset;
 
                     int moveCost;
-                    if (!traverser.TryMove(point, nextPoint, out moveCost))
+                    Traversal traversal;
+                    if (!traverser.TryMove(point, nextPoint, size, out moveCost, out traversal))
                         continue;
 
                     var isDiagonal = offset.x != 0 && offset.y != 0;
@@ -57,15 +58,17 @@ public class PathfindingSystem : IPathfindingSystem
 
                     if (!map.ContainsKey(nextPoint))
                     {
-                        map[nextPoint] = new PathNode(nextPoint, moveCost, diagonalActive, node);
-                        checkNext.Add(nextPoint);
+                        map[nextPoint] = new PathNode(nextPoint, moveCost, diagonalActive, node, traversal);
+                        if (traversal != Traversal.Block)
+                            checkNext.Add(nextPoint);
                     }
                     else if (moveCost < map[nextPoint].moveCost)
                     {
                         map[nextPoint].moveCost = moveCost;
                         map[nextPoint].diagonalActive = diagonalActive;
                         map[nextPoint].previous = node;
-                        checkNext.Add(nextPoint);
+                        if (traversal != Traversal.Block)
+                            checkNext.Add(nextPoint);
                     }
                 }
             }

@@ -37,7 +37,9 @@ public class StridePresenter : MonoBehaviour, IStridePresenter
         for (var i = 1; i < info.path.Count; ++i)
         {
             var next = info.path[i];
+            ICombatSelectionIndicator.Resolve().SetPosition(next);
             await view.transform.MoveTo(next, moveSpeed).Play();
+            ICombatantViewSystem.Resolve().SetLayerOrder(combatant, next.y);
             previous = next;
         }
 

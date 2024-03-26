@@ -14,12 +14,13 @@ public enum EntityFilter
 
 public interface IEntityFilterSystem : IDependency<IEntityFilterSystem>
 {
-    List<Entity> Apply(EntityFilter filter, Entity entity, List<Entity> entities);
+    List<Entity> Apply(EntityFilter filter, Entity entity, IEnumerable<Entity> entities);
+    List<Entity> Fetch(EntityFilter filter, Entity entity);
 }
 
 public class EntityFilterSystem : IEntityFilterSystem
 {
-    public List<Entity> Apply(EntityFilter filter, Entity entity, List<Entity> entities)
+    public List<Entity> Apply(EntityFilter filter, Entity entity, IEnumerable<Entity> entities)
     {
         var result = new List<Entity>();
         foreach (var candidate in entities)
@@ -38,6 +39,16 @@ public class EntityFilterSystem : IEntityFilterSystem
 
         return result;
     }
+
+    public List<Entity> Fetch(EntityFilter filter, Entity entity)
+    {
+        // Start with a set of all entities that have a size and position
+        var candidates = new HashSet<Entity>(ISizeSystem.Resolve().Table.Keys);
+        candidates.IntersectWith(IPositionSystem.Resolve().Table.Keys);
+
+        // Then return a filtered list
+        return Apply(filter, entity, candidates);
+    }
 }
 
 public static class EntityFilterExtensions
@@ -45,5 +56,10 @@ public static class EntityFilterExtensions
     public static List<Entity> Apply(this EntityFilter filter, Entity entity, List<Entity> entities)
     {
         return IEntityFilterSystem.Resolve().Apply(filter, entity, entities);
+    }
+
+    public static List<Entity> Fetch(this EntityFilter filter, Entity entity)
+    {
+        return IEntityFilterSystem.Resolve().Fetch(filter, entity);
     }
 }
