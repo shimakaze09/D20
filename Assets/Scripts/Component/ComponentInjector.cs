@@ -11,6 +11,7 @@ public static class ComponentInjector
         HealthInjector.Inject();
         ILevelSystem.Register(new LevelSystem());
         INameSystem.Register(new NameSystem());
+        IPartyOrderSystem.Register(new PartyOrderSystem());
         IPartySystem.Register(new PartySystem());
         IPositionSystem.Register(new PositionSystem());
         SizeInjector.Inject();

@@ -13,7 +13,7 @@ public class GameSystem : IGameSystem
         var dataSystem = IDataSystem.Resolve();
         dataSystem.Create();
         IEntrySystem.Resolve().SetName("Entry_01");
-        await ISoloHeroSystem.Resolve().CreateHero();
+        await ICreateHeroPartyFlow.Resolve().Play();
     }
 
     public async UniTask ContinueGame()

@@ -3,6 +3,7 @@ public static class FlowInjector
     public static void Inject()
     {
         ICombatFlow.Register(new CombatFlow());
+        ICreateHeroPartyFlow.Register(new CreateHeroPartyFlow());
         IEncounterFlow.Register(new EncounterFlow());
         IEntryFlow.Register(new EntryFlow());
         IGameFlow.Register(new GameFlow());
