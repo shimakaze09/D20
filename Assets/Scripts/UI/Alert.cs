@@ -1,7 +1,7 @@
-using UnityEngine;
 using Cysharp.Threading.Tasks;
-using UnityEngine.UI;
 using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
 
 public interface IAlert : IDependency<IAlert>
 {
@@ -13,6 +13,17 @@ public class Alert : MonoBehaviour, IAlert
     [SerializeField] private RectTransform rootPanel;
     [SerializeField] private TextMeshProUGUI label;
     [SerializeField] private Button button;
+
+    private void OnEnable()
+    {
+        IAlert.Register(this);
+        rootPanel.localScale = Vector3.zero;
+    }
+
+    private void OnDisable()
+    {
+        IAlert.Reset();
+    }
 
     public async UniTask Show(string message)
     {
@@ -28,16 +39,5 @@ public class Alert : MonoBehaviour, IAlert
 
         // dismiss the alert
         await rootPanel.ScaleTo(Vector3.zero, 0.25f, EasingEquations.EaseInBack).Play();
-    }
-
-    private void OnEnable()
-    {
-        IAlert.Register(this);
-        rootPanel.localScale = Vector3.zero;
-    }
-
-    private void OnDisable()
-    {
-        IAlert.Reset();
     }
 }

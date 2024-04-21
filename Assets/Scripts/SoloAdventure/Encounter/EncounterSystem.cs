@@ -1,5 +1,5 @@
-using UnityEngine;
 using Cysharp.Threading.Tasks;
+using UnityEngine;
 
 public partial class Data
 {
@@ -15,8 +15,8 @@ public interface IEncounterSystem : IDependency<IEncounterSystem>
 
 public class EncounterSystem : IEncounterSystem
 {
-    private string heroPath = "Assets/Prefabs/Combatants/Heroes/{0}.prefab";
-    private string monsterPath = "Assets/Prefabs/Combatants/Monsters/{0}.prefab";
+    private readonly string heroPath = "Assets/Prefabs/Combatants/Heroes/{0}.prefab";
+    private readonly string monsterPath = "Assets/Prefabs/Combatants/Monsters/{0}.prefab";
 
     public void SetName(string name)
     {

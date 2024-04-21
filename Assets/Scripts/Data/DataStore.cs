@@ -11,12 +11,12 @@ public interface IDataStore : IDependency<IDataStore>
 
 public class DataStore : IDataStore
 {
-    public string FilePath { get; private set; }
-
     public DataStore(string fileName)
     {
         FilePath = string.Format("{0}/{1}.txt", Application.persistentDataPath, fileName);
     }
+
+    public string FilePath { get; }
 
     public bool HasFile()
     {

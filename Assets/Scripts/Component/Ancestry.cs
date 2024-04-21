@@ -1,5 +1,5 @@
-using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine;
 
 public interface IAncestry
 {
@@ -11,14 +11,14 @@ public interface IAncestry
 
 public class Ancestry : MonoBehaviour, IAncestry
 {
-    public string Title => _title;
     [SerializeField] private string _title;
+    [SerializeField] private string _description;
+    [SerializeField] private Rarity _rarity;
+    public string Title => _title;
 
     public string Description => _description;
-    [SerializeField] private string _description;
 
     public Rarity Rarity => _rarity;
-    [SerializeField] private Rarity _rarity;
 
     public List<IAttributeProvider> AttributeProviders => new(gameObject.GetComponents<IAttributeProvider>());
 

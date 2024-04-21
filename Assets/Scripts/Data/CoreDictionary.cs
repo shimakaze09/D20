@@ -1,9 +1,10 @@
-using System.Collections.Generic;
+using System;
 using System.Collections;
-using UnityEngine;
+using System.Collections.Generic;
 using System.Runtime.Serialization;
+using UnityEngine;
 
-[System.Serializable]
+[Serializable]
 public class CoreDictionary<TKey, TValue> : ISerializationCallbackReceiver, ICollection<KeyValuePair<TKey, TValue>>,
     IEnumerable<KeyValuePair<TKey, TValue>>, IEnumerable, IDictionary<TKey, TValue>,
     IReadOnlyCollection<KeyValuePair<TKey, TValue>>, IReadOnlyDictionary<TKey, TValue>, ICollection, IDictionary,
@@ -13,56 +14,16 @@ public class CoreDictionary<TKey, TValue> : ISerializationCallbackReceiver, ICol
     [SerializeField] private List<TValue> values = new();
     private Dictionary<TKey, TValue> dictionary = new();
 
-    public void OnAfterDeserialize()
+    public bool IsSynchronized => ((ICollection)dictionary).IsSynchronized;
+    public object SyncRoot => ((ICollection)dictionary).SyncRoot;
+
+    public void CopyTo(Array array, int index)
     {
-        dictionary.Clear();
-
-        var count = Mathf.Min(keys.Count, values.Count);
-        for (var i = 0; i < count; ++i)
-            dictionary.Add(keys[i], values[i]);
-    }
-
-    public void OnBeforeSerialize()
-    {
-        keys.Clear();
-        values.Clear();
-
-        foreach (var kvp in dictionary)
-        {
-            keys.Add(kvp.Key);
-            values.Add(kvp.Value);
-        }
+        ((ICollection)dictionary).CopyTo(array, index);
     }
 
     public int Count => dictionary.Count;
     public bool IsReadOnly => ((ICollection<TKey>)dictionary).IsReadOnly;
-
-    public ICollection<TKey> Keys => dictionary.Keys;
-    public ICollection<TValue> Values => dictionary.Values;
-
-    IEnumerable<TKey> IReadOnlyDictionary<TKey, TValue>.Keys => ((IReadOnlyDictionary<TKey, TValue>)dictionary).Keys;
-
-    IEnumerable<TValue> IReadOnlyDictionary<TKey, TValue>.Values =>
-        ((IReadOnlyDictionary<TKey, TValue>)dictionary).Values;
-
-    public bool IsSynchronized => ((ICollection)dictionary).IsSynchronized;
-    public object SyncRoot => ((ICollection)dictionary).SyncRoot;
-
-    public bool IsFixedSize => ((IDictionary)dictionary).IsFixedSize;
-    ICollection IDictionary.Keys => ((IDictionary)dictionary).Keys;
-    ICollection IDictionary.Values => ((IDictionary)dictionary).Values;
-
-    public object this[object key]
-    {
-        get => ((IDictionary)dictionary)[key];
-        set => ((IDictionary)dictionary)[key] = value;
-    }
-
-    public TValue this[TKey key]
-    {
-        get => dictionary[key];
-        set => dictionary[key] = value;
-    }
 
     public void Add(KeyValuePair<TKey, TValue> item)
     {
@@ -99,29 +60,19 @@ public class CoreDictionary<TKey, TValue> : ISerializationCallbackReceiver, ICol
         return dictionary.GetEnumerator();
     }
 
-    public void Add(TKey key, TValue value)
+    public void OnDeserialization(object sender)
     {
-        dictionary.Add(key, value);
+        dictionary.OnDeserialization(sender);
     }
 
-    public bool ContainsKey(TKey key)
-    {
-        return dictionary.ContainsKey(key);
-    }
+    public bool IsFixedSize => ((IDictionary)dictionary).IsFixedSize;
+    ICollection IDictionary.Keys => ((IDictionary)dictionary).Keys;
+    ICollection IDictionary.Values => ((IDictionary)dictionary).Values;
 
-    public bool Remove(TKey key)
+    public object this[object key]
     {
-        return dictionary.Remove(key);
-    }
-
-    public bool TryGetValue(TKey key, out TValue value)
-    {
-        return dictionary.TryGetValue(key, out value);
-    }
-
-    public void CopyTo(System.Array array, int index)
-    {
-        ((ICollection)dictionary).CopyTo(array, index);
+        get => ((IDictionary)dictionary)[key];
+        set => ((IDictionary)dictionary)[key] = value;
     }
 
     public void Add(object key, object value)
@@ -144,13 +95,63 @@ public class CoreDictionary<TKey, TValue> : ISerializationCallbackReceiver, ICol
         ((IDictionary)dictionary).Remove(key);
     }
 
-    public void OnDeserialization(object sender)
+    public ICollection<TKey> Keys => dictionary.Keys;
+    public ICollection<TValue> Values => dictionary.Values;
+
+    public TValue this[TKey key]
     {
-        dictionary.OnDeserialization(sender);
+        get => dictionary[key];
+        set => dictionary[key] = value;
     }
+
+    public void Add(TKey key, TValue value)
+    {
+        dictionary.Add(key, value);
+    }
+
+    public bool ContainsKey(TKey key)
+    {
+        return dictionary.ContainsKey(key);
+    }
+
+    public bool Remove(TKey key)
+    {
+        return dictionary.Remove(key);
+    }
+
+    public bool TryGetValue(TKey key, out TValue value)
+    {
+        return dictionary.TryGetValue(key, out value);
+    }
+
+    IEnumerable<TKey> IReadOnlyDictionary<TKey, TValue>.Keys => ((IReadOnlyDictionary<TKey, TValue>)dictionary).Keys;
+
+    IEnumerable<TValue> IReadOnlyDictionary<TKey, TValue>.Values =>
+        ((IReadOnlyDictionary<TKey, TValue>)dictionary).Values;
 
     public void GetObjectData(SerializationInfo info, StreamingContext context)
     {
         dictionary.GetObjectData(info, context);
+    }
+
+    public void OnAfterDeserialize()
+    {
+        dictionary.Clear();
+
+        var count = Mathf.Min(keys.Count, values.Count);
+        for (var i = 0; i < count; ++i)
+            dictionary.Add(keys[i], values[i]);
+    }
+
+    public void OnBeforeSerialize()
+    {
+        keys.Clear();
+        values.Clear();
+
+        foreach (var kvp in dictionary)
+        {
+            keys.Add(kvp.Key);
+            values.Add(kvp.Value);
+        }
     }
 }

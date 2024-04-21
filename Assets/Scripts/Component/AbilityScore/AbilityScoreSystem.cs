@@ -40,7 +40,7 @@ public class AbilityScoreSystem : IAbilityScoreSystem
                 return ICharismaSystem.Resolve().Get(entity);
         }
 
-        return (AbilityScore)0;
+        return 0;
     }
 
     public void Set(Entity entity, AbilityScore.Attribute attribute, AbilityScore value)

@@ -1,8 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
-[System.Serializable]
+[Serializable]
 public struct Layout
 {
     public Anchor anchor;

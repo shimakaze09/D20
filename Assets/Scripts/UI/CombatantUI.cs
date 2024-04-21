@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class CombatantUI : MonoBehaviour
 {
     public Slider healthSlider;
-    public TMPro.TextMeshProUGUI damageLabel;
+    public TextMeshProUGUI damageLabel;
 }

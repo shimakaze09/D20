@@ -1,39 +1,11 @@
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEditor;
 using System;
+using System.Collections.Generic;
+using UnityEditor;
+using UnityEngine;
 using Object = UnityEngine.Object;
 
 public static class AncestryParser
 {
-    [Serializable]
-    private class AncestryData
-    {
-        public string name;
-        public string description;
-        public string rarity;
-        public string traits;
-        public string backgrounds;
-        public string classes;
-        public string names;
-        public int hitPoints;
-        public string size;
-        public int speed;
-        public int waterSpeed;
-        public string boosts;
-        public string flaws;
-        public string languages;
-        public string extraLanguages;
-        public string vision;
-        public string special;
-    }
-
-    [Serializable]
-    private class AncestryDataList
-    {
-        public List<AncestryData> datas;
-    }
-
     [MenuItem("Pre Production/Generate/Ancestries")]
     public static void GenerateAll()
     {
@@ -105,5 +77,33 @@ public static class AncestryParser
         var result = new List<string>(components.Length);
         foreach (var component in components) result.Add(component.Trim());
         return result;
+    }
+
+    [Serializable]
+    private class AncestryData
+    {
+        public string name;
+        public string description;
+        public string rarity;
+        public string traits;
+        public string backgrounds;
+        public string classes;
+        public string names;
+        public int hitPoints;
+        public string size;
+        public int speed;
+        public int waterSpeed;
+        public string boosts;
+        public string flaws;
+        public string languages;
+        public string extraLanguages;
+        public string vision;
+        public string special;
+    }
+
+    [Serializable]
+    private class AncestryDataList
+    {
+        public List<AncestryData> datas;
     }
 }

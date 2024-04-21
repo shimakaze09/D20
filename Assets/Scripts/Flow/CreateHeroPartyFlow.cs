@@ -1,4 +1,5 @@
 using Cysharp.Threading.Tasks;
+using UnityEngine;
 
 public interface ICreateHeroPartyFlow : IDependency<ICreateHeroPartyFlow>
 {
@@ -9,7 +10,7 @@ public class CreateHeroPartyFlow : ICreateHeroPartyFlow
 {
     private const int heroPartySize = 4;
 
-    private string[] autoChosenAncestries = new string[]
+    private readonly string[] autoChosenAncestries =
     {
         "Dwarf",
         "Elf",
@@ -31,7 +32,7 @@ public class CreateHeroPartyFlow : ICreateHeroPartyFlow
 
     private async UniTask LoadAncestry(Entity entity, string ancestry)
     {
-        UnityEngine.Debug.Log(string.Format("Loading Ancestry: {0}", ancestry));
+        Debug.Log(string.Format("Loading Ancestry: {0}", ancestry));
         entity.Ancestry = ancestry;
         var assetSystem = IAncestryAssetSystem.Resolve();
         var ancestryAsset = await assetSystem.Load(ancestry);

@@ -12,14 +12,14 @@ public interface IPathMap
 
 public class PathMap : IPathMap
 {
-    private Dictionary<Point, PathNode> map;
-
-    public PathNode this[Point point] => map[point];
+    private readonly Dictionary<Point, PathNode> map;
 
     public PathMap(Dictionary<Point, PathNode> map)
     {
         this.map = map;
     }
+
+    public PathNode this[Point point] => map[point];
 
     public bool TryGetNode(out PathNode node, Point point)
     {

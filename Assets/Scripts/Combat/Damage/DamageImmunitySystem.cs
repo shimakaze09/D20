@@ -1,4 +1,6 @@
-[System.Serializable]
+using System;
+
+[Serializable]
 public class DamageImmunity
 {
     public CoreSet<string> types = new();

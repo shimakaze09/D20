@@ -10,9 +10,9 @@ public enum Traversal
 
 public class PathNode
 {
-    public Point point;
-    public int moveCost;
     public bool diagonalActive;
+    public int moveCost;
+    public Point point;
     public PathNode previous;
     public Traversal traversal;
 

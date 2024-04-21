@@ -2,8 +2,8 @@ using System.Collections.Generic;
 
 public class DamageTypeSystem : IDamageTypeSystem
 {
-    private string category;
-    private HashSet<string> types;
+    private readonly string category;
+    private readonly HashSet<string> types;
 
     public DamageTypeSystem(string category, string[] types)
     {

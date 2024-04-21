@@ -1,4 +1,6 @@
-[System.Serializable]
+using System;
+
+[Serializable]
 public struct AbilityScore
 {
     public enum Attribute

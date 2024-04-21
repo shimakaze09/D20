@@ -1,6 +1,6 @@
+using System.Threading;
 using Cysharp.Threading.Tasks;
 using UnityEngine.SceneManagement;
-using System.Threading;
 
 public interface IEntryFlow : IDependency<IEntryFlow>
 {
@@ -38,11 +38,9 @@ public class EntryFlow : IEntryFlow
                 entry.Options[menu].Select();
                 break;
             }
-            else
-            {
-                // Selected a link in the text
-                await entry.SelectLink(link);
-            }
+
+            // Selected a link in the text
+            await entry.SelectLink(link);
         }
 
         // MARK: - Exit

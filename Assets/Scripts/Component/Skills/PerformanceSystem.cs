@@ -9,9 +9,9 @@ public interface IPerformanceSystem : IDependency<IPerformanceSystem>, IBaseSkil
 
 public class PerformanceSystem : BaseSkillSystem, IPerformanceSystem
 {
-    public override CoreDictionary<Entity, int> Table => IDataSystem.Resolve().Data.performance;
     protected override Skill Skill => Skill.Performance;
     protected override AbilityScore.Attribute Attribute => AbilityScore.Attribute.Charisma;
+    public override CoreDictionary<Entity, int> Table => IDataSystem.Resolve().Data.performance;
 }
 
 public partial struct Entity

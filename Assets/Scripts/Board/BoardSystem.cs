@@ -12,8 +12,20 @@ public interface IBoardSystem : IDependency<IBoardSystem>
 
 public class BoardSystem : MonoBehaviour, IBoardSystem
 {
-    public BoardData BoardData { get; private set; }
     private Tilemap tilemap;
+
+    private void OnEnable()
+    {
+        tilemap = GetComponent<Tilemap>();
+        IBoardSystem.Register(this);
+    }
+
+    private void OnDisable()
+    {
+        IBoardSystem.Reset();
+    }
+
+    public BoardData BoardData { get; private set; }
 
     public void Load(IEncounter encounter)
     {
@@ -36,16 +48,5 @@ public class BoardSystem : MonoBehaviour, IBoardSystem
     {
         var index = point.y * BoardData.width + point.x;
         return BoardData.tiles[index];
-    }
-
-    private void OnEnable()
-    {
-        tilemap = GetComponent<Tilemap>();
-        IBoardSystem.Register(this);
-    }
-
-    private void OnDisable()
-    {
-        IBoardSystem.Reset();
     }
 }

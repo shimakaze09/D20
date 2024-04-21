@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public enum AbilityBoost
 {
@@ -28,7 +29,7 @@ public class AbilityBoostProvider : MonoBehaviour, IAttributeProvider
                 var options = new List<AbilityBoost>((AbilityBoost[])Enum.GetValues(typeof(AbilityBoost)));
                 foreach (var option in boosts)
                     options.Remove(option);
-                var rand = UnityEngine.Random.Range(0, options.Count);
+                var rand = Random.Range(0, options.Count);
                 var selectedBoost = options[rand];
                 attribute = (AbilityScore.Attribute)selectedBoost;
             }

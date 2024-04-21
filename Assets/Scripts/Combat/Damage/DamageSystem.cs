@@ -25,7 +25,7 @@ public interface IDamageSystem : IDependency<IDamageSystem>
 
 public class DamageSystem : IDamageSystem
 {
-    private List<IDamageTypeSystem> damageTypeSystems = new();
+    private readonly List<IDamageTypeSystem> damageTypeSystems = new();
 
     public int Apply(DamageInfo info)
     {
