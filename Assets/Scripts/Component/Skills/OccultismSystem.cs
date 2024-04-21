@@ -9,9 +9,9 @@ public interface IOccultismSystem : IDependency<IOccultismSystem>, IBaseSkillSys
 
 public class OccultismSystem : BaseSkillSystem, IOccultismSystem
 {
+    public override CoreDictionary<Entity, int> Table => IDataSystem.Resolve().Data.occultism;
     protected override Skill Skill => Skill.Occultism;
     protected override AbilityScore.Attribute Attribute => AbilityScore.Attribute.Intelligence;
-    public override CoreDictionary<Entity, int> Table => IDataSystem.Resolve().Data.occultism;
 }
 
 public partial struct Entity

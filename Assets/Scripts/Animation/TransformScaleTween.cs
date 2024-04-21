@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class TransformScaleTween : Vector3Tween
 {

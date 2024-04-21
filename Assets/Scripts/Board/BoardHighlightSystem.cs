@@ -13,17 +13,6 @@ public class BoardHighlightSystem : MonoBehaviour, IBoardHighlightSystem
     [SerializeField] private TileBase highlight;
     private Tilemap tilemap;
 
-    private void OnEnable()
-    {
-        tilemap = GetComponent<Tilemap>();
-        IBoardHighlightSystem.Register(this);
-    }
-
-    private void OnDisable()
-    {
-        IBoardHighlightSystem.Reset();
-    }
-
     public void Highlight(IEnumerable<Point> points, Color color)
     {
         ClearHighlights();
@@ -36,5 +25,16 @@ public class BoardHighlightSystem : MonoBehaviour, IBoardHighlightSystem
     {
         tilemap.ClearAllTiles();
         tilemap.color = Color.white;
+    }
+
+    private void OnEnable()
+    {
+        tilemap = GetComponent<Tilemap>();
+        IBoardHighlightSystem.Register(this);
+    }
+
+    private void OnDisable()
+    {
+        IBoardHighlightSystem.Reset();
     }
 }

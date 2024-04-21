@@ -1,7 +1,7 @@
 using System;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEditor;
 
 public class BoardGenerator : MonoBehaviour
 {
@@ -11,7 +11,7 @@ public class BoardGenerator : MonoBehaviour
     [SerializeField] private int[] tiles;
 
     [SerializeField] private TileBase[] tileViews;
-    [SerializeField] private float[] elevations = { 0.3f, 0.6f, 0.7f, 1f };
+    [SerializeField] private float[] elevations = new float[] { 0.3f, 0.6f, 0.7f, 1f };
 
     [SerializeField] private Vector2 perlinScale = new(0.1f, 0.1f);
     [SerializeField] private Vector2 perlinOffset = Vector2.zero;

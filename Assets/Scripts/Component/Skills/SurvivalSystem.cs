@@ -9,9 +9,9 @@ public interface ISurvivalSystem : IDependency<ISurvivalSystem>, IBaseSkillSyste
 
 public class SurvivalSystem : BaseSkillSystem, ISurvivalSystem
 {
+    public override CoreDictionary<Entity, int> Table => IDataSystem.Resolve().Data.survival;
     protected override Skill Skill => Skill.Survival;
     protected override AbilityScore.Attribute Attribute => AbilityScore.Attribute.Wisdom;
-    public override CoreDictionary<Entity, int> Table => IDataSystem.Resolve().Data.survival;
 }
 
 public partial struct Entity

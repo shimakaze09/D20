@@ -1,6 +1,6 @@
 public partial class Data
 {
-    public CoreDictionary<Entity, int> partyOrder = new CoreDictionary<Entity, int>();
+    public CoreDictionary<Entity, int> partyOrder = new();
 }
 
 public interface IPartyOrderSystem : IDependency<IPartyOrderSystem>, IEntityTableSystem<int>
@@ -17,10 +17,8 @@ public class PartyOrderSystem : EntityTableSystem<int>, IPartyOrderSystem
         get
         {
             foreach (var entity in Table.Keys)
-            {
                 if (entity.PartyOrder == 0)
                     return entity;
-            }
             return Entity.None;
         }
     }
@@ -30,7 +28,7 @@ public partial struct Entity
 {
     public int PartyOrder
     {
-        get { return IPartyOrderSystem.Resolve().Get(this); }
-        set { IPartyOrderSystem.Resolve().Set(this, value); }
+        get => IPartyOrderSystem.Resolve().Get(this);
+        set => IPartyOrderSystem.Resolve().Set(this, value);
     }
 }

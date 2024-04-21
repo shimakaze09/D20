@@ -14,26 +14,29 @@ public interface ITurnSystem : IDependency<ITurnSystem>
 
 public class TurnSystem : ITurnSystem
 {
-    public Entity Current { get; private set; }
+    public Entity Current => current;
+    private Entity current;
 
-    public int ActionsRemaining { get; private set; }
+    public int ActionsRemaining => actionsRemaining;
+    private int actionsRemaining;
 
-    public int AttackCount { get; private set; }
+    public int AttackCount => attackCount;
+    private int attackCount;
 
-    public bool IsComplete => ActionsRemaining == 0;
+    public bool IsComplete => actionsRemaining == 0;
 
     public List<Entity> InReach { get; set; }
 
     public void Begin(Entity entity)
     {
-        Current = entity;
-        ActionsRemaining = 3;
-        AttackCount = 0;
+        current = entity;
+        actionsRemaining = 3;
+        attackCount = 0;
     }
 
     public void TakeAction(int actionCost, bool isAttack)
     {
-        ActionsRemaining -= actionCost;
-        if (isAttack) AttackCount++;
+        actionsRemaining -= actionCost;
+        if (isAttack) attackCount++;
     }
 }

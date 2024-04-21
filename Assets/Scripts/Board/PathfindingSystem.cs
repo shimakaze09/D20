@@ -12,7 +12,7 @@ public interface IPathfindingSystem : IDependency<IPathfindingSystem>
 
 public class PathfindingSystem : IPathfindingSystem
 {
-    private readonly Point[] offsets =
+    private Point[] offsets = new Point[]
     {
         new(0, 1),
         new(1, 0),

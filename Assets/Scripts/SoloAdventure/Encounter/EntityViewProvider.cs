@@ -14,17 +14,7 @@ public interface IEntityViewProvider : IDependency<IEntityViewProvider>
 
 public class EntityViewProvider : MonoBehaviour, IEntityViewProvider
 {
-    private readonly Dictionary<ViewZone, Dictionary<Entity, GameObject>> mapping = new();
-
-    private void OnEnable()
-    {
-        IEntityViewProvider.Register(this);
-    }
-
-    private void OnDisable()
-    {
-        IEntityViewProvider.Reset();
-    }
+    private Dictionary<ViewZone, Dictionary<Entity, GameObject>> mapping = new();
 
     public GameObject GetView(Entity entity, ViewZone zone)
     {
@@ -61,6 +51,16 @@ public class EntityViewProvider : MonoBehaviour, IEntityViewProvider
         {
             mapping[zone].Remove(entity);
         }
+    }
+
+    private void OnEnable()
+    {
+        IEntityViewProvider.Register(this);
+    }
+
+    private void OnDisable()
+    {
+        IEntityViewProvider.Reset();
     }
 }
 

@@ -10,7 +10,7 @@ public interface ITearDownSystem : IDependency<ITearDownSystem>
 
 public class TearDownSystem : ITearDownSystem
 {
-    private readonly List<Action> actions = new();
+    private List<Action> actions = new();
 
     public void TearDown()
     {

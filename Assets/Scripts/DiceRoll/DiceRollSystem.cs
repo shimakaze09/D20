@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public interface IDiceRollSystem : IDependency<IDiceRollSystem>
 {
     int Roll(DiceRoll diceRoll);

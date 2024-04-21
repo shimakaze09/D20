@@ -1,10 +1,10 @@
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
-using Cysharp.Threading.Tasks;
-using TMPro;
 using UnityEngine;
+using TMPro;
+using Cysharp.Threading.Tasks;
 using UnityEngine.UI;
+using System.Threading;
+using System.Linq;
 
 public interface IEntryPanel : IDependency<IEntryPanel>
 {
@@ -17,25 +17,11 @@ public interface IEntryPanel : IDependency<IEntryPanel>
 
 public class EntryPanel : MonoBehaviour, IEntryPanel
 {
-    private const float transitionTime = 0.25f;
     [SerializeField] private CanvasGroup canvasGroup;
     [SerializeField] private TextMeshProUGUI entryText;
     [SerializeField] private List<GameObject> entryOptions;
 
-    private void Awake()
-    {
-        canvasGroup.alpha = 0;
-    }
-
-    private void OnEnable()
-    {
-        IEntryPanel.Register(this);
-    }
-
-    private void OnDisable()
-    {
-        IEntryPanel.Reset();
-    }
+    private const float transitionTime = 0.25f;
 
     public void Setup(IEntry entry)
     {
@@ -43,7 +29,7 @@ public class EntryPanel : MonoBehaviour, IEntryPanel
         entryText.text = entry.Text;
 
         // Setup buttons for entry options
-        var pairs = entryOptions.Zip(entry.Options, (view, data) => (view, data));
+        var pairs = entryOptions.Zip(entry.Options, (GameObject view, IEntryOption data) => (view, data));
         foreach (var pair in pairs)
         {
             pair.view.SetActive(true);
@@ -104,5 +90,20 @@ public class EntryPanel : MonoBehaviour, IEntryPanel
         {
             await handler.OnClickAsync();
         }
+    }
+
+    private void Awake()
+    {
+        canvasGroup.alpha = 0;
+    }
+
+    private void OnEnable()
+    {
+        IEntryPanel.Register(this);
+    }
+
+    private void OnDisable()
+    {
+        IEntryPanel.Reset();
     }
 }

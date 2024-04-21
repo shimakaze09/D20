@@ -9,9 +9,9 @@ public interface IAcrobaticsSystem : IDependency<IAcrobaticsSystem>, IBaseSkillS
 
 public class AcrobaticsSystem : BaseSkillSystem, IAcrobaticsSystem
 {
+    public override CoreDictionary<Entity, int> Table => IDataSystem.Resolve().Data.acrobatics;
     protected override Skill Skill => Skill.Acrobatics;
     protected override AbilityScore.Attribute Attribute => AbilityScore.Attribute.Dexterity;
-    public override CoreDictionary<Entity, int> Table => IDataSystem.Resolve().Data.acrobatics;
 }
 
 public partial struct Entity

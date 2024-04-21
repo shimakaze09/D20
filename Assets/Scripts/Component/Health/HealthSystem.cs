@@ -1,5 +1,5 @@
-using Cysharp.Threading.Tasks;
 using UnityEngine;
+using Cysharp.Threading.Tasks;
 
 public struct HealthInfo
 {
@@ -60,7 +60,7 @@ public partial struct Entity
         {
             var hp = IHitPointSystem.Resolve().Get(this);
             var mhp = IMaxHitPointSystem.Resolve().Get(this);
-            return hp / (float)MaxHitPoints;
+            return (float)hp / (float)MaxHitPoints;
         }
     }
 }

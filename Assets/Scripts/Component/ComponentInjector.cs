@@ -4,6 +4,7 @@ public static class ComponentInjector
     {
         AbilityScoreInjector.Inject();
         IAdventureItemSystem.Register(new AdventureItemSystem());
+        IAncestrySystem.Register(new AncestrySystem());
         IArmorClassSystem.Register(new ArmorClassSystem());
         ICombatantSystem.Register(new CombatantSystem());
         IDyingSystem.Register(new DyingSystem());
@@ -14,6 +15,7 @@ public static class ComponentInjector
         IPartyOrderSystem.Register(new PartyOrderSystem());
         IPartySystem.Register(new PartySystem());
         IPositionSystem.Register(new PositionSystem());
+        IRaritySystem.Register(new RaritySystem());
         SizeInjector.Inject();
         SkillsInjector.Inject();
         ISpeedSystem.Register(new SpeedSystem());

@@ -1,3 +1,7 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
 public interface IEntityTableSystem<T>
 {
     CoreDictionary<Entity, T> Table { get; }
@@ -11,13 +15,13 @@ public interface IEntityTableSystem<T>
 
 public abstract class EntityTableSystem<T> : IEntityTableSystem<T>
 {
+    public abstract CoreDictionary<Entity, T> Table { get; }
+
     public EntityTableSystem()
     {
         ISetUpSystem.Resolve().Add(SetUp);
         ITearDownSystem.Resolve().Add(TearDown);
     }
-
-    public abstract CoreDictionary<Entity, T> Table { get; }
 
     public virtual void Set(Entity entity, T value)
     {

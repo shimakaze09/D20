@@ -9,9 +9,9 @@ public interface ICraftingSystem : IDependency<ICraftingSystem>, IBaseSkillSyste
 
 public class CraftingSystem : BaseSkillSystem, ICraftingSystem
 {
+    public override CoreDictionary<Entity, int> Table => IDataSystem.Resolve().Data.crafting;
     protected override Skill Skill => Skill.Crafting;
     protected override AbilityScore.Attribute Attribute => AbilityScore.Attribute.Intelligence;
-    public override CoreDictionary<Entity, int> Table => IDataSystem.Resolve().Data.crafting;
 }
 
 public partial struct Entity

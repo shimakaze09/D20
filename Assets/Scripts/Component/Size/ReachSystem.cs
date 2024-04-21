@@ -1,5 +1,5 @@
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections.Generic;
 
 public enum Reach
 {
@@ -23,8 +23,9 @@ public interface IReachSystem : IDependency<IReachSystem>, IEntityTableSystem<Re
 
 public class ReachSystem : EntityTableSystem<Reach>, IReachSystem
 {
-    private const int tileSize = 5;
     public override CoreDictionary<Entity, Reach> Table => IDataSystem.Resolve().Data.reach;
+
+    private const int tileSize = 5;
 
     public int ReachInFeet(Size size, Reach reach)
     {

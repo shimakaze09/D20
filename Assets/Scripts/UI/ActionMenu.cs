@@ -1,9 +1,9 @@
 using System.Collections.Generic;
-using System.Linq;
-using Cysharp.Threading.Tasks;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Cysharp.Threading.Tasks;
+using System.Linq;
+using TMPro;
 
 public interface IActionMenu : IDependency<IActionMenu>
 {
@@ -20,25 +20,15 @@ public class ActionMenu : MonoBehaviour, IActionMenu
     [SerializeField] private Layout onScreen;
     [SerializeField] private Layout offScreen;
     private Entity entity;
-    private int menuCount;
     private int selection;
-
-    private void OnEnable()
-    {
-        IActionMenu.Register(this);
-    }
-
-    private void OnDisable()
-    {
-        IActionMenu.Reset();
-    }
+    private int menuCount;
 
     public async UniTask Setup()
     {
         selection = 0;
         buttons[0].Select();
         entity = ITurnSystem.Resolve().Current;
-        var pairs = buttons.Zip(entity.EncounterActions.names, (button, action) => (button, action));
+        var pairs = buttons.Zip(entity.EncounterActions.names, (Button button, string action) => (button, action));
         foreach (var pair in pairs)
         {
             var label = pair.button.GetComponentInChildren<TextMeshProUGUI>();
@@ -77,5 +67,15 @@ public class ActionMenu : MonoBehaviour, IActionMenu
     public async UniTask TransitionOut()
     {
         await rootPanel.Layout(onScreen, offScreen, 0.25f).Play();
+    }
+
+    private void OnEnable()
+    {
+        IActionMenu.Register(this);
+    }
+
+    private void OnDisable()
+    {
+        IActionMenu.Reset();
     }
 }

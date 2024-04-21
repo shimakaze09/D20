@@ -10,7 +10,7 @@ public interface ISetUpSystem : IDependency<ISetUpSystem>
 
 public class SetUpSystem : ISetUpSystem
 {
-    private readonly List<Action> actions = new();
+    private List<Action> actions = new();
 
     public void SetUp()
     {

@@ -1,6 +1,6 @@
-using System.Collections.Generic;
-using Cysharp.Threading.Tasks;
 using UnityEngine;
+using Cysharp.Threading.Tasks;
+using System.Collections.Generic;
 
 public struct StridePresentationInfo
 {
@@ -16,16 +16,6 @@ public interface IStridePresenter : IDependency<IStridePresenter>
 public class StridePresenter : MonoBehaviour, IStridePresenter
 {
     [SerializeField] private float moveSpeed = 0.25f;
-
-    private void OnEnable()
-    {
-        IStridePresenter.Register(this);
-    }
-
-    private void OnDisable()
-    {
-        IStridePresenter.Reset();
-    }
 
     public async UniTask Present(StridePresentationInfo info)
     {
@@ -44,5 +34,15 @@ public class StridePresenter : MonoBehaviour, IStridePresenter
         }
 
         ICombatantViewSystem.Resolve().SetAnimation(combatant, CombatantAnimation.Idle);
+    }
+
+    private void OnEnable()
+    {
+        IStridePresenter.Register(this);
+    }
+
+    private void OnDisable()
+    {
+        IStridePresenter.Reset();
     }
 }

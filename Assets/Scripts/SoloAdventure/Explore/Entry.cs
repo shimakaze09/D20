@@ -1,5 +1,5 @@
-using Cysharp.Threading.Tasks;
 using UnityEngine;
+using Cysharp.Threading.Tasks;
 
 public interface IEntry
 {
@@ -10,8 +10,8 @@ public interface IEntry
 
 public class Entry : MonoBehaviour, IEntry
 {
-    [SerializeField] private string text;
     public string Text => text;
+    [SerializeField] private string text;
 
     public IEntryOption[] Options => GetComponents<IEntryOption>();
 

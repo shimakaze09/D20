@@ -1,5 +1,5 @@
-using Cysharp.Threading.Tasks;
 using UnityEngine;
+using Cysharp.Threading.Tasks;
 
 public struct AttackPresentationInfo
 {
@@ -15,6 +15,13 @@ public interface IAttackPresenter : IDependency<IAttackPresenter>
 
 public class AttackPresenter : MonoBehaviour, IAttackPresenter
 {
+    public async UniTask Present(AttackPresentationInfo info)
+    {
+        var view = IEntityViewProvider.Resolve().GetView(info.attacker, ViewZone.Combatant);
+        var combatant = view.GetComponent<CombatantView>();
+        await ICombatantViewSystem.Resolve().PlayAnimation(combatant, CombatantAnimation.Attack);
+    }
+
     private void OnEnable()
     {
         IAttackPresenter.Register(this);
@@ -23,12 +30,5 @@ public class AttackPresenter : MonoBehaviour, IAttackPresenter
     private void OnDisable()
     {
         IAttackPresenter.Reset();
-    }
-
-    public async UniTask Present(AttackPresentationInfo info)
-    {
-        var view = IEntityViewProvider.Resolve().GetView(info.attacker, ViewZone.Combatant);
-        var combatant = view.GetComponent<CombatantView>();
-        await ICombatantViewSystem.Resolve().PlayAnimation(combatant, CombatantAnimation.Attack);
     }
 }

@@ -1,6 +1,4 @@
-using System;
-
-[Serializable]
+[System.Serializable]
 public class DamageResistanceException
 {
     public CoreDictionary<string, string> types = new();

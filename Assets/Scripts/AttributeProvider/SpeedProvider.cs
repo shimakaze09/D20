@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SpeedProvider : MonoBehaviour, IAttributeProvider
 {
-    [SerializeField] private int value;
+    public int value;
 
     public void Setup(Entity entity)
     {

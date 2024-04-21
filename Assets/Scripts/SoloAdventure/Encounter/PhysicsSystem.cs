@@ -8,7 +8,7 @@ public interface IPhysicsSystem : IDependency<IPhysicsSystem>
 public class PhysicsSystem : IPhysicsSystem
 {
     private const int maxResultCount = 10;
-    private readonly Collider2D[] results = new Collider2D[maxResultCount];
+    private Collider2D[] results = new Collider2D[maxResultCount];
 
     public Entity? OverlapPoint(Point point, int layerMask)
     {

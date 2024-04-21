@@ -5,10 +5,10 @@ public struct LandTraverser : ITraverser
     private const int landTile = 1;
     private const int hillTile = 2;
 
-    private readonly HashSet<Point> passable;
-    private readonly HashSet<Point> block;
+    private HashSet<Point> passable;
+    private HashSet<Point> block;
 
-    private readonly IBoardSystem system;
+    private IBoardSystem system;
 
     public LandTraverser(HashSet<Point> passable, HashSet<Point> block)
     {
@@ -31,8 +31,10 @@ public struct LandTraverser : ITraverser
             cost = type == landTile ? 5 : 10;
             return true;
         }
-
-        return false;
+        else
+        {
+            return false;
+        }
     }
 
     private Traversal SingleTraversal(Point point)

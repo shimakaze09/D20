@@ -1,7 +1,6 @@
-using System;
 using System.Collections.Generic;
 
-[Serializable]
+[System.Serializable]
 public struct EncounterActions
 {
     public List<string> names;

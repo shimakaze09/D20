@@ -1,6 +1,6 @@
-using System.Collections.Generic;
-using Cysharp.Threading.Tasks;
 using UnityEngine;
+using Cysharp.Threading.Tasks;
+using System.Collections.Generic;
 
 public class SoloAdventureAttack : MonoBehaviour, ICombatAction
 {
@@ -89,6 +89,7 @@ public class SoloAdventureAttack : MonoBehaviour, ICombatAction
     {
         if (entity.Party == Party.Monster)
             return targets[0];
-        return await IEntitySelectionSystem.Resolve().Select(targets);
+        else
+            return await IEntitySelectionSystem.Resolve().Select(targets);
     }
 }
