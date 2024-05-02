@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SkillsProficiencyProvider : MonoBehaviour, IAttributeProvider
 {
-    [SerializeField] private List<ValuePair> valuePairs;
+    public List<ValuePair> valuePairs;
 
     public void Setup(Entity entity)
     {

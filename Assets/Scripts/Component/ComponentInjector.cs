@@ -6,6 +6,7 @@ public static class ComponentInjector
         IAdventureItemSystem.Register(new AdventureItemSystem());
         IAncestrySystem.Register(new AncestrySystem());
         IArmorClassSystem.Register(new ArmorClassSystem());
+        IBackgroundSystem.Register(new BackgroundSystem());
         ICombatantSystem.Register(new CombatantSystem());
         IDyingSystem.Register(new DyingSystem());
         IEntityFilterSystem.Register(new EntityFilterSystem());
