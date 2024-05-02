@@ -1,6 +1,6 @@
 ﻿public partial class Data
 {
-    public CoreDictionary<Entity, string> background = new CoreDictionary<Entity, string>();
+    public CoreDictionary<Entity, string> background = new();
 }
 
 public interface IBackgroundSystem : IDependency<IBackgroundSystem>, IEntityTableSystem<string>
@@ -16,7 +16,7 @@ public partial struct Entity
 {
     public string Background
     {
-        get { return IBackgroundSystem.Resolve().Get(this); }
-        set { IBackgroundSystem.Resolve().Set(this, value); }
+        get => IBackgroundSystem.Resolve().Get(this);
+        set => IBackgroundSystem.Resolve().Set(this, value);
     }
 }

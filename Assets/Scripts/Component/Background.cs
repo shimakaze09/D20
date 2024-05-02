@@ -1,5 +1,5 @@
-using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine;
 
 public interface IBackground
 {
@@ -11,32 +11,29 @@ public interface IBackground
 
 public class Background : MonoBehaviour, IBackground
 {
+    [SerializeField] private string _title;
+
+    [SerializeField] private Rarity _rarity;
+
+    [SerializeField] private string _summary;
+
     public string Title
     {
-        get { return _title; }
-        set { _title = value; }
+        get => _title;
+        set => _title = value;
     }
-
-    [SerializeField] string _title;
 
     public Rarity Rarity
     {
-        get { return _rarity; }
-        set { _rarity = value; }
+        get => _rarity;
+        set => _rarity = value;
     }
-
-    [SerializeField] Rarity _rarity;
 
     public string Summary
     {
-        get { return _summary; }
-        set { _summary = value; }
+        get => _summary;
+        set => _summary = value;
     }
 
-    [SerializeField] string _summary;
-
-    public List<IAttributeProvider> AttributeProviders
-    {
-        get { return new List<IAttributeProvider>(gameObject.GetComponents<IAttributeProvider>()); }
-    }
+    public List<IAttributeProvider> AttributeProviders => new(gameObject.GetComponents<IAttributeProvider>());
 }

@@ -40,13 +40,10 @@ public class CreateHeroPartyFlow : ICreateHeroPartyFlow
         foreach (var provider in ancestryAsset.AttributeProviders) provider.Setup(entity);
     }
 
-    async UniTask LoadBackground(Entity entity)
+    private async UniTask LoadBackground(Entity entity)
     {
-        UnityEngine.Debug.Log(string.Format("Loading Background: {0}", entity.Background));
+        Debug.Log(string.Format("Loading Background: {0}", entity.Background));
         var backgroundAsset = await IBackgroundAssetSystem.Resolve().Load(entity.Background);
-        foreach (var provider in backgroundAsset.AttributeProviders)
-        {
-            provider.Setup(entity);
-        }
+        foreach (var provider in backgroundAsset.AttributeProviders) provider.Setup(entity);
     }
 }

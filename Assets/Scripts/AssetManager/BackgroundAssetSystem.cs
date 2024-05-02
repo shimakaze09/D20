@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
+using UnityEngine;
 
 public interface IBackgroundAssetSystem : IDependency<IBackgroundAssetSystem>
 {
