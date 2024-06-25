@@ -1,11 +1,13 @@
-public interface IBaseSkillSystem : IEntityTableSystem<int>
+﻿using UnityEngine;
+
+public interface IBaseSavingThrowSystem : IEntityTableSystem<int>
 {
     void Setup(Entity entity);
 }
 
-public abstract class BaseSkillSystem : EntityTableSystem<int>, IBaseSkillSystem
+public abstract class BaseSavingThrowSystem : EntityTableSystem<int>, IBaseSavingThrowSystem
 {
-    protected abstract Skill Skill { get; }
+    protected abstract SavingThrow SavingThrow { get; }
     protected abstract AbilityScore.Attribute Attribute { get; }
 
     public virtual void Setup(Entity entity)
@@ -16,9 +18,10 @@ public abstract class BaseSkillSystem : EntityTableSystem<int>, IBaseSkillSystem
     protected virtual int Calculate(Entity entity)
     {
         var result = entity[Attribute].Modifier;
-        var proficiency = ISkillProficiencySystem.Resolve().Get(entity, Skill);
+        var proficiency = ISavingThrowProficiencySystem.Resolve().Get(entity, SavingThrow);
         if (proficiency != Proficiency.Untrained)
             result += (int)proficiency * 2 + entity.Level;
+        Debug.Log(string.Format("SavingThrow: {0}, Value: {1}", SavingThrow.ToString(), result));
         return result;
     }
 }

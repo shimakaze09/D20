@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-public class MockProficiencySystem : IProficiencySystem
+public class MockSkillProficiencySystem : ISkillProficiencySystem
 {
     private readonly Dictionary<Entity, Dictionary<Skill, Proficiency>> fakeTable = new();
 

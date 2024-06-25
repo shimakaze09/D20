@@ -17,6 +17,7 @@ public static class ComponentInjector
         IPartySystem.Register(new PartySystem());
         IPositionSystem.Register(new PositionSystem());
         IRaritySystem.Register(new RaritySystem());
+        SavingThrowsInjector.Inject();
         SizeInjector.Inject();
         SkillsInjector.Inject();
         ISpeedSystem.Register(new SpeedSystem());

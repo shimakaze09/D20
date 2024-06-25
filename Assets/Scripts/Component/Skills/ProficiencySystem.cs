@@ -7,13 +7,13 @@ public enum Proficiency
     Legendary
 }
 
-public interface IProficiencySystem : IDependency<IProficiencySystem>
+public interface ISkillProficiencySystem : IDependency<ISkillProficiencySystem>
 {
     Proficiency Get(Entity entity, Skill skill);
     void Set(Entity entity, Skill skill, Proficiency value);
 }
 
-public class ProficiencySystem : IProficiencySystem
+public class SkillProficiencySystem : ISkillProficiencySystem
 {
     public Proficiency Get(Entity entity, Skill skill)
     {

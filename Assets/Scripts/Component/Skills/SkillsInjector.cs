@@ -26,7 +26,7 @@ public static class SkillsInjector
         IOccultismSystem.Register(new OccultismSystem());
         IPerformanceProficiencySystem.Register(new PerformanceProficiencySystem());
         IPerformanceSystem.Register(new PerformanceSystem());
-        IProficiencySystem.Register(new ProficiencySystem());
+        ISkillProficiencySystem.Register(new SkillProficiencySystem());
         IReligionProficiencySystem.Register(new ReligionProficiencySystem());
         IReligionSystem.Register(new ReligionSystem());
         ISkillSystem.Register(new SkillSystem());
