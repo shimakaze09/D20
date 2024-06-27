@@ -21,7 +21,7 @@ public abstract class BaseSavingThrowSystem : EntityTableSystem<int>, IBaseSavin
         var proficiency = ISavingThrowProficiencySystem.Resolve().Get(entity, SavingThrow);
         if (proficiency != Proficiency.Untrained)
             result += (int)proficiency * 2 + entity.Level;
-        Debug.Log(string.Format("SavingThrow: {0}, Value: {1}", SavingThrow.ToString(), result));
+        Debug.Log($"SavingThrow: {SavingThrow.ToString()}, Value: {result}");
         return result;
     }
 }

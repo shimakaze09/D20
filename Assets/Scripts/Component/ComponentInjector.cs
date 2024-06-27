@@ -11,10 +11,12 @@ public static class ComponentInjector
         IDyingSystem.Register(new DyingSystem());
         IEntityFilterSystem.Register(new EntityFilterSystem());
         HealthInjector.Inject();
+        IInitiativeSystem.Register(new InitiativeSystem());
         ILevelSystem.Register(new LevelSystem());
         INameSystem.Register(new NameSystem());
         IPartyOrderSystem.Register(new PartyOrderSystem());
         IPartySystem.Register(new PartySystem());
+        PerceptionInjector.Inject();
         IPositionSystem.Register(new PositionSystem());
         IRaritySystem.Register(new RaritySystem());
         SavingThrowsInjector.Inject();

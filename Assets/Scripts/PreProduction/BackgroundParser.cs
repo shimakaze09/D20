@@ -85,7 +85,7 @@ public static class BackgroundParser
 
     private static void CreatePrefab(GameObject asset, BackgroundData data)
     {
-        var path = string.Format("Assets/AutoGeneration/Backgrounds/{0}.prefab", data.title);
+        var path = $"Assets/AutoGeneration/Backgrounds/{data.title}.prefab";
         PrefabUtility.SaveAsPrefabAsset(asset, path);
     }
 

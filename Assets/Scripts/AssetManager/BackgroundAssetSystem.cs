@@ -11,7 +11,7 @@ public class BackgroundAssetSystem : IBackgroundAssetSystem
     public async UniTask<IBackground> Load(string name)
     {
         var assetManager = IAssetManager<GameObject>.Resolve();
-        var key = string.Format("Assets/AutoGeneration/Backgrounds/{0}.prefab", name);
+        var key = $"Assets/AutoGeneration/Backgrounds/{name}.prefab";
         var prefab = await assetManager.LoadAssetAsync(key);
         return prefab.GetComponent<IBackground>();
     }

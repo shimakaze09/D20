@@ -13,7 +13,7 @@ public class DataStore : IDataStore
 {
     public DataStore(string fileName)
     {
-        FilePath = string.Format("{0}/{1}.txt", Application.persistentDataPath, fileName);
+        FilePath = $"{Application.persistentDataPath}/{fileName}.txt";
     }
 
     public string FilePath { get; }

@@ -28,6 +28,7 @@ public class CreateHeroPartyFlow : ICreateHeroPartyFlow
             await LoadBackground(entity);
             ISkillSystem.Resolve().SetupAllSkills(entity);
             ISavingThrowSystem.Resolve().SetupAllSavingThrows(entity);
+            IPerceptionSystem.Resolve().Setup(entity);
         }
 
         await UniTask.CompletedTask;
@@ -35,7 +36,7 @@ public class CreateHeroPartyFlow : ICreateHeroPartyFlow
 
     private async UniTask LoadAncestry(Entity entity, string ancestry)
     {
-        Debug.Log(string.Format("Loading Ancestry: {0}", ancestry));
+        Debug.Log($"Loading Ancestry: {ancestry}");
         entity.Ancestry = ancestry;
         var assetSystem = IAncestryAssetSystem.Resolve();
         var ancestryAsset = await assetSystem.Load(ancestry);
@@ -44,7 +45,7 @@ public class CreateHeroPartyFlow : ICreateHeroPartyFlow
 
     private async UniTask LoadBackground(Entity entity)
     {
-        Debug.Log(string.Format("Loading Background: {0}", entity.Background));
+        Debug.Log($"Loading Background: {entity.Background}");
         var backgroundAsset = await IBackgroundAssetSystem.Resolve().Load(entity.Background);
         foreach (var provider in backgroundAsset.AttributeProviders) provider.Setup(entity);
     }

@@ -30,14 +30,14 @@ public class EntityViewProvider : MonoBehaviour, IEntityViewProvider
     {
         if (!mapping.ContainsKey(zone))
         {
-            Debug.LogError(string.Format("No mapping for zone {0}", zone));
+            Debug.LogError($"No mapping for zone {zone}");
             return null;
         }
 
         var zoneMap = mapping[zone];
         if (!zoneMap.ContainsKey(entity))
         {
-            Debug.LogError(string.Format("No mapping for entity {0} in zone {1}", entity.id, zone));
+            Debug.LogError($"No mapping for entity {entity.id} in zone {zone}");
             return null;
         }
 

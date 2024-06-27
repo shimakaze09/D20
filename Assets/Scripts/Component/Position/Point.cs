@@ -66,6 +66,6 @@ public struct Point : IEquatable<Point>
 
     public override string ToString()
     {
-        return string.Format("Point(x:{0}, y:{1})", x, y);
+        return $"Point(x:{x}, y:{y})";
     }
 }
