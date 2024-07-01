@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿#region
+
+using UnityEngine;
+
+#endregion
 
 public class RectTransformAnchorPositionTween : Vector3Tween
 {

@@ -1,8 +1,12 @@
+#region
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 using UnityEngine;
+
+#endregion
 
 [Serializable]
 public class CoreDictionary<TKey, TValue> : ISerializationCallbackReceiver, ICollection<KeyValuePair<TKey, TValue>>,

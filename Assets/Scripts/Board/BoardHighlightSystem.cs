@@ -1,6 +1,10 @@
+#region
+
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+
+#endregion
 
 public interface IBoardHighlightSystem : IDependency<IBoardHighlightSystem>
 {

@@ -1,5 +1,9 @@
+#region
+
 using System;
 using System.Collections.Generic;
+
+#endregion
 
 public interface ISetUpSystem : IDependency<ISetUpSystem>
 {

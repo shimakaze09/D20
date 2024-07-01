@@ -1,5 +1,3 @@
-// NOTE: cases should be ordered from least to most restricted
-
 public enum Traversal
 {
     Open, // Can move through or stop here

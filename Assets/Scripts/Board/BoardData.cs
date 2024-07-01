@@ -1,4 +1,8 @@
+#region
+
 using UnityEngine;
+
+#endregion
 
 [CreateAssetMenu]
 public class BoardData : ScriptableObject

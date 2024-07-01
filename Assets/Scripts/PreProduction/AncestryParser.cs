@@ -1,8 +1,12 @@
+#region
+
 using System;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using Object = UnityEngine.Object;
+
+#endregion
 
 public static class AncestryParser
 {

@@ -1,7 +1,11 @@
+#region
+
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
+
+#endregion
 
 public enum MainMenuOption
 {

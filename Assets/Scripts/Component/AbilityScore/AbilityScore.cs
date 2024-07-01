@@ -1,4 +1,8 @@
+#region
+
 using System;
+
+#endregion
 
 [Serializable]
 public struct AbilityScore

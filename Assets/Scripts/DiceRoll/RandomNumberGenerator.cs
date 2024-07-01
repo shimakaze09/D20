@@ -1,4 +1,8 @@
+#region
+
 using UnityEngine;
+
+#endregion
 
 public interface IRandomNumberGenerator : IDependency<IRandomNumberGenerator>
 {

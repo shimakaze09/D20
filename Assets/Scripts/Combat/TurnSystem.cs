@@ -1,4 +1,8 @@
+#region
+
 using System.Collections.Generic;
+
+#endregion
 
 public interface ITurnSystem : IDependency<ITurnSystem>
 {

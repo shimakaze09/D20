@@ -1,4 +1,8 @@
+#region
+
 using NUnit.Framework;
+
+#endregion
 
 internal class TestEntityTableSystem : EntityTableSystem<int>
 {

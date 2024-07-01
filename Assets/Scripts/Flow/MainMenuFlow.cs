@@ -1,5 +1,9 @@
+#region
+
 using Cysharp.Threading.Tasks;
 using UnityEngine.SceneManagement;
+
+#endregion
 
 public interface IMainMenuFlow : IDependency<IMainMenuFlow>
 {

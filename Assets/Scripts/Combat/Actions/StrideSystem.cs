@@ -1,5 +1,9 @@
+#region
+
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
+
+#endregion
 
 public struct StrideInfo
 {

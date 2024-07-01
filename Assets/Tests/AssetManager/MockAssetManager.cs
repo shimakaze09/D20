@@ -1,4 +1,8 @@
+#region
+
 using Cysharp.Threading.Tasks;
+
+#endregion
 
 public class MockAssetManager<T> : IAssetManager<T>
 {

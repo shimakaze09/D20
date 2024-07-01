@@ -1,4 +1,8 @@
+#region
+
 using System.Linq;
+
+#endregion
 
 public enum CombatResult
 {

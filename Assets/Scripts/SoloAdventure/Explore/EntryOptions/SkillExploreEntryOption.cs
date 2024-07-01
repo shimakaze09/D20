@@ -1,4 +1,8 @@
+#region
+
 using UnityEngine;
+
+#endregion
 
 public class SkillExploreEntryOption : MonoBehaviour, IEntryOption
 {

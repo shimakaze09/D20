@@ -1,7 +1,11 @@
+#region
+
 using System;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+
+#endregion
 
 public class BoardGenerator : MonoBehaviour
 {

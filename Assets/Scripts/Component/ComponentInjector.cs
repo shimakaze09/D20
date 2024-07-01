@@ -23,5 +23,6 @@ public static class ComponentInjector
         SizeInjector.Inject();
         SkillsInjector.Inject();
         ISpeedSystem.Register(new SpeedSystem());
+        WeaponInjector.Inject();
     }
 }

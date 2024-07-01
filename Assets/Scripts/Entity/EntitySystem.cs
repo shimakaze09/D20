@@ -1,4 +1,8 @@
+#region
+
 using System;
+
+#endregion
 
 public partial class Data
 {

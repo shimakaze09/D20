@@ -1,5 +1,9 @@
+#region
+
 using Cysharp.Threading.Tasks;
 using UnityEngine;
+
+#endregion
 
 public interface IEncounterAssetSystem : IDependency<IEncounterAssetSystem>
 {

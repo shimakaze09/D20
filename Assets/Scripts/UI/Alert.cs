@@ -1,7 +1,11 @@
+#region
+
 using Cysharp.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+
+#endregion
 
 public interface IAlert : IDependency<IAlert>
 {

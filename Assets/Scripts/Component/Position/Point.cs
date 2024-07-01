@@ -1,5 +1,9 @@
+#region
+
 using System;
 using UnityEngine;
+
+#endregion
 
 [Serializable]
 public struct Point : IEquatable<Point>

@@ -1,6 +1,10 @@
+#region
+
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using UnityEngine.SceneManagement;
+
+#endregion
 
 public interface IEncounterFlow : IDependency<IEncounterFlow>
 {
