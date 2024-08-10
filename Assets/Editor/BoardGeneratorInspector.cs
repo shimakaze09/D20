@@ -1,5 +1,9 @@
+#region
+
 using UnityEditor;
 using UnityEngine;
+
+#endregion
 
 [CustomEditor(typeof(BoardGenerator))]
 public class BoardGeneratorInspector : Editor

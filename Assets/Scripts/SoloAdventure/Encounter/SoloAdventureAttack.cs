@@ -67,12 +67,12 @@ public class SoloAdventureAttack : MonoBehaviour, ICombatAction
                 var critRoll = damage.Roll();
                 damageInfo.damage = critRoll;
                 damageInfo.criticalDamage = critRoll;
-                Debug.Log($"Critical Hit for {critRoll * 2} Damage!");
+                Debug.Log(string.Format("Critical Hit for {0} Damage!", critRoll * 2));
                 break;
             case Check.Success:
                 var roll = damage.Roll();
                 damageInfo.damage = roll;
-                Debug.Log($"Hit for {roll} Damage!");
+                Debug.Log(string.Format("Hit for {0} Damage!", roll));
                 break;
             default:
                 Debug.Log("Miss");

@@ -10,6 +10,7 @@ public static class ComponentInjector
         ICombatantSystem.Register(new CombatantSystem());
         IDyingSystem.Register(new DyingSystem());
         IEntityFilterSystem.Register(new EntityFilterSystem());
+        EquipmentInjector.Inject();
         HealthInjector.Inject();
         IInitiativeSystem.Register(new InitiativeSystem());
         ILevelSystem.Register(new LevelSystem());
@@ -23,6 +24,5 @@ public static class ComponentInjector
         SizeInjector.Inject();
         SkillsInjector.Inject();
         ISpeedSystem.Register(new SpeedSystem());
-        WeaponInjector.Inject();
     }
 }

@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class LevelProvider : MonoBehaviour, IAttributeProvider
 {
-    [SerializeField] private int value;
+    public int value;
 
     public void Setup(Entity entity)
     {

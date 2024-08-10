@@ -13,8 +13,13 @@ public abstract class EntityTableSystem<T> : IEntityTableSystem<T>
 {
     public EntityTableSystem()
     {
-        ISetUpSystem.Resolve().Add(SetUp);
-        ITearDownSystem.Resolve().Add(TearDown);
+        ISetUpSystem setup;
+        if (ISetUpSystem.TryResolve(out setup))
+            setup.Add(SetUp);
+
+        ITearDownSystem tearDown;
+        if (ITearDownSystem.TryResolve(out tearDown))
+            tearDown.Add(TearDown);
     }
 
     public abstract CoreDictionary<Entity, T> Table { get; }

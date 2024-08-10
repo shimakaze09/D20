@@ -1,4 +1,4 @@
-﻿#region
+#region
 
 using Cysharp.Threading.Tasks;
 using UnityEngine;
@@ -15,7 +15,7 @@ public class BackgroundAssetSystem : IBackgroundAssetSystem
     public async UniTask<IBackground> Load(string name)
     {
         var assetManager = IAssetManager<GameObject>.Resolve();
-        var key = $"Assets/AutoGeneration/Backgrounds/{name}.prefab";
+        var key = string.Format("Assets/AutoGeneration/Backgrounds/{0}.prefab", name);
         var prefab = await assetManager.LoadAssetAsync(key);
         return prefab.GetComponent<IBackground>();
     }

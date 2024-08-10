@@ -17,8 +17,10 @@ GameObject:
   - component: {fileID: 6806599084912475206}
   - component: {fileID: -8268890174237408610}
   - component: {fileID: -2075919072345422946}
-  - component: {fileID: 5465906914155196325}
-  - component: {fileID: -2306067410540832407}
+  - component: {fileID: -3455631235283556389}
+  - component: {fileID: 7324337154926583888}
+  - component: {fileID: 6102444527702348390}
+  - component: {fileID: 4656925584622872923}
   m_Layer: 0
   m_Name: Hero
   m_TagString: Untagged
@@ -33,13 +35,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5404773072611836338}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &-2405910357953824713
 MonoBehaviour:
@@ -66,12 +68,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d3af7837586d42a09151a445b9c9f56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strength: 10
-  dexterity: 10
-  constitution: 10
-  intelligence: 10
-  wisdom: 10
-  charisma: 10
+  strength: 20
+  dexterity: 20
+  constitution: 20
+  intelligence: 20
+  wisdom: 20
+  charisma: 20
 --- !u!114 &781005791991563718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85,7 +87,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value:
-  - Strike (Shortsword)
+  - Attack
   - Stride
 --- !u!114 &-3237872224526893971
 MonoBehaviour:
@@ -153,7 +155,7 @@ MonoBehaviour:
   damageType: piercing
   amount: 5
   exception: 
---- !u!114 &5465906914155196325
+--- !u!114 &-3455631235283556389
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,7 +164,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5404773072611836338}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60888cc63cd54960bda9ef36ed028288, type: 3}
+  m_Script: {fileID: 11500000, guid: c9efa302274374e72bd0185a843b459d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   valuePairs:
@@ -172,7 +174,7 @@ MonoBehaviour:
     proficiency: 1
   - savingThrow: 2
     proficiency: 2
---- !u!114 &-2306067410540832407
+--- !u!114 &7324337154926583888
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -181,7 +183,38 @@ MonoBehaviour:
   m_GameObject: {fileID: 5404773072611836338}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 378d617af7214e1da47ebdeadffa4600, type: 3}
+  m_Script: {fileID: 11500000, guid: d34065ebf02e6449ca17cccd8ce5f72b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   proficiency: 1
+--- !u!114 &6102444527702348390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5404773072611836338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69745cc0cdfd0401c9616e3a4330820d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value:
+    filter:
+      name: 
+      category: 28
+      group: 0
+    proficiency: 2
+--- !u!114 &4656925584622872923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5404773072611836338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01103a2cb46e647c59e2c58c4647b8b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recipeName: Shortsword

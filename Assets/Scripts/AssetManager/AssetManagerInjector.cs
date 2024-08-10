@@ -7,5 +7,6 @@ public static class AssetManagerInjector
         ICombatActionAssetSystem.Register(new CombatActionAssetSystem());
         IEncounterAssetSystem.Register(new EncounterAssetSystem());
         IEntryAssetSystem.Register(new EntryAssetSystem());
+        IWeaponAssetSystem.Register(new WeaponAssetSystem());
     }
 }

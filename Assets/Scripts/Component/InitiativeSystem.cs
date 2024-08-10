@@ -1,4 +1,4 @@
-﻿public partial class Data
+public partial class Data
 {
     public CoreDictionary<Entity, int> initiative = new();
 }

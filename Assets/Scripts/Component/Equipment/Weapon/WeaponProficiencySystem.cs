@@ -1,4 +1,4 @@
-﻿#region
+#region
 
 using System;
 using System.Collections.Generic;
@@ -20,8 +20,7 @@ public class WeaponProficiency
 
 public partial class Data
 {
-    public CoreDictionary<Entity, WeaponProficiency>
-        weaponProficiency = new();
+    public CoreDictionary<Entity, WeaponProficiency> weaponProficiency = new();
 }
 
 public interface IWeaponProficiencySystem : IDependency<IWeaponProficiencySystem>, IEntityTableSystem<WeaponProficiency>

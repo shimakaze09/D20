@@ -34,4 +34,11 @@ public partial struct DiceRoll
         this.sides = sides;
         this.bonus = bonus;
     }
+
+    public override string ToString()
+    {
+        if (bonus != 0)
+            return string.Format("{0}d{1}+{2}", count, sides, bonus);
+        return string.Format("{0}d{1}", count, sides);
+    }
 }

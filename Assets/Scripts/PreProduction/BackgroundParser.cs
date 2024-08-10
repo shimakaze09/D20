@@ -1,4 +1,4 @@
-﻿#region
+#region
 
 using System;
 using System.Collections.Generic;
@@ -89,7 +89,7 @@ public static class BackgroundParser
 
     private static void CreatePrefab(GameObject asset, BackgroundData data)
     {
-        var path = $"Assets/AutoGeneration/Backgrounds/{data.title}.prefab";
+        var path = string.Format("Assets/AutoGeneration/Backgrounds/{0}.prefab", data.title);
         PrefabUtility.SaveAsPrefabAsset(asset, path);
     }
 

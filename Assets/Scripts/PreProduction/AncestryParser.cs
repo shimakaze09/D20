@@ -74,7 +74,7 @@ public static class AncestryParser
 
     private static void CreatePrefab(GameObject asset, string assetName)
     {
-        var path = $"Assets/AutoGeneration/Ancestries/{assetName}.prefab";
+        var path = string.Format("Assets/AutoGeneration/Ancestries/{0}.prefab", assetName);
         PrefabUtility.SaveAsPrefabAsset(asset, path);
     }
 

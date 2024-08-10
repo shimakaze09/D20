@@ -1,4 +1,4 @@
-﻿public class PerceptionInjector
+public class PerceptionInjector
 {
     public static void Inject()
     {

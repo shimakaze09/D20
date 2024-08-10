@@ -16,9 +16,7 @@ public interface IBackground
 public class Background : MonoBehaviour, IBackground
 {
     [SerializeField] private string _title;
-
     [SerializeField] private Rarity _rarity;
-
     [SerializeField] private string _summary;
 
     public string Title

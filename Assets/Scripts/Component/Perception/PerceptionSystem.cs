@@ -1,9 +1,3 @@
-﻿#region
-
-using UnityEngine;
-
-#endregion
-
 public partial class Data
 {
     public CoreDictionary<Entity, int> perception = new();
@@ -29,7 +23,6 @@ public class PerceptionSystem : EntityTableSystem<int>, IPerceptionSystem
         var proficiency = IPerceptionProficiencySystem.Resolve().Get(entity);
         if (proficiency != Proficiency.Untrained)
             result += (int)proficiency * 2 + entity.Level;
-        Debug.Log($"Proficiency: {result}");
         return result;
     }
 }

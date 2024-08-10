@@ -1,0 +1,307 @@
+Name	Weapon type	Weapon category	Weapon group	Trait	Damage	Hands	Range	Reload	Bulk	Price	Level
+8-Round Magazine	Ranged	Ammunition	Firearm						L	2 sp	0
+Adze	Melee	Martial	Axe	"Forceful, Grippli, Sweep"	1d10 S	2			2	1 gp	0
+Air Repeater	Ranged	Simple	Firearm	"Agile, Repeating, Uncommon"	1d4 P	1	30 ft.	0	L	5 gp	0
+Aklys	Melee	Advanced	Club	"Ranged Trip, Tethered, Thrown 20 feet, Trip, Uncommon"	1d6 B	1			1	5 gp	0
+Alchemical Bomb	Ranged	Martial	Bomb		Varies	1	20 ft.		L	(Varies)	0
+Alchemical Crossbow	Ranged	Simple	Bow	"Alchemical, Uncommon"	1d8 P	2	30 ft.	1	1	25 gp	0
+Aldori Dueling Sword	Melee	Advanced	Sword	"Finesse, Uncommon, Versatile P"	1d8 S	1			1	2 gp	1
+Arbalest	Ranged	Martial	Crossbow	"Backstabber, Backstabber"	1d10 P	2	110 ft.	1	2	8 gp	0
+Arquebus	Ranged	Martial	Firearm	"Concussive, Fatal d12, Kickback, Uncommon"	1d8 P	2	150 ft.	1	2	10 gp	0
+Arrows	Ranged	Ammunition	Bow						L	1 sp (price for 10)	0
+Asp Coil	Melee	Martial	Sword	"Reach, Uncommon, Versatile P"	1d6 S	1			1	10 gp	0
+Atlatl	Ranged	Simple	Dart	Propulsive	1d6 P	1	60 ft.	1	1	2 sp	0
+Axe Musket	Ranged	Martial	Firearm	"Combination, Concussive, Fatal d10, Uncommon"	1d6 P	2	50 ft.	1	2	10 gp	1
+Axe Musket	Melee	Martial	Axe	"Critical Fusion, Forceful, Sweep, Uncommon, Combination, Uncommon"	1d8 S	2			2	10 gp	1
+Backpack Ballista	Ranged	Martial	Crossbow	Uncommon	1d12 P	1	180 ft.	1 minute	2	18 gp	1
+Backpack Ballista Bolts	Ranged	Ammunition	Bow	Uncommon					L	1 sp (price for 10)	0
+Backpack Catapult	Ranged	Advanced	Sling	"Uncommon, Volley 50 ft."	1d12 B	1	240 ft.	1 minute	3	20 gp	1
+Backpack Catapult Stones	Ranged	Ammunition	Sling	Uncommon					1	1 sp (price for 10)	0
+Barricade Buster	Ranged	Advanced	Firearm	"Kickback, Orc, Razing, Repeating, Uncommon, Volley 20 ft."	1d10 B	2	40 ft.	0	3	9 gp	1
+Bastard Sword	Melee	Martial	Sword	Two-Hand 1d12	1d8 S	1			1	4 gp	0
+Battle Axe	Melee	Martial	Axe	Sweep	1d8 S	1			1	1 gp	0
+Battle Lute	Melee	Simple	Club	"Shove, Two-Hand 1d8, Uncommon"	1d4 B	1			1	15 gp	0
+Battle Saddle	Melee	Martial	Axe	"Parry, Sweep, Vehicular"	1d8 S	2			2	6 gp	0
+Bayonet	Melee	Martial	Knife	"Agile, Attached to crossbow or firearm, Finesse"	1d4 P	1 or 2			L	2 sp	0
+Bec de Corbin	Melee	Martial	Polearm	"Razing, Reach, Shove, Versatile B"	1d8 P	2			2	4 gp	0
+Big Boom Gun	Ranged	Martial	Firearm	"Cobbled, Fatal d12, Goblin, Modular B, P, or S, Uncommon"	1d6 modular	1	20 ft.	1	2	10 gp	1
+Black Powder Knuckle Dusters	Ranged	Martial	Firearm	"Combination, Concussive, Fatal d8, Monk, Uncommon"	1d4 P	1	30 ft.	1	L	8 gp	0
+Black Powder Knuckle Dusters	Melee	Martial	Brawling	"Agile, Critical Fusion, Monk, Uncommon, Combination, Uncommon"	1d4 B	1			L	8 gp	0
+Bladed Diabolo	Melee	Advanced	Flail	"Backswing, Disarm, Finesse, Thrown 40 ft., Trip, Uncommon"	1d4 S	2			L	2 gp	0
+Bladed Gauntlet	Melee	Martial	Brawling	"Agile, Finesse, Free-Hand, Modular B, P, or S, Uncommon"	1d4 modular	1			L	5 gp	0
+Bladed Hoop	Melee	Advanced	Knife	"Finesse, Sweep, Two-Hand 1d8, Uncommon"	1d6 S	0			1	"2 gp, 5 sp"	0
+Bladed Scarf	Melee	Martial	Flail	"Disarm, Finesse, Reach, Sweep, Trip, Uncommon"	1d6 S	2			1	3 gp	0
+Blowgun	Ranged	Simple	Dart	"Agile, Nonlethal"	1 P	1	20 ft.	1	L	1 sp	0
+Blowgun Darts	Ranged	Ammunition	Dart						L	5 cp (price for 10)	0
+Blunderbuss	Ranged	Martial	Firearm	"Concussive, Scatter 10 ft., Uncommon"	1d8 P	2	40 ft.	1	2	8 gp	0
+Bo Staff	Melee	Martial	Club	"Monk, Parry, Reach, Trip"	1d8 B	2			2	2 sp	0
+Boarding Axe	Melee	Martial	Axe	"Agile, Azarketi, Climbing, Uncommon, Versatile P"	1d6 S	1			L	1 gp	0
+Boarding Pike	Melee	Martial	Polearm	"Reach, Shove, Uncommon"	1d10 P	2			2	8 sp	1
+Bola	Ranged	Martial	Sling	"Nonlethal, Ranged Trip, Thrown"	1d6 B	1	20 ft.		L	5 sp	0
+Bolts	Ranged	Ammunition	Bow						L	1 sp (price for 10)	0
+Bolts (Phalanx Piercer)	Ranged	Ammunition	Bow						L	1 sp (price for 5)	0
+Boomerang	Ranged	Martial	Club	"Recovery, Thrown, Uncommon"	1d6 B	1	60 ft.		L	2 sp	0
+Bow Staff	Ranged	Martial	Bow	"Combination, Deadly d8, Monk"	1d6 P	1	80 ft.	0	1	8 gp	0
+Bow Staff	Melee	Martial	Club	"Finesse, Monk, Parry, Sweep, Combination"	1d6 B	2			1	8 gp	0
+Breaching Pike	Melee	Martial	Spear	"Hobgoblin, Razing, Reach, Uncommon"	1d6 P	1			1	8 gp	0
+Broadspear	Melee	Advanced	Spear	"Reach, Sweep, Versatile S"	1d10 P	2			2	2 gp	0
+Butchering Axe	Melee	Advanced	Axe	"Orc, Shove, Sweep, Uncommon"	1d12 S	2			2	8 gp	0
+Butterfly Sword	Melee	Advanced	Sword	"Agile, Concealable, Disarm, Finesse, Monk, Parry, Twin, Uncommon"	1d4 S	1			L	2 gp	0
+Buugeng	Melee	Martial	Sword	"Agile, Conrasu, Sweep, Twin, Uncommon"	1d4 S	1			1	4 gp	0
+Cane Pistol	Ranged	Martial	Firearm	"Combination, Concealable, Concussive, Fatal d8, Uncommon"	1d4 P	1	30 ft.	1	1	8 gp	0
+Cane Pistol	Melee	Martial	Club	"Concealable, Critical Fusion, Thrown 10 ft., Uncommon, Combination, Uncommon"	1d6 B	1			1	8 gp	0
+Chain Sword	Melee	Advanced	Sword	"Finesse, Reach, Sweep, Uncommon"	1d6 S	1			1	6 gp	0
+Chakram	Ranged	Martial	Knife	Thrown	1d8 S	1	20 ft.		L	5 sp	0
+Chakri	Ranged	Martial	Dart	"Recovery, Thrown, Uncommon"	1d6 S	1	40 ft.		L	2 sp	0
+Clan Dagger	Melee	Simple	Knife	"Agile, Dwarf, Parry, Uncommon, Versatile B"	1d4 P	1			L	2 gp	0
+Clan Pistol	Ranged	Martial	Firearm	"Concussive, Dwarf, Fatal d10, Uncommon"	1d6 P	1	80 ft.	1	L	5 gp	0
+Claw Blade	Melee	Martial	Knife	"Agile, Catfolk, Deadly d8, Disarm, Finesse, Uncommon, Versatile P"	1d4 S	1			L	2 gp	0
+Clockwork Macuahuitl	Melee	Advanced	Club	"Backswing, Clockwork, Forceful, Rare, Versatile B"	1d10 S	2			1	550 gp	8
+Club	Melee	Simple	Club	Thrown 10 ft.	1d6 B	1			1		0
+Coat Pistol	Ranged	Simple	Firearm	"Concealable, Concussive, Fatal d8, Uncommon"	1d4 P	1	30 ft.	1	L	6 gp	0
+Combat Grapnel	Melee	Martial	Flail	"Finesse, Grapple, Tethered, Thrown 20 ft., Uncommon"	1d6 P	2			1	9 sp	1
+Combat Lure	Melee	Martial	Flail	"Finesse, Tethered, Thrown 20 ft., Training, Uncommon"	1d6 B	2			1	2 gp	0
+Composite Longbow	Ranged	Martial	Bow	"Deadly d10, Propulsive, Volley 30 ft."	1d8 P	1	100 ft.	0	2	20 gp	0
+Composite Shortbow	Ranged	Martial	Bow	"Deadly d10, Propulsive"	1d6 P	1	60 ft.	0	1	14 gp	0
+Corset Knife	Melee	Simple	Knife	"Agile, Concealable, Finesse, Thrown 10 ft."	1d4 P	1			L	3 sp	0
+Crescent Cross	Ranged	Martial	Bow	"Capacity 3, Combination, Parry"	1d6 P	1	30 ft.	1	L	4 gp	0
+Crescent Cross	Melee	Martial	Knife	"Critical Fusion, Parry, Combination"	1d4 S	1			L	4 gp	0
+Crossbow	Ranged	Simple	Crossbow		1d8 P	2	120 ft.	1	1	3 gp	0
+Dagger	Melee	Simple	Knife	"Agile, Finesse, Thrown 10 ft., Versatile S"	1d4 P	1			L	2 sp	0
+Dagger Pistol	Ranged	Martial	Firearm	"Combination, Concussive, Fatal d8, Uncommon"	1d4 P	1	30 ft.	1	L	8 gp	0
+Dagger Pistol	Melee	Martial	Knife	"Agile, Critical Fusion, Finesse, Thrown 10 ft., Uncommon, Versatile S, Combination, Uncommon"	1d4 P	1			L	8 gp	0
+Daikyu	Ranged	Advanced	Bow	"Propulsive, Uncommon"	1d8 P	1	80 ft.	0	2	8 gp	0
+Dancer's Spear	Melee	Martial	Spear	"Backswing, Finesse, Reach, Sweep, Versatile B"	1d6 P	2			1	3 gp	0
+Dandpatta	Melee	Martial	Sword	"Agile, Twin, Uncommon"	1d6 S	1			L	8 sp	0
+Dart	Ranged	Simple	Dart	"Agile, Thrown"	1d4 P	1	20 ft.		L	1 cp	0
+Dart Umbrella	Ranged	Martial	Dart	"Agile, Concealable, Nonlethal, Uncommon"	1 P	1	30 ft.	1	1	1 gp	0
+Dogslicer	Melee	Martial	Sword	"Agile, Backstabber, Finesse, Goblin, Uncommon"	1d6 S	1			L	1 sp	0
+Donchak	Melee	Advanced	Polearm	"Hampering, Reach, Reload 1, Tethered, Thrown 20 ft., Uncommon"	1d8 S	2			2	4 gp	0
+Double-barreled Musket	Ranged	Martial	Firearm	"Concussive, Double Barrel, Fatal d10, Uncommon"	1d6 P	2	60 ft.	1	1	11 gp	1
+Double-Barreled Pistol	Ranged	Martial	Firearm	"Concussive, Double Barrel, Fatal d8, Uncommon"	1d4 P	1	30 ft.	1	1	7 gp	0
+Dragon Mouth Pistol	Ranged	Martial	Firearm	"Concussive, Scatter 5 ft., Uncommon"	1d6 P	1	20 ft.	1	1	9 gp	0
+Dueling Pistol	Ranged	Martial	Firearm	"Concealable, Concussive, Fatal d10, Uncommon"	1d6 P	1	60 ft.	1	L	12 gp	1
+Dueling Spear	Melee	Martial	Spear	"Disarm, Finesse, Uncommon, Versatile S"	1d8 P	2			2	2 gp	0
+Dwarven Dorn-Dergar	Melee	Advanced	Flail	"Dwarf, Razing, Reach, Uncommon"	1d10 B	2			2	8 gp	0
+Dwarven Scattergun	Ranged	Advanced	Firearm	"Concussive, Dwarf, Kickback, Scatter 10 ft., Uncommon"	1d8 P	2	50 ft.	1	2	10 gp	1
+Dwarven Waraxe	Melee	Advanced	Axe	"Dwarf, Sweep, Two-Hand 1d12, Uncommon"	1d8 S	1			2	3 gp	0
+Earthbreaker	Melee	Martial	Hammer	"Razing, Shove, Two-Hand d10, Versatile P"	1d6 B	1			2	4 gp	0
+Elven Branched Spear	Melee	Martial	Spear	"Deadly d8, Elf, Finesse, Reach, Uncommon"	1d6 P	2			1	3 gp	0
+Elven Curve Blade	Melee	Martial	Sword	"Elf, Finesse, Forceful, Uncommon"	1d8 S	2			2	4 gp	0
+Explosive Dogslicer	Ranged	Advanced	Firearm	"Backstabber, Combination, Fatal d10, Goblin, Scatter 5 ft., Uncommon"	1d6 S	2	20 ft.	1	2	10 gp	1
+Explosive Dogslicer	Melee	Advanced	Sword	"Agile, Backstabber, Critical Fusion, Finesse, Goblin, Uncommon, Combination, Uncommon"	1d6 S	2			2	10 gp	1
+Exquisite Sword Cane	Melee	Martial	Sword	"Agile, Concealable, Finesse, Parry, Twin (Sheath)"	1d6 P	1			1	90 gp	4
+Exquisite Sword Cane Sheath	Melee	Martial	Club	"Agile, Finesse, Parry, Twin (Sword)"	1d4 B	1			L		0
+Falcata	Melee	Advanced	Sword	Fatal d12	1d8 S	1			1	3 gp	0
+Falchion	Melee	Martial	Sword	"Forceful, Sweep"	1d10 S	2			2	3 gp	0
+Fangwire	Melee	Martial	Brawling	"Agile, Backstabber, Deadly d8, Finesse, Grapple, Kobold, Uncommon"	1d4 S	1			L	4 gp	0
+Fauchard	Melee	Martial	Polearm	"Deadly d8, Reach, Sweep, Trip"	1d8 S	2			2	"1 gp, 4 sp"	0
+Feng Huo Lun	Melee	Advanced	Knife	"Agile, Disarm, Finesse, Monk, Parry, Twin, Uncommon, Versatile P"	1d4 S	1			L	2 gp	0
+Fighting Fan	Melee	Martial	Knife	"Agile, Backstabber, Deadly d6, Finesse, Monk, Uncommon"	1d4 S	1			L	"1 gp, 1 sp"	0
+Fighting Stick	Melee	Martial	Club	"Backswing, Halfling, Nonlethal, Shove, Uncommon"	1d6 B	1			1	5 sp	0
+Filcher's Fork	Melee	Martial	Spear	"Agile, Backstabber, Deadly d6, Finesse, Halfling, Thrown 20 ft., Uncommon"	1d4 P	1			L	1 gp	0
+Fire Lance	Ranged	Simple	Firearm	"Fatal d10, Uncommon"	1d6 P	2	10 ft.	2	2	5 gp	0
+Fire Poi	Melee	Advanced	Flail	"Agile, Backswing, Finesse, Twin, Uncommon"	1d4 B + 1d4 F	1			L	5 gp	0
+Firearm Ammunition (10 rounds)	Ranged	Ammunition	Firearm	Uncommon					L	1 sp	0
+Firearm Ammunition (5 rounds)	Ranged	Ammunition	Firearm	Uncommon					L	1 sp	0
+Fist	Melee	Unarmed	Brawling	"Agile, Finesse, Nonlethal, Unarmed"	1d4 B	1					0
+Flail	Melee	Martial	Flail	"Disarm, Sweep, Trip"	1d6 B	1			1	8 sp	0
+Flingflenser	Ranged	Advanced	Firearm	"Backstabber, Fatal d10, Goblin, Scatter 5 ft., Uncommon"	1d6 S	2	30 ft.	1	1	6 gp	0
+Flintlock Musket	Ranged	Simple	Firearm	"Concussive, Fatal d10, Uncommon"	1d6 P	2	70 ft.	1	1	7 gp	0
+Flintlock Pistol	Ranged	Simple	Firearm	"Concussive, Fatal d8, Uncommon"	1d4 P	1	40 ft.	1	1	6 gp	0
+Flying Talon	Melee	Advanced	Flail	"Agile, Finesse, Kobold, Ranged Trip, Tethered, thrown 10 ft., Trip, Uncommon"	1d4 P	1			1	6 gp	1
+Flyssa	Melee	Martial	Knife	"Agile, Finesse, Versatile P"	1d6 S	1			L	1 gp	0
+Forked Bipod	Melee	Simple	Spear	"Agile, Deadly d6, Finesse"	1d4 P	1			L	3 sp	0
+Frying Pan	Melee	Simple	Club	"Fatal d8, Halfling"	1d4 B	1			L	1 sp	0
+Gada	Melee	Advanced	Club	"Backswing, Two-Hand d12, Vanara"	1d8 B	1			1	1 gp	0
+Gaff	Melee	Martial	Club	"Trip, Versatile P"	1d6 B	1			1	1 gp	0
+Gakgung	Ranged	Martial	Bow	"Deadly d8, Monk, Propulsive"	1d6 P	1	100 ft.	0	L	6 gp	0
+Gauntlet	Melee	Simple	Brawling	"Agile, Free-Hand"	1d4 B	1			L	2 sp	0
+Gauntlet Bow	Ranged	Martial	Bow	"Capacity 4, Free-Hand, Parry"	1d4 P	1	60 ft.	1	1	9 gp	0
+Gill Hook	Melee	Martial	Spear	"Azarketi, Grapple, Reach, Uncommon"	1d10 P	2			2	2 gp	0
+Glaive	Melee	Martial	Polearm	"Deadly d8, Forceful, Reach"	1d8 S	2			2	1 gp	0
+Gnome Amalgam Musket	Ranged	Martial	Firearm	"Combination, Concussive, Fatal d10, Gnome, Uncommon"	1d6 P	2	50 ft.	2	2	10 gp	1
+Gnome Amalgam Musket	Melee	Martial	Hammer	"Backswing, Critical Fusion, Gnome, Trip, Uncommon, Versatile P, Combination, Uncommon"	1d8 B	2			2	10 gp	1
+Gnome Flickmace	Melee	Advanced	Flail	"Gnome, Reach, Sweep, Uncommon"	1d6 B	1			1	3 gp	0
+Gnome Hooked Hammer	Melee	Martial	Hammer	"Gnome, Trip, Two-Hand 1d10, Uncommon, Versatile P"	1d6 B	1			1	2 gp	0
+Greataxe	Melee	Martial	Axe	Sweep	1d12 S	2			2	2 gp	0
+Greatclub	Melee	Martial	Club	"Backswing, Shove"	1d10 B	2			2	1 gp	0
+Greatpick	Melee	Martial	Pick	Fatal 1d12	1d10 P	2			2	1 gp	0
+Greatsword	Melee	Martial	Sword	Versatile P	1d12 S	2			2	2 gp	0
+Griffon Cane	Melee	Martial	Club	"Backswing, Two-Hand d10"	1d6 B	1			L	1 gp	0
+Guisarme	Melee	Martial	Polearm	"Reach, Trip"	1d10 S	2			2	2 gp	0
+Gun Sword	Ranged	Martial	Firearm	"Combination, Concussive, Kickback, Uncommon"	1d10 P	2	30 ft.	1	2	13 gp	1
+Gun Sword	Melee	Martial	Sword	"Critical Fusion, Uncommon, Versatile P, Combination, Uncommon"	1d8 S	2			2	13 gp	1
+Halberd	Melee	Martial	Polearm	"Reach, Versatile S"	1d10 P	2			2	2 gp	0
+Halfling Sling Staff	Ranged	Martial	Sling	"Halfling, Propulsive, Uncommon"	1d10 B	2	80 ft.	1	1	5 gp	0
+Hammer Gun	Ranged	Martial	Firearm	"Combination, Concussive, Fatal d10, Uncommon"	1d6 P	2	60 ft.	1	2	13 gp	1
+Hammer Gun	Melee	Martial	Hammer	"Critical Fusion, Shove, Uncommon, Combination, Uncommon"	1d10 B	2			2	13 gp	1
+Hand Adze	Melee	Martial	Axe	"Agile, Forceful, Grippli, Sweep, Thrown 10 ft."	1d4 S	1			L	5 sp	0
+Hand Cannon	Ranged	Simple	Firearm	"Modular B, P, or S, Uncommon"	1d6 modular	1	30 ft.	1	1	5 gp	0
+Hand Crossbow	Ranged	Simple	Crossbow		1d6 P	1	60 ft.	1	L	3 gp	0
+Harmona Gun	Ranged	Martial	Firearm	"Kickback, Uncommon"	1d10 B	2	150 ft.	1	2	10 gp	0
+Harpoon	Ranged	Martial	Dart	"Tethered, Thrown"	1d8 P	2	30 ft.		1	1 gp	0
+Hatchet	Melee	Martial	Axe	"Agile, Sweep, Thrown  10 ft."	1d6 S	1			L	4 sp	0
+Heavy Crossbow	Ranged	Simple	Crossbow		1d10 P	2	120 ft.	2	2	4 gp	0
+Hongali Hornbow	Ranged	Advanced	Bow	"Deadly d6, Propulsive, Uncommon"	1d8 P	1	40 ft.	0	2	11 gp	0
+Hook Sword	Melee	Advanced	Sword	"Disarm, Monk, Parry, Trip, Twin, Uncommon"	1d6 S	1			1	3 gp	0
+Horsechopper	Melee	Martial	Polearm	"Goblin, Reach, Trip, Uncommon, Versatile P"	1d8 S	2			2	9 sp	0
+Injection Spear	Melee	Martial	Spear	"Injection, Reach, Uncommon"	1d8 P	2			1	3 gp	0
+Javelin	Ranged	Simple	Dart	Thrown	1d6 P	1	30 ft.		L	1 sp	0
+Jezail	Ranged	Martial	Firearm	"Concussive, Fatal Aim d12, Uncommon"	1d8 P	1	90 ft.	1	1	11 gp	1
+Jiu Huan Dao	Melee	Martial	Sword	"Sweep, Uncommon"	1d8 S	1			1	9 sp	0
+Juggling Club	Melee	Simple	Club	"Agile, Nonlethal, Thrown 20 ft., Uncommon"	1d4 B	1			L	1 sp	0
+Kalis	Melee	Advanced	Sword	"Deadly d8, Uncommon, Versatile P"	1d8 S	1			1	3 gp	0
+Kama	Melee	Martial	Knife	"Agile, Monk, Trip, Uncommon"	1d6 S	1			L	1 gp	0
+Karambit	Melee	Advanced	Knife	"Agile, Fatal d8, Finesse, Uncommon, Versatile S"	1d4 P	1			L	2 gp	0
+Katana	Melee	Martial	Sword	"Deadly d8, Two-Hand 1d10, Uncommon, Versatile P"	1d6 S	1			1	2 gp	0
+Katar	Melee	Simple	Knife	"Agile, Deadly d6, Monk, Uncommon"	1d4 P	1			L	3 sp	0
+Khakkara	Melee	Martial	Club	"Monk, Shove, Two-Hand d10, Uncommon, Versatile P"	1d6 B	1			1	2 gp	0
+Khopesh	Melee	Martial	Sword	"Trip, Uncommon"	1d8 S	1			1	2 gp	0
+Knuckle Duster	Melee	Simple	Brawling	"Agile, Free-Hand, Monk"	1d4 B	1			L	3 sp	0
+Kris	Melee	Martial	Knife	"Agile, Deadly d8, Finesse"	1d4 P	1			L	7 sp	0
+Kukri	Melee	Martial	Knife	"Agile, Finesse, Trip, Uncommon"	1d6 S	1			L	6 sp	0
+Kusarigama	Melee	Martial	Knife	"Disarm, Monk, Reach, Trip, Uncommon, Versatile B"	1d8 S	2			1	2 gp	0
+Lance	Melee	Martial	Spear	"Deadly d8, Jousting 1d6, Reach"	1d8 P	2			2	1 gp	0
+Lancer	Ranged	Martial	Bow	"Capacity 2, Combination"	1d8 P	2	60 ft.	2	2	8 gp	0
+Lancer	Melee	Martial	Spear	"Critical Fusion, Reach, Combination"	1d6 P	2			2	8 gp	0
+Leiomano	Melee	Martial	Club	"Fatal d10, Uncommon, Versatile S"	1d6 B	1			1	2 gp	0
+Light Hammer	Melee	Martial	Hammer	"Agile, Thrown 20 ft."	1d6 B	1			L	3 sp	0
+Light Mace	Melee	Simple	Club	"Agile, Finesse, Shove"	1d4 B	1			L	4 sp	0
+Light Pick	Melee	Martial	Pick	"Agile, Fatal 1d8"	1d4 P	1			L	4 sp	0
+Lion Scythe	Melee	Martial	Knife	"Agile, Finesse, Trip, Uncommon"	1d6 S	1			L	1 gp	0
+Long Air Repeater	Ranged	Simple	Firearm	"Kickback, Repeating, Uncommon"	1d4 P	2	60 ft.	0	1	9 gp	0
+Long Hammer	Melee	Martial	Hammer	"Brace, Dwarf, Reach, Trip, Versatile P"	1d8 B	2			2	5 gp	0
+Longbow	Ranged	Martial	Bow	"Deadly d10, Volley 30 ft."	1d8 P	1	100 ft.	0	2	6 gp	0
+Longspear	Melee	Simple	Spear	Reach	1d8 P	2			2	5 sp	0
+Longsword	Melee	Martial	Sword	Versatile P	1d8 S	1			1	1 gp	0
+Mace	Melee	Simple	Club	Shove	1d6 B	1			1	1 gp	0
+Mace Multipistol	Ranged	Martial	Firearm	"Capacity 3, Combination, Concussive, Fatal d8, Uncommon"	1d4 P	1	20 ft.	1	1	13 gp	0
+Mace Multipistol	Melee	Martial	Club	"Critical Fusion, Finesse, Shove, Uncommon, Combination, Uncommon"	1d6 B	1			1	13 gp	0
+Machete	Melee	Martial	Sword	"Deadly d8, Sweep"	1d6 S	1			L	7 sp	0
+Magazine (Air Repeater)	Ranged	Ammunition	Firearm	Uncommon						6 sp	0
+Magazine (Long Air Repeater)	Ranged	Ammunition	Firearm	Uncommon						8 sp	0
+Main-gauche	Melee	Martial	Knife	"Agile, Disarm, Finesse, Parry, Versatile S"	1d4 P	1			L	5 sp	0
+Mambele	Melee	Martial	Axe	"Deadly d8, Disarm, Thrown 20 ft., Uncommon"	1d6 S	1			1	6 sp	0
+Maul	Melee	Martial	Hammer	Shove	1d12 B	2			2	3 gp	0
+Meteor Hammer	Melee	Martial	Flail	"Backswing, Disarm, Reach, Trip"	1d8 B	2			2	3 gp	0
+Mikazuki	Ranged	Martial	Bow	"Combination, Monk, Propulsive"	1d6 P	1	70 ft.	1	2	8 gp	0
+Mikazuki	Melee	Martial	Flail	"Backswing, Disarm, Monk, Parry, Combination"	1d6 B	2			2	8 gp	0
+Mithral Tree	Ranged	Martial	Firearm	"Concussive, Elf, Fatal d10, Parry, Uncommon"	1d6 P	2	150 ft.	1	1	9 gp	0
+Monkey's Fist	Melee	Martial	Flail	"Finesse, Monk, Nonlethal"	1d6 B	1				1 sp	0
+Morningstar	Melee	Simple	Club	Versatile P	1d6 B	1			1	1 gp	0
+Naginata	Melee	Martial	Polearm	"Deadly d8, Reach, Uncommon, Versatile P"	1d8 S	2			2	3 gp	0
+Nightstick	Melee	Simple	Club	"Agile, Finesse, Nonlethal, Parry, Uncommon"	1d4 B	1			L	1 gp	0
+Nodachi	Melee	Advanced	Sword	"Brace, Deadly d12, Reach"	1d8 S	2			2	6 gp	0
+Nunchaku	Melee	Martial	Club	"Backswing, Disarm, Finesse, Monk, Uncommon"	1d6 B	1			L	2 sp	0
+Ogre Hook	Melee	Martial	Pick	"Deadly d10, Trip, Uncommon"	1d10 P	2			2	1 gp	0
+Orc Knuckle Dagger	Melee	Martial	Knife	"Agile, Disarm, Orc, Uncommon"	1d6 P	1			L	7 sp	0
+Orc Necksplitter	Melee	Advanced	Axe	"Forceful, Orc, Sweep, Uncommon"	1d8 S	1			1	2 gp	0
+Panabas	Melee	Martial	Sword	"Forceful, Sweep, Two-Hand d10"	1d6 S	1			1	1 gp	0
+Pantograph Gauntlet	Melee	Martial	Brawling	"Deadly d6, Monk, Reach, Shove, Uncommon"	1d4 B	1			L	2 gp	0
+Pepperbox	Ranged	Martial	Firearm	"Capacity 3, Concussive, Fatal d8, Uncommon"	1d4 P	1	60 ft.	1	1	12 gp	0
+Phalanx Piercer	Ranged	Advanced	Bow	"Concussive, Hobgoblin, Propulsive, Razing, Volley 30 ft."	1d10 P	1	80 ft.	1	2	10 gp	1
+Pick	Melee	Martial	Pick	Fatal 1d10	1d6 P	1			1	7 sp	0
+Piercing Wind	Ranged	Martial	Firearm	"Combination, Concussive, Fatal Aim d10, Uncommon"	1d6 P	1	40 ft.	1	1	15 gp	0
+Piercing Wind	Melee	Martial	Sword	"Critical Fusion, Finesse, Sweep, Uncommon, Combination, Uncommon"	1d6 S	1			1	15 gp	0
+Piranha Kiss	Melee	Martial	Knife	"Agile, Disarm, Finesse, Uncommon"	1d6 S	1			L	4 sp	0
+Poi	Melee	Simple	Flail	"Agile, Backswing, Finesse, Nonlethal, Uncommon"	1d4 B	1			L	2 sp	0
+Polytool	Melee	Martial	Sword	"Agile, Modular (B, P, or S), Uncommon"	1d6 modular	1			L	10 gp	1
+Probing Cane	Melee	Martial	Club	"Finesse, Sweep"	1d6 B	1			L	5 sp	0
+Ranseur	Melee	Martial	Polearm	"Disarm, Reach"	1d10 P	2			2	2 gp	0
+Rapier	Melee	Martial	Sword	"Deadly d8, Disarm, Finesse"	1d6 P	1			1	2 gp	0
+Rapier Pistol	Ranged	Martial	Firearm	"Backstabber, Combination, Concussive, Fatal d8, Uncommon"	1d4 P	1	30 ft.	1	1	10 gp	0
+Rapier Pistol	Melee	Martial	Sword	"Critical Fusion, Deadly d8, Disarm, Finesse, Uncommon, Combination, Uncommon"	1d4 P	1			1	10 gp	0
+Reinforced Frame	Melee	Simple	Club	"Agile, Attached, Free-Hand"	1d4 B	1				5 sp	0
+Reinforced Stock	Melee	Martial	Club	"Attached to crossbow or firearm, Finesse, Two-Hand d8"	1d4 B	1 or 2			L	2 sp	0
+Repeating Crossbow	Ranged	Advanced	Crossbow	"Repeating, Uncommon"	1d8 P	2	120 ft.	0	1	15 gp	1
+Repeating Crossbow Magazine	Ranged	Ammunition	Bow	Uncommon					L	9 sp (price for 5 bolts)	0
+Repeating Hand Crossbow	Ranged	Advanced	Crossbow	"Repeating, Uncommon"	1d6 P	1	60 ft.	0	L	10 gp	1
+Repeating Hand Crossbow Magazine	Ranged	Ammunition	Bow	Uncommon					L	9 sp (price for 5 bolts)	0
+Repeating Heavy Crossbow	Ranged	Martial	Bow	"Repeating, Uncommon"	1d10 P	2	180 ft.	1	2	20 gp	1
+Repeating Heavy Crossbow Magazine	Ranged	Ammunition	Bow	Uncommon					L	9 sp (price for 5 bolts)	0
+Rhoka Sword	Melee	Advanced	Sword	"Deadly d8, Two-Hand 1d10, Uncommon"	1d8 S	1			2	4 gp	0
+Rope Dart	Melee	Martial	Dart	"Disarm, Finesse, Sweep, Tethered, Thrown 20 ft., Trip, Uncommon"	1d4 P	2			1	1 gp	0
+Rotary Bow	Ranged	Martial	Bow	Capacity 4	1d8 P	1	80 ft.	1	1	8 gp	0
+Rungu	Melee	Martial	Club	"Grippli, Shove, Thrown 30 ft."	1d6 B	1			L	4 sp	0
+Sai	Melee	Martial	Knife	"Agile, Disarm, Finesse, Monk, Uncommon, Versatile B"	1d4 P	1			L	6 sp	0
+Sansetsukon	Melee	Martial	Flail	"Backswing, Disarm, Monk, Parry, Uncommon"	1d8 B	2			2	2 gp	0
+Sap	Melee	Martial	Club	"Agile, Nonlethal"	1d6 B	1			L	1 sp	0
+Sawtooth Saber	Melee	Advanced	Sword	"Agile, Finesse, Twin, Uncommon"	1d6 S	1			L	5 gp	0
+Scimitar	Melee	Martial	Sword	"Forceful, Sweep"	1d6 S	1			1	1 gp	0
+Scizore	Melee	Martial	Knife	"Disarm, Parry"	1d6 S	1			L	9 sp	0
+Scorpion Whip	Melee	Martial	Flail	"Disarm, Finesse, Reach, Trip, Uncommon"	1d4 S	1			L	5 sp	0
+Scourge	Melee	Martial	Flail	"Agile, Disarm, Finesse, Nonlethal, Sweep"	1d4 S	1			1	1 sp	0
+Scythe	Melee	Martial	Polearm	"Deadly d10, Trip"	1d10 S	2			2	2 gp	0
+Shauth Blade	Melee	Martial	Knife	"Agile, Deadly d8, Finesse, Uncommon, Versatile P"	1d4 S	1			L	2 gp	0
+Shauth Lash	Melee	Advanced	Flail	"Deadly d10, Finesse, Trip, Uncommon"	1d6 S	2			1	8 gp	0
+Shears	Melee	Simple	Knife	"Deadly d8, Finesse, Versatile P"	1d4 S	1			L	5 sp	0
+Shield Bash	Melee	Martial	Shield		1d4 B	1					0
+Shield Boss	Melee	Martial	Shield	Attached to Shield	1d6 B	1				5 sp	0
+Shield Bow	Ranged	Martial	Bow	"Deadly d8, Parry"	1d6 P	1	50 ft.	0	1	5 gp	0
+Shield Pistol	Ranged	Simple	Firearm	"Attached to shield, Concussive, Fatal d8, Uncommon"	1d4 P	1	20 ft.	1	1	6 gp	0
+Shield Spikes	Melee	Martial	Shield	Attached to Shield	1d6 P	1				5 sp	0
+Shobhad Longrifle	Ranged	Martial	Firearm	"Backstabber, Concussive, Fatal d12, Kickback, Rare, Volley"	1d8 P	2	120 ft.	1	1	20 gp	1
+Shortbow	Ranged	Martial	Bow	Deadly d10	1d6 P	1	60 ft.	0	1	3 gp	0
+Shortsword	Melee	Martial	Sword	"Agile, Finesse, Versatile S"	1d6 P	1			L	9 sp	0
+Shuriken	Ranged	Martial	Dart	"Agile, Monk, Thrown, Uncommon"	1d4 P	1	20 ft.	0		1 cp	0
+Sickle	Melee	Simple	Knife	"Agile, Finesse, Trip"	1d4 S	1			L	2 sp	0
+Sickle-Saber	Melee	Advanced	Sword	"Backswing, Forceful, Uncommon"	1d6 S	1			1	5 gp	0
+Slide Pistol	Ranged	Martial	Firearm	"Capacity 5, Concussive, Fatal d10, Uncommon"	1d6 P	1	30 ft.	1	2	16 gp	1
+Sling	Ranged	Simple	Sling	Propulsive	1d6 B	1	50 ft.	1	L		0
+Sling Bullets	Ranged	Ammunition	Sling						L	1 cp (price for 10)	0
+Spear	Melee	Simple	Spear	"Monk, Thrown 20 ft."	1d6 P	1			1	1 sp	0
+Spiked Chain	Melee	Martial	Flail	"Disarm, Finesse, Trip, Uncommon"	1d8 S	2			1	3 gp	0
+Spiked Gauntlet	Melee	Simple	Brawling	"Agile, Free-Hand"	1d4 P	1			L	3 sp	0
+Spiral Rapier	Melee	Advanced	Sword	"Disarm, Finesse, Parry, Uncommon"	1d6 P	1			1	5 gp	0
+Spoon Gun	Ranged	Martial	Firearm	"Cobbled, Goblin, Modular B, P, or S, Scatter 5 ft., Uncommon"	1d6 modular	1	30 ft.	1	1	10 gp	1
+Spray Pellet	Ranged	Ammunition	Sling						L	1 sp (price for 10)	0
+Spraysling	Ranged	Martial	Sling	"Halfling, Propulsive, Scatter 5 ft., Uncommon"	1d6 B	1	20 ft.	1	L	1 gp	0
+Staff	Melee	Simple	Club	"Monk, Two-Hand 1d8"	1d4 B	1			1		0
+Starknife	Melee	Martial	Knife	"Agile, Deadly d6, Finesse, Thrown 20 ft., Versatile S"	1d4 P	1			L	2 gp	0
+Stiletto Pen	Melee	Simple	Dart	"Agile, Concealable, Finesse, Thrown 10 ft., Uncommon"	1d4 P	1			L	8 gp	1
+Sukgung	Ranged	Martial	Bow	Fatal Aim d12	1d8 P	1	200 ft.	1	1	7 gp	1
+Sun Shot	Ranged	Ammunition	Sling	"Concussive, Propulsive, Uncommon"					L	1 sp (for 10)	0
+Sun Sling	Ranged	Martial	Sling	"Concussive, Propulsive, Uncommon"	1d8 P	1	100 ft.	1	L	3 gp	0
+Switchscythe	Melee	Advanced	Pick	"Fatal d10, Gnome, Modular (P and grapple, or S and sweep), Uncommon"	1d6 P	1			2	12 gp	1
+Sword Cane	Melee	Martial	Sword	"Agile, Concealable, Finesse"	1d6 P	1			1	5 gp	0
+Talwar	Melee	Martial	Sword	"Forceful, Two-Hand d10, Versatile P"	1d6 S	1			1	2 gp	0
+Tamchal Chakram	Melee	Advanced	Dart	"Agile, Deadly d6, Finesse, Thrown 20 feet, Uncommon"	1d6 S	1			L	5 gp	0
+Taw Launcher	Ranged	Advanced	Bow	"Conrasu, Deadly d10, Modular (B, P, or S), Uncommon"	1d10 modular	2	100 ft.	1	1	10 gp	0
+Tekko-Kagi	Melee	Martial	Brawling	"Agile, Disarm, Finesse, Free-Hand, Monk, Parry, Uncommon"	1d4 S	1			L	2 sp	0
+Temple Sword	Melee	Martial	Sword	"Monk, Trip, Uncommon"	1d8 S	1			1	2 gp	0
+Tengu Gale Blade	Melee	Martial	Sword	"Agile, Disarm, Finesse, Tengu, Uncommon"	1d6 S	1			L	4 gp	0
+Tetsubo	Melee	Martial	Club	"Razing, Shove, Sweep, Uncommon"	1d10 B	2			3	3 gp	0
+Thorn Whip	Melee	Martial	Brawling	"Disarm, Finesse, Ghoran, Reach, Trip, Uncommon"	1d4 P	1			1	6 sp	0
+Three Peaked Tree	Ranged	Martial	Firearm	"Combination, Concussive, Elf, Fatal d10, Parry, Uncommon"	1d6 P	2	60 ft.	1	2	12 gp	1
+Three Peaked Tree	Melee	Martial	Spear	"Critical Fusion, Elf, Tethered, Thrown 20 ft., Uncommon, Combination, Uncommon"	1d8 P	2			2	12 gp	1
+Three-Section Naginata	Melee	Advanced	Flail	"Deadly d8, Forceful, Sweep, Uncommon, Versatile B"	1d8 S	2			2	12 gp	0
+Throwing Knife	Melee	Simple	Knife	"Agile, Finesse, Thrown 20 ft."	1d4 P	1			L	3 sp	0
+Thunder Sling	Ranged	Martial	Sling	"Agile, Propulsive, Tengu, Uncommon"	1d6 P	1	50 ft.	1	L	5 gp	0
+Thundermace	Melee	Simple	Club	"Backswing, Uncommon"	1d8 B	2			2	2 sp	0
+Tonfa	Melee	Martial	Brawling	"Agile, Finesse, Monk, Parry, Twin, Uncommon"	1d4	1			L	1 sp	0
+Tri-Bladed Katar	Melee	Simple	Knife	"Disarm, Fatal d8, Monk, Uncommon"	1d4 P	1			L	8 sp	0
+Tricky Pick	Melee	Advanced	Pick	"Backstabber, Fatal 1d10, Kobold, Modular (B, P, or S), Uncommon"	1d6 modular	1			1	10 gp	0
+Trident	Melee	Martial	Spear	Thrown 20 ft.	1d8 P	1			1	1 gp	0
+Triggerbrand	Ranged	Martial	Firearm	"Combination, Concussive, Fatal d8, Uncommon"	1d4 P	1	30 ft.	1	1	10 gp	0
+Triggerbrand	Melee	Martial	Sword	"Critical Fusion, Finesse, Versatile S, Combination, Uncommon"	1d6 P	1			1	10 gp	0
+Umbrella Injector	Melee	Martial	Sword	"Concealable, Finesse, Injection, Parry, Uncommon"	1d4 P	1			1	4 gp	0
+Urumi	Melee	Martial	Flail	"Deadly d10, Sweep, Uncommon"	1d6 S	1			2	2 gp	0
+Visap	Melee	Advanced	Knife	"Agile, Finesse, Injection, Uncommon, Versatile P, Vishkanya"	1d4 S	1			L	2 gp	0
+Wakizashi	Melee	Martial	Sword	"Agile, Deadly d8, Finesse, Uncommon, Versatile P"	1d4 S	1			L	1 gp	0
+War Flail	Melee	Martial	Flail	"Disarm, Sweep, Trip"	1d10 B	2			2	2 gp	0
+War Lance	Melee	Martial	Spear	"Deadly d8, Jousting d6, Parry, Shove, Uncommon"	1d8 P	2			2	4 gp	0
+War Razor	Melee	Martial	Knife	"Agile, Backstabber, Deadly d8, Finesse"	1d4 S	1			L	3 sp	0
+Warhammer	Melee	Martial	Hammer	Shove	1d8 B	1			1	1 gp	0
+Wheel Blades	Melee	Simple	Sword	"Agile, Attached, Free-Hand"	1d4 S	1				5 sp	0
+Wheel Spikes	Melee	Simple	Knife	"Agile, Attached, Free-Hand"	1d4 P	1				5 sp	0
+Whip	Melee	Martial	Flail	"Disarm, Finesse, Nonlethal, Reach, Trip"	1d4 S	1			1	1 sp	0
+Whip Claw	Melee	Advanced	Flail	"Catfolk, Finesse, Hampering, Reach, Uncommon"	1d6 S	2			1	5 gp	0
+Whipstaff	Melee	Martial	Club	"Agile, Finesse, Monk, Parry, Sweep, Uncommon"	1d6 B	2			L	3 gp	0
+Wish Blade	Melee	Martial	Sword	"Disarm, Geniekin, Resonant, Two-Hand 1d10, Uncommon"	1d6 S	1			1	5 gp	0
+Wish Knife	Melee	Martial	Knife	"Agile, Disarm, Finesse, Geniekin, Resonant, Uncommon, Versatile S"	1d4 P	1			L	2 gp	0
+Wooden Taws	Ranged	Ammunition	Bow						L	1 sp (price for 10)	0
+Wrecker	Ranged	Advanced	Sling	"Combination, Dwarf, Ranged Trip, Razing"	1d6 B	2	20 ft.	1	2	8 gp	0
+Wrecker	Melee	Advanced	Flail	"Dwarf, Razing, Reach, Combination"	1d8 B	2			2	8 gp	0
+Wrist Launcher	Ranged	Martial	Dart	"Agile, Concealable, Free-Hand, Uncommon"	1d4 P	1	30 ft.	1	1	3 gp	0
+Zulfikar	Melee	Advanced	Sword	"Deadly d8, Disarm, Sweep, Uncommon, Versatile P"	1d6 S	1			1	4 gp	0
