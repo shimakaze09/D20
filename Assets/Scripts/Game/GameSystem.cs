@@ -1,8 +1,4 @@
-#region
-
 using Cysharp.Threading.Tasks;
-
-#endregion
 
 public interface IGameSystem : IDependency<IGameSystem>
 {
@@ -10,6 +6,7 @@ public interface IGameSystem : IDependency<IGameSystem>
     UniTask ContinueGame();
 }
 
+[Dependency(typeof(IGameSystem))]
 public class GameSystem : IGameSystem
 {
     public async UniTask NewGame()

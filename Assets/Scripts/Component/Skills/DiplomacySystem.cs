@@ -7,6 +7,7 @@ public interface IDiplomacySystem : IDependency<IDiplomacySystem>, IBaseSkillSys
 {
 }
 
+[Dependency(typeof(IDiplomacySystem))]
 public class DiplomacySystem : BaseSkillSystem, IDiplomacySystem
 {
     protected override Skill Skill => Skill.Diplomacy;

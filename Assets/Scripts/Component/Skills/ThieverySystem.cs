@@ -7,6 +7,7 @@ public interface IThieverySystem : IDependency<IThieverySystem>, IBaseSkillSyste
 {
 }
 
+[Dependency(typeof(IThieverySystem))]
 public class ThieverySystem : BaseSkillSystem, IThieverySystem
 {
     protected override Skill Skill => Skill.Thievery;

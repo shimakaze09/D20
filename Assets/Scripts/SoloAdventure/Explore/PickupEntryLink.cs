@@ -1,15 +1,11 @@
-#region
-
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-#endregion
-
 public class PickupEntryLink : MonoBehaviour, IEntryLink
 {
+    [SerializeField] private string dropMessage;
     [SerializeField] private AdventureItem item;
     [SerializeField] private string takeMessage;
-    [SerializeField] private string dropMessage;
 
     public async UniTask Select(string link)
     {

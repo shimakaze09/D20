@@ -7,6 +7,7 @@ public interface IReflexSystem : IDependency<IReflexSystem>, IBaseSavingThrowSys
 {
 }
 
+[Dependency(typeof(IReflexSystem))]
 public class ReflexSystem : BaseSavingThrowSystem, IReflexSystem
 {
     protected override SavingThrow SavingThrow => SavingThrow.Reflex;

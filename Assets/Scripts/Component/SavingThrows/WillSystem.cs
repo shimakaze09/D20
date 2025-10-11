@@ -7,6 +7,7 @@ public interface IWillSystem : IDependency<IWillSystem>, IBaseSavingThrowSystem
 {
 }
 
+[Dependency(typeof(IWillSystem))]
 public class WillSystem : BaseSavingThrowSystem, IWillSystem
 {
     protected override SavingThrow SavingThrow => SavingThrow.Will;

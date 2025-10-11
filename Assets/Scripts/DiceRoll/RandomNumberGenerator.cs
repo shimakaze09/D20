@@ -1,14 +1,11 @@
-#region
-
 using UnityEngine;
-
-#endregion
 
 public interface IRandomNumberGenerator : IDependency<IRandomNumberGenerator>
 {
     public int Range(int minInclusive, int maxExclusive);
 }
 
+[Dependency(typeof(IRandomNumberGenerator))]
 public struct RandomNumberGenerator : IRandomNumberGenerator
 {
     public int Range(int minInclusive, int maxExclusive)

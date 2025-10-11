@@ -7,6 +7,7 @@ public interface IArcanaProficiencySystem : IDependency<IArcanaProficiencySystem
 {
 }
 
+[Dependency(typeof(IArcanaProficiencySystem))]
 public class ArcanaProficiencySystem : EntityTableSystem<Proficiency>, IArcanaProficiencySystem
 {
     public override CoreDictionary<Entity, Proficiency> Table => IDataSystem.Resolve().Data.arcanaProficiency;

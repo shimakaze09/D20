@@ -1,13 +1,9 @@
-#region
-
 using System.Collections.Generic;
 using System.Linq;
 using Cysharp.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-
-#endregion
 
 public interface IActionMenu : IDependency<IActionMenu>
 {
@@ -19,23 +15,13 @@ public interface IActionMenu : IDependency<IActionMenu>
 
 public class ActionMenu : MonoBehaviour, IActionMenu
 {
-    [SerializeField] private RectTransform rootPanel;
     [SerializeField] private List<Button> buttons;
-    [SerializeField] private Layout onScreen;
-    [SerializeField] private Layout offScreen;
     private Entity entity;
     private int menuCount;
+    [SerializeField] private Layout offScreen;
+    [SerializeField] private Layout onScreen;
+    [SerializeField] private RectTransform rootPanel;
     private int selection;
-
-    private void OnEnable()
-    {
-        IActionMenu.Register(this);
-    }
-
-    private void OnDisable()
-    {
-        IActionMenu.Reset();
-    }
 
     public async UniTask Setup()
     {
@@ -81,5 +67,15 @@ public class ActionMenu : MonoBehaviour, IActionMenu
     public async UniTask TransitionOut()
     {
         await rootPanel.Layout(onScreen, offScreen, 0.25f).Play();
+    }
+
+    private void OnEnable()
+    {
+        IActionMenu.Register(this);
+    }
+
+    private void OnDisable()
+    {
+        IActionMenu.Reset();
     }
 }

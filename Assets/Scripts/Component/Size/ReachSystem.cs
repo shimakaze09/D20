@@ -1,9 +1,5 @@
-#region
-
 using System.Collections.Generic;
 using UnityEngine;
-
-#endregion
 
 public enum Reach
 {
@@ -25,6 +21,7 @@ public interface IReachSystem : IDependency<IReachSystem>, IEntityTableSystem<Re
     List<Entity> EntitiesInReach(Entity entity);
 }
 
+[Dependency(typeof(IReachSystem))]
 public class ReachSystem : EntityTableSystem<Reach>, IReachSystem
 {
     private const int tileSize = 5;

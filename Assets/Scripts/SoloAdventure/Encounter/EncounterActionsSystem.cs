@@ -1,9 +1,5 @@
-#region
-
 using System;
 using System.Collections.Generic;
-
-#endregion
 
 [Serializable]
 public struct EncounterActions
@@ -25,6 +21,7 @@ public interface IEncounterActionsSystem : IDependency<IEncounterActionsSystem>,
 {
 }
 
+[Dependency(typeof(IEncounterActionsSystem))]
 public class EncounterActionsSystem : EntityTableSystem<EncounterActions>, IEncounterActionsSystem
 {
     public override CoreDictionary<Entity, EncounterActions> Table => IDataSystem.Resolve().Data.encounterActions;

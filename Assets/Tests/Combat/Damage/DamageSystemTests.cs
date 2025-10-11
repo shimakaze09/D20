@@ -1,8 +1,4 @@
-#region
-
 using NUnit.Framework;
-
-#endregion
 
 public class DamageSystemTests
 {
@@ -14,7 +10,13 @@ public class DamageSystemTests
     [SetUp]
     public void SetUp()
     {
-        DamageInjector.Inject();
+        IDataStore.Register(new DataStore("TestGameData"));
+        IDamageImmunitySystem.Register(new DamageImmunitySystem());
+        IDamageWeaknessSystem.Register(new DamageWeaknessSystem());
+        IDamageResistanceSystem.Register(new DamageResistanceSystem());
+        IDamageResistanceExceptionSystem.Register(new DamageResistanceExceptionSystem());
+        IDamageRollSystem.Register(new DamageRollSystem());
+
         entity = new Entity(123);
         damageType = "slashing";
         material = "silver";

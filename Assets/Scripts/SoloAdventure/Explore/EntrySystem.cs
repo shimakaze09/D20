@@ -9,6 +9,7 @@ public interface IEntrySystem : IDependency<IEntrySystem>
     string GetName();
 }
 
+[Dependency(typeof(IEntrySystem))]
 public class EntrySystem : IEntrySystem
 {
     public void SetName(string name)

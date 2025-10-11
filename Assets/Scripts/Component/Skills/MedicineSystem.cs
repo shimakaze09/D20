@@ -7,6 +7,7 @@ public interface IMedicineSystem : IDependency<IMedicineSystem>, IBaseSkillSyste
 {
 }
 
+[Dependency(typeof(IMedicineSystem))]
 public class MedicineSystem : BaseSkillSystem, IMedicineSystem
 {
     protected override Skill Skill => Skill.Medicine;

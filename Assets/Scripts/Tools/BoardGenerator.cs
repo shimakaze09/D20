@@ -1,28 +1,24 @@
-#region
-
 using System;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-#endregion
-
 public class BoardGenerator : MonoBehaviour
 {
+    [SerializeField] private readonly float[] elevations = { 0.3f, 0.6f, 0.7f, 1f };
+    [SerializeField] private readonly Vector2 perlinOffset = Vector2.zero;
+
+    [SerializeField] private readonly Vector2 perlinScale = new(0.1f, 0.1f);
     [SerializeField] private BoardData data;
-    [SerializeField] private int width = 6;
     [SerializeField] private int height = 8;
+    [SerializeField] private Transform marker;
+    [SerializeField] private Point markerPosition;
+
+    [SerializeField] private Tilemap tilemap;
     [SerializeField] private int[] tiles;
 
     [SerializeField] private TileBase[] tileViews;
-    [SerializeField] private float[] elevations = { 0.3f, 0.6f, 0.7f, 1f };
-
-    [SerializeField] private Vector2 perlinScale = new(0.1f, 0.1f);
-    [SerializeField] private Vector2 perlinOffset = Vector2.zero;
-
-    [SerializeField] private Tilemap tilemap;
-    [SerializeField] private Transform marker;
-    [SerializeField] private Point markerPosition;
+    [SerializeField] private int width = 6;
 
     public void Clear()
     {
@@ -145,6 +141,7 @@ public class BoardGenerator : MonoBehaviour
         for (var index = 0; index < elevations.Length; ++index)
             if (value < elevations[index])
                 return index;
+
         return elevations.Length - 1;
     }
 }

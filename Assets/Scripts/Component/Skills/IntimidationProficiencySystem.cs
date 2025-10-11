@@ -8,6 +8,7 @@ public interface IIntimidationProficiencySystem : IDependency<IIntimidationProfi
 {
 }
 
+[Dependency(typeof(IIntimidationProficiencySystem))]
 public class IntimidationProficiencySystem : EntityTableSystem<Proficiency>, IIntimidationProficiencySystem
 {
     public override CoreDictionary<Entity, Proficiency> Table => IDataSystem.Resolve().Data.intimidationProficiency;

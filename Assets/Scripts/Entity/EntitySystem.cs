@@ -1,8 +1,4 @@
-#region
-
 using System;
-
-#endregion
 
 public partial class Data
 {
@@ -17,6 +13,7 @@ public interface IEntitySystem : IDependency<IEntitySystem>
     void Destroy(Entity entity);
 }
 
+[Dependency(typeof(IEntitySystem))]
 public class EntitySystem : IEntitySystem
 {
     private Data Data => IDataSystem.Resolve().Data;

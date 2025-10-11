@@ -7,6 +7,7 @@ public interface ISocietyProficiencySystem : IDependency<ISocietyProficiencySyst
 {
 }
 
+[Dependency(typeof(ISocietyProficiencySystem))]
 public class SocietyProficiencySystem : EntityTableSystem<Proficiency>, ISocietyProficiencySystem
 {
     public override CoreDictionary<Entity, Proficiency> Table => IDataSystem.Resolve().Data.societyProficiency;

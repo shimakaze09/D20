@@ -1,15 +1,12 @@
-#region
-
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
-
-#endregion
 
 public interface IEntitySelectionSystem : IDependency<IEntitySelectionSystem>
 {
     UniTask<Entity> Select(List<Entity> list);
 }
 
+[Dependency(typeof(IEntitySelectionSystem))]
 public class EntitySelectionSystem : IEntitySelectionSystem
 {
     public async UniTask<Entity> Select(List<Entity> list)

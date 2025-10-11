@@ -7,6 +7,7 @@ public interface ICraftingSystem : IDependency<ICraftingSystem>, IBaseSkillSyste
 {
 }
 
+[Dependency(typeof(ICraftingSystem))]
 public class CraftingSystem : BaseSkillSystem, ICraftingSystem
 {
     protected override Skill Skill => Skill.Crafting;

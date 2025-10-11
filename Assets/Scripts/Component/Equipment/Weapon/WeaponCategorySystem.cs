@@ -1,8 +1,4 @@
-#region
-
 using System;
-
-#endregion
 
 [Flags]
 public enum WeaponCategory
@@ -24,6 +20,7 @@ public interface IWeaponCategorySystem : IDependency<IWeaponCategorySystem>, IEn
 {
 }
 
+[Dependency(typeof(IWeaponCategorySystem))]
 public class WeaponCategorySystem : EntityTableSystem<WeaponCategory>, IWeaponCategorySystem
 {
     public override CoreDictionary<Entity, WeaponCategory> Table => IDataSystem.Resolve().Data.weaponCategory;

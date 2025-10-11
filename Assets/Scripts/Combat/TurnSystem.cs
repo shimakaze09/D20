@@ -1,8 +1,4 @@
-#region
-
 using System.Collections.Generic;
-
-#endregion
 
 public interface ITurnSystem : IDependency<ITurnSystem>
 {
@@ -16,6 +12,7 @@ public interface ITurnSystem : IDependency<ITurnSystem>
     void TakeAction(int actionCost, bool isAttack);
 }
 
+[Dependency(typeof(ITurnSystem))]
 public class TurnSystem : ITurnSystem
 {
     public Entity Current { get; private set; }

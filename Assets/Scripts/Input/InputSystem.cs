@@ -1,8 +1,4 @@
-#region
-
 using UnityEngine;
-
-#endregion
 
 public enum InputAxis
 {
@@ -22,6 +18,7 @@ public interface IInputSystem : IDependency<IInputSystem>
     bool GetKeyUp(InputAction action);
 }
 
+[Dependency(typeof(IInputSystem))]
 public class InputSystem : IInputSystem
 {
     public int GetAxisUp(InputAxis axis)

@@ -1,12 +1,7 @@
-#region
-
 using System;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-using Object = UnityEngine.Object;
-
-#endregion
 
 public static class WeaponParser
 {
@@ -39,7 +34,7 @@ public static class WeaponParser
         AddPrice(asset, data);
         AddLevel(asset, data);
         CreatePrefab(asset, data);
-        Object.DestroyImmediate(asset);
+        GameObject.DestroyImmediate(asset);
     }
 
     private static void AddType(GameObject asset, WeaponData data)
@@ -168,17 +163,17 @@ public static class WeaponParser
     [Serializable]
     public class WeaponData
     {
+        public string bulk;
+        public string damage;
+        public string hands;
+        public string level;
         public string name;
-        public string weaponType;
+        public string price;
+        public string range;
+        public string reload;
         public string weaponCategory;
         public string weaponGroup;
         public string weaponTraits;
-        public string damage;
-        public string hands;
-        public string range;
-        public string reload;
-        public string bulk;
-        public string price;
-        public string level;
+        public string weaponType;
     }
 }

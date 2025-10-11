@@ -1,10 +1,6 @@
-#region
-
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-
-#endregion
 
 public class SavingThrowsProficiencyProvider : MonoBehaviour, IAttributeProvider
 {

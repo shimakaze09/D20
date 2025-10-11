@@ -1,9 +1,5 @@
-#region
-
 using Cysharp.Threading.Tasks;
 using UnityEngine;
-
-#endregion
 
 public struct DyingPresentationInfo
 {
@@ -18,6 +14,15 @@ public interface IDyingPresenter : IDependency<IDyingPresenter>
 
 public class DyingPresenter : MonoBehaviour, IDyingPresenter
 {
+    public async UniTask Present(DyingPresentationInfo info)
+    {
+        var view = IEntityViewProvider.Resolve().GetView(info.entity, ViewZone.Combatant);
+        var combatant = view.GetComponent<CombatantView>();
+        var animation = info.value ? CombatantAnimation.Death : CombatantAnimation.Idle;
+        ICombatantViewSystem.Resolve().SetAnimation(combatant, animation);
+        await UniTask.CompletedTask;
+    }
+
     private void OnEnable()
     {
         IDyingPresenter.Register(this);
@@ -26,14 +31,5 @@ public class DyingPresenter : MonoBehaviour, IDyingPresenter
     private void OnDisable()
     {
         IDyingPresenter.Reset();
-    }
-
-    public async UniTask Present(DyingPresentationInfo info)
-    {
-        var view = IEntityViewProvider.Resolve().GetView(info.entity, ViewZone.Combatant);
-        var combatant = view.GetComponent<CombatantView>();
-        var animation = info.value ? CombatantAnimation.Death : CombatantAnimation.Idle;
-        ICombatantViewSystem.Resolve().SetAnimation(combatant, animation);
-        await UniTask.CompletedTask;
     }
 }

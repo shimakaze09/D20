@@ -7,6 +7,7 @@ public interface IConstitutionSystem : IDependency<IConstitutionSystem>, IEntity
 {
 }
 
+[Dependency(typeof(IConstitutionSystem))]
 public class ConstitutionSystem : EntityTableSystem<AbilityScore>, IConstitutionSystem
 {
     public override CoreDictionary<Entity, AbilityScore> Table => IDataSystem.Resolve().Data.constitution;

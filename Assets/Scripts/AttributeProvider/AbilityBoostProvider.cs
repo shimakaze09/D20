@@ -1,11 +1,7 @@
-#region
-
 using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
-
-#endregion
 
 public enum AbilityBoost
 {
@@ -20,8 +16,8 @@ public enum AbilityBoost
 
 public class AbilityBoostProvider : MonoBehaviour, IAttributeProvider
 {
-    public bool isFlaw;
     public List<AbilityBoost> boosts;
+    public bool isFlaw;
 
     public void Setup(Entity entity)
     {

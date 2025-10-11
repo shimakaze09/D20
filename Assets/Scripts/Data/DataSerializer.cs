@@ -1,8 +1,4 @@
-#region
-
 using UnityEngine;
-
-#endregion
 
 public interface IDataSerializer : IDependency<IDataSerializer>
 {
@@ -10,6 +6,7 @@ public interface IDataSerializer : IDependency<IDataSerializer>
     Data Deserialize(string json);
 }
 
+[Dependency(typeof(IDataSerializer))]
 public class DataSerializer : IDataSerializer
 {
     public string Serialize(Data data)

@@ -1,13 +1,9 @@
-#region
-
 using UnityEngine;
-
-#endregion
 
 public class ExploreEntryOption : MonoBehaviour, IEntryOption
 {
-    [SerializeField] private string text;
     [SerializeField] private string entryName;
+    [SerializeField] private string text;
     public string Text => text;
 
     public void Select()

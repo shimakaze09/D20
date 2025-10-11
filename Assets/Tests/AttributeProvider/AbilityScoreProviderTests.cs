@@ -1,9 +1,5 @@
-#region
-
 using NUnit.Framework;
 using UnityEngine;
-
-#endregion
 
 public class AbilityScoreProviderTests
 {
@@ -12,7 +8,13 @@ public class AbilityScoreProviderTests
     {
         IDataSystem.Register(new MockDataSystem());
         IDataSystem.Resolve().Create();
-        AbilityScoreInjector.Inject();
+        IAbilityScoreSystem.Register(new AbilityScoreSystem());
+        ICharismaSystem.Register(new CharismaSystem());
+        IConstitutionSystem.Register(new ConstitutionSystem());
+        IDexteritySystem.Register(new DexteritySystem());
+        IIntelligenceSystem.Register(new IntelligenceSystem());
+        IStrengthSystem.Register(new StrengthSystem());
+        IWisdomSystem.Register(new WisdomSystem());
     }
 
     [Test]

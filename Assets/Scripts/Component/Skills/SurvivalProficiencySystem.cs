@@ -7,6 +7,7 @@ public interface ISurvivalProficiencySystem : IDependency<ISurvivalProficiencySy
 {
 }
 
+[Dependency(typeof(ISurvivalProficiencySystem))]
 public class SurvivalProficiencySystem : EntityTableSystem<Proficiency>, ISurvivalProficiencySystem
 {
     public override CoreDictionary<Entity, Proficiency> Table => IDataSystem.Resolve().Data.survivalProficiency;

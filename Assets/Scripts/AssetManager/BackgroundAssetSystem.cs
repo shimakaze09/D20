@@ -1,15 +1,12 @@
-#region
-
 using Cysharp.Threading.Tasks;
 using UnityEngine;
-
-#endregion
 
 public interface IBackgroundAssetSystem : IDependency<IBackgroundAssetSystem>
 {
     UniTask<IBackground> Load(string name);
 }
 
+[Dependency(typeof(IBackgroundAssetSystem))]
 public class BackgroundAssetSystem : IBackgroundAssetSystem
 {
     public async UniTask<IBackground> Load(string name)

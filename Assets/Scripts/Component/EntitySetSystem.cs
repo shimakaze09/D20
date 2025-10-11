@@ -7,14 +7,10 @@ public interface IEntitySetSystem
     void Remove(Entity entity);
 }
 
-public abstract class EntitySetSystem : IEntitySetSystem
+[DependencyCollection(typeof(ISetup))]
+[DependencyCollection(typeof(ITearDown))]
+public abstract class EntitySetSystem : IEntitySetSystem, ISetup, ITearDown
 {
-    public EntitySetSystem()
-    {
-        ISetUpSystem.Resolve().Add(SetUp);
-        ITearDownSystem.Resolve().Add(TearDown);
-    }
-
     public abstract CoreSet<Entity> Table { get; }
 
     public virtual void Add(Entity entity)

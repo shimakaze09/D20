@@ -7,6 +7,7 @@ public interface INatureProficiencySystem : IDependency<INatureProficiencySystem
 {
 }
 
+[Dependency(typeof(INatureProficiencySystem))]
 public class NatureProficiencySystem : EntityTableSystem<Proficiency>, INatureProficiencySystem
 {
     public override CoreDictionary<Entity, Proficiency> Table => IDataSystem.Resolve().Data.natureProficiency;

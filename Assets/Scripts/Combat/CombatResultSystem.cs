@@ -1,8 +1,4 @@
-#region
-
 using System.Linq;
-
-#endregion
 
 public enum CombatResult
 {
@@ -15,6 +11,7 @@ public interface ICombatResultSystem : IDependency<ICombatResultSystem>
     CombatResult? CheckResult();
 }
 
+[Dependency(typeof(ICombatResultSystem))]
 public class CombatResultSystem : ICombatResultSystem
 {
     public CombatResult? CheckResult()

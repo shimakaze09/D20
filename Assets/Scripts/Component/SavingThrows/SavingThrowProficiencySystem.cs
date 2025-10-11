@@ -4,6 +4,7 @@ public interface ISavingThrowProficiencySystem : IDependency<ISavingThrowProfici
     void Set(Entity entity, SavingThrow savingThrow, Proficiency value);
 }
 
+[Dependency(typeof(ISavingThrowProficiencySystem))]
 public class SavingThrowProficiencySystem : ISavingThrowProficiencySystem
 {
     public Proficiency Get(Entity entity, SavingThrow savingThrow)

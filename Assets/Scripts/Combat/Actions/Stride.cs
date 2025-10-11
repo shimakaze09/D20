@@ -1,9 +1,5 @@
-#region
-
 using Cysharp.Threading.Tasks;
 using UnityEngine;
-
-#endregion
 
 public interface IStridePositionSelector
 {
@@ -12,8 +8,8 @@ public interface IStridePositionSelector
 
 public class Stride : MonoBehaviour, ICombatAction
 {
-    [SerializeField] private EntityFilter passFilter;
     [SerializeField] private EntityFilter blockFilter;
+    [SerializeField] private EntityFilter passFilter;
 
     public bool CanPerform(Entity entity)
     {

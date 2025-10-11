@@ -7,6 +7,7 @@ public interface IOccultismProficiencySystem : IDependency<IOccultismProficiency
 {
 }
 
+[Dependency(typeof(IOccultismProficiencySystem))]
 public class OccultismProficiencySystem : EntityTableSystem<Proficiency>, IOccultismProficiencySystem
 {
     public override CoreDictionary<Entity, Proficiency> Table => IDataSystem.Resolve().Data.occultismProficiency;

@@ -1,12 +1,7 @@
-#region
-
 using System;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-using Object = UnityEngine.Object;
-
-#endregion
 
 public static class AncestryParser
 {
@@ -46,7 +41,7 @@ public static class AncestryParser
         if (!string.IsNullOrEmpty(data.flaws)) AddBoosts(asset, data.flaws, true);
 
         CreatePrefab(asset, data.name);
-        Object.DestroyImmediate(asset);
+        GameObject.DestroyImmediate(asset);
     }
 
     private static void AddAncestry(GameObject asset, AncestryData data)
@@ -89,23 +84,23 @@ public static class AncestryParser
     [Serializable]
     private class AncestryData
     {
-        public string name;
-        public string description;
-        public string rarity;
-        public string traits;
         public string backgrounds;
-        public string classes;
-        public string names;
-        public int hitPoints;
-        public string size;
-        public int speed;
-        public int waterSpeed;
         public string boosts;
-        public string flaws;
-        public string languages;
+        public string classes;
+        public string description;
         public string extraLanguages;
-        public string vision;
+        public string flaws;
+        public int hitPoints;
+        public string languages;
+        public string name;
+        public string names;
+        public string rarity;
+        public string size;
         public string special;
+        public int speed;
+        public string traits;
+        public string vision;
+        public int waterSpeed;
     }
 
     [Serializable]

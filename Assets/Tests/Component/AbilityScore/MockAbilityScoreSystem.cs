@@ -1,9 +1,5 @@
-#region
-
 using System.Collections.Generic;
 using NUnit.Framework;
-
-#endregion
 
 public class MockAbilityScoreSystem : IAbilityScoreSystem
 {

@@ -7,6 +7,7 @@ public interface IReligionSystem : IDependency<IReligionSystem>, IBaseSkillSyste
 {
 }
 
+[Dependency(typeof(IReligionSystem))]
 public class ReligionSystem : BaseSkillSystem, IReligionSystem
 {
     protected override Skill Skill => Skill.Religion;

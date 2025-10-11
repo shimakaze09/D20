@@ -1,11 +1,7 @@
-#region
-
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
-
-#endregion
 
 [RequireComponent(typeof(TMP_Text))]
 public class LinkOpener : MonoBehaviour, IPointerClickHandler

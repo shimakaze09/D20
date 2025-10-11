@@ -7,6 +7,7 @@ public interface IArcanaSystem : IDependency<IArcanaSystem>, IBaseSkillSystem
 {
 }
 
+[Dependency(typeof(IArcanaSystem))]
 public class ArcanaSystem : BaseSkillSystem, IArcanaSystem
 {
     protected override Skill Skill => Skill.Arcana;

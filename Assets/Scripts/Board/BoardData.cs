@@ -1,13 +1,11 @@
-#region
-
 using UnityEngine;
-
-#endregion
 
 [CreateAssetMenu]
 public class BoardData : ScriptableObject
 {
-    public int width;
     public int height;
     public int[] tiles;
+    public int width;
+
+    [field: SerializeField] public int SomeNumber { get; private set; } = 5;
 }

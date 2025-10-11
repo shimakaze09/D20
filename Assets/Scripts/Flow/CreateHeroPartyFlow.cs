@@ -1,14 +1,11 @@
-#region
-
 using Cysharp.Threading.Tasks;
-
-#endregion
 
 public interface ICreateHeroPartyFlow : IDependency<ICreateHeroPartyFlow>
 {
     UniTask Play();
 }
 
+[Dependency(typeof(ICreateHeroPartyFlow))]
 public class CreateHeroPartyFlow : ICreateHeroPartyFlow
 {
     private const int heroPartySize = 4;

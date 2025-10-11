@@ -7,6 +7,7 @@ public interface IStealthSystem : IDependency<IStealthSystem>, IBaseSkillSystem
 {
 }
 
+[Dependency(typeof(IStealthSystem))]
 public class StealthSystem : BaseSkillSystem, IStealthSystem
 {
     protected override Skill Skill => Skill.Stealth;

@@ -1,16 +1,13 @@
-#region
-
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using UnityEngine.SceneManagement;
-
-#endregion
 
 public interface IEncounterFlow : IDependency<IEncounterFlow>
 {
     UniTask Play();
 }
 
+[Dependency(typeof(IEncounterFlow))]
 public class EncounterFlow : IEncounterFlow
 {
     public async UniTask Play()

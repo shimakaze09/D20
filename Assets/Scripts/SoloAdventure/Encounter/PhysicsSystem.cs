@@ -1,14 +1,11 @@
-#region
-
 using UnityEngine;
-
-#endregion
 
 public interface IPhysicsSystem : IDependency<IPhysicsSystem>
 {
     Entity? OverlapPoint(Point point, int layerMask);
 }
 
+[Dependency(typeof(IPhysicsSystem))]
 public class PhysicsSystem : IPhysicsSystem
 {
     private const int maxResultCount = 10;

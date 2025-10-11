@@ -1,8 +1,4 @@
-#region
-
 using Cysharp.Threading.Tasks;
-
-#endregion
 
 public interface ICombatAction
 {

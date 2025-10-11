@@ -1,16 +1,13 @@
-#region
-
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using UnityEngine.SceneManagement;
-
-#endregion
 
 public interface IEntryFlow : IDependency<IEntryFlow>
 {
     UniTask Play();
 }
 
+[Dependency(typeof(IEntryFlow))]
 public class EntryFlow : IEntryFlow
 {
     public async UniTask Play()

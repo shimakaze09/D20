@@ -1,17 +1,13 @@
-#region
-
 using UnityEngine;
-
-#endregion
 
 public class AbilityScoresProvider : MonoBehaviour, IAttributeProvider
 {
-    [SerializeField] private int strength;
-    [SerializeField] private int dexterity;
-    [SerializeField] private int constitution;
-    [SerializeField] private int intelligence;
-    [SerializeField] private int wisdom;
     [SerializeField] private int charisma;
+    [SerializeField] private int constitution;
+    [SerializeField] private int dexterity;
+    [SerializeField] private int intelligence;
+    [SerializeField] private int strength;
+    [SerializeField] private int wisdom;
 
     public void Setup(Entity entity)
     {

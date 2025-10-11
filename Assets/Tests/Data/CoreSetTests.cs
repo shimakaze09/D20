@@ -1,9 +1,5 @@
-#region
-
 using NUnit.Framework;
 using UnityEngine;
-
-#endregion
 
 public class CoreSetTests
 {

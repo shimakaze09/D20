@@ -7,6 +7,7 @@ public interface IThieveryProficiencySystem : IDependency<IThieveryProficiencySy
 {
 }
 
+[Dependency(typeof(IThieveryProficiencySystem))]
 public class ThieveryProficiencySystem : EntityTableSystem<Proficiency>, IThieveryProficiencySystem
 {
     public override CoreDictionary<Entity, Proficiency> Table => IDataSystem.Resolve().Data.thieveryProficiency;

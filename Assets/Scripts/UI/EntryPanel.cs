@@ -1,5 +1,3 @@
-#region
-
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
@@ -7,8 +5,6 @@ using Cysharp.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-
-#endregion
 
 public interface IEntryPanel : IDependency<IEntryPanel>
 {
@@ -23,23 +19,8 @@ public class EntryPanel : MonoBehaviour, IEntryPanel
 {
     private const float transitionTime = 0.25f;
     [SerializeField] private CanvasGroup canvasGroup;
-    [SerializeField] private TextMeshProUGUI entryText;
     [SerializeField] private List<GameObject> entryOptions;
-
-    private void Awake()
-    {
-        canvasGroup.alpha = 0;
-    }
-
-    private void OnEnable()
-    {
-        IEntryPanel.Register(this);
-    }
-
-    private void OnDisable()
-    {
-        IEntryPanel.Reset();
-    }
+    [SerializeField] private TextMeshProUGUI entryText;
 
     public void Setup(IEntry entry)
     {
@@ -108,5 +89,20 @@ public class EntryPanel : MonoBehaviour, IEntryPanel
         {
             await handler.OnClickAsync();
         }
+    }
+
+    private void Awake()
+    {
+        canvasGroup.alpha = 0;
+    }
+
+    private void OnEnable()
+    {
+        IEntryPanel.Register(this);
+    }
+
+    private void OnDisable()
+    {
+        IEntryPanel.Reset();
     }
 }

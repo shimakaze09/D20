@@ -7,6 +7,7 @@ public interface IOccultismSystem : IDependency<IOccultismSystem>, IBaseSkillSys
 {
 }
 
+[Dependency(typeof(IOccultismSystem))]
 public class OccultismSystem : BaseSkillSystem, IOccultismSystem
 {
     protected override Skill Skill => Skill.Occultism;

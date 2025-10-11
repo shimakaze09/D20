@@ -1,9 +1,5 @@
-#region
-
 using Cysharp.Threading.Tasks;
 using UnityEngine;
-
-#endregion
 
 public class PrimaryWeaponProvider : MonoBehaviour, IAttributeProvider
 {

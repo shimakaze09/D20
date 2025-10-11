@@ -1,8 +1,4 @@
-#region
-
 using System.Collections.Generic;
-
-#endregion
 
 public interface IRoundSystem : IDependency<IRoundSystem>
 {
@@ -12,6 +8,7 @@ public interface IRoundSystem : IDependency<IRoundSystem>
     Entity Next();
 }
 
+[Dependency(typeof(IRoundSystem))]
 public class RoundSystem : IRoundSystem
 {
     private List<Entity> turnOrder;

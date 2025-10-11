@@ -1,16 +1,13 @@
-#region
-
 using System.Collections.Generic;
 using System.Linq;
 using Cysharp.Threading.Tasks;
-
-#endregion
 
 public interface IRoundFlow : IDependency<IRoundFlow>
 {
     UniTask<CombatResult?> Play();
 }
 
+[Dependency(typeof(IRoundFlow))]
 public class RoundFlow : IRoundFlow
 {
     public async UniTask<CombatResult?> Play()

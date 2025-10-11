@@ -1,13 +1,9 @@
-#region
-
 using UnityEngine;
-
-#endregion
 
 public class CameraFollow : MonoBehaviour
 {
+    [SerializeField] private readonly float speed = 0.9f;
     [SerializeField] private Transform target;
-    [SerializeField] private float speed = 0.9f;
 
     private void Update()
     {

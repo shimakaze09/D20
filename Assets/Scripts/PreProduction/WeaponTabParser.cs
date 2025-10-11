@@ -1,12 +1,8 @@
-#region
-
 using System;
 using System.Collections.Generic;
 using System.IO;
 using UnityEditor;
 using UnityEngine;
-
-#endregion
 
 public class WeaponTabParser : MonoBehaviour
 {
@@ -64,17 +60,17 @@ public class WeaponTabParser : MonoBehaviour
     [Serializable]
     public class RawWeaponData
     {
+        public string bulk;
+        public string damage;
+        public string hands;
+        public string level;
         public string name;
-        public string weaponType;
+        public string price;
+        public string range;
+        public string reload;
         public string weaponCategory;
         public string weaponGroup;
         public string weaponTraits;
-        public string damage;
-        public string hands;
-        public string range;
-        public string reload;
-        public string bulk;
-        public string price;
-        public string level;
+        public string weaponType;
     }
 }

@@ -7,6 +7,7 @@ public interface IMedicineProficiencySystem : IDependency<IMedicineProficiencySy
 {
 }
 
+[Dependency(typeof(IMedicineProficiencySystem))]
 public class MedicineProficiencySystem : EntityTableSystem<Proficiency>, IMedicineProficiencySystem
 {
     public override CoreDictionary<Entity, Proficiency> Table => IDataSystem.Resolve().Data.medicineProficiency;

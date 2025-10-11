@@ -7,6 +7,7 @@ public interface IIntimidationSystem : IDependency<IIntimidationSystem>, IBaseSk
 {
 }
 
+[Dependency(typeof(IIntimidationSystem))]
 public class IntimidationSystem : BaseSkillSystem, IIntimidationSystem
 {
     protected override Skill Skill => Skill.Intimidation;

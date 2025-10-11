@@ -1,8 +1,4 @@
-#region
-
 using System;
-
-#endregion
 
 [Serializable]
 public partial struct DiceRoll

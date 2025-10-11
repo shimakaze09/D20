@@ -7,6 +7,7 @@ public interface ISurvivalSystem : IDependency<ISurvivalSystem>, IBaseSkillSyste
 {
 }
 
+[Dependency(typeof(ISurvivalSystem))]
 public class SurvivalSystem : BaseSkillSystem, ISurvivalSystem
 {
     protected override Skill Skill => Skill.Survival;

@@ -7,6 +7,7 @@ public interface IStrengthSystem : IDependency<IStrengthSystem>, IEntityTableSys
 {
 }
 
+[Dependency(typeof(IStrengthSystem))]
 public class StrengthSystem : EntityTableSystem<AbilityScore>, IStrengthSystem
 {
     public override CoreDictionary<Entity, AbilityScore> Table => IDataSystem.Resolve().Data.strength;

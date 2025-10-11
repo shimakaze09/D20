@@ -1,18 +1,14 @@
-#region
-
 using UnityEngine;
-
-#endregion
 
 public class SkillExploreEntryOption : MonoBehaviour, IEntryOption
 {
-    [SerializeField] private string text;
-    [SerializeField] private Skill skill;
-    [SerializeField] private int difficultyCheck;
     [SerializeField] private string criticalFailureEntry;
-    [SerializeField] private string failureEntry;
-    [SerializeField] private string successEntry;
     [SerializeField] private string criticalSuccessEntry;
+    [SerializeField] private int difficultyCheck;
+    [SerializeField] private string failureEntry;
+    [SerializeField] private Skill skill;
+    [SerializeField] private string successEntry;
+    [SerializeField] private string text;
 
     public string Text => text;
 

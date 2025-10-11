@@ -1,8 +1,4 @@
-#region
-
 using NUnit.Framework;
-
-#endregion
 
 public class WeaponFilterSystemTests
 {

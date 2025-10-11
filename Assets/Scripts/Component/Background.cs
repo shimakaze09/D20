@@ -1,9 +1,5 @@
-#region
-
 using System.Collections.Generic;
 using UnityEngine;
-
-#endregion
 
 public interface IBackground
 {
@@ -15,9 +11,9 @@ public interface IBackground
 
 public class Background : MonoBehaviour, IBackground
 {
-    [SerializeField] private string _title;
     [SerializeField] private Rarity _rarity;
     [SerializeField] private string _summary;
+    [SerializeField] private string _title;
 
     public string Title
     {

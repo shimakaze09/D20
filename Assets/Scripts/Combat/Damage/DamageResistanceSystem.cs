@@ -1,8 +1,4 @@
-#region
-
 using System;
-
-#endregion
 
 [Serializable]
 public class DamageResistance
@@ -22,6 +18,7 @@ public interface IDamageResistanceSystem : IDependency<IDamageResistanceSystem>,
     void RemoveResistance(Entity entity, string damageType);
 }
 
+[Dependency(typeof(IDamageResistanceSystem))]
 public class DamageResistanceSystem : EntityTableSystem<DamageResistance>, IDamageResistanceSystem
 {
     public override CoreDictionary<Entity, DamageResistance> Table => IDataSystem.Resolve().Data.damageResistance;

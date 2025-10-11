@@ -1,8 +1,4 @@
-#region
-
 using System;
-
-#endregion
 
 [Serializable]
 public partial struct Entity
@@ -28,7 +24,7 @@ public partial struct Entity
 
     public override bool Equals(object obj)
     {
-        return Equals((Entity)obj);
+        return this.Equals((Entity)obj);
     }
 
     public override int GetHashCode()

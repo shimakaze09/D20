@@ -7,6 +7,7 @@ public interface IDexteritySystem : IDependency<IDexteritySystem>, IEntityTableS
 {
 }
 
+[Dependency(typeof(IDexteritySystem))]
 public class DexteritySystem : EntityTableSystem<AbilityScore>, IDexteritySystem
 {
     public override CoreDictionary<Entity, AbilityScore> Table => IDataSystem.Resolve().Data.dexterity;

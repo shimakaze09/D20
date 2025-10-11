@@ -7,6 +7,7 @@ public interface IDeceptionSystem : IDependency<IDeceptionSystem>, IBaseSkillSys
 {
 }
 
+[Dependency(typeof(IDeceptionSystem))]
 public class DeceptionSystem : BaseSkillSystem, IDeceptionSystem
 {
     protected override Skill Skill => Skill.Deception;

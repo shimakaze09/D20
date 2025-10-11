@@ -9,19 +9,10 @@ public interface IEntityTableSystem<T>
     void Remove(Entity entity);
 }
 
-public abstract class EntityTableSystem<T> : IEntityTableSystem<T>
+[DependencyCollection(typeof(ISetup))]
+[DependencyCollection(typeof(ITearDown))]
+public abstract class EntityTableSystem<T> : IEntityTableSystem<T>, ISetup, ITearDown
 {
-    public EntityTableSystem()
-    {
-        ISetUpSystem setup;
-        if (ISetUpSystem.TryResolve(out setup))
-            setup.Add(SetUp);
-
-        ITearDownSystem tearDown;
-        if (ITearDownSystem.TryResolve(out tearDown))
-            tearDown.Add(TearDown);
-    }
-
     public abstract CoreDictionary<Entity, T> Table { get; }
 
     public virtual void Set(Entity entity, T value)

@@ -1,10 +1,6 @@
-#region
-
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-
-#endregion
 
 [Serializable]
 public struct MonsterSpawn
@@ -25,12 +21,12 @@ public interface IEncounter
 
 public class Encounter : MonoBehaviour, IEncounter
 {
-    [SerializeField] private string victoryEntry;
-    [SerializeField] private string defeatEntry;
-    [SerializeField] private List<MonsterSpawn> monsterSpawns;
-    [SerializeField] private List<Point> heroPositions;
     [SerializeField] private BoardData boardData;
     [SerializeField] private BoardSkin boardSkin;
+    [SerializeField] private string defeatEntry;
+    [SerializeField] private List<Point> heroPositions;
+    [SerializeField] private List<MonsterSpawn> monsterSpawns;
+    [SerializeField] private string victoryEntry;
     public string VictoryEntry => victoryEntry;
 
     public string DefeatEntry => defeatEntry;

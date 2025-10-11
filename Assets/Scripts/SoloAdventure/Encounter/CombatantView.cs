@@ -1,15 +1,11 @@
-#region
-
 using Cysharp.Threading.Tasks;
 using UnityEngine;
-
-#endregion
 
 public class CombatantView : MonoBehaviour
 {
     public SpriteRenderer avatar;
-    public SpriteRenderer shadow;
     public bool flipDirection;
+    public SpriteRenderer shadow;
 }
 
 public enum CombatantDirection
@@ -34,6 +30,7 @@ public interface ICombatantViewSystem : IDependency<ICombatantViewSystem>
     UniTask PlayAnimation(CombatantView view, CombatantAnimation animation);
 }
 
+[Dependency(typeof(ICombatantViewSystem))]
 public class CombatantViewSystem : ICombatantViewSystem
 {
     private readonly int attackState = Animator.StringToHash("Attack");

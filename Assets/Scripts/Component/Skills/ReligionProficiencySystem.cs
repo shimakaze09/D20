@@ -7,6 +7,7 @@ public interface IReligionProficiencySystem : IDependency<IReligionProficiencySy
 {
 }
 
+[Dependency(typeof(IReligionProficiencySystem))]
 public class ReligionProficiencySystem : EntityTableSystem<Proficiency>, IReligionProficiencySystem
 {
     public override CoreDictionary<Entity, Proficiency> Table => IDataSystem.Resolve().Data.religionProficiency;

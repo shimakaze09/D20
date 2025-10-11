@@ -1,15 +1,12 @@
-#region
-
 using Cysharp.Threading.Tasks;
 using UnityEngine;
-
-#endregion
 
 public interface ICombatActionAssetSystem : IDependency<ICombatActionAssetSystem>
 {
     UniTask<ICombatAction> Load(string assetName);
 }
 
+[Dependency(typeof(ICombatActionAssetSystem))]
 public class CombatActionAssetSystem : ICombatActionAssetSystem
 {
     public async UniTask<ICombatAction> Load(string assetName)

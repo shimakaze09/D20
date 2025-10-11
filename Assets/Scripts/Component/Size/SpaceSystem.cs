@@ -1,8 +1,4 @@
-#region
-
 using System.Collections.Generic;
-
-#endregion
 
 public interface ISpaceSystem : IDependency<ISpaceSystem>
 {
@@ -15,6 +11,7 @@ public interface ISpaceSystem : IDependency<ISpaceSystem>
     List<Point> AdjacentSpaces(Entity entity, Entity target);
 }
 
+[Dependency(typeof(ISpaceSystem))]
 public class SpaceSystem : ISpaceSystem
 {
     private const int tileSize = 5;
@@ -48,6 +45,7 @@ public class SpaceSystem : ISpaceSystem
         for (var y = 0; y < space; ++y)
         for (var x = 0; x < space; ++x)
             result.Add(new Point(x, y) + position);
+
         return result;
     }
 
@@ -84,6 +82,7 @@ public class SpaceSystem : ISpaceSystem
         for (var x = xStart; x <= xEnd; ++x)
             if (x == xStart || x == xEnd || y == yStart || y == yEnd)
                 result.Add(new Point(x, y));
+
         return result;
     }
 }

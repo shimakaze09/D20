@@ -7,6 +7,7 @@ public interface IAthleticsProficiencySystem : IDependency<IAthleticsProficiency
 {
 }
 
+[Dependency(typeof(IAthleticsProficiencySystem))]
 public class AthleticsProficiencySystem : EntityTableSystem<Proficiency>, IAthleticsProficiencySystem
 {
     public override CoreDictionary<Entity, Proficiency> Table => IDataSystem.Resolve().Data.athleticsProficiency;

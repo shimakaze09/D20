@@ -1,16 +1,12 @@
-#region
-
 using Cysharp.Threading.Tasks;
 using UnityEngine;
-
-#endregion
 
 public class AppFlow : MonoBehaviour
 {
     private async UniTaskVoid Start()
     {
         DontDestroyOnLoad(gameObject);
-        Injector.Inject();
+        new DependencyInjection().Init();
         ISetUpSystem.Resolve().SetUp();
         while (true)
         {

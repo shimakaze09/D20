@@ -7,6 +7,7 @@ public interface IPerformanceSystem : IDependency<IPerformanceSystem>, IBaseSkil
 {
 }
 
+[Dependency(typeof(IPerformanceSystem))]
 public class PerformanceSystem : BaseSkillSystem, IPerformanceSystem
 {
     protected override Skill Skill => Skill.Performance;

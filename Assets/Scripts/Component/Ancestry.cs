@@ -1,9 +1,5 @@
-#region
-
 using System.Collections.Generic;
 using UnityEngine;
-
-#endregion
 
 public interface IAncestry
 {
@@ -15,10 +11,9 @@ public interface IAncestry
 
 public class Ancestry : MonoBehaviour, IAncestry
 {
-    [SerializeField] private string _title;
     [SerializeField] private string _description;
     [SerializeField] private Rarity _rarity;
-
+    [SerializeField] private string _title;
     public string Title => _title;
 
     public string Description => _description;

@@ -3,6 +3,7 @@ public interface IDiceRollSystem : IDependency<IDiceRollSystem>
     int Roll(DiceRoll diceRoll);
 }
 
+[Dependency(typeof(IDiceRollSystem))]
 public class DiceRollSystem : IDiceRollSystem
 {
     public int Roll(DiceRoll diceRoll)

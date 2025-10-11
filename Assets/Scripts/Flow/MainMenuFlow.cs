@@ -1,15 +1,12 @@
-#region
-
 using Cysharp.Threading.Tasks;
 using UnityEngine.SceneManagement;
-
-#endregion
 
 public interface IMainMenuFlow : IDependency<IMainMenuFlow>
 {
     UniTask<MainMenuOption> Play();
 }
 
+[Dependency(typeof(IMainMenuFlow))]
 public class MainMenuFlow : IMainMenuFlow
 {
     public async UniTask<MainMenuOption> Play()

@@ -1,10 +1,6 @@
-#region
-
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-
-#endregion
 
 public interface IBoardHighlightSystem : IDependency<IBoardHighlightSystem>
 {
@@ -16,17 +12,6 @@ public class BoardHighlightSystem : MonoBehaviour, IBoardHighlightSystem
 {
     [SerializeField] private TileBase highlight;
     private Tilemap tilemap;
-
-    private void OnEnable()
-    {
-        tilemap = GetComponent<Tilemap>();
-        IBoardHighlightSystem.Register(this);
-    }
-
-    private void OnDisable()
-    {
-        IBoardHighlightSystem.Reset();
-    }
 
     public void Highlight(IEnumerable<Point> points, Color color)
     {
@@ -40,5 +25,16 @@ public class BoardHighlightSystem : MonoBehaviour, IBoardHighlightSystem
     {
         tilemap.ClearAllTiles();
         tilemap.color = Color.white;
+    }
+
+    private void OnEnable()
+    {
+        tilemap = GetComponent<Tilemap>();
+        IBoardHighlightSystem.Register(this);
+    }
+
+    private void OnDisable()
+    {
+        IBoardHighlightSystem.Reset();
     }
 }

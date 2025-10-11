@@ -1,8 +1,4 @@
-#region
-
 using UnityEngine;
-
-#endregion
 
 public class DamageRollProvider : MonoBehaviour, IAttributeProvider
 {

@@ -1,19 +1,15 @@
-#region
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 using UnityEngine;
 
-#endregion
-
 [Serializable]
 public class CoreSet<T> : ISerializationCallbackReceiver, ICollection<T>, IEnumerable<T>, IEnumerable,
     IReadOnlyCollection<T>, ISet<T>, IDeserializationCallback, ISerializable
 {
-    [SerializeField] private List<T> values = new();
     private HashSet<T> set = new();
+    [SerializeField] private List<T> values = new();
 
     public int Count => set.Count;
     public bool IsReadOnly => ((ICollection<T>)set).IsReadOnly;

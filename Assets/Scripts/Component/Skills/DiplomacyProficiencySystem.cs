@@ -7,6 +7,7 @@ public interface IDiplomacyProficiencySystem : IDependency<IDiplomacyProficiency
 {
 }
 
+[Dependency(typeof(IDiplomacyProficiencySystem))]
 public class DiplomacyProficiencySystem : EntityTableSystem<Proficiency>, IDiplomacyProficiencySystem
 {
     public override CoreDictionary<Entity, Proficiency> Table => IDataSystem.Resolve().Data.diplomacyProficiency;

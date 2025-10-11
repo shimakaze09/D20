@@ -1,14 +1,11 @@
-#region
-
 using Cysharp.Threading.Tasks;
-
-#endregion
 
 public interface ITurnFlow : IDependency<ITurnFlow>
 {
     UniTask<CombatResult?> Play(Entity entity);
 }
 
+[Dependency(typeof(ITurnFlow))]
 public struct TurnFlow : ITurnFlow
 {
     public async UniTask<CombatResult?> Play(Entity entity)

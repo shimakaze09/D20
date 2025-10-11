@@ -1,11 +1,7 @@
-#region
-
 using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
-
-#endregion
 
 public class Tween
 {
@@ -62,7 +58,7 @@ public class Tween
     public TimeType timeType = TimeType.Normal;
     public PlayState playState { get; private set; }
     public Direction direction { get; private set; }
-    public PlayState previousPlayState { get; }
+    public PlayState previousPlayState { get; private set; }
     public EndBehaviour endBehaviour = EndBehaviour.Constant;
     public LoopType loopType = LoopType.Repeat;
 

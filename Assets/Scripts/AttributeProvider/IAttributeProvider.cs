@@ -1,9 +1,5 @@
-#region
-
 using System;
 using Cysharp.Threading.Tasks;
-
-#endregion
 
 public interface IAttributeProvider
 {

@@ -1,8 +1,4 @@
-#region
-
 using Cysharp.Threading.Tasks;
-
-#endregion
 
 public partial class Data
 {
@@ -15,6 +11,7 @@ public interface IDyingSystem : IDependency<IDyingSystem>, IEntityTableSystem<in
     UniTask Revive(Entity entity);
 }
 
+[Dependency(typeof(IDyingSystem))]
 public class DyingSystem : EntityTableSystem<int>, IDyingSystem
 {
     public override CoreDictionary<Entity, int> Table => IDataSystem.Resolve().Data.dying;

@@ -1,12 +1,8 @@
-#region
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 using UnityEngine;
-
-#endregion
 
 [Serializable]
 public class CoreDictionary<TKey, TValue> : ISerializationCallbackReceiver, ICollection<KeyValuePair<TKey, TValue>>,
@@ -14,9 +10,9 @@ public class CoreDictionary<TKey, TValue> : ISerializationCallbackReceiver, ICol
     IReadOnlyCollection<KeyValuePair<TKey, TValue>>, IReadOnlyDictionary<TKey, TValue>, ICollection, IDictionary,
     IDeserializationCallback, ISerializable
 {
+    private Dictionary<TKey, TValue> dictionary = new();
     [SerializeField] private List<TKey> keys = new();
     [SerializeField] private List<TValue> values = new();
-    private Dictionary<TKey, TValue> dictionary = new();
 
     public bool IsSynchronized => ((ICollection)dictionary).IsSynchronized;
     public object SyncRoot => ((ICollection)dictionary).SyncRoot;

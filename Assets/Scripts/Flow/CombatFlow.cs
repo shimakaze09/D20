@@ -1,16 +1,13 @@
-#region
-
 using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
-
-#endregion
 
 public interface ICombatFlow : IDependency<ICombatFlow>
 {
     UniTask<CombatResult> Play();
 }
 
+[Dependency(typeof(ICombatFlow))]
 public struct CombatFlow : ICombatFlow
 {
     public async UniTask<CombatResult> Play()

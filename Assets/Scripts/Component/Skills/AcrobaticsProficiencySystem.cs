@@ -8,6 +8,7 @@ public interface IAcrobaticsProficiencySystem : IDependency<IAcrobaticsProficien
 {
 }
 
+[Dependency(typeof(IAcrobaticsProficiencySystem))]
 public class AcrobaticsProficiencySystem : EntityTableSystem<Proficiency>, IAcrobaticsProficiencySystem
 {
     public override CoreDictionary<Entity, Proficiency> Table => IDataSystem.Resolve().Data.acrobaticsProficiency;

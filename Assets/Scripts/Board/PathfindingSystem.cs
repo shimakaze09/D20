@@ -1,8 +1,4 @@
-#region
-
 using System.Collections.Generic;
-
-#endregion
 
 public interface ITraverser
 {
@@ -14,6 +10,7 @@ public interface IPathfindingSystem : IDependency<IPathfindingSystem>
     IPathMap Map(Point start, int range, Size size, ITraverser traverser);
 }
 
+[Dependency(typeof(IPathfindingSystem))]
 public class PathfindingSystem : IPathfindingSystem
 {
     private readonly Point[] offsets =

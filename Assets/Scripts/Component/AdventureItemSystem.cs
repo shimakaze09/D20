@@ -16,6 +16,7 @@ public interface IAdventureItemSystem : IDependency<IAdventureItemSystem>
     bool Has(AdventureItem item);
 }
 
+[Dependency(typeof(IAdventureItemSystem))]
 public class AdventureItemSystem : IAdventureItemSystem
 {
     private CoreSet<AdventureItem> Items => IDataSystem.Resolve().Data.items;

@@ -7,6 +7,7 @@ public interface ISocietySystem : IDependency<ISocietySystem>, IBaseSkillSystem
 {
 }
 
+[Dependency(typeof(ISocietySystem))]
 public class SocietySystem : BaseSkillSystem, ISocietySystem
 {
     protected override Skill Skill => Skill.Society;

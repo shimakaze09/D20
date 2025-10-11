@@ -1,8 +1,4 @@
-#region
-
 using UnityEngine;
-
-#endregion
 
 public abstract class Vector3Tween : Tween
 {

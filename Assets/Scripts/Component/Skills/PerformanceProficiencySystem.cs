@@ -8,6 +8,7 @@ public interface IPerformanceProficiencySystem : IDependency<IPerformanceProfici
 {
 }
 
+[Dependency(typeof(IPerformanceProficiencySystem))]
 public class PerformanceProficiencySystem : EntityTableSystem<Proficiency>, IPerformanceProficiencySystem
 {
     public override CoreDictionary<Entity, Proficiency> Table => IDataSystem.Resolve().Data.performanceProficiency;

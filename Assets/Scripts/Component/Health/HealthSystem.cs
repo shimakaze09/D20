@@ -1,9 +1,5 @@
-#region
-
 using Cysharp.Threading.Tasks;
 using UnityEngine;
-
-#endregion
 
 public struct HealthInfo
 {
@@ -16,6 +12,7 @@ public interface IHealthSystem : IDependency<IHealthSystem>
     UniTask Apply(HealthInfo info);
 }
 
+[Dependency(typeof(IHealthSystem))]
 public class HealthSystem : IHealthSystem
 {
     public async UniTask Apply(HealthInfo info)

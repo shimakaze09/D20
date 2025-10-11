@@ -1,9 +1,5 @@
-#region
-
 using UnityEngine;
 using UnityEngine.Tilemaps;
-
-#endregion
 
 public interface IBoardSkin
 {

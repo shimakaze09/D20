@@ -1,9 +1,5 @@
-#region
-
 using Cysharp.Threading.Tasks;
 using UnityEngine;
-
-#endregion
 
 public interface IEncounterAssetSystem : IDependency<IEncounterAssetSystem>
 {
@@ -11,6 +7,7 @@ public interface IEncounterAssetSystem : IDependency<IEncounterAssetSystem>
     UniTask<IEncounter> Load(string entryName);
 }
 
+[Dependency(typeof(IEncounterAssetSystem))]
 public class EncounterAssetSystem : IEncounterAssetSystem
 {
     public async UniTask<IEncounter> Load()

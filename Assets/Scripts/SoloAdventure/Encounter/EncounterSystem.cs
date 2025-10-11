@@ -1,9 +1,5 @@
-#region
-
 using Cysharp.Threading.Tasks;
 using UnityEngine;
-
-#endregion
 
 public partial class Data
 {
@@ -17,6 +13,7 @@ public interface IEncounterSystem : IDependency<IEncounterSystem>
     UniTask Setup(IEncounter encounter);
 }
 
+[Dependency(typeof(IEncounterSystem))]
 public class EncounterSystem : IEncounterSystem
 {
     private readonly string heroPath = "Assets/Prefabs/Combatants/Heroes/{0}.prefab";

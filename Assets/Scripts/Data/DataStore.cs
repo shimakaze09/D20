@@ -1,9 +1,5 @@
-#region
-
 using System.IO;
 using UnityEngine;
-
-#endregion
 
 public interface IDataStore : IDependency<IDataStore>
 {

@@ -1,8 +1,4 @@
-#region
-
 using System;
-
-#endregion
 
 public enum Skill
 {
@@ -33,6 +29,7 @@ public interface ISkillSystem : IDependency<ISkillSystem>
     void Setup(Entity entity, Skill skill);
 }
 
+[Dependency(typeof(ISkillSystem))]
 public class SkillSystem : ISkillSystem
 {
     public void Set(Entity entity, Skill skill, int value)

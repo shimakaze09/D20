@@ -7,6 +7,7 @@ public interface ILoreSystem : IDependency<ILoreSystem>, IBaseSkillSystem
 {
 }
 
+[Dependency(typeof(ILoreSystem))]
 public class LoreSystem : BaseSkillSystem, ILoreSystem
 {
     protected override Skill Skill => Skill.Lore;

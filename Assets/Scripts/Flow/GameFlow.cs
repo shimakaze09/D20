@@ -1,14 +1,11 @@
-#region
-
 using Cysharp.Threading.Tasks;
-
-#endregion
 
 public interface IGameFlow : IDependency<IGameFlow>
 {
     UniTask Play();
 }
 
+[Dependency(typeof(IGameFlow))]
 public class GameFlow : IGameFlow
 {
     public async UniTask Play()

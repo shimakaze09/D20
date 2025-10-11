@@ -1,10 +1,6 @@
-#region
-
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
-
-#endregion
 
 public abstract class Attack : MonoBehaviour, ICombatAction
 {

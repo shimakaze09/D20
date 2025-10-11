@@ -1,15 +1,11 @@
-#region
-
 using UnityEngine;
-
-#endregion
 
 public class ItemExploreEntryOption : MonoBehaviour, IEntryOption
 {
-    [SerializeField] private string text;
-    [SerializeField] private AdventureItem item;
     [SerializeField] private string hasItemEntry;
+    [SerializeField] private AdventureItem item;
     [SerializeField] private string noItemEntry;
+    [SerializeField] private string text;
 
     public string Text => text;
 

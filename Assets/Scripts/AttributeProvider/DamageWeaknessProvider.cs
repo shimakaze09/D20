@@ -1,13 +1,9 @@
-#region
-
 using UnityEngine;
-
-#endregion
 
 public class DamageWeaknessProvider : MonoBehaviour, IAttributeProvider
 {
-    [SerializeField] private string damageType;
     [SerializeField] private int amount;
+    [SerializeField] private string damageType;
 
     public void Setup(Entity entity)
     {

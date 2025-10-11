@@ -1,8 +1,4 @@
-#region
-
 using System;
-
-#endregion
 
 [Serializable]
 public class DamageResistanceException
@@ -23,6 +19,7 @@ public interface IDamageResistanceExceptionSystem : IDependency<IDamageResistanc
     void RemoveException(Entity entity, string damageType);
 }
 
+[Dependency(typeof(IDamageResistanceExceptionSystem))]
 public class DamageResistanceExceptionSystem : EntityTableSystem<DamageResistanceException>,
     IDamageResistanceExceptionSystem
 {

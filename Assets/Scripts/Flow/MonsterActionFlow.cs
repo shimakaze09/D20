@@ -1,14 +1,11 @@
-#region
-
 using Cysharp.Threading.Tasks;
-
-#endregion
 
 public interface IMonsterActionFlow : IDependency<IMonsterActionFlow>
 {
     UniTask<CombatResult?> Play();
 }
 
+[Dependency(typeof(IMonsterActionFlow))]
 public class MonsterActionFlow : IMonsterActionFlow
 {
     public async UniTask<CombatResult?> Play()

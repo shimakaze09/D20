@@ -1,9 +1,5 @@
-#region
-
 using System.Collections.Generic;
 using UnityEngine;
-
-#endregion
 
 public struct DamageInfo
 {
@@ -27,6 +23,7 @@ public interface IDamageSystem : IDependency<IDamageSystem>
     void Add(IDamageTypeSystem damageTypeSystem);
 }
 
+[Dependency(typeof(IDamageSystem))]
 public class DamageSystem : IDamageSystem
 {
     private readonly List<IDamageTypeSystem> damageTypeSystems = new();

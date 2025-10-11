@@ -7,6 +7,7 @@ public interface ICraftingProficiencySystem : IDependency<ICraftingProficiencySy
 {
 }
 
+[Dependency(typeof(ICraftingProficiencySystem))]
 public class CraftingProficiencySystem : EntityTableSystem<Proficiency>, ICraftingProficiencySystem
 {
     public override CoreDictionary<Entity, Proficiency> Table => IDataSystem.Resolve().Data.craftingProficiency;

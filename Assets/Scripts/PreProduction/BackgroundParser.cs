@@ -1,12 +1,7 @@
-#region
-
 using System;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-using Object = UnityEngine.Object;
-
-#endregion
 
 public static class BackgroundParser
 {
@@ -31,7 +26,7 @@ public static class BackgroundParser
         AddBoosts(asset, data);
         AddSkills(asset, data);
         CreatePrefab(asset, data);
-        Object.DestroyImmediate(asset);
+        GameObject.DestroyImmediate(asset);
     }
 
     private static void AddBackground(GameObject asset, BackgroundData data)
@@ -102,11 +97,11 @@ public static class BackgroundParser
     [Serializable]
     public class BackgroundData
     {
-        public string title;
         public List<string> abilities;
-        public List<string> skills;
         public List<string> feats;
         public string rarity;
+        public List<string> skills;
         public string summary;
+        public string title;
     }
 }

@@ -7,6 +7,7 @@ public interface IAthleticsSystem : IDependency<IAthleticsSystem>, IBaseSkillSys
 {
 }
 
+[Dependency(typeof(IAthleticsSystem))]
 public class AthleticsSystem : BaseSkillSystem, IAthleticsSystem
 {
     protected override Skill Skill => Skill.Athletics;

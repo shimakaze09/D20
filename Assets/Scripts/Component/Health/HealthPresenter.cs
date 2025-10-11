@@ -1,9 +1,5 @@
-#region
-
 using Cysharp.Threading.Tasks;
 using UnityEngine;
-
-#endregion
 
 public struct HealthPresentationInfo
 {
@@ -18,6 +14,14 @@ public interface IHealthPresenter : IDependency<IHealthPresenter>
 
 public class HealthPresenter : MonoBehaviour, IHealthPresenter
 {
+    public async UniTask Present(HealthPresentationInfo info)
+    {
+        var view = IEntityViewProvider.Resolve().GetView(info.target, ViewZone.Combatant);
+        var combatantUI = view.GetComponentInChildren<CombatantUI>();
+        combatantUI.healthSlider.value = info.target.Health;
+        await UniTask.CompletedTask;
+    }
+
     private void OnEnable()
     {
         IHealthPresenter.Register(this);
@@ -26,13 +30,5 @@ public class HealthPresenter : MonoBehaviour, IHealthPresenter
     private void OnDisable()
     {
         IHealthPresenter.Reset();
-    }
-
-    public async UniTask Present(HealthPresentationInfo info)
-    {
-        var view = IEntityViewProvider.Resolve().GetView(info.target, ViewZone.Combatant);
-        var combatantUI = view.GetComponentInChildren<CombatantUI>();
-        combatantUI.healthSlider.value = info.target.Health;
-        await UniTask.CompletedTask;
     }
 }

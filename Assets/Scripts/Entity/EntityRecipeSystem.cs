@@ -1,15 +1,12 @@
-#region
-
 using Cysharp.Threading.Tasks;
 using UnityEngine;
-
-#endregion
 
 public interface IEntityRecipeSystem : IDependency<IEntityRecipeSystem>
 {
     UniTask<Entity> Create(string assetName);
 }
 
+[Dependency(typeof(IEntityRecipeSystem))]
 public class EntityRecipeSystem : IEntityRecipeSystem
 {
     public async UniTask<Entity> Create(string assetName)

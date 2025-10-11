@@ -1,8 +1,4 @@
-#region
-
 using System;
-
-#endregion
 
 public interface ISavingThrowSystem : IDependency<ISavingThrowSystem>
 {
@@ -12,6 +8,7 @@ public interface ISavingThrowSystem : IDependency<ISavingThrowSystem>
     void Setup(Entity entity, SavingThrow savingThrow);
 }
 
+[Dependency(typeof(ISavingThrowSystem))]
 public class SavingThrowSystem : ISavingThrowSystem
 {
     public void Set(Entity entity, SavingThrow savingThrow, int value)

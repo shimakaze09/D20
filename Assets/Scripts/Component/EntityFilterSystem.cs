@@ -1,9 +1,5 @@
-#region
-
 using System;
 using System.Collections.Generic;
-
-#endregion
 
 [Flags]
 public enum EntityFilter
@@ -22,6 +18,7 @@ public interface IEntityFilterSystem : IDependency<IEntityFilterSystem>
     List<Entity> Fetch(EntityFilter filter, Entity entity);
 }
 
+[Dependency(typeof(IEntityFilterSystem))]
 public class EntityFilterSystem : IEntityFilterSystem
 {
     public List<Entity> Apply(EntityFilter filter, Entity entity, IEnumerable<Entity> entities)

@@ -1,8 +1,4 @@
-#region
-
 using UnityEngine;
-
-#endregion
 
 public class WeaponTrainingProvider : MonoBehaviour, IAttributeProvider
 {

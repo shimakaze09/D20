@@ -7,6 +7,7 @@ public interface INatureSystem : IDependency<INatureSystem>, IBaseSkillSystem
 {
 }
 
+[Dependency(typeof(INatureSystem))]
 public class NatureSystem : BaseSkillSystem, INatureSystem
 {
     protected override Skill Skill => Skill.Nature;

@@ -7,6 +7,7 @@ public interface ILoreProficiencySystem : IDependency<ILoreProficiencySystem>, I
 {
 }
 
+[Dependency(typeof(ILoreProficiencySystem))]
 public class LoreProficiencySystem : EntityTableSystem<Proficiency>, ILoreProficiencySystem
 {
     public override CoreDictionary<Entity, Proficiency> Table => IDataSystem.Resolve().Data.loreProficiency;

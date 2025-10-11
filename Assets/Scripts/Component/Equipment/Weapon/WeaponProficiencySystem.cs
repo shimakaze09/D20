@@ -1,9 +1,5 @@
-#region
-
 using System;
 using System.Collections.Generic;
-
-#endregion
 
 [Serializable]
 public class WeaponTraining
@@ -29,6 +25,7 @@ public interface IWeaponProficiencySystem : IDependency<IWeaponProficiencySystem
     Proficiency GetProficiency(Entity entity, Entity weapon);
 }
 
+[Dependency(typeof(IWeaponProficiencySystem))]
 public class WeaponProficiencySystem : EntityTableSystem<WeaponProficiency>, IWeaponProficiencySystem
 {
     public override CoreDictionary<Entity, WeaponProficiency> Table => IDataSystem.Resolve().Data.weaponProficiency;

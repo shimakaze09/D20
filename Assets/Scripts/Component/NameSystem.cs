@@ -7,6 +7,7 @@ public interface INameSystem : IDependency<INameSystem>, IEntityTableSystem<stri
 {
 }
 
+[Dependency(typeof(INameSystem))]
 public class NameSystem : EntityTableSystem<string>, INameSystem
 {
     public override CoreDictionary<Entity, string> Table => IDataSystem.Resolve().Data.name;
